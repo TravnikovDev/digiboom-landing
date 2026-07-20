@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DigiBoom White Paper (v1.0)</title>
+    <meta name="description" content="DigiBoom White Paper – Building the Future of Digital Goods Commerce" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Bebas Neue', 'system-ui', 'sans-serif'],
+                        sans: ['Rubik', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', 'Arial', 'sans-serif'],
+                        serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif']
+                    },
+                    colors: {
+                        boom: {
+                            50: '#FFF5EF', 100: '#FFE8DA', 200: '#FFC9AE', 300: '#FFA279', 400: '#FF7E47', 500: '#F1641E', 600: '#D65516', 700: '#B5460F', 800: '#8E3609', 900: '#6F2B06'
+                        },
+                        ink: {
+                            50: '#F4F7FA', 100: '#E9EEF3', 200: '#CDD7E1', 300: '#A6B4C3', 400: '#7C8FA4', 500: '#556B85', 600: '#3A4E68', 700: '#283A52', 800: '#1E2A38', 900: '#14202C'
+                        }
+                    },
+                    boxShadow: { card: '0 8px 30px rgba(20,32,44,0.10)' },
+                    borderRadius: { brand: '14px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        @page {
+            margin: 20mm;
+        }
+
+        @media print {
+            .page {
+                box-shadow: none !important;
+                border: none !important;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .lead {
+            font-size: 1.125rem;
+            line-height: 1.9;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-ink-900 antialiased font-sans">
+
+    <!-- Cover / Hero -->
+    <section class="mx-auto max-w-5xl px-6 pt-16 pb-10">
+        <div class="relative overflow-hidden rounded-brand border border-ink-100 shadow-card">
+            <div class="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-boom-100"></div>
+            <div class="absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-ink-50"></div>
+            <div class="bg-gradient-to-r from-ink-900 to-ink-700 px-10 py-12">
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-ink-600/40 ring-1 ring-white/10 text-white px-3 py-1 text-xs tracking-wider uppercase">White
+                    Paper</span>
+                <h1 class="mt-4 font-display text-6xl tracking-tight text-white">DigiBoom</h1>
+                <p class="mt-3 text-ink-100/90 text-lg max-w-3xl">Explosive growth for digital goods. Export • Import •
+                    Sync across marketplaces without friction.</p>
+                <div
+                    class="mt-6 inline-flex items-center gap-3 rounded-full bg-white text-ink-900 px-4 py-2 text-sm font-semibold shadow-card">
+                    <span class="inline-block h-2 w-2 rounded-full bg-boom-500"></span>
+                    Version 1.0 · Author: Roman Travnikov
+                </div>
+            </div>
+            <div class="bg-white px-10 py-8">
+                <div class="grid gap-6 sm:grid-cols-3 text-sm">
+                    <div class="rounded-brand border border-ink-100 p-4">
+                        <div class="text-ink-500 text-[11px] tracking-widest uppercase">Model</div>
+                        <div class="mt-1 font-semibold">Subscription SaaS</div>
+                    </div>
+                    <div class="rounded-brand border border-ink-100 p-4">
+                        <div class="text-ink-500 text-[11px] tracking-widest uppercase">Audience</div>
+                        <div class="mt-1 font-semibold">Digital Goods Sellers</div>
+                    </div>
+                    <div class="rounded-brand border border-ink-100 p-4">
+                        <div class="text-ink-500 text-[11px] tracking-widest uppercase">Focus</div>
+                        <div class="mt-1 font-semibold">Interoperability</div>
+                    </div>
+                </div>
+                <div class="mt-6 rounded-brand border-l-4 border-boom-500 bg-boom-50 p-5">
+                    <p class="text-ink-800"><span class="font-semibold text-ink-900">Executive Summary:</span> DigiBoom
+                        enables creators to export, import, and synchronize digital goods across marketplaces
+                        automatically — breaking platform lock-in, reducing algorithm risk, and restoring growth through
+                        true interoperability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Journey (TOC as timeline) -->
+    <section class="mx-auto max-w-5xl px-6 pb-12">
+        <h2 class="font-display text-3xl text-ink-900">Journey</h2>
+        <div class="mt-2 h-1 w-16 bg-boom-500"></div>
+        <ol class="mt-6 grid gap-4 md:grid-cols-3 text-sm">
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">1</span>
+                <a class="hover:underline" href="#abstract">Abstract</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">2</span>
+                <a class="hover:underline" href="#mission-vision">Mission & Vision</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">3</span>
+                <a class="hover:underline" href="#values">Core Values</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">4</span>
+                <a class="hover:underline" href="#problem">The Problem</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">5</span>
+                <a class="hover:underline" href="#solution">The Solution</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">6</span>
+                <a class="hover:underline" href="#stage-goals">Stage & Goals</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">7</span>
+                <a class="hover:underline" href="#technology">Technology</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">8</span>
+                <a class="hover:underline" href="#monetization">Monetization</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">9</span>
+                <a class="hover:underline" href="#growth">Growth Strategy</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">10</span>
+                <a class="hover:underline" href="#team">Team</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">11</span>
+                <a class="hover:underline" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">12</span>
+                <a class="hover:underline" href="#impact">Impact</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">13</span>
+                <a class="hover:underline" href="#vision">5–10 Year Vision</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">14</span>
+                <a class="hover:underline" href="#future">Future</a>
+            </li>
+            <li class="flex items-center gap-3">
+                <span
+                    class="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-boom-500 text-white font-bold">15</span>
+                <a class="hover:underline" href="#notes">Notes</a>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Body -->
+    <main class="mx-auto max-w-5xl px-6 pb-24">
+        <article class="prose prose-slate max-w-none">
+
+            <style>
+                .section-head {
+                    display: flex;
+                    align-items: center;
+                    gap: .75rem
+                }
+
+                .section-head .num {
+                    height: 40px;
+                    width: 40px;
+                    display: grid;
+                    place-items: center;
+                    border-radius: 9999px;
+                    background: #F1641E;
+                    color: white;
+                    font-weight: 700
+                }
+            </style>
+
+            <!-- 1 -->
+            <section id="abstract" class="mb-16">
+                <div class="section-head"><span class="num">1</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Abstract</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p class="mt-4 lead">In the modern digital economy, millions of creators sell their work through
+                    platforms such as Etsy, Gumroad, and Shopify. Yet these ecosystems remain isolated — each with its
+                    own rules, fees, and technical barriers. When a platform declines, sellers lose visibility, income,
+                    and sometimes their entire business. <strong>DigiBoom</strong> breaks those walls by enabling
+                    creators to <strong>export, import, and synchronize</strong> digital goods across marketplaces
+                    automatically.</p>
+            </section>
+
+            <!-- 2 (alt background wrapper) -->
+            <section id="mission-vision" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">2</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Mission & Vision</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <h3 class="mt-4">Mission</h3>
+                <p class="lead">To empower creators of digital goods to expand their businesses rapidly by enabling
+                    seamless interoperability between e‑commerce platforms.</p>
+                <h3>Vision</h3>
+                <p>To build a global infrastructure for digital product mobility — where creators can instantly publish,
+                    update, and distribute their files worldwide, independent of any single marketplace.</p>
+            </section>
+
+            <!-- 3 -->
+            <section id="values" class="mb-16">
+                <div class="section-head"><span class="num">3</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Core Values</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <li><strong>Scalability</strong> — systems designed for exponential growth.</li>
+                    <li><strong>Explosive Growth</strong> — tools that multiply reach.</li>
+                    <li><strong>Integration</strong> — connecting isolated ecosystems.</li>
+                    <li><strong>Cooperation</strong> — empowering creators.</li>
+                    <li><strong>Expansion</strong> — fueling digital entrepreneurship.</li>
+                </ul>
+            </section>
+
+            <!-- 4 (alt background) -->
+            <section id="problem" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">4</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">The Problem</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p class="mt-4 lead">Digital creators are trapped inside closed ecosystems. Export/import features
+                    rarely support <strong>digital products</strong> (files, metadata, licenses). Sellers become
+                    dependent on single platforms, vulnerable to algorithm changes, traffic drops, bans, and fee hikes.
+                </p>
+            </section>
+
+            <!-- 5 -->
+            <section id="solution" class="mb-16">
+                <div class="section-head"><span class="num">5</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">The Solution — DigiBoom</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p class="mt-4"><strong>DigiBoom</strong> is a universal bridge for digital commerce. Connect your
+                    store; the platform syncs listings across marketplaces.</p>
+                <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                    <div class="rounded-brand border border-ink-100 p-4">
+                        <h4 class="m-0 text-sm font-semibold tracking-wide text-ink-500 uppercase">Workflow</h4>
+                        <ol class="mt-3 space-y-2 text-sm">
+                            <li><strong>Connect:</strong> Securely link Etsy, Shopify, Gumroad.</li>
+                            <li><strong>Analyze:</strong> Scan listings, find transferable products.</li>
+                            <li><strong>Publish:</strong> Replicate listings with files & metadata.</li>
+                            <li><strong>Update:</strong> Edit once — update everywhere.</li>
+                            <li><strong>Improve:</strong> Insights for placement & performance.</li>
+                        </ol>
+                    </div>
+                    <div class="rounded-brand border border-ink-100 p-4">
+                        <h4 class="m-0 text-sm font-semibold tracking-wide text-ink-500 uppercase">Benefits</h4>
+                        <ul class="mt-3 list-disc list-inside text-sm">
+                            <li>Break platform lock‑in</li>
+                            <li>Reduce algorithmic risk</li>
+                            <li>Save time via automation</li>
+                            <li>Own your data & files</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6 (alt background) -->
+            <section id="stage-goals" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">6</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Current Stage & Goals</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p class="mt-4">Concept and validation phase. Next step: public landing page for early signups, followed
+                    by MVP development guided by user feedback.</p>
+            </section>
+
+            <!-- 7 -->
+            <section id="technology" class="mb-16">
+                <div class="section-head"><span class="num">7</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Technology Overview</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <h3 class="mt-4">Architecture</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Layer</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frontend / Marketing Site</strong></td>
+                            <td>Static landings for signups & SEO.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Core Application (Monorepo)</strong></td>
+                            <td>TypeScript + Bun.js app with user/admin UIs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend Repository</strong></td>
+                            <td>Node.js/Bun.js API, integrations, sync logic.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Automation</h3>
+                <ul>
+                    <li>API bundling layer (Etsy/Shopify/Gumroad)</li>
+                    <li>Import/export pipelines for files & metadata</li>
+                    <li>Product matching & deduplication</li>
+                    <li>Structured file storage and caching</li>
+                </ul>
+                <h3>Privacy & Security</h3>
+                <p>User data remains user‑owned; official APIs, OAuth, and encryption planned before MVP.</p>
+            </section>
+
+            <!-- 8 (alt background) -->
+            <section id="monetization" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">8</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Monetization Model</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p>Transparent subscription pricing; no tokens/credits.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Price</th>
+                            <th>Product Limit</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Starter</td>
+                            <td>$10/mo</td>
+                            <td>50</td>
+                            <td>For small creators</td>
+                        </tr>
+                        <tr>
+                            <td>Pro</td>
+                            <td>$30/mo</td>
+                            <td>200</td>
+                            <td>For active stores</td>
+                        </tr>
+                        <tr>
+                            <td>Business</td>
+                            <td>$50/mo</td>
+                            <td>500</td>
+                            <td>For studios</td>
+                        </tr>
+                        <tr>
+                            <td>Enterprise</td>
+                            <td>Custom</td>
+                            <td>Unlimited</td>
+                            <td>Tailored & API access</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 9 -->
+            <section id="growth" class="mb-16">
+                <div class="section-head"><span class="num">9</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Growth Strategy</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <ol>
+                    <li><strong>Community first:</strong> Telegram/Facebook/Discord groups.</li>
+                    <li><strong>Organic expansion:</strong> reinvest to ads & SEO.</li>
+                    <li><strong>Self‑propagation:</strong> users promote via multi‑platform presence.</li>
+                    <li><strong>Continuous improvement:</strong> new integrations & AI tooling.</li>
+                </ol>
+                <p><strong>Target:</strong> $10,000 MRR within 4 months post‑MVP.</p>
+            </section>
+
+            <!-- 10 (alt background) -->
+            <section id="team" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">10</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Team & Collaboration</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <h3 class="mt-4">Founder</h3>
+                <p><strong>Roman Travnikov</strong> — Founder & Lead Developer. 10+ years in web development.</p>
+                <h3>Extended Team</h3>
+                <p>Freelance collaborators (backend, UI/UX, QA) will be hired as the project scales.</p>
+                <h3>Advisors & Investors</h3>
+                <p>None at this stage; independence first, partnerships later if aligned.</p>
+            </section>
+
+            <!-- 11 -->
+            <section id="roadmap" class="mb-16">
+                <div class="section-head"><span class="num">11</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Roadmap (12 Months)</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Milestone</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Landing Page</td>
+                            <td>Signup & interest collection</td>
+                        </tr>
+                        <tr>
+                            <td>2–3</td>
+                            <td>Community Build</td>
+                            <td>Engage seller groups</td>
+                        </tr>
+                        <tr>
+                            <td>3–5</td>
+                            <td>MVP Development</td>
+                            <td>Etsy ↔ Shopify sync</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Closed Beta</td>
+                            <td>Invite early users</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Public Release</td>
+                            <td>Open subscriptions</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Expansion</td>
+                            <td>Add Gumroad & analytics</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 12 (alt background) -->
+            <section id="impact" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">12</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Industry Impact</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p>Platform interoperability shifts competition toward serving creators better (lower fees, improved
+                    tools), democratizing digital commerce.</p>
+            </section>
+
+            <!-- 13 -->
+            <section id="vision" class="mb-16">
+                <div class="section-head"><span class="num">13</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">5–10 Year Vision</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <ul>
+                    <li>AI listing optimization & pricing suggestions</li>
+                    <li>Automation suite for replies & store ops</li>
+                    <li>DigiBoom marketplace</li>
+                    <li>Lower‑fee decentralized payments (optional)</li>
+                    <li>Full interoperability across platforms</li>
+                </ul>
+            </section>
+
+            <!-- 14 (alt background) -->
+            <section id="future" class="mb-16 rounded-brand border border-ink-100 bg-ink-50 p-6">
+                <div class="section-head"><span class="num">14</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Future of Digital Goods</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p>As assets from art to blueprints become digital, DigiBoom serves as the universal connective layer
+                    enabling instant, borderless exchange.</p>
+            </section>
+
+            <!-- 15 -->
+            <section id="notes" class="mb-10">
+                <div class="section-head"><span class="num">15</span>
+                    <h2 class="m-0 font-display tracking-wide text-3xl">Format & Reading Notes</h2>
+                </div>
+                <div class="mt-3 h-0.5 w-14 bg-ink-200"></div>
+                <p>Prepared for users, developers, and collaborators. Target length ≈ 10 pages. Print‑friendly layout
+                    with consistent section styling.</p>
+            </section>
+
+            <div class="h-px bg-slate-200 my-12"></div>
+            <section class="mb-24">
+                <h2 class="m-0 font-display tracking-wide text-3xl">Conclusion</h2>
+                <p class="mt-4"><strong>DigiBoom</strong> is the missing infrastructure layer of digital commerce —
+                    restoring freedom, growth, and sustainability for creators worldwide.</p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="mx-auto max-w-5xl px-6 pb-16 text-sm text-ink-600">
+        © <span id="year"></span> DigiBoom — Roman Travnikov
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
