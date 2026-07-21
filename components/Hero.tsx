@@ -41,6 +41,9 @@ export default function Hero() {
                 {name} <span className="text-white/60">· we set it up</span>
               </span>
             ))}
+            <a href="#platforms" className="font-mono text-xs text-white/80 underline underline-offset-4 hover:text-white">
+              + 20 more platforms
+            </a>
           </div>
 
           <SignupForm
