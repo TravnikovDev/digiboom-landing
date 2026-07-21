@@ -16,13 +16,13 @@ const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
     title: "Marketplaces",
     blurb: "Existing audiences already searching for digital goods.",
     items: [
-      { name: "Etsy", color: "#F56400", stage: "launch" },
+      { name: "Etsy", color: "#F56400", logo: "/logos/etsy.svg", stage: "launch" },
       { name: "Creative Market", color: "#0FA0A0", stage: "planned" },
       { name: "Creative Fabrica", color: "#2E7CF6", stage: "planned" },
       { name: "Design Bundles", color: "#E4405F", stage: "planned" },
-      { name: "Envato", color: "#82B440", stage: "planned" },
-      { name: "itch.io", color: "#FA5C5C", stage: "exploring" },
-      { name: "ArtStation", color: "#13AFF0", stage: "exploring" },
+      { name: "Envato", color: "#82B440", logo: "/logos/envato.svg", stage: "planned" },
+      { name: "itch.io", color: "#FA5C5C", logo: "/logos/itchdotio.svg", stage: "exploring" },
+      { name: "ArtStation", color: "#13AFF0", logo: "/logos/artstation.svg", stage: "exploring" },
       { name: "CGTrader", color: "#E4573D", stage: "exploring" },
     ],
   },
@@ -30,22 +30,22 @@ const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
     title: "Your own storefront",
     blurb: "Stores you control, where you keep the customer relationship.",
     items: [
-      { name: "Shopify", color: "#5A863E", stage: "launch" },
-      { name: "WooCommerce", color: "#7F54B3", stage: "planned" },
-      { name: "Payhip", color: "#2C7BE5", stage: "planned" },
-      { name: "Sellfy", color: "#22A6A0", stage: "planned" },
-      { name: "Big Cartel", color: "#E0573E", stage: "exploring" },
-      { name: "Squarespace", color: "#1B1712", stage: "exploring" },
+      { name: "Shopify", color: "#5A863E", logo: "/logos/shopify.svg", stage: "launch" },
+      { name: "WooCommerce", color: "#7F54B3", logo: "/logos/woocommerce.svg", stage: "planned" },
+      { name: "Payhip", color: "#2C7BE5", logo: "/logos/payhip.svg", stage: "planned" },
+      { name: "Sellfy", color: "#22A6A0", logo: "/logos/sellfy.svg", stage: "planned" },
+      { name: "Big Cartel", color: "#E0573E", logo: "/logos/bigcartel.svg", stage: "exploring" },
+      { name: "Squarespace", color: "#1B1712", logo: "/logos/squarespace.svg", stage: "exploring" },
     ],
   },
   {
     title: "Creator platforms",
     blurb: "Where an audience buys directly from you.",
     items: [
-      { name: "Gumroad", color: "#D64FA8", stage: "launch" },
-      { name: "Lemon Squeezy", color: "#4B3A8F", stage: "planned" },
-      { name: "Ko-fi", color: "#FF5E5B", stage: "planned" },
-      { name: "Patreon", color: "#E2574C", stage: "exploring" },
+      { name: "Gumroad", color: "#D64FA8", logo: "/logos/gumroad.svg", stage: "launch" },
+      { name: "Lemon Squeezy", color: "#4B3A8F", logo: "/logos/lemonsqueezy.svg", stage: "planned" },
+      { name: "Ko-fi", color: "#FF5E5B", logo: "/logos/kofi.svg", stage: "planned" },
+      { name: "Patreon", color: "#E2574C", logo: "/logos/patreon.svg", stage: "exploring" },
       { name: "Podia", color: "#2B6CB0", stage: "exploring" },
       { name: "Whop", color: "#C2410C", stage: "exploring" },
     ],
@@ -56,8 +56,8 @@ const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
     items: [
       { name: "Teachable", color: "#0E7C86", stage: "exploring" },
       { name: "Thinkific", color: "#2A5DB0", stage: "exploring" },
-      { name: "BeatStars", color: "#B3202C", stage: "exploring" },
-      { name: "Bandcamp", color: "#1DA0C3", stage: "exploring" },
+      { name: "BeatStars", color: "#B3202C", logo: "/logos/beatstars.svg", stage: "exploring" },
+      { name: "Bandcamp", color: "#1DA0C3", logo: "/logos/bandcamp.svg", stage: "exploring" },
     ],
   },
 ];
@@ -86,7 +86,12 @@ function PlatformTile({ platform }: { platform: Platform }) {
     <div className="flex items-center gap-3 rounded-xl border-2 border-ink bg-white px-3 py-2.5 comic-shadow-sm">
       {platform.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={platform.logo} alt="" aria-hidden="true" className="h-8 w-8 rounded-lg object-contain shrink-0" />
+        <img
+          src={platform.logo}
+          alt=""
+          aria-hidden="true"
+          className="h-8 w-8 rounded-lg border-2 border-bomb-200 bg-white object-contain p-1.5 shrink-0"
+        />
       ) : (
         <span
           className="h-8 w-8 rounded-lg border-2 border-ink grid place-items-center font-display text-lg text-white shrink-0"

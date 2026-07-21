@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "logos": "node scripts/generate-logos.mjs",
     "start": "next start"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "simple-icons": "^16.27.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
