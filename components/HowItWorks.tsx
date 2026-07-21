@@ -2,7 +2,7 @@ import { Plug, ScanLine, Store, Upload } from "lucide-react";
 import Reveal from "./Reveal";
 
 const orangeBall = {
-  background: "radial-gradient(circle at 32% 28%, #FF9A5C 0%, #FF6B1A 55%, #C24204 100%)",
+  background: "radial-gradient(circle at 32% 28%, #FF9A5C 0%, #EE5C0B 55%, #C24204 100%)",
   boxShadow: "inset -3px -5px 8px rgba(27,23,18,.35), 0 6px 10px rgba(27,23,18,.25)",
 };
 

@@ -21,27 +21,33 @@ export default function Hero() {
             <br />
             <span className="text-ink">In a good way.</span>
           </h1>
-          <p className="mt-5 text-white text-lg max-w-md font-medium leading-relaxed">
-            Selling on <strong className="text-ink">Etsy</strong> only? DigiBoom sets up your{" "}
-            <strong className="text-ink">Shopify</strong> and <strong className="text-ink">Gumroad</strong> storefronts for you,
-            moves your catalog over, and keeps it all in sync. One shop becomes three — and your products get found several
-            times more often.
+          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-relaxed">
+            Selling on <strong className="underline decoration-2 underline-offset-2">Etsy</strong> only? DigiBoom sets up your{" "}
+            <strong className="underline decoration-2 underline-offset-2">Shopify</strong> and{" "}
+            <strong className="underline decoration-2 underline-offset-2">Gumroad</strong> storefronts for you, moves your
+            catalog over, and keeps it all in sync. One shop becomes three — and your products get found several times more
+            often.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
-            <span className="font-mono text-xs text-white border border-white/50 rounded-md px-2.5 py-1.5 bg-white/10">
-              {PLATFORMS[0]} <span className="text-white/60">· your shop</span>
+            <span className="font-mono text-xs text-ink border-2 border-ink rounded-md px-2.5 py-1.5 bg-white">
+              {PLATFORMS[0]} <span className="text-bomb-600">· your shop</span>
             </span>
-            <span className="font-comic text-xl text-white/90">→</span>
+            <span className="font-comic text-xl text-ink" aria-hidden="true">
+              →
+            </span>
             {PLATFORMS.slice(1).map((name) => (
               <span
                 key={name}
-                className="font-mono text-xs text-white border border-dashed border-white/50 rounded-md px-2.5 py-1.5"
+                className="font-mono text-xs text-ink border-2 border-dashed border-ink rounded-md px-2.5 py-1.5"
               >
-                {name} <span className="text-white/60">· we set it up</span>
+                {name} <span className="text-ink/70">· we set it up</span>
               </span>
             ))}
-            <a href="#platforms" className="font-mono text-xs text-white/80 underline underline-offset-4 hover:text-white">
+            <a
+              href="#platforms"
+              className="font-mono text-xs text-ink underline underline-offset-4 rounded px-2 py-2.5 hover:bg-white/30"
+            >
               + 20 more platforms
             </a>
           </div>

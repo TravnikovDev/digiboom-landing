@@ -63,7 +63,7 @@ export default function SignupForm({
           {buttonLabel}
         </button>
       </form>
-      <p className="mt-3 text-white/90 text-sm">
+      <p className="mt-3 text-ink text-sm font-medium" role="status">
         {state === "done" ? (
           <>
             <strong>Fuse lit.</strong> You&apos;ll hear the boom first.

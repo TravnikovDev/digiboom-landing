@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-blast: #ff6b1a;
+  --color-blast: #ee5c0b;
   --color-ember: #d14805;
   --color-emberdark: #a33403;
   --color-ink: #1b1712;
@@ -23,6 +23,36 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Keyboard focus: ink ring by default, white where the surface is dark. */
+:focus-visible {
+  outline: 3px solid #1b1712;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.bg-ink :focus-visible,
+footer :focus-visible,
+.on-dark :focus-visible {
+  outline-color: #ffffff;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  background: #1b1712;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 .comic-shadow {
@@ -101,6 +131,12 @@ html {
   animation: marquee 22s linear infinite;
 }
 
+/* WCAG 2.2.2 — let people stop the moving content */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
 @keyframes fusepulse {
   0%,
   100% {
@@ -133,4 +169,28 @@ html {
 
 details summary::-webkit-details-marker {
   display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track,
+  .sync-dot,
+  .fuse-burning {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

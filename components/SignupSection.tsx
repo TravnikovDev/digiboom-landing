@@ -12,7 +12,7 @@ export default function SignupSection() {
           <br />
           the first sync
         </h2>
-        <p className="mt-4 text-white font-medium max-w-xl mx-auto leading-relaxed">
+        <p className="mt-4 text-ink font-medium max-w-xl mx-auto leading-relaxed">
           Build updates as they ship, a beta invite ahead of the queue, and launch pricing locked in for early members.
         </p>
         <SignupForm inputId="email-bottom" defaultNote="One email per milestone. Unsubscribe anytime." large center />

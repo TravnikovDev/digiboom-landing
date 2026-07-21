@@ -45,7 +45,7 @@ export default function SyncPanel() {
       <div className="flex items-center gap-3 px-4 py-3.5 border-b border-bomb-200">
         <div
           className="h-11 w-11 rounded-lg border-2 border-ink shrink-0"
-          style={{ background: "radial-gradient(circle at 30% 26%, #FF9A5C 0%, #FF6B1A 60%, #C24204 100%)" }}
+          style={{ background: "radial-gradient(circle at 30% 26%, #FF9A5C 0%, #EE5C0B 60%, #C24204 100%)" }}
         />
         <div className="min-w-0">
           <p className="font-semibold text-sm truncate">Your Etsy catalog — 48 products</p>

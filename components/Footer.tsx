@@ -9,13 +9,13 @@ export default function Footer() {
           <span className="font-display text-lg tracking-widest text-white">DIGIBOOM</span>
         </div>
         <nav className="flex gap-6">
-          <a className="hover:text-white" href="#platforms">
+          <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#platforms">
             Platforms
           </a>
-          <a className="hover:text-white" href="#status">
+          <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#status">
             Roadmap
           </a>
-          <a className="hover:text-white" href="#signup">
+          <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#signup">
             Waitlist
           </a>
         </nav>

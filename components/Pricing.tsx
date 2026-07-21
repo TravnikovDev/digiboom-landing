@@ -11,7 +11,7 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-5">
         <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Planned pricing</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Flat monthly plans, no credits</h2>
-        <p className="mt-3 text-white/90 max-w-2xl font-medium">
+        <p className="mt-3 text-ink max-w-2xl font-medium">
           Priced by catalog size, not per sync. Waitlist members lock in launch pricing before anyone else.
         </p>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -48,7 +48,7 @@ export default function Pricing() {
           <Reveal delay={0.24} className="bg-ink border-[3px] border-ink rounded-2xl p-6 comic-shadow">
             <div
               className="h-12 w-12 rounded-full border-2 border-white"
-              style={sphere("#FF9A5C", "#FF6B1A", "#C24204", ", 0 0 18px rgba(255,107,26,.5)")}
+              style={sphere("#FF9A5C", "#EE5C0B", "#C24204", ", 0 0 18px rgba(255,107,26,.5)")}
             />
             <h3 className="mt-3 font-display text-3xl text-white">Enterprise</h3>
             <p className="font-mono text-[11px] text-bomb-400">unlimited products</p>

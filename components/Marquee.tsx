@@ -26,7 +26,7 @@ function Line({ hidden = false }: { hidden?: boolean }) {
 
 export default function Marquee() {
   return (
-    <div className="bg-ink py-4 overflow-hidden border-y-4 border-ink">
+    <div className="marquee bg-ink py-4 overflow-hidden border-y-4 border-ink">
       <div className="marquee-track flex w-max">
         <Line />
         <Line hidden />

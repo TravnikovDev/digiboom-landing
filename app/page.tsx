@@ -14,17 +14,22 @@ import SignupSection from "@/components/SignupSection";
 export default function Home() {
   return (
     <>
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <Nav />
-      <Hero />
-      <Marquee />
-      <Product />
-      <Problem />
-      <HowItWorks />
-      <Platforms />
-      <Countdown />
-      <Pricing />
-      <Faq />
-      <SignupSection />
+      <main id="main">
+        <Hero />
+        <Marquee />
+        <Product />
+        <Problem />
+        <HowItWorks />
+        <Platforms />
+        <Countdown />
+        <Pricing />
+        <Faq />
+        <SignupSection />
+      </main>
       <Footer />
     </>
   );

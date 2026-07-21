@@ -150,7 +150,7 @@ function ProductCards() {
           {/* thumbnail block */}
           <mesh position={[0, 0.19, 0.035]}>
             <boxGeometry args={[0.56, 0.4, 0.02]} />
-            <meshToonMaterial color="#FF6B1A" />
+            <meshToonMaterial color="#EE5C0B" />
           </mesh>
           {/* metadata lines */}
           <mesh position={[-0.08, -0.13, 0.035]}>
@@ -186,12 +186,18 @@ function FitCamera({ radius = 3.1 }: { radius?: number }) {
 
 export default function Bomb3D() {
   return (
-    <Canvas camera={{ position: [0, 0.3, 7.4], fov: 36 }} dpr={[1, 2]} gl={{ antialias: true, alpha: true }}>
+    <Canvas
+      camera={{ position: [0, 0.3, 7.4], fov: 36 }}
+      dpr={[1, 2]}
+      gl={{ antialias: true, alpha: true }}
+      aria-label="The DigiBoom bomb mascot, with digital product cards orbiting it"
+      role="img"
+    >
       <FitCamera />
       <ambientLight intensity={0.55} />
       <directionalLight position={[-3, 4, 3]} intensity={1.25} />
       {/* orange bounce light from the scene */}
-      <pointLight position={[2.6, -1.6, 2]} color="#FF6B1A" intensity={18} />
+      <pointLight position={[2.6, -1.6, 2]} color="#EE5C0B" intensity={18} />
       <group scale={0.82} position={[0, -0.05, 0]}>
         <Bomb />
         <ProductCards />
