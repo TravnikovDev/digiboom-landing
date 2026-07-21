@@ -13,17 +13,18 @@ export default function Hero() {
       />
       <div className="grid lg:grid-cols-2 gap-10 items-center relative">
         <div>
-          <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">
-            Multi-marketplace sync for digital products
-          </p>
-          <h1 className="mt-3 font-display text-white leading-[0.95] text-6xl sm:text-7xl lg:text-8xl">
-            Sell everywhere.
+          <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Tick... tick... tick...</p>
+          <h1 className="mt-2 font-display text-white leading-[0.95] text-6xl sm:text-7xl lg:text-8xl">
+            We&apos;ll explode
             <br />
-            <span className="text-ink">Manage in one place.</span>
+            your sales.
+            <br />
+            <span className="text-ink">In a good way.</span>
           </h1>
           <p className="mt-5 text-white text-lg max-w-md font-medium leading-relaxed">
-            DigiBoom connects your stores and keeps every listing in sync — files, prices, metadata and licenses. Publish a
-            product once, and it goes live across every marketplace you sell on.
+            One bomb, three marketplaces. DigiBoom syncs your digital products across <strong className="text-ink">Etsy</strong>,{" "}
+            <strong className="text-ink">Shopify</strong> and <strong className="text-ink">Gumroad</strong> — edit once, publish
+            everywhere, and boom: customers from every direction.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -38,7 +39,11 @@ export default function Hero() {
             <span className="font-mono text-xs text-white/70">+ more at launch</span>
           </div>
 
-          <SignupForm inputId="email-hero" defaultNote="Free early access for waitlist members. Product updates only — no spam." />
+          <SignupForm
+            inputId="email-hero"
+            buttonLabel="Light the fuse"
+            defaultNote="Free early access for waitlist members. Product updates only — no spam."
+          />
         </div>
 
         {/* Bomb mascot — three.js scene, padded so the orbit never clips */}

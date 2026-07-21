@@ -7,11 +7,13 @@ const FORMSPREE_ACTION = "https://formspree.io/f/YOUR_FORM_ID";
 export default function SignupForm({
   inputId,
   defaultNote,
+  buttonLabel = "Get early access",
   large = false,
   center = false,
 }: {
   inputId: string;
   defaultNote: string;
+  buttonLabel?: string;
   large?: boolean;
   center?: boolean;
 }) {
@@ -58,13 +60,13 @@ export default function SignupForm({
           type="submit"
           className={`rounded-full bg-ink text-white font-bold px-7 ${pad} border-[3px] border-ink comic-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all whitespace-nowrap`}
         >
-          Get early access
+          {buttonLabel}
         </button>
       </form>
       <p className="mt-3 text-white/90 text-sm">
         {state === "done" ? (
           <>
-            <strong>You&apos;re on the list.</strong> We&apos;ll email you when the beta opens.
+            <strong>Fuse lit.</strong> You&apos;ll hear the boom first.
           </>
         ) : state === "error" ? (
           "That didn't go through — try again in a minute."

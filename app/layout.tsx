@@ -25,7 +25,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DigiBoom — sell everywhere, manage in one place",
+  title: "DigiBoom — we'll explode your sales. In a good way.",
   description:
     "DigiBoom keeps your digital products in sync across Etsy, Shopify and Gumroad — files, prices, metadata and licenses. Publish once, sell everywhere. Join the early access list.",
 };
