@@ -2,15 +2,15 @@ import Reveal from "./Reveal";
 
 const CARDS = [
   {
-    label: "platform_lock_in",
-    title: "Locked into one storefront",
-    text: "Your files, listings and reviews live inside a single marketplace. Expanding to another means rebuilding the whole catalog by hand.",
+    label: "expansion_is_expensive",
+    title: "A second store costs weeks",
+    text: "New account, new branding, new categories, then re-uploading every file and description by hand. Most sellers start and give up.",
     tilt: "-rotate-1",
   },
   {
-    label: "single_point_of_failure",
-    title: "One algorithm decides your income",
-    text: "A ranking change, a policy update or a suspension can cut your traffic overnight — with nowhere else for buyers to find you.",
+    label: "capped_visibility",
+    title: "One marketplace, one audience",
+    text: "Your products are only ever seen by people already browsing that platform. Every other marketplace's buyers never know you exist.",
     tilt: "rotate-1",
   },
   {
@@ -26,7 +26,9 @@ export default function Problem() {
     <section className="bg-ember py-20">
       <div className="mx-auto max-w-6xl px-5">
         <p className="font-comic text-2xl tracking-wide text-white/85 -rotate-1 inline-block">The problem</p>
-        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Selling in one place is a single point of failure</h2>
+        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">
+          One shop means one audience — and one bad day away from zero
+        </h2>
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {CARDS.map((card, i) => (
             <Reveal

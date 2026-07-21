@@ -3,19 +3,19 @@ import SyncPanel from "./SyncPanel";
 
 const FEATURES = [
   {
-    label: "one_source_of_truth",
-    title: "Edit once, everywhere updates",
-    text: "Change a price, swap a file, fix a typo in the description — DigiBoom pushes it to every connected store within seconds.",
+    label: "guided_setup",
+    title: "We build the storefronts for you",
+    text: "DigiBoom walks you through opening a Shopify or Gumroad store, then fills it in automatically — branding, categories, policies, products. You approve each step; the busywork is ours.",
   },
   {
-    label: "full_payload",
-    title: "Files, metadata and licenses",
-    text: "Not just titles. Digital assets, variants, tags, categories and license terms travel with the product.",
+    label: "catalog_transfer",
+    title: "Your whole catalog comes along",
+    text: "Digital files, descriptions, variants, tags and license terms are mapped to each platform's format — not just titles and prices.",
   },
   {
-    label: "official_apis",
-    title: "OAuth, official APIs, no scraping",
-    text: "Connections use each marketplace's public API with tokens you can revoke at any time. Your data stays yours.",
+    label: "stays_in_sync",
+    title: "Then it stays in sync, forever",
+    text: "Change a price or upload a new file version once. Every storefront you own updates within seconds.",
   },
 ];
 
@@ -30,8 +30,12 @@ export default function Product() {
           <div>
             <p className="font-comic text-2xl tracking-wide text-ember -rotate-1 inline-block">What you get</p>
             <h2 className="mt-2 font-display text-ink text-5xl sm:text-6xl leading-[0.95]">
-              One dashboard for every store you sell on
+              You bring one shop. We open the rest.
             </h2>
+            <p className="mt-3 text-bomb-600 leading-relaxed">
+              Most sellers never expand because setting up a second storefront means starting from zero. DigiBoom does that
+              part for you — semi-automatically, with your approval at every step.
+            </p>
             <div className="mt-8 space-y-6">
               {FEATURES.map((f, i) => (
                 <Reveal key={f.label} delay={i * 0.08}>

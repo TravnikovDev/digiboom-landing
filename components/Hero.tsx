@@ -22,21 +22,25 @@ export default function Hero() {
             <span className="text-ink">In a good way.</span>
           </h1>
           <p className="mt-5 text-white text-lg max-w-md font-medium leading-relaxed">
-            One bomb, three marketplaces. DigiBoom syncs your digital products across <strong className="text-ink">Etsy</strong>,{" "}
-            <strong className="text-ink">Shopify</strong> and <strong className="text-ink">Gumroad</strong> — edit once, publish
-            everywhere, and boom: customers from every direction.
+            Selling on <strong className="text-ink">Etsy</strong> only? DigiBoom sets up your{" "}
+            <strong className="text-ink">Shopify</strong> and <strong className="text-ink">Gumroad</strong> storefronts for you,
+            moves your catalog over, and keeps it all in sync. One shop becomes three — and your products get found several
+            times more often.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
-            {PLATFORMS.map((name) => (
+            <span className="font-mono text-xs text-white border border-white/50 rounded-md px-2.5 py-1.5 bg-white/10">
+              {PLATFORMS[0]} <span className="text-white/60">· your shop</span>
+            </span>
+            <span className="font-comic text-xl text-white/90">→</span>
+            {PLATFORMS.slice(1).map((name) => (
               <span
                 key={name}
-                className="font-mono text-xs text-white border border-white/50 rounded-md px-2.5 py-1.5 bg-white/10"
+                className="font-mono text-xs text-white border border-dashed border-white/50 rounded-md px-2.5 py-1.5"
               >
-                {name}
+                {name} <span className="text-white/60">· we set it up</span>
               </span>
             ))}
-            <span className="font-mono text-xs text-white/70">+ more at launch</span>
           </div>
 
           <SignupForm

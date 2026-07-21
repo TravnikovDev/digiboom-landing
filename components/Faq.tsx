@@ -2,6 +2,14 @@ import Reveal from "./Reveal";
 
 const ITEMS = [
   {
+    q: "Do I need stores on other platforms already?",
+    a: "No — that's the point. If you only sell on Etsy, DigiBoom guides you through opening the others and fills in most of the setup automatically, then moves your catalog across.",
+  },
+  {
+    q: "Can it open the accounts entirely on its own?",
+    a: "Not entirely — marketplaces require you to accept terms and verify identity yourself, and that's a good thing. DigiBoom prepares everything around those steps: branding, categories, policies, listings and files.",
+  },
+  {
     q: "Is this against marketplace rules?",
     a: "No. DigiBoom uses official public APIs with OAuth authorization — the same integrations marketplaces offer to any app developer. No scraping, no password sharing.",
   },
