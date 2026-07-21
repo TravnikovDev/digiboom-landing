@@ -1,9 +1,11 @@
+import { ArrowRight, Check, Loader } from "lucide-react";
+
 type State = "connected" | "created" | "creating";
 
-const PLATFORMS: { name: string; handle: string; state: State }[] = [
-  { name: "Etsy", handle: "etsy.com/shop/yourstore", state: "connected" },
-  { name: "Shopify", handle: "yourstore.myshopify.com", state: "created" },
-  { name: "Gumroad", handle: "gumroad.com/yourstore", state: "creating" },
+const PLATFORMS: { name: string; handle: string; logo: string; state: State }[] = [
+  { name: "Etsy", handle: "etsy.com/shop/yourstore", logo: "/logos/etsy.svg", state: "connected" },
+  { name: "Shopify", handle: "yourstore.myshopify.com", logo: "/logos/shopify.svg", state: "created" },
+  { name: "Gumroad", handle: "gumroad.com/yourstore", logo: "/logos/gumroad.svg", state: "creating" },
 ];
 
 function StateChip({ state }: { state: State }) {
@@ -15,11 +17,14 @@ function StateChip({ state }: { state: State }) {
     );
   if (state === "created")
     return (
-      <span className="font-mono text-[11px] uppercase tracking-wider text-white bg-ink rounded px-2 py-0.5">store live</span>
+      <span className="font-mono text-[11px] uppercase tracking-wider text-white bg-ink rounded px-2 py-0.5 inline-flex items-center gap-1.5">
+        <Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" />
+        store live
+      </span>
     );
   return (
     <span className="font-mono text-[11px] uppercase tracking-wider text-white bg-blast rounded px-2 py-0.5 inline-flex items-center gap-1.5">
-      <span className="h-1.5 w-1.5 rounded-full bg-white sync-dot" />
+      <Loader className="h-3 w-3 sync-dot" strokeWidth={3} aria-hidden="true" />
       setting up
     </span>
   );
@@ -53,9 +58,13 @@ export default function SyncPanel() {
         {PLATFORMS.map((p) => (
           <div key={p.name} className="flex items-center justify-between gap-3 px-4 py-3">
             <div className="flex items-center gap-3 min-w-0">
-              <span className="h-7 w-7 rounded-md bg-bomb-200 border border-bomb-300 grid place-items-center font-bold text-xs shrink-0">
-                {p.name[0]}
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.logo}
+                alt=""
+                aria-hidden="true"
+                className="h-7 w-7 rounded-md border border-bomb-300 bg-white object-contain p-1 shrink-0"
+              />
               <div className="min-w-0">
                 <p className="font-semibold text-sm leading-tight">{p.name}</p>
                 <p className="font-mono text-[11px] text-bomb-500 truncate">{p.handle}</p>
@@ -68,7 +77,9 @@ export default function SyncPanel() {
 
       {/* status bar */}
       <div className="flex items-center justify-between px-4 py-2.5 bg-bomb-100 border-t border-bomb-200">
-        <span className="font-mono text-[11px] text-bomb-600">1 shop → 3 storefronts</span>
+        <span className="font-mono text-[11px] text-bomb-600 inline-flex items-center gap-1.5">
+          1 shop <ArrowRight className="h-3 w-3" strokeWidth={2.5} aria-hidden="true" /> 3 storefronts
+        </span>
         <span className="font-mono text-[11px] text-ink font-semibold">3× the places buyers can find you</span>
       </div>
     </div>

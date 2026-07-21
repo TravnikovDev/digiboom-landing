@@ -1,3 +1,4 @@
+import { Plug, ScanLine, Store, Upload } from "lucide-react";
 import Reveal from "./Reveal";
 
 const orangeBall = {
@@ -11,10 +12,10 @@ const inkBall = {
 };
 
 const STEPS = [
-  { n: "1", title: "Connect your shop", text: "Authorize the store you already have — Etsy, Shopify or Gumroad — through the official API." },
-  { n: "2", title: "Import your catalog", text: "DigiBoom reads your listings, digital files and metadata, and maps what can move where." },
-  { n: "3", title: "Open new storefronts", text: "Guided setup on the platforms you're missing: account, branding, categories and policies, mostly filled in for you." },
-  { n: "4", title: "Publish everywhere", text: "Your catalog lands on each new store with files, descriptions, tags and licenses intact." },
+  { n: "1", icon: Plug, title: "Connect your shop", text: "Authorize the store you already have — Etsy, Shopify or Gumroad — through the official API." },
+  { n: "2", icon: ScanLine, title: "Import your catalog", text: "DigiBoom reads your listings, digital files and metadata, and maps what can move where." },
+  { n: "3", icon: Store, title: "Open new storefronts", text: "Guided setup on the platforms you're missing: account, branding, categories and policies, mostly filled in for you." },
+  { n: "4", icon: Upload, title: "Publish everywhere", text: "Your catalog lands on each new store with files, descriptions, tags and licenses intact." },
 ];
 
 export default function HowItWorks() {
@@ -33,7 +34,10 @@ export default function HowItWorks() {
               >
                 {step.n}
               </div>
-              <h3 className="mt-3 font-bold">{step.title}</h3>
+              <h3 className="mt-3 font-bold flex items-center gap-2">
+                <step.icon className="h-4 w-4 text-ember shrink-0" strokeWidth={2.5} aria-hidden="true" />
+                {step.title}
+              </h3>
               <p className="mt-1 text-sm text-bomb-600 leading-relaxed">{step.text}</p>
             </Reveal>
           ))}

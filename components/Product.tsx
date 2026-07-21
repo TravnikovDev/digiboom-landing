@@ -1,18 +1,22 @@
+import { PackageOpen, RefreshCw, Store } from "lucide-react";
 import Reveal from "./Reveal";
 import SyncPanel from "./SyncPanel";
 
 const FEATURES = [
   {
+    icon: Store,
     label: "guided_setup",
     title: "We build the storefronts for you",
     text: "DigiBoom walks you through opening a Shopify or Gumroad store, then fills it in automatically — branding, categories, policies, products. You approve each step; the busywork is ours.",
   },
   {
+    icon: PackageOpen,
     label: "catalog_transfer",
     title: "Your whole catalog comes along",
     text: "Digital files, descriptions, variants, tags and license terms are mapped to each platform's format — not just titles and prices.",
   },
   {
+    icon: RefreshCw,
     label: "stays_in_sync",
     title: "Then it stays in sync, forever",
     text: "Change a price or upload a new file version once. Every storefront you own updates within seconds.",
@@ -39,9 +43,16 @@ export default function Product() {
             <div className="mt-8 space-y-6">
               {FEATURES.map((f, i) => (
                 <Reveal key={f.label} delay={i * 0.08}>
-                  <p className="font-mono text-[11px] text-bomb-500">{f.label}</p>
-                  <h3 className="mt-1 font-bold text-lg">{f.title}</h3>
-                  <p className="mt-1 text-bomb-600 leading-relaxed">{f.text}</p>
+                  <div className="flex gap-4">
+                    <span className="h-11 w-11 rounded-xl border-2 border-ink bg-white grid place-items-center shrink-0 comic-shadow-sm">
+                      <f.icon className="h-5 w-5 text-ember" strokeWidth={2.5} aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="font-mono text-[11px] text-bomb-500">{f.label}</p>
+                      <h3 className="mt-0.5 font-bold text-lg">{f.title}</h3>
+                      <p className="mt-1 text-bomb-600 leading-relaxed">{f.text}</p>
+                    </div>
+                  </div>
                 </Reveal>
               ))}
             </div>
