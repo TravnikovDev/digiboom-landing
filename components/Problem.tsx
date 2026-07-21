@@ -25,7 +25,7 @@ export default function Problem() {
   return (
     <section className="bg-ember py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">The problem</p>
+        <p className="font-comic text-2xl tracking-wide text-white/85 -rotate-1 inline-block">The problem</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Selling in one place is a single point of failure</h2>
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {CARDS.map((card, i) => (
@@ -34,8 +34,9 @@ export default function Problem() {
               delay={i * 0.1}
               className={`bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow ${card.tilt}`}
             >
+              <span className="font-comic text-4xl text-ember">{String(i + 1).padStart(2, "0")}</span>
               <p className="font-mono text-[11px] text-bomb-500">{card.label}</p>
-              <h3 className="mt-2 font-bold text-lg">{card.title}</h3>
+              <h3 className="mt-1 font-bold text-lg">{card.title}</h3>
               <p className="mt-2 text-bomb-600 leading-relaxed">{card.text}</p>
             </Reveal>
           ))}

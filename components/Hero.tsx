@@ -13,7 +13,7 @@ export default function Hero() {
       />
       <div className="grid lg:grid-cols-2 gap-10 items-center relative">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/80">
+          <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">
             Multi-marketplace sync for digital products
           </p>
           <h1 className="mt-3 font-display text-white leading-[0.95] text-6xl sm:text-7xl lg:text-8xl">

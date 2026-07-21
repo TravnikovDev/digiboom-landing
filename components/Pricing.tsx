@@ -9,7 +9,7 @@ export default function Pricing() {
   return (
     <section className="bg-blast py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/80">Planned pricing</p>
+        <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Planned pricing</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Flat monthly plans, no credits</h2>
         <p className="mt-3 text-white/90 max-w-2xl font-medium">
           Priced by catalog size, not per sync. Waitlist members lock in launch pricing before anyone else.

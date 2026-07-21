@@ -65,7 +65,7 @@ export default function Countdown() {
   return (
     <section id="status" className="bg-ink py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-blast">Build status</p>
+        <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">Build status</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Being built in the open</h2>
         <p className="mt-3 text-bomb-300 max-w-2xl leading-relaxed">
           DigiBoom is early — here&apos;s exactly what&apos;s done, what&apos;s in progress, and what&apos;s next. This page

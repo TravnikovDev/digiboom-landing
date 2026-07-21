@@ -28,7 +28,7 @@ export default function Product() {
             <SyncPanel />
           </Reveal>
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember">What you get</p>
+            <p className="font-comic text-2xl tracking-wide text-ember -rotate-1 inline-block">What you get</p>
             <h2 className="mt-2 font-display text-ink text-5xl sm:text-6xl leading-[0.95]">
               One dashboard for every store you sell on
             </h2>

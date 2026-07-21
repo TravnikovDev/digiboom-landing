@@ -21,7 +21,7 @@ export default function HowItWorks() {
   return (
     <section className="bg-white py-20 halftone">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember">How it works</p>
+        <p className="font-comic text-2xl tracking-wide text-ember -rotate-1 inline-block">How it works</p>
         <h2 className="mt-2 font-display text-ink text-5xl sm:text-6xl">From one store to everywhere in five steps</h2>
         <div className="mt-12 grid md:grid-cols-5 gap-4 relative">
           <div className="hidden md:block absolute top-7 left-[10%] right-[10%] border-t-4 border-dashed border-ink/50" />
@@ -41,7 +41,7 @@ export default function HowItWorks() {
             <div className="h-14 w-14 rounded-full border-[3px] border-ink grid place-items-center relative z-10" style={inkBall}>
               <span className="font-comic text-white text-2xl">5</span>
             </div>
-            <h3 className="mt-3 font-bold text-ember">Live everywhere</h3>
+            <h3 className="mt-3 font-comic text-2xl tracking-wide text-ember">Live everywhere</h3>
             <p className="mt-1 text-sm text-bomb-600 leading-relaxed">
               Your catalog is selling on every connected marketplace — reaching buyers who were never going to find your one
               store.

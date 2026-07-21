@@ -6,7 +6,7 @@ export default function SignupSection() {
       <div className="absolute -top-16 -left-16 w-72 h-72 halftone-white rounded-full opacity-50 pointer-events-none" />
       <div className="absolute -bottom-20 -right-10 w-80 h-80 halftone-white rounded-full opacity-50 pointer-events-none" />
       <div className="mx-auto max-w-3xl px-5 text-center relative">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/80">Early access</p>
+        <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-2 inline-block">Early access</p>
         <h2 className="mt-3 font-display text-white text-6xl sm:text-7xl leading-[0.95]">
           Get in before
           <br />

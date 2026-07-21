@@ -23,8 +23,8 @@ export default function Faq() {
   return (
     <section className="bg-ember py-20">
       <div className="mx-auto max-w-3xl px-5">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">FAQ</p>
-        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Before you ask</h2>
+        <p className="font-comic text-2xl tracking-wide text-white/85 -rotate-1 inline-block">Before you ask</p>
+        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Questions, answered</h2>
         <div className="mt-8 space-y-4">
           {ITEMS.map((item) => (
             <Reveal key={item.q}>
