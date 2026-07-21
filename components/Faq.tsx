@@ -11,7 +11,7 @@ const ITEMS = [
   },
   {
     q: "When can I actually try it?",
-    a: "MVP with Etsy ↔ Shopify sync goes to closed beta first — waitlist members get invited in order of signup. Light the fuse now, skip the queue later.",
+    a: "The MVP with Etsy ↔ Shopify sync goes to closed beta first — waitlist members get invited in signup order. Join now to skip the queue later.",
   },
   {
     q: "Who's building this?",
@@ -23,7 +23,8 @@ export default function Faq() {
   return (
     <section className="bg-ember py-20">
       <div className="mx-auto max-w-3xl px-5">
-        <h2 className="font-display text-white text-5xl sm:text-6xl">Before you ask</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">FAQ</p>
+        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Before you ask</h2>
         <div className="mt-8 space-y-4">
           {ITEMS.map((item) => (
             <Reveal key={item.q}>

@@ -2,21 +2,21 @@ import Reveal from "./Reveal";
 
 const CARDS = [
   {
-    n: 1,
-    title: "Locked in one platform",
-    text: "Your files, listings and reviews are trapped in a single marketplace. Moving out by hand? Weeks of copy-paste.",
+    label: "platform_lock_in",
+    title: "Locked into one storefront",
+    text: "Your files, listings and reviews live inside a single marketplace. Expanding to another means rebuilding the whole catalog by hand.",
     tilt: "-rotate-1",
   },
   {
-    n: 2,
-    title: "Algorithm roulette",
-    text: "One ranking change, one policy update, one ban — and your traffic flatlines overnight. You never held the detonator.",
+    label: "single_point_of_failure",
+    title: "One algorithm decides your income",
+    text: "A ranking change, a policy update or a suspension can cut your traffic overnight — with nowhere else for buyers to find you.",
     tilt: "rotate-1",
   },
   {
-    n: 3,
-    title: "Manual re-listing hell",
-    text: "Every price change, every new file version, repeated on every platform. Your time burns like a fuse.",
+    label: "manual_busywork",
+    title: "Every update, repeated by hand",
+    text: "New file version, new price, new tags — multiplied by every platform you sell on. Hours a week that produce nothing new.",
     tilt: "-rotate-1",
   },
 ];
@@ -25,12 +25,16 @@ export default function Problem() {
   return (
     <section className="bg-ember py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-comic text-white/80 text-xl -rotate-1">Meanwhile, in a lonely shop...</p>
-        <h2 className="mt-1 font-display text-white text-5xl sm:text-6xl">Selling on one platform is a time bomb</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">The problem</p>
+        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Selling in one place is a single point of failure</h2>
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {CARDS.map((card, i) => (
-            <Reveal key={card.n} delay={i * 0.1} className={`bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow ${card.tilt}`}>
-              <span className="font-comic text-4xl text-ember">{card.n}</span>
+            <Reveal
+              key={card.label}
+              delay={i * 0.1}
+              className={`bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow ${card.tilt}`}
+            >
+              <p className="font-mono text-[11px] text-bomb-500">{card.label}</p>
               <h3 className="mt-2 font-bold text-lg">{card.title}</h3>
               <p className="mt-2 text-bomb-600 leading-relaxed">{card.text}</p>
             </Reveal>

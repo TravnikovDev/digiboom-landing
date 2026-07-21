@@ -7,6 +7,7 @@ import Marquee from "@/components/Marquee";
 import Nav from "@/components/Nav";
 import Pricing from "@/components/Pricing";
 import Problem from "@/components/Problem";
+import Product from "@/components/Product";
 import SignupSection from "@/components/SignupSection";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Marquee />
+      <Product />
       <Problem />
       <HowItWorks />
       <Countdown />

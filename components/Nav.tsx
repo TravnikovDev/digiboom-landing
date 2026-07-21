@@ -8,8 +8,8 @@ export default function Nav() {
         <span className="font-display text-2xl tracking-widest text-white">DIGIBOOM</span>
       </a>
       <div className="flex items-center gap-3">
-        <span className="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-white border-2 border-white/70 rounded-full px-3 py-1.5 -rotate-2">
-          <span className="h-2 w-2 rounded-full bg-white fuse-burning" /> In development · MVP 2026
+        <span className="hidden sm:inline-flex items-center gap-2 font-mono text-[11px] text-white border border-white/50 rounded-md px-2.5 py-1.5">
+          <span className="h-1.5 w-1.5 rounded-full bg-white sync-dot" /> in development · beta 2026
         </span>
         <a
           href="#signup"

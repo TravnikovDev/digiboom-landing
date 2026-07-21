@@ -6,16 +6,16 @@ export default function SignupSection() {
       <div className="absolute -top-16 -left-16 w-72 h-72 halftone-white rounded-full opacity-50 pointer-events-none" />
       <div className="absolute -bottom-20 -right-10 w-80 h-80 halftone-white rounded-full opacity-50 pointer-events-none" />
       <div className="mx-auto max-w-3xl px-5 text-center relative">
-        <p className="font-comic text-white/90 text-2xl -rotate-2">Don&apos;t just stand there!</p>
-        <h2 className="mt-2 font-display text-white text-6xl sm:text-7xl leading-[0.95]">
-          Get in the
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/80">Early access</p>
+        <h2 className="mt-3 font-display text-white text-6xl sm:text-7xl leading-[0.95]">
+          Get in before
           <br />
-          blast radius
+          the first sync
         </h2>
         <p className="mt-4 text-white font-medium max-w-xl mx-auto leading-relaxed">
-          Be first to hear every boom: progress updates, beta invites, and launch pricing locked in for early birds.
+          Build updates as they ship, a beta invite ahead of the queue, and launch pricing locked in for early members.
         </p>
-        <SignupForm inputId="email-bottom" defaultNote="Unsubscribe anytime. But why would you?" large center />
+        <SignupForm inputId="email-bottom" defaultNote="One email per milestone. Unsubscribe anytime." large center />
       </div>
     </section>
   );

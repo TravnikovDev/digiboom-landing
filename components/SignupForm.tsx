@@ -58,16 +58,16 @@ export default function SignupForm({
           type="submit"
           className={`rounded-full bg-ink text-white font-bold px-7 ${pad} border-[3px] border-ink comic-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all whitespace-nowrap`}
         >
-          Light the fuse
+          Get early access
         </button>
       </form>
       <p className="mt-3 text-white/90 text-sm">
         {state === "done" ? (
           <>
-            <strong>Fuse lit.</strong> You&apos;ll hear the boom first.
+            <strong>You&apos;re on the list.</strong> We&apos;ll email you when the beta opens.
           </>
         ) : state === "error" ? (
-          "Something misfired — try again in a minute."
+          "That didn't go through — try again in a minute."
         ) : (
           defaultNote
         )}

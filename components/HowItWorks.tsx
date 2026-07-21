@@ -11,18 +11,18 @@ const inkBall = {
 };
 
 const STEPS = [
-  { n: "1", title: "Connect", text: "Securely link your Etsy, Shopify or Gumroad store via official APIs." },
-  { n: "2", title: "Analyze", text: "DigiBoom scans your listings, files and metadata and finds what's transferable." },
-  { n: "3", title: "Publish", text: "Replicate products to other marketplaces — files, descriptions, tags, licenses." },
-  { n: "4", title: "Sync", text: "Edit once — price, files, description update everywhere automatically." },
+  { n: "1", title: "Connect", text: "Authorize your Etsy, Shopify or Gumroad store through the official API. Revoke anytime." },
+  { n: "2", title: "Import", text: "DigiBoom reads your catalog — listings, digital files, metadata — and maps what can move." },
+  { n: "3", title: "Publish", text: "Push products to any connected marketplace with files, descriptions, tags and licenses intact." },
+  { n: "4", title: "Sync", text: "Edit in one place. Price, files and copy update everywhere automatically." },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="bg-bomb-200 py-20 halftone">
+    <section className="bg-white py-20 halftone">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-comic text-ember text-xl -rotate-1">Follow the fuse</p>
-        <h2 className="mt-1 font-display text-ink text-5xl sm:text-6xl">From one store to everywhere in 5 steps</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember">How it works</p>
+        <h2 className="mt-2 font-display text-ink text-5xl sm:text-6xl">From one store to everywhere in five steps</h2>
         <div className="mt-12 grid md:grid-cols-5 gap-4 relative">
           <div className="hidden md:block absolute top-7 left-[10%] right-[10%] border-t-4 border-dashed border-ink/50" />
           {STEPS.map((step, i) => (
@@ -39,11 +39,12 @@ export default function HowItWorks() {
           ))}
           <Reveal delay={0.32} className="relative">
             <div className="h-14 w-14 rounded-full border-[3px] border-ink grid place-items-center relative z-10" style={inkBall}>
-              <span className="font-comic text-white text-lg">5</span>
+              <span className="font-comic text-white text-2xl">5</span>
             </div>
-            <h3 className="mt-3 font-comic text-2xl text-ember tracking-wide">BOOM!</h3>
+            <h3 className="mt-3 font-bold text-ember">Live everywhere</h3>
             <p className="mt-1 text-sm text-bomb-600 leading-relaxed">
-              Your products are live on every marketplace. New customers within seconds, not months.
+              Your catalog is selling on every connected marketplace — reaching buyers who were never going to find your one
+              store.
             </p>
           </Reveal>
         </div>
