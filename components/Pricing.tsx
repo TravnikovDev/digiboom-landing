@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import TornEdge from "./TornEdge";
 
 const sphere = (light: string, mid: string, dark: string, extra = "") => ({
   background: `radial-gradient(circle at 32% 28%, ${light} 0%, ${mid} 55%, ${dark} 100%)`,
@@ -7,7 +8,8 @@ const sphere = (light: string, mid: string, dark: string, extra = "") => ({
 
 export default function Pricing() {
   return (
-    <section className="bg-blast py-20">
+    <section className="relative bg-blast pt-24 pb-20">
+      <TornEdge className="-top-8" fill="#EE5C0B" />
       <div className="mx-auto max-w-6xl px-5">
         <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Planned pricing</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Flat monthly plans, no credits</h2>

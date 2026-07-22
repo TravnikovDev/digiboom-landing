@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import TornEdge from "./TornEdge";
 
 const ITEMS = [
   {
@@ -29,7 +30,8 @@ const ITEMS = [
 
 export default function Faq() {
   return (
-    <section className="bg-ember py-20">
+    <section className="relative bg-ember pt-24 pb-20">
+      <TornEdge className="-top-8" fill="#D14805" flip />
       <div className="mx-auto max-w-3xl px-5">
         <p className="font-comic text-2xl tracking-wide text-white/85 -rotate-1 inline-block">Before you ask</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Questions, answered</h2>

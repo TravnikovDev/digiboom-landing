@@ -1,5 +1,6 @@
 import { EyeOff, Hourglass, RotateCw } from "lucide-react";
 import Reveal from "./Reveal";
+import TornEdge from "./TornEdge";
 
 const CARDS = [
   {
@@ -27,7 +28,8 @@ const CARDS = [
 
 export default function Problem() {
   return (
-    <section className="bg-ember py-20">
+    <section className="relative bg-ember pt-24 pb-20">
+      <TornEdge className="-top-8" fill="#D14805" flip />
       <div className="mx-auto max-w-6xl px-5">
         <p className="font-comic text-2xl tracking-wide text-white/85 -rotate-1 inline-block">The problem</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">

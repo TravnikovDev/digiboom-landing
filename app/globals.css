@@ -25,6 +25,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Film grain over the whole page — kills the flatness of large solid areas. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 /* Keyboard focus: ink ring by default, white where the surface is dark. */
 :focus-visible {
   outline: 3px solid #1b1712;
@@ -42,7 +53,7 @@ footer :focus-visible,
   position: absolute;
   left: 1rem;
   top: -4rem;
-  z-index: 50;
+  z-index: 60;
   background: #1b1712;
   color: #fff;
   padding: 0.75rem 1.25rem;

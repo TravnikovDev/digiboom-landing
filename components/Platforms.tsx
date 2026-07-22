@@ -113,14 +113,18 @@ export default function Platforms() {
   return (
     <section id="platforms" className="bg-bomb-100 py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-comic text-2xl tracking-wide text-ember -rotate-1 inline-block">Where your products can go</p>
-        <h2 className="mt-2 font-display text-ink text-5xl sm:text-6xl leading-[0.95]">
-          Every place digital goods sell
-        </h2>
-        <p className="mt-3 text-bomb-600 max-w-2xl leading-relaxed">
-          Etsy, Shopify and Gumroad come first — then we keep adding, prioritized by what early members actually sell on. Ask
-          for a platform and it moves up the list.
-        </p>
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-16 lg:items-end">
+          <div>
+            <p className="font-comic text-2xl tracking-wide text-ember -rotate-1 inline-block">Where your products can go</p>
+            <h2 className="mt-2 font-display text-ink text-5xl sm:text-6xl lg:text-7xl leading-[0.92]">
+              Every place digital goods sell
+            </h2>
+          </div>
+          <p className="text-bomb-600 leading-relaxed lg:pb-3 lg:border-l-4 lg:border-ink lg:pl-6">
+            Etsy, Shopify and Gumroad come first — then we keep adding, prioritized by what early members actually sell on.
+            Ask for a platform and it moves up the list.
+          </p>
+        </div>
 
         <div className="mt-12 space-y-10">
           {GROUPS.map((group, gi) => (
