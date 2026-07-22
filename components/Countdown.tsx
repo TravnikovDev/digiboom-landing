@@ -1,3 +1,4 @@
+import { Check, Loader } from "lucide-react";
 import Reveal from "./Reveal";
 
 type Status = "done" | "active" | "planned";
@@ -23,7 +24,7 @@ const MILESTONES: { title: string; text: string; status: Status; when: string }[
   },
   {
     title: "MVP — Etsy ↔ Shopify sync",
-    text: "Two-way sync of digital products between the first two marketplaces.",
+    text: "Store setup on Shopify plus two-way sync of digital products between the first two platforms.",
     status: "planned",
     when: "Q1–Q2",
   },
@@ -41,53 +42,98 @@ const MILESTONES: { title: string; text: string; status: Status; when: string }[
   },
 ];
 
-function Dot({ status }: { status: Status }) {
-  if (status === "done")
-    return <span className="absolute -left-[13px] top-1 h-5 w-5 rounded-full bg-bomb-400 border-[3px] border-ink" />;
-  if (status === "active")
-    return <span className="absolute -left-[13px] top-1 h-5 w-5 rounded-full bg-blast border-[3px] border-white sync-dot" />;
-  return <span className="absolute -left-[13px] top-1 h-5 w-5 rounded-full bg-bomb-700 border-[3px] border-bomb-600" />;
-}
+const DONE = MILESTONES.filter((m) => m.status !== "planned").length;
 
-function Badge({ status }: { status: Status }) {
+function Node({ status }: { status: Status }) {
   if (status === "done")
     return (
-      <span className="font-mono text-[11px] uppercase tracking-wider bg-bomb-400 text-ink rounded px-2 py-0.5">shipped</span>
+      <span className="relative z-10 grid h-11 w-11 place-items-center rounded-xl border-[3px] border-bomb-400 bg-bomb-400 text-ink">
+        <Check className="h-5 w-5" strokeWidth={3} aria-hidden="true" />
+      </span>
     );
   if (status === "active")
-    return <span className="font-mono text-[11px] uppercase tracking-wider bg-blast text-white rounded px-2 py-0.5">in progress</span>;
-  return (
-    <span className="font-mono text-[11px] uppercase tracking-wider bg-bomb-700 text-bomb-300 rounded px-2 py-0.5">planned</span>
-  );
+    return (
+      <span className="relative z-10 grid h-11 w-11 place-items-center rounded-xl border-[3px] border-white bg-blast text-white">
+        <Loader className="h-5 w-5 sync-dot" strokeWidth={3} aria-hidden="true" />
+      </span>
+    );
+  return <span className="relative z-10 block h-11 w-11 rounded-xl border-[3px] border-dashed border-bomb-600 bg-ink" />;
 }
 
 export default function Countdown() {
   return (
     <section id="status" className="bg-ink py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">Build status</p>
-        <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Being built in the open</h2>
-        <p className="mt-3 text-bomb-300 max-w-2xl leading-relaxed">
-          DigiBoom is early — here&apos;s exactly what&apos;s done, what&apos;s in progress, and what&apos;s next. This page
-          updates as the work lands.
-        </p>
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-16 lg:items-end">
+          <div>
+            <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">Build status</p>
+            <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.92]">
+              Being built in the open
+            </h2>
+          </div>
+          <div className="lg:pb-3">
+            <p className="text-bomb-300 leading-relaxed">
+              DigiBoom is early. Here&apos;s exactly what&apos;s done, what&apos;s in progress and what&apos;s next — this page
+              updates as the work lands.
+            </p>
+            {/* fuse-progress bar */}
+            <div className="mt-5 flex items-center gap-3">
+              <div className="h-2.5 flex-1 rounded-full bg-bomb-700 overflow-hidden">
+                <div className="h-full rounded-full bg-blast" style={{ width: `${(DONE / MILESTONES.length) * 100}%` }} />
+              </div>
+              <span className="font-mono text-[11px] text-bomb-400 whitespace-nowrap">
+                {DONE} / {MILESTONES.length} shipped
+              </span>
+            </div>
+          </div>
+        </div>
 
-        <ol className="mt-12 relative border-l-2 border-dashed border-bomb-600 ml-3 space-y-9">
-          {MILESTONES.map((m) => (
-            <li key={m.title} className="pl-8 relative">
-              <Dot status={m.status} />
-              <Reveal>
-                <div className="flex flex-wrap items-center gap-3">
-                  <h3 className={`font-bold text-lg ${m.status === "planned" ? "text-bomb-300" : "text-white"}`}>{m.title}</h3>
-                  <Badge status={m.status} />
-                  <span className="font-mono text-[11px] text-bomb-500">{m.when}</span>
-                </div>
-                <p className={`mt-1 text-sm leading-relaxed ${m.status === "planned" ? "text-bomb-400" : "text-bomb-300"}`}>
-                  {m.text}
-                </p>
-              </Reveal>
-            </li>
-          ))}
+        <ol className="mt-14 space-y-4">
+          {MILESTONES.map((m, i) => {
+            const planned = m.status === "planned";
+            const last = i === MILESTONES.length - 1;
+            return (
+              <li key={m.title} className="relative flex gap-5">
+                {/* rail segment: solid while the fuse has burned past, dashed ahead of it */}
+                {!last && (
+                  <span
+                    aria-hidden="true"
+                    className={`absolute left-[22px] top-11 -bottom-4 w-0 ${
+                      planned ? "border-l-[3px] border-dashed border-bomb-700" : "border-l-[3px] border-blast"
+                    }`}
+                  />
+                )}
+                <Node status={m.status} />
+                <Reveal
+                  delay={i * 0.05}
+                  className={`flex-1 rounded-2xl border-2 p-5 ${
+                    m.status === "active"
+                      ? "border-blast bg-blast/10"
+                      : planned
+                        ? "border-bomb-700 border-dashed"
+                        : "border-bomb-700 bg-white/5"
+                  }`}
+                >
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                    <h3 className={`font-bold text-lg ${planned ? "text-bomb-300" : "text-white"}`}>{m.title}</h3>
+                    <span
+                      className={`font-mono text-[11px] uppercase tracking-wider rounded px-2 py-0.5 ${
+                        m.status === "done"
+                          ? "bg-bomb-400 text-ink"
+                          : m.status === "active"
+                            ? "bg-blast text-white"
+                            : "bg-bomb-700 text-bomb-300"
+                      }`}
+                    >
+                      {m.status === "done" ? "shipped" : m.status === "active" ? "in progress" : "planned"}
+                    </span>
+                    <span className="font-mono text-[11px] text-bomb-500">{m.when}</span>
+                  </div>
+                  <p className={`mt-1.5 text-sm leading-relaxed ${planned ? "text-bomb-400" : "text-bomb-300"}`}>{m.text}</p>
+                </Reveal>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </section>
