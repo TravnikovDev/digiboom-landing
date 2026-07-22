@@ -38,6 +38,8 @@ export default function SignupForm({
     }
     form.reset();
     setState("done");
+    // the mascot celebrates — see components/Bomb3D.tsx
+    window.dispatchEvent(new CustomEvent("digiboom:signup"));
   }
 
   const pad = large ? "py-4" : "py-3.5";
@@ -66,7 +68,8 @@ export default function SignupForm({
       <p className="mt-3 text-ink text-sm font-medium" role="status">
         {state === "done" ? (
           <>
-            <strong>Fuse lit.</strong> You&apos;ll hear the boom first.
+            <strong>Fuse lit.</strong>{" "}
+            You&apos;ll hear the boom first.
           </>
         ) : state === "error" ? (
           "That didn't go through — try again in a minute."
