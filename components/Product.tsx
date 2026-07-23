@@ -1,7 +1,6 @@
 import { PackageOpen, RefreshCw, Store } from "lucide-react";
 import Reveal from "./Reveal";
 import SyncPanel from "./SyncPanel";
-import TornEdge from "./TornEdge";
 
 const FEATURES = [
   {
@@ -26,8 +25,7 @@ const FEATURES = [
 
 export default function Product() {
   return (
-    <section className="relative bg-bomb-200 pt-24 pb-20 tech-grid-ink">
-      <TornEdge className="-top-10" fill="#E8EAED" />
+    <section className="relative bg-bomb-200 pt-20 pb-20 tech-grid-ink">
       <div className="mx-auto max-w-6xl px-5">
         {/* header — top-left, consistent with every other section */}
         <p className="font-comic text-2xl tracking-wide text-ember -rotate-1 inline-block">What you get</p>
