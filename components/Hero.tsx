@@ -5,13 +5,14 @@ const PLATFORMS = ["Etsy", "Shopify", "Gumroad"];
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto max-w-6xl px-5 pt-10 pb-16 lg:pt-14 lg:pb-20">
+    <section className="relative overflow-hidden pt-10 pb-16 lg:pt-14 lg:pb-20">
+      {/* full-bleed decorative layers, so there's no seam where a centred box would end */}
       <div className="absolute inset-0 tech-grid mask-fade pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(circle at 72% 38%, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 55%)" }}
+        style={{ background: "radial-gradient(circle at 72% 42%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 48%)" }}
       />
-      <div className="grid lg:grid-cols-2 gap-10 items-center relative">
+      <div className="relative mx-auto max-w-6xl px-5 grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Tick... tick... tick...</p>
           <h1 className="mt-2 font-display text-white leading-[0.95] text-6xl sm:text-7xl lg:text-8xl">
