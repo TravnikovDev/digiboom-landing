@@ -43,10 +43,16 @@ export default function BombCanvas() {
 
   return (
     <div className="relative h-full w-full">
-      {/* base layer — always present, so the hero is never blank */}
-      <BombStatic className="h-full w-full" />
+      {/* static base — visible instantly, then fades OUT as the live scene arrives,
+          so the two bombs cross-dissolve instead of stacking */}
+      <div
+        className="absolute inset-0 transition-opacity duration-700 ease-out"
+        style={{ opacity: ready3D ? 0 : 1 }}
+      >
+        <BombStatic className="h-full w-full" />
+      </div>
 
-      {/* live scene fades in over the static bomb once it's actually painted */}
+      {/* live 3D scene fades IN once its first frame is painted */}
       {mount3D && (
         <div
           className="absolute inset-0 transition-opacity duration-700 ease-out"

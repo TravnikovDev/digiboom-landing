@@ -178,6 +178,16 @@ footer :focus-visible,
   text-shadow: 4px 4px 0 #1b1712;
 }
 
+/* highlighter marker for emphasised words — reads as emphasis, not a link */
+.hl {
+  font-weight: 700;
+  background: linear-gradient(transparent 58%, rgba(255, 255, 255, 0.6) 58%);
+  padding: 0 0.12em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }

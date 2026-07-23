@@ -21,12 +21,10 @@ export default function Hero() {
             <br />
             <span className="text-ink">In a good way.</span>
           </h1>
-          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-relaxed">
-            Selling on <strong className="underline decoration-2 underline-offset-2">Etsy</strong> only? DigiBoom sets up your{" "}
-            <strong className="underline decoration-2 underline-offset-2">Shopify</strong> and{" "}
-            <strong className="underline decoration-2 underline-offset-2">Gumroad</strong> storefronts for you, moves your
-            catalog over, and keeps it all in sync. One shop becomes three — and your products get found several times more
-            often.
+          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-loose">
+            Selling on <span className="hl">Etsy</span> only? DigiBoom sets up your <span className="hl">Shopify</span> and{" "}
+            <span className="hl">Gumroad</span> storefronts for you, moves your catalog over, and keeps it all in sync. One
+            shop becomes three — and your products get found several times more often.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -46,9 +44,9 @@ export default function Hero() {
             ))}
             <a
               href="#platforms"
-              className="font-mono text-xs text-ink underline underline-offset-4 rounded px-2 py-2.5 hover:bg-white/30"
+              className="font-mono text-xs font-semibold text-ink border-2 border-ink/30 rounded-md px-2.5 py-1.5 hover:border-ink transition-colors"
             >
-              + 20 more platforms
+              +20 more →
             </a>
           </div>
 
@@ -61,7 +59,6 @@ export default function Hero() {
 
         {/* Bomb mascot — three.js scene, padded so the orbit never clips. */}
         <div className="relative flex justify-center items-center">
-          <div className="absolute w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full border border-white/25" />
           <div className="relative w-full max-w-[520px] h-[400px] sm:h-[560px] px-6">
             <BombCanvas />
           </div>
