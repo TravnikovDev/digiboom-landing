@@ -44,9 +44,7 @@ export default function HowItWorks() {
             <Reveal
               key={step.n}
               delay={i * 0.07}
-              className={`${step.span} h-full bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow ${
-                i % 2 ? "lg:translate-y-4" : ""
-              }`}
+              className={`${step.span} h-full bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow`}
             >
               <div className="flex items-start justify-between gap-3">
                 <span className="h-12 w-12 rounded-xl bg-ink grid place-items-center shrink-0">
@@ -62,7 +60,7 @@ export default function HowItWorks() {
           {/* the payoff — inverted so the destination reads differently from the steps */}
           <Reveal
             delay={0.28}
-            className="lg:col-span-3 h-full bg-ink border-[3px] border-ink rounded-2xl p-6 comic-shadow lg:translate-y-4"
+            className="lg:col-span-3 h-full bg-ink border-[3px] border-ink rounded-2xl p-6 comic-shadow"
           >
             <div className="flex items-start justify-between gap-3">
               <span className="h-12 w-12 rounded-xl bg-blast grid place-items-center shrink-0">

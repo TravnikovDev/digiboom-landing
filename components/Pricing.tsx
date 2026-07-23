@@ -24,7 +24,7 @@ export default function Pricing() {
             </p>
             <p className="mt-2 text-sm text-bomb-600">For solo creators expanding to a second marketplace.</p>
           </Reveal>
-          <Reveal delay={0.08} className="relative bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow -translate-y-2">
+          <Reveal delay={0.08} className="relative bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow">
             <span className="absolute -top-4 right-4 font-comic text-lg bg-ink text-white px-3 py-0.5 rounded-full rotate-3">
               Most popular
             </span>
