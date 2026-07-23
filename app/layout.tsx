@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
   variable: "--font-mono-code",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://digiboom.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://digiboom.biz";
 
 const TITLE = "DigiBoom — we'll explode your sales. In a good way.";
 const DESCRIPTION =
@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     "Gumroad",
   ],
   authors: [{ name: "Roman Travnikov" }],
+  icons: {
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     siteName: "DigiBoom",
@@ -51,11 +54,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: SITE_URL,
     locale: "en_US",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: TITLE }],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
+    images: ["/og.png"],
   },
   robots: { index: true, follow: true },
 };
