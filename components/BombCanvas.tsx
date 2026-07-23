@@ -46,10 +46,10 @@ export default function BombCanvas() {
       {/* static base — visible instantly, then fades OUT as the live scene arrives,
           so the two bombs cross-dissolve instead of stacking */}
       <div
-        className="absolute inset-0 transition-opacity duration-700 ease-out"
+        className="absolute inset-0 grid place-items-center transition-opacity duration-700 ease-out"
         style={{ opacity: ready3D ? 0 : 1 }}
       >
-        <BombStatic className="h-full w-full" />
+        <BombStatic className="h-[86%] w-[86%]" />
       </div>
 
       {/* live 3D scene fades IN once its first frame is painted */}

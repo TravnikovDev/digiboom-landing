@@ -243,7 +243,7 @@ function ProductCards() {
     const angle = (i / 3) * Math.PI * 2;
     return {
       key: i,
-      position: [Math.cos(angle) * 2.5, [0.5, -0.3, 0.1][i], Math.sin(angle) * 2.5] as [number, number, number],
+      position: [Math.cos(angle) * 2.1, [0.5, -0.3, 0.1][i], Math.sin(angle) * 2.1] as [number, number, number],
       rotation: [0, -angle + Math.PI / 2, [0.12, -0.1, 0.06][i]] as [number, number, number],
     };
   });
@@ -279,7 +279,7 @@ function ProductCards() {
 }
 
 /** Pulls the camera back until the whole scene fits — no clipping at any viewport size. */
-function FitCamera({ radius = 3.1 }: { radius?: number }) {
+function FitCamera({ radius = 2.5 }: { radius?: number }) {
   const camera = useThree((state) => state.camera);
   const size = useThree((state) => state.size);
 

@@ -21,10 +21,11 @@ export default function Hero() {
             <br />
             <span className="text-ink">In a good way.</span>
           </h1>
-          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-loose">
-            Selling on <span className="hl">Etsy</span> only? DigiBoom sets up your <span className="hl">Shopify</span> and{" "}
-            <span className="hl">Gumroad</span> storefronts for you, moves your catalog over, and keeps it all in sync. One
-            shop becomes three — and your products get found several times more often.
+          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-relaxed">
+            Selling on <span className="font-bold">Etsy</span> only? DigiBoom sets up your{" "}
+            <span className="font-bold">Shopify</span> and <span className="font-bold">Gumroad</span> storefronts for you,
+            moves your catalog over, and keeps it all in sync. One shop becomes three — and your products get found several
+            times more often.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
