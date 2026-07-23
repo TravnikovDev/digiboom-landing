@@ -6,36 +6,55 @@ import BombStatic from "./BombStatic";
 
 const Bomb3D = dynamic(() => import("./Bomb3D"), { ssr: false });
 
-/** three.js is ~900KB — only worth loading on a screen big enough to see it,
- *  when the hero is actually in view, and when motion is welcome. */
+/**
+ * The static SVG bomb renders instantly and always stays as the base layer.
+ * three.js (~900KB) loads only on a wide screen with motion allowed, deferred
+ * past first paint so it never competes with the hero. The live canvas then
+ * fades in ON TOP once its first frame is painted — no empty gap, no pop.
+ * The hero is above the fold, so no scroll/intersection gate is needed.
+ */
 export default function BombCanvas() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [show3D, setShow3D] = useState(false);
+  const [mount3D, setMount3D] = useState(false);
+  const [ready3D, setReady3D] = useState(false);
+  const idle = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const wideEnough = window.matchMedia("(min-width: 768px)").matches;
     const wantsMotion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!wideEnough || !wantsMotion) return;
 
-    const el = ref.current;
-    if (!el) return;
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setShow3D(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    const start = () => setMount3D(true);
+    const ric = window.requestIdleCallback;
+    if (typeof ric === "function") {
+      idle.current = ric(start, { timeout: 1200 });
+      return () => window.cancelIdleCallback(idle.current!);
+    }
+    idle.current = window.setTimeout(start, 600);
+    return () => clearTimeout(idle.current);
   }, []);
 
+  // Reveal the canvas once it reports ready (onCreated); a fallback timer guarantees
+  // the crossfade still happens if that signal is delayed.
+  useEffect(() => {
+    if (!mount3D) return;
+    const t = window.setTimeout(() => setReady3D(true), 900);
+    return () => clearTimeout(t);
+  }, [mount3D]);
+
   return (
-    <div ref={ref} className="h-full w-full">
-      {show3D ? <Bomb3D /> : <BombStatic className="h-full w-full" />}
+    <div className="relative h-full w-full">
+      {/* base layer — always present, so the hero is never blank */}
+      <BombStatic className="h-full w-full" />
+
+      {/* live scene fades in over the static bomb once it's actually painted */}
+      {mount3D && (
+        <div
+          className="absolute inset-0 transition-opacity duration-700 ease-out"
+          style={{ opacity: ready3D ? 1 : 0 }}
+        >
+          <Bomb3D onReady={() => setReady3D(true)} />
+        </div>
+      )}
     </div>
   );
 }

@@ -295,12 +295,14 @@ function FitCamera({ radius = 3.1 }: { radius?: number }) {
   return null;
 }
 
-export default function Bomb3D() {
+export default function Bomb3D({ onReady }: { onReady?: () => void }) {
   return (
     <Canvas
       camera={{ position: [0, 0.3, 7.4], fov: 36 }}
       dpr={[1, 2]}
       gl={{ antialias: true, alpha: true }}
+      // renderer is up — let the parent crossfade the canvas in over the static bomb
+      onCreated={() => onReady?.()}
       aria-label="The DigiBoom bomb mascot, with digital product cards orbiting it"
       role="img"
     >

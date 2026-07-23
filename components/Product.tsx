@@ -26,12 +26,11 @@ const FEATURES = [
 
 export default function Product() {
   return (
-    <section className="relative bg-bomb-200 pt-20 pb-20 tech-grid-ink">
+    <section className="relative bg-bomb-200 pt-24 pb-20 tech-grid-ink">
       <TornEdge className="-top-10" fill="#E8EAED" />
       <div className="mx-auto max-w-6xl px-5">
-        <div className="grid lg:grid-cols-2 gap-12 items-center lg:items-start">
-          {/* the panel rises out of its band and layers over the ticker above */}
-          <Reveal className="relative z-20 lg:-translate-y-44">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Reveal className="relative z-10">
             <SyncPanel />
           </Reveal>
           <div>

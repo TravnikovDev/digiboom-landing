@@ -59,9 +59,8 @@ export default function Hero() {
           />
         </div>
 
-        {/* Bomb mascot — three.js scene, padded so the orbit never clips.
-            Breaks its container downward so it crosses the strip below. */}
-        <div className="relative flex justify-center items-center lg:-mb-16 z-10">
+        {/* Bomb mascot — three.js scene, padded so the orbit never clips. */}
+        <div className="relative flex justify-center items-center">
           <div className="absolute w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full border border-white/25" />
           <div className="relative w-full max-w-[520px] h-[400px] sm:h-[560px] px-6">
             <BombCanvas />
