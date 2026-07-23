@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const FORMSPREE_ACTION = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ACTION = "https://formspree.io/f/mvzebyqy";
 
 export default function SignupForm({
   inputId,
@@ -47,6 +47,12 @@ export default function SignupForm({
   return (
     <div className={center ? "mx-auto max-w-lg" : "max-w-md"}>
       <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-3" action={FORMSPREE_ACTION} method="POST">
+        {/* which form on the page it came from */}
+        <input type="hidden" name="source" value={inputId} />
+        {/* subject line for the notification email Formspree sends */}
+        <input type="hidden" name="_subject" value="New DigiBoom waitlist signup" />
+        {/* honeypot: bots fill it, humans never see it */}
+        <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
         <label className="sr-only" htmlFor={inputId}>
           Email
         </label>
