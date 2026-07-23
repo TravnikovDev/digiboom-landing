@@ -178,12 +178,13 @@ footer :focus-visible,
   text-shadow: 4px 4px 0 #1b1712;
 }
 
-/* highlighter marker for emphasised words — reads as emphasis, not a link */
-.hl {
+/* solid white marker for emphasised words — a clean sticker, ink on white */
+.mark {
+  background: #ffffff;
+  color: #1b1712;
   font-weight: 700;
-  background: linear-gradient(transparent 58%, rgba(255, 255, 255, 0.6) 58%);
-  padding: 0 0.12em;
-  border-radius: 2px;
+  padding: 0.04em 0.34em;
+  border-radius: 4px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }

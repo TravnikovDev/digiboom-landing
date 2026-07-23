@@ -21,11 +21,10 @@ export default function Hero() {
             <br />
             <span className="text-ink">In a good way.</span>
           </h1>
-          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-relaxed">
-            Selling on <span className="font-bold">Etsy</span> only? DigiBoom sets up your{" "}
-            <span className="font-bold">Shopify</span> and <span className="font-bold">Gumroad</span> storefronts for you,
-            moves your catalog over, and keeps it all in sync. One shop becomes three — and your products get found several
-            times more often.
+          <p className="mt-5 text-ink text-lg max-w-md font-medium leading-loose">
+            Selling on <span className="mark">Etsy</span> only? DigiBoom sets up your <span className="mark">Shopify</span> and{" "}
+            <span className="mark">Gumroad</span> storefronts for you, moves your catalog over, and keeps it all in sync. One
+            shop becomes three — and your products get found several times more often.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -38,14 +37,14 @@ export default function Hero() {
             {PLATFORMS.slice(1).map((name) => (
               <span
                 key={name}
-                className="font-mono text-xs text-ink border-2 border-dashed border-ink rounded-md px-2.5 py-1.5"
+                className="font-mono text-xs text-ink bg-white border-2 border-dashed border-ink rounded-md px-2.5 py-1.5"
               >
-                {name} <span className="text-ink/70">· we set it up</span>
+                {name} <span className="text-bomb-500">· we set it up</span>
               </span>
             ))}
             <a
               href="#platforms"
-              className="font-mono text-xs font-semibold text-ink border-2 border-ink/30 rounded-md px-2.5 py-1.5 hover:border-ink transition-colors"
+              className="font-mono text-xs font-semibold text-ink bg-white border-2 border-ink rounded-md px-2.5 py-1.5 hover:-translate-y-0.5 transition-transform"
             >
               +20 more →
             </a>
