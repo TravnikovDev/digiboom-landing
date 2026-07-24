@@ -88,30 +88,39 @@ export default function Countdown() {
           </div>
         </div>
 
-        <ol className="mt-14 space-y-4">
+        <ol className="mt-14">
           {MILESTONES.map((m, i) => {
             const planned = m.status === "planned";
             const last = i === MILESTONES.length - 1;
+            const solid = m.status !== "planned";
+            const railStyle = solid
+              ? { background: "#EE5C0B" }
+              : { backgroundImage: "repeating-linear-gradient(to bottom, #4E555F 0 6px, transparent 6px 12px)" };
             return (
-              <li key={m.title} className="relative flex gap-5">
-                {/* rail segment: solid while the fuse has burned past, dashed ahead of it */}
+              <li key={m.title} className="relative flex gap-4 pb-4 last:pb-0">
+                {/* continuous rail: from this node's centre down to the next node */}
                 {!last && (
                   <span
                     aria-hidden="true"
-                    className={`absolute left-[22px] top-11 -bottom-4 w-0 ${
-                      planned ? "border-l-[3px] border-dashed border-bomb-700" : "border-l-[3px] border-blast"
-                    }`}
+                    className="absolute left-[22px] top-[22px] -bottom-[10px] w-[3px] -translate-x-1/2 rounded"
+                    style={railStyle}
                   />
                 )}
+                {/* short tick linking the node to its card */}
+                <span
+                  aria-hidden="true"
+                  className="absolute left-11 top-[22px] h-[3px] w-4 -translate-y-1/2"
+                  style={railStyle}
+                />
                 <Node status={m.status} />
                 <Reveal
                   delay={i * 0.05}
-                  className={`flex-1 rounded-2xl border-2 p-5 ${
+                  className={`flex-1 rounded-2xl p-5 ${
                     m.status === "active"
-                      ? "border-blast bg-blast/10"
+                      ? "border-2 border-blast bg-blast/10"
                       : planned
-                        ? "border-bomb-700 border-dashed"
-                        : "border-bomb-700 bg-white/5"
+                        ? "border border-white/10 bg-white/[0.02]"
+                        : "border border-white/10 bg-white/[0.05]"
                   }`}
                 >
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
