@@ -10,7 +10,8 @@ export default function Pricing() {
         <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Planned pricing</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Flat monthly plans, no credits</h2>
         <p className="mt-3 text-ink max-w-2xl font-medium">
-          Priced by catalog size, not per sync. Waitlist members lock in launch pricing before anyone else.
+          Priced by catalog size, not per sync. If one extra sale a month covers it, the rest is upside. Waitlist members
+          lock in launch pricing before anyone else.
         </p>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Reveal className="bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow">

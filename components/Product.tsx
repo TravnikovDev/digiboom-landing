@@ -5,21 +5,21 @@ import SyncPanel from "./SyncPanel";
 const FEATURES = [
   {
     icon: Store,
-    label: "guided_setup",
-    title: "We build the storefronts for you",
-    text: "DigiBoom walks you through opening a Shopify or Gumroad store, then fills it in automatically — branding, categories, policies, products. You approve each step; the busywork is ours.",
+    label: "more_places_to_be_found",
+    title: "Be where the buyers already are",
+    text: "Opening a store used to cost you weeks, so you never did it. DigiBoom does the account, branding, categories and policies for you — you're live on a new marketplace in an afternoon, in front of a fresh audience.",
   },
   {
     icon: PackageOpen,
-    label: "catalog_transfer",
-    title: "Your whole catalog comes along",
-    text: "Digital files, descriptions, variants, tags and license terms are mapped to each platform's format — not just titles and prices.",
+    label: "ready_to_sell",
+    title: "Every listing lands ready to sell",
+    text: "Files, descriptions, variants, tags and licenses move with each product, mapped to each platform's format — not just titles and prices. Nothing to re-upload, so every new store earns from day one.",
   },
   {
     icon: RefreshCw,
-    label: "stays_in_sync",
-    title: "Then it stays in sync, forever",
-    text: "Change a price or upload a new file version once. Every storefront you own updates within seconds.",
+    label: "grow_without_the_grind",
+    title: "Grow without the extra work",
+    text: "Change a price or drop a new version once — every storefront updates in seconds. The upkeep that used to eat your week disappears, so more stores never means more hours.",
   },
 ];
 
@@ -33,8 +33,9 @@ export default function Product() {
           You bring one shop. We open the rest.
         </h2>
         <p className="mt-3 text-bomb-600 max-w-2xl leading-relaxed">
-          Most sellers never expand because setting up a second storefront means starting from zero. DigiBoom does that part
-          for you — semi-automatically, with your approval at every step.
+          Most sellers list on one marketplace. The ones who grow are on three or four — <strong className="text-ink">3–4×
+          the storefronts a buyer can discover you on</strong>, for a fraction of the effort. DigiBoom does the expanding for
+          you, semi-automatically, with your approval at every step.
         </p>
 
         <div className="mt-12 grid lg:grid-cols-2 gap-12 items-center">

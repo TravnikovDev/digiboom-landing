@@ -23,9 +23,9 @@ export default function Hero() {
             <span className="text-ink">In a good way.</span>
           </h1>
           <p className="mt-5 text-ink text-lg max-w-md font-medium leading-loose">
-            Selling on <span className="mark">Etsy</span> only? DigiBoom sets up your <span className="mark">Shopify</span> and{" "}
-            <span className="mark">Gumroad</span> storefronts for you, moves your catalog over, and keeps it all in sync. One
-            shop becomes three — and your products get found several times more often.
+            Selling your templates, presets, brushes or fonts on <span className="mark">Etsy</span> alone? DigiBoom opens your
+            storefronts on <span className="mark">Shopify</span>, <span className="mark">Gumroad</span> and more, and keeps
+            every listing in sync. The more places you sell, the more buyers find you — without the extra work.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">

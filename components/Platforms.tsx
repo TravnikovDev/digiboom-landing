@@ -14,7 +14,7 @@ type Platform = {
 const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
   {
     title: "Marketplaces",
-    blurb: "Existing audiences already searching for digital goods.",
+    blurb: "New audiences already searching for digital goods — this is where more discovery comes from.",
     items: [
       { name: "Etsy", color: "#F56400", logo: "/logos/etsy.svg", stage: "launch" },
       { name: "Creative Market", color: "#0FA0A0", stage: "planned" },
@@ -28,7 +28,7 @@ const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
   },
   {
     title: "Your own storefront",
-    blurb: "Stores you control, where you keep the customer relationship.",
+    blurb: "A store you control — own the customer, keep the margin, escape marketplace fees.",
     items: [
       { name: "Shopify", color: "#5A863E", logo: "/logos/shopify.svg", stage: "launch" },
       { name: "WooCommerce", color: "#7F54B3", logo: "/logos/woocommerce.svg", stage: "planned" },
@@ -121,8 +121,8 @@ export default function Platforms() {
             </h2>
           </div>
           <p className="text-bomb-600 leading-relaxed lg:pb-3 lg:border-l-4 lg:border-ink lg:pl-6">
-            Etsy, Shopify and Gumroad come first — then we keep adding, prioritized by what early members actually sell on.
-            Ask for a platform and it moves up the list.
+            Marketplaces put you in front of new buyers; your own stores let you keep the margin. Do both. Etsy, Shopify and
+            Gumroad come first — then we keep adding, prioritized by what early members sell on.
           </p>
         </div>
 
