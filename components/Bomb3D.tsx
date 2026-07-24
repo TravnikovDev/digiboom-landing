@@ -48,16 +48,17 @@ function Bomb() {
     if (group.current) {
       group.current.position.y = Math.sin(t * 1.4) * 0.16 + hop;
       group.current.rotation.z = Math.sin(t * 0.7) * 0.05;
-      // idle sway, plus a gentle lean toward the pointer
-      group.current.rotation.y = Math.sin(t * 0.45) * 0.1 + state.pointer.x * 0.22;
-      group.current.rotation.x = -state.pointer.y * 0.1;
+      // idle sway, plus a gentle lean toward the pointer (kept subtle so the flat
+      // face doesn't foreshorten into a glitch)
+      group.current.rotation.y = Math.sin(t * 0.45) * 0.1 + state.pointer.x * 0.1;
+      group.current.rotation.x = -state.pointer.y * 0.05;
       group.current.scale.set(1 + squash, 1 - squash, 1 + squash);
     }
 
-    // eyes track the pointer a little further than the head turns
+    // the face slides toward the pointer to "look" — the interaction we keep
     if (face.current) {
-      face.current.position.x = THREE.MathUtils.lerp(face.current.position.x, state.pointer.x * 0.1, 0.08);
-      face.current.position.y = THREE.MathUtils.lerp(face.current.position.y, state.pointer.y * 0.06, 0.08);
+      face.current.position.x = THREE.MathUtils.lerp(face.current.position.x, state.pointer.x * 0.08, 0.08);
+      face.current.position.y = THREE.MathUtils.lerp(face.current.position.y, state.pointer.y * 0.05, 0.08);
     }
 
     // blink: squash the eye group flat for a beat, at irregular intervals
@@ -152,17 +153,18 @@ function Bomb() {
         <pointLight ref={sparkLight} color="#FFD9C2" distance={5} intensity={14} />
       </group>
 
-      {/* face */}
+      {/* face — features float just in front of the sphere surface so they never
+          clip into it when the face shifts/turns (which was the shape glitch) */}
       <group ref={face} position={[0, 0, 0]}>
-        {/* eyes */}
+        {/* eyes — flat ovals proud of the surface */}
         <group ref={eyes}>
           {[-0.36, 0.36].map((x) => (
-            <group key={x} position={[x, 0.1, 1.06]}>
-              <mesh scale={[1, 1.45, 0.45]}>
+            <group key={x} position={[x, 0.1, 1.14]}>
+              <mesh scale={[1, 1.45, 0.25]}>
                 <sphereGeometry args={[0.13, 24, 24]} />
                 <meshBasicMaterial color={INK} />
               </mesh>
-              <mesh position={[0.035, 0.07, 0.07]}>
+              <mesh position={[0.035, 0.07, 0.05]}>
                 <sphereGeometry args={[0.04, 12, 12]} />
                 <meshBasicMaterial color="#FFFFFF" />
               </mesh>
@@ -170,16 +172,16 @@ function Bomb() {
           ))}
         </group>
         {/* brows — outer ends up: confident, not worried */}
-        <mesh position={[-0.38, 0.44, 1.0]} rotation={[0, 0, -0.3]}>
+        <mesh position={[-0.38, 0.44, 1.05]} rotation={[0, 0, -0.3]}>
           <boxGeometry args={[0.24, 0.05, 0.05]} />
           <meshBasicMaterial color={INK} />
         </mesh>
-        <mesh position={[0.38, 0.44, 1.0]} rotation={[0, 0, 0.3]}>
+        <mesh position={[0.38, 0.44, 1.05]} rotation={[0, 0, 0.3]}>
           <boxGeometry args={[0.24, 0.05, 0.05]} />
           <meshBasicMaterial color={INK} />
         </mesh>
         {/* smile */}
-        <mesh position={[0, -0.2, 1.07]} rotation={[0.25, 0, Math.PI * 1.08]}>
+        <mesh position={[0, -0.2, 1.19]} rotation={[0.25, 0, Math.PI * 1.08]}>
           <torusGeometry args={[0.34, 0.05, 12, 40, Math.PI * 0.84]} />
           <meshBasicMaterial color={INK} />
         </mesh>
