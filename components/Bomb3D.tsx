@@ -318,7 +318,10 @@ export default function Bomb3D({ onReady }: { onReady?: () => void }) {
       {/* orange bounce light from the scene */}
       <pointLight position={[2.6, -1.6, 2]} color="#EE5C0B" intensity={18} />
       <group scale={0.82} position={[0, -0.05, 0]}>
-        <Bomb />
+        {/* the bomb itself, 20% larger than the orbiting cards */}
+        <group scale={1.2}>
+          <Bomb />
+        </group>
         <ProductCards />
       </group>
       <ContactShadows position={[0, -1.75, 0]} opacity={0.4} scale={7} blur={2.6} color={INK} />
