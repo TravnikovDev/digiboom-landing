@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Marquee from "@/components/Marquee";
 import Nav from "@/components/Nav";
+import Payoff from "@/components/Payoff";
 import Platforms from "@/components/Platforms";
 import Pricing from "@/components/Pricing";
 import Problem from "@/components/Problem";
@@ -24,6 +25,7 @@ export default function Home() {
         <Product />
         <Problem />
         <HowItWorks />
+        <Payoff />
         <Platforms />
         <Countdown />
         <Pricing />
