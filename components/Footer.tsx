@@ -19,7 +19,7 @@ export default function Footer() {
             Waitlist
           </a>
         </nav>
-        <p>© {new Date().getFullYear()} DigiBoom — Roman Travnikov</p>
+        <p>© {new Date().getFullYear()} DigiBoom · Roman Travnikov</p>
       </div>
     </footer>
   );

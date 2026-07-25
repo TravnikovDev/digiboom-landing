@@ -38,7 +38,7 @@ export default function SyncPanel() {
         <span className="h-2.5 w-2.5 rounded-full bg-bomb-500" />
         <span className="h-2.5 w-2.5 rounded-full bg-bomb-600" />
         <span className="h-2.5 w-2.5 rounded-full bg-bomb-700" />
-        <span className="ml-2 font-mono text-[11px] text-bomb-400">digiboom — store expansion</span>
+        <span className="ml-2 font-mono text-[11px] text-bomb-400">digiboom / store expansion</span>
       </div>
 
       {/* the catalog being expanded */}
@@ -48,7 +48,7 @@ export default function SyncPanel() {
           style={{ background: "radial-gradient(circle at 30% 26%, #FF9A5C 0%, #EE5C0B 60%, #C24204 100%)" }}
         />
         <div className="min-w-0">
-          <p className="font-semibold text-sm truncate">Your Etsy catalog — 48 products</p>
+          <p className="font-semibold text-sm truncate">Your Etsy catalog, 48 products</p>
           <p className="font-mono text-[11px] text-bomb-500 truncate">files · descriptions · tags · prices</p>
         </div>
       </div>

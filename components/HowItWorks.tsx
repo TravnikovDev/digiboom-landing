@@ -6,28 +6,28 @@ const STEPS = [
     n: "01",
     icon: Plug,
     title: "Connect your shop",
-    text: "Authorize the store you already have — Etsy, Shopify or Gumroad — through the official API. Revoke access whenever you want.",
+    text: "Point us at the store you already run, Etsy or Shopify or Gumroad, through the official API. Pull the plug whenever you feel like it.",
     span: "lg:col-span-2",
   },
   {
     n: "02",
     icon: ScanLine,
     title: "Import your catalog",
-    text: "DigiBoom reads your listings, digital files and metadata, then maps what can move to each platform's format.",
+    text: "We read your listings, your files and all the fiddly metadata, then work out what fits where.",
     span: "lg:col-span-2",
   },
   {
     n: "03",
     icon: Store,
     title: "Open new storefronts",
-    text: "Guided setup on the platforms you're missing: account, branding, categories and policies, mostly filled in for you.",
+    text: "Guided setup on the platforms you are missing. Account, branding, categories, policies, mostly filled in before you touch a thing.",
     span: "lg:col-span-2",
   },
   {
     n: "04",
     icon: Upload,
     title: "Publish everywhere",
-    text: "Your catalog lands on each new store with files, descriptions, tags and licenses intact — no re-uploading by hand.",
+    text: "Your catalog arrives at every new store intact. Files, copy, tags, licences. You upload nothing twice.",
     span: "lg:col-span-3",
   },
 ];
@@ -70,7 +70,7 @@ export default function HowItWorks() {
             </div>
             <h3 className="mt-4 font-comic text-3xl tracking-wide text-blast">Multiply your reach</h3>
             <p className="mt-1.5 text-sm text-bomb-300 leading-relaxed">
-              Same catalog, several times the shelf space — in front of every marketplace&apos;s audience instead of just one.
+              Same catalog, several times the shelf space, in front of every marketplace instead of the one you started with.
             </p>
           </Reveal>
         </div>

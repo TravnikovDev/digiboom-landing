@@ -10,8 +10,8 @@ export default function Pricing() {
         <p className="font-comic text-2xl tracking-wide text-white/90 -rotate-1 inline-block">Planned pricing</p>
         <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl">Flat monthly plans, no credits</h2>
         <p className="mt-3 text-ink max-w-2xl font-medium">
-          Priced by catalog size, not per sync. If one extra sale a month covers it, the rest is upside. Waitlist members
-          lock in launch pricing before anyone else.
+          Priced by how much you sell, not by the sync. One extra sale a month covers it and the rest is yours. Waitlist
+          members lock in launch pricing before we come to our senses.
         </p>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Reveal className="bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow">
@@ -23,7 +23,7 @@ export default function Pricing() {
             <p className="mt-3 text-3xl font-bold">
               $10<span className="text-base font-medium text-bomb-500">/mo</span>
             </p>
-            <p className="mt-2 text-sm text-bomb-600">For solo creators expanding to a second marketplace.</p>
+            <p className="mt-2 text-sm text-bomb-600">For the one-person shop finally opening a second front.</p>
           </Reveal>
           <Reveal delay={0.08} className="relative bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow">
             <span className="absolute -top-4 right-4 font-comic text-lg bg-ink text-white px-3 py-0.5 rounded-full rotate-3">
@@ -37,7 +37,7 @@ export default function Pricing() {
             <p className="mt-3 text-3xl font-bold">
               $30<span className="text-base font-medium text-bomb-500">/mo</span>
             </p>
-            <p className="mt-2 text-sm text-bomb-600">For active stores selling across three or more platforms.</p>
+            <p className="mt-2 text-sm text-bomb-600">For stores already working three platforms or more.</p>
           </Reveal>
           <Reveal delay={0.16} className="bg-white border-[3px] border-ink rounded-2xl p-6 comic-shadow">
             <span className="grid h-11 w-11 place-items-center rounded-xl border-2 border-ink bg-bomb-200">
@@ -48,7 +48,7 @@ export default function Pricing() {
             <p className="mt-3 text-3xl font-bold">
               $50<span className="text-base font-medium text-bomb-500">/mo</span>
             </p>
-            <p className="mt-2 text-sm text-bomb-600">For studios and teams managing a large catalog.</p>
+            <p className="mt-2 text-sm text-bomb-600">For studios wrangling a catalog that got out of hand.</p>
           </Reveal>
           <Reveal delay={0.24} className="bg-ink border-[3px] border-ink rounded-2xl p-6 comic-shadow">
             <span className="grid h-11 w-11 place-items-center rounded-xl border-2 border-white bg-blast">
@@ -57,7 +57,7 @@ export default function Pricing() {
             <h3 className="mt-3 font-display text-3xl text-white">Enterprise</h3>
             <p className="font-mono text-[11px] text-bomb-400">unlimited products</p>
             <p className="mt-3 text-3xl font-bold text-white">Custom</p>
-            <p className="mt-2 text-sm text-bomb-300">Unlimited products, API access, tailored integrations.</p>
+            <p className="mt-2 text-sm text-bomb-300">Everything, plus API access and integrations we build to fit.</p>
           </Reveal>
         </div>
       </div>

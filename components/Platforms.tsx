@@ -14,7 +14,7 @@ type Platform = {
 const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
   {
     title: "Marketplaces",
-    blurb: "New audiences already searching for digital goods — this is where more discovery comes from.",
+    blurb: "New audiences already out there looking. This is where the discovery actually comes from.",
     items: [
       { name: "Etsy", color: "#F56400", logo: "/logos/etsy.svg", stage: "launch" },
       { name: "Creative Market", color: "#0FA0A0", stage: "planned" },
@@ -28,7 +28,7 @@ const GROUPS: { title: string; blurb: string; items: Platform[] }[] = [
   },
   {
     title: "Your own storefront",
-    blurb: "A store you control — own the customer, keep the margin, escape marketplace fees.",
+    blurb: "A store you own. Keep the customer, keep the margin, keep what the marketplaces would have skimmed.",
     items: [
       { name: "Shopify", color: "#5A863E", logo: "/logos/shopify.svg", stage: "launch" },
       { name: "WooCommerce", color: "#7F54B3", logo: "/logos/woocommerce.svg", stage: "planned" },
@@ -121,8 +121,8 @@ export default function Platforms() {
             </h2>
           </div>
           <p className="text-bomb-600 leading-relaxed lg:pb-3 lg:border-l-4 lg:border-ink lg:pl-6">
-            Marketplaces put you in front of new buyers; your own stores let you keep the margin. Do both. Etsy, Shopify and
-            Gumroad come first — then we keep adding, prioritized by what early members sell on.
+            Marketplaces put you in front of new buyers. Your own stores let you keep the margin. Do both. Etsy, Shopify and
+            Gumroad come first, then we keep adding, in the order early members actually ask for.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function Platforms() {
         </div>
 
         <p className="mt-10 font-mono text-xs text-bomb-500">
-          Selling somewhere that isn&apos;t listed? Tell us on signup and we&apos;ll look at it next.
+          Selling somewhere we have not listed? Tell us when you sign up and it goes on the pile.
         </p>
       </div>
     </section>

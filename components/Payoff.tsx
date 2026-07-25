@@ -60,13 +60,13 @@ export default function Payoff() {
             Then the orders come from everywhere
           </h2>
           <p className="mt-5 text-bomb-300 text-lg leading-relaxed max-w-md">
-            Your catalog goes live across every marketplace you sell on — each one a new place a buyer can stumble onto you,
-            each one working while you make the next thing. One upload, selling in every direction at once.{" "}
-            <span className="text-white font-medium">That&apos;s the boom.</span>
+            Your catalog goes live across every marketplace you sell on. Each one is another place a stranger trips over your
+            work. Each one keeps selling while you make the next thing. One upload, working in every direction at once.{" "}
+            <span className="text-white font-medium">That is the boom.</span>
           </p>
           <p className="mt-5 font-mono text-xs text-bomb-500 leading-relaxed max-w-md">
-            Reach is the lever we hand you — three or four times the storefronts, none of the busywork. What you make of it is
-            the fun part.
+            Reach is the lever we hand you. Three or four times the storefronts, none of the busywork. What you do with it is
+            your business.
           </p>
         </div>
 

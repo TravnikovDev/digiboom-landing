@@ -7,19 +7,19 @@ const FEATURES = [
     icon: Store,
     label: "more_places_to_be_found",
     title: "Be where the buyers already are",
-    text: "Opening a store used to cost you weeks, so you never did it. DigiBoom does the account, branding, categories and policies for you — you're live on a new marketplace in an afternoon, in front of a fresh audience.",
+    text: "Opening a store used to cost you a week you did not have, so you never bothered. We handle the account, the branding, the categories, the fine print. You are live on a new marketplace by dinner, in front of people who have never heard of you.",
   },
   {
     icon: PackageOpen,
     label: "ready_to_sell",
     title: "Every listing lands ready to sell",
-    text: "Files, descriptions, variants, tags and licenses move with each product, mapped to each platform's format — not just titles and prices. Nothing to re-upload, so every new store earns from day one.",
+    text: "Files, descriptions, variants, tags, licences. All of it travels with the product, shaped to fit each platform, not just the title and a price. Nothing to re-upload. Every new store is open for business on day one.",
   },
   {
     icon: RefreshCw,
-    label: "grow_without_the_grind",
-    title: "Grow without the extra work",
-    text: "Change a price or drop a new version once — every storefront updates in seconds. The upkeep that used to eat your week disappears, so more stores never means more hours.",
+    label: "more_stores_not_more_hours",
+    title: "More stores, not more hours",
+    text: "Change a price once. Ship a new version once. Every storefront catches up in seconds. The busywork that used to swallow your week is simply gone, so you can go as wide as you like and keep your evenings.",
   },
 ];
 
@@ -33,9 +33,9 @@ export default function Product() {
           You bring one shop. We open the rest.
         </h2>
         <p className="mt-3 text-bomb-600 max-w-2xl leading-relaxed">
-          Most sellers list on one marketplace. The ones who grow are on three or four — <strong className="text-ink">3–4×
-          the storefronts a buyer can discover you on</strong>, for a fraction of the effort. DigiBoom does the expanding for
-          you, semi-automatically, with your approval at every step.
+          Most sellers list in one place. The ones who grow list in three or four. That is{" "}
+          <strong className="text-ink">three or four times the storefronts a buyer can trip over you on</strong>, for a sliver
+          of the work. DigiBoom does the expanding. You approve each step, we do the rest.
         </p>
 
         <div className="mt-12 grid lg:grid-cols-2 gap-12 items-center">

@@ -78,7 +78,7 @@ export default function SignupForm({
             You&apos;ll hear the boom first.
           </>
         ) : state === "error" ? (
-          "That didn't go through — try again in a minute."
+          "That did not go through. Give it a minute and try again."
         ) : (
           defaultNote
         )}

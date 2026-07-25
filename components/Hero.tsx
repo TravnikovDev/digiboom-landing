@@ -23,9 +23,10 @@ export default function Hero() {
             <span className="text-ink">In a good way.</span>
           </h1>
           <p className="mt-5 text-ink text-lg max-w-md font-medium leading-loose">
-            Selling your templates, presets, brushes or fonts on <span className="mark">Etsy</span> alone? DigiBoom opens your
-            storefronts on <span className="mark">Shopify</span>, <span className="mark">Gumroad</span> and more, and keeps
-            every listing in sync. The more places you sell, the more buyers find you — without the extra work.
+            You sell your templates, presets, brushes and fonts on <span className="mark">Etsy</span>. Only Etsy. One shelf,
+            one shop, and you already know how that story goes. DigiBoom opens your other storefronts on{" "}
+            <span className="mark">Shopify</span>, <span className="mark">Gumroad</span> and the rest, then keeps every listing
+            in sync. More places to be found. More buyers. None of the extra hours.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -54,7 +55,7 @@ export default function Hero() {
           <SignupForm
             inputId="email-hero"
             buttonLabel="Light the fuse"
-            defaultNote="Free early access for waitlist members. Product updates only — no spam."
+            defaultNote="Free early access for the waitlist. Product updates, nothing else. We have no interest in cluttering your inbox."
           />
         </div>
 

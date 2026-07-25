@@ -3,28 +3,28 @@ import TornEdge from "./TornEdge";
 
 const ITEMS = [
   {
-    q: "Do I need stores on other platforms already?",
-    a: "No — that's the point. If you only sell on Etsy, DigiBoom guides you through opening the others and fills in most of the setup automatically, then moves your catalog across.",
+    q: "Do I need stores on the other platforms already?",
+    a: "No. That is the entire point. If Etsy is all you have, we walk you through opening the rest, fill in most of the setup for you, and carry your catalog over.",
   },
   {
     q: "Can it open the accounts entirely on its own?",
-    a: "Not entirely — marketplaces require you to accept terms and verify identity yourself, and that's a good thing. DigiBoom prepares everything around those steps: branding, categories, policies, listings and files.",
+    a: "No, and you would not want it to. The marketplaces make you accept the terms and prove who you are, yourself. We prepare everything around those two steps. Branding, categories, policies, listings, files.",
   },
   {
-    q: "Is this against marketplace rules?",
-    a: "No. DigiBoom uses official public APIs with OAuth authorization — the same integrations marketplaces offer to any app developer. No scraping, no password sharing.",
+    q: "Is this against the marketplace rules?",
+    a: "No. We use the official public APIs with OAuth, the same doors these platforms open to any app developer. No scraping. No handing us your password.",
   },
   {
     q: "Do you keep my files and customer data?",
-    a: "Your data stays yours. Files are stored encrypted only as needed for syncing, and you can export or wipe everything at any time.",
+    a: "Your data stays yours. Files sit encrypted, only for as long as a sync needs them, and you can export or wipe the lot whenever you want.",
   },
   {
     q: "When can I actually try it?",
-    a: "The MVP with Etsy ↔ Shopify sync goes to closed beta first — waitlist members get invited in signup order. Join now to skip the queue later.",
+    a: "The first build, Etsy and Shopify in sync, goes to a closed beta. Waitlist members get in first, in the order they signed up. Join now, thank yourself later.",
   },
   {
-    q: "Who's building this?",
-    a: "Roman Travnikov — founder and lead developer, 10+ years in web development, building DigiBoom in the open. The full plan is in the DigiBoom white paper.",
+    q: "Who is building this?",
+    a: "Roman Travnikov. Founder and lead developer, ten-plus years shipping on the web, building DigiBoom out in the open. The whole plan is in the white paper.",
   },
 ];
 

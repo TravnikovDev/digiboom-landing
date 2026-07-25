@@ -26,9 +26,9 @@ const mono = JetBrains_Mono({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://digiboom.biz";
 
-const TITLE = "DigiBoom — we'll explode your sales. In a good way.";
+const TITLE = "DigiBoom. We'll explode your sales. In a good way.";
 const DESCRIPTION =
-  "Selling on Etsy only? DigiBoom opens your Shopify and Gumroad storefronts for you, moves your catalog across and keeps everything in sync — so your digital products get found several times more often. Join the early access list.";
+  "Selling on Etsy alone? DigiBoom opens your Shopify and Gumroad storefronts for you, moves your catalog across and keeps everything in sync, so your work gets found in more places than one. Join the early access list.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

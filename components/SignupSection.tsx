@@ -13,9 +13,9 @@ export default function SignupSection() {
           the first sync
         </h2>
         <p className="mt-4 text-ink font-medium max-w-xl mx-auto leading-relaxed">
-          Build updates as they ship, a beta invite ahead of the queue, and launch pricing locked in for early members.
+          Updates as they ship. A beta invite before the crowd gets one. Launch pricing locked in while it lasts.
         </p>
-        <SignupForm inputId="email-bottom" defaultNote="One email per milestone. Unsubscribe anytime." large center />
+        <SignupForm inputId="email-bottom" defaultNote="One email per milestone. Leave whenever you like." large center />
       </div>
     </section>
   );

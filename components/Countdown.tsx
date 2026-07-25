@@ -5,38 +5,38 @@ type Status = "done" | "active" | "planned";
 
 const MILESTONES: { title: string; text: string; status: Status; when: string }[] = [
   {
-    title: "Concept & white paper",
-    text: "Problem validated with sellers, architecture and business model documented.",
+    title: "Concept and white paper",
+    text: "The problem held up with real sellers. Architecture and business model, on paper.",
     status: "done",
     when: "Q4 2025",
   },
   {
-    title: "Landing & waitlist",
-    text: "You're looking at it. Sign up and you're first in line for the beta.",
+    title: "Landing and waitlist",
+    text: "You are looking at it. Sign up now and you are near the front of the queue.",
     status: "active",
     when: "Now",
   },
   {
     title: "Seller community",
-    text: "Telegram and Discord groups where early users shape what gets built first.",
+    text: "Telegram and Discord, where the early ones argue about what gets built first.",
     status: "planned",
     when: "Next",
   },
   {
-    title: "MVP — Etsy ↔ Shopify sync",
-    text: "Store setup on Shopify plus two-way sync of digital products between the first two platforms.",
+    title: "MVP: Etsy and Shopify",
+    text: "Shopify store setup, and two-way sync of your digital products between the first two platforms.",
     status: "planned",
-    when: "Q1–Q2",
+    when: "Q1 to Q2",
   },
   {
     title: "Closed beta",
-    text: "Waitlist members get invited first, in signup order.",
+    text: "Waitlist first, in the order you signed up. No queue-jumping.",
     status: "planned",
     when: "Q3",
   },
   {
     title: "Public launch",
-    text: "Open subscriptions, then Gumroad support and listing analytics.",
+    text: "Subscriptions open to everyone, then Gumroad, then the analytics.",
     status: "planned",
     when: "Q4",
   },
@@ -73,8 +73,8 @@ export default function Countdown() {
           </div>
           <div className="lg:pb-3">
             <p className="text-bomb-300 leading-relaxed">
-              DigiBoom is early. Here&apos;s exactly what&apos;s done, what&apos;s in progress and what&apos;s next — this page
-              updates as the work lands.
+              DigiBoom is early, and we are not going to pretend otherwise. Here is what is done, what is underway, and what
+              is next. This page changes as the work does.
             </p>
             {/* fuse-progress bar */}
             <div className="mt-5 flex items-center gap-3">
