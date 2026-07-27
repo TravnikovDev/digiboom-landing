@@ -5,7 +5,7 @@
  * Phase 1 ships the Latin four. pt/ja/ru are planned (see docs/LOCALIZATION.md) and get
  * added here once translated and, for ja/ru, once their fonts are wired.
  */
-export const locales = ["en", "de", "fr", "es"] as const;
+export const locales = ["en", "de", "fr", "es", "pt", "ja", "ru"] as const;
 
 export type Locale = (typeof locales)[number];
 
@@ -21,4 +21,7 @@ export const localeNames: Record<Locale, string> = {
   de: "Deutsch",
   fr: "Français",
   es: "Español",
+  pt: "Português",
+  ja: "日本語",
+  ru: "Русский",
 };

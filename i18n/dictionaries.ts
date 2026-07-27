@@ -3,6 +3,9 @@ import en from "../messages/en.json";
 import de from "../messages/de.json";
 import fr from "../messages/fr.json";
 import es from "../messages/es.json";
+import pt from "../messages/pt.json";
+import ja from "../messages/ja.json";
+import ru from "../messages/ru.json";
 
 /**
  * The message shape is derived from English, which is the source of truth: every other
@@ -19,6 +22,9 @@ const overrides: Record<Locale, DeepPartial<Messages>> = {
   de: de as DeepPartial<Messages>,
   fr: fr as DeepPartial<Messages>,
   es: es as DeepPartial<Messages>,
+  pt: pt as DeepPartial<Messages>,
+  ja: ja as DeepPartial<Messages>,
+  ru: ru as DeepPartial<Messages>,
 };
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {

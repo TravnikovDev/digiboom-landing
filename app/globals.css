@@ -14,11 +14,43 @@
   --color-bomb-700: #343a42;
 }
 
-@theme inline {
+/* Not `inline`: the utilities must resolve `var(--font-display)` at runtime so the
+   per-language overrides below can swap the stack for scripts the brand faces don't cover. */
+@theme {
   --font-display: var(--font-bebas), Impact, sans-serif;
   --font-comic: var(--font-bangers), Impact, sans-serif;
   --font-sans: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-code), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Bebas/Bangers are Latin-only. Russian (Cyrillic) and Japanese (CJK) swap in faces that
+   cover their script; `<html lang>` is set per page, so the right stack applies with zero JS.
+   These fonts are preload:false (see app/[locale]/layout.tsx), so only ru/ja pages fetch them. */
+:root:lang(ru) {
+  --font-display: var(--font-oswald), Impact, sans-serif;
+  --font-comic: var(--font-rubik-cyr), ui-sans-serif, sans-serif;
+  --font-sans: var(--font-rubik-cyr), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-cyr), ui-monospace, monospace;
+}
+:root:lang(ja) {
+  --font-display: var(--font-noto-jp), sans-serif;
+  --font-comic: var(--font-noto-jp), sans-serif;
+  --font-sans: var(--font-noto-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-noto-jp), ui-monospace, monospace;
+}
+
+/* Noto's square CJK glyphs run large and tall at the display sizes tuned for the condensed
+   Latin brand face, swallowing the Japanese hero. Step the big headings down (clamp keeps it
+   responsive; the .font-display element selector out-specifies the Tailwind text-* utility)
+   and open the line-height a touch. */
+:lang(ja) h1.font-display {
+  font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+}
+:lang(ja) h2.font-display {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+}
+:lang(ja) .font-display {
+  line-height: 1.25;
 }
 
 html {

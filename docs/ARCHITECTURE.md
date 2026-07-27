@@ -143,6 +143,11 @@ Defined as Tailwind `@theme` tokens in `app/globals.css`.
 - `--font-sans` **Rubik** — body.
 - `--font-mono` **JetBrains Mono** — technical labels, `snake_case` tags, statuses.
 
+Bebas/Bangers are Latin-only, so `:root:lang(ru|ja)` in `globals.css` swaps the semantic
+font variables per script: **Oswald** + Cyrillic Rubik/JetBrains for Russian, **Noto Sans
+JP** for Japanese. These faces are `preload:false` and referenced only via `:lang`, so Latin
+pages never download them. See [LOCALIZATION.md §2.8](LOCALIZATION.md).
+
 **Comic devices:** hard offset shadows (`.comic-shadow`), ripped-paper dividers
 (`TornEdge`), a faint film-grain overlay (`body::after`), a blueprint grid (`.tech-grid`),
 halftone dots. These carry personality without stock imagery.
@@ -308,12 +313,12 @@ Gotchas:
       stills, reserving realtime three.js for the hero.
 
 ### Internationalization
-- [x] **Phase 1 shipped** — en/de/fr/es on Next's native dictionary pattern: `app/[locale]/`
-      static routes, `getDictionary` with English fallback, hreflang + per-locale metadata, a
-      `/` redirect, a language switcher, and a blocking CI key-diff check.
-- [ ] **Phase 2** — native review of de/fr/es copy, then pt/ja/ru (needs Cyrillic + CJK
-      fonts), a sitemap, and per-locale OG images. Design and maintenance model are in
-      **[LOCALIZATION.md](./LOCALIZATION.md)**.
+- [x] **Shipped — all seven languages** (en/de/fr/es/pt/ja/ru) on Next's native dictionary
+      pattern: `app/[locale]/` static routes, `getDictionary` with English fallback, hreflang
+      + per-locale metadata, a `/` redirect, a language switcher, a sitemap, and a blocking CI
+      key-diff check. Cyrillic (Oswald) and CJK (Noto Sans JP) fonts load only on ru/ja pages.
+- [ ] **Remaining** — native review of the non-English copy, and per-locale OG images. Design
+      and maintenance model are in **[LOCALIZATION.md](./LOCALIZATION.md)**.
 
 ### Product roadmap
 The *product's* roadmap (community → MVP Etsy↔Shopify sync → closed beta → public launch)

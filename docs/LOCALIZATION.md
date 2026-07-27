@@ -17,8 +17,10 @@ second.
 > source of truth, deep-merge fallback, hreflang, a client root redirect, a CI key-diff — is
 > exactly what was built; only the message-plumbing tool changed. Sections **2.2, 2.4–2.7,
 > 2.11** and the **Part 7 checklist** below are updated to match the code; the rest of the
-> plan (general plan, fonts, SEO, switcher, workflow, risks) stands as written. **Live now:**
-> `en`, `de`, `fr`, `es`. **Phase 2 (not built):** `pt`, `ja`, `ru`.
+> plan (general plan, fonts, SEO, switcher, workflow, risks) stands as written. **Live now:
+> all seven** — `en`, `de`, `fr`, `es`, `pt`, `ja`, `ru`. The Cyrillic (Oswald) and CJK
+> (Noto Sans JP) fonts from §2.8 are wired (see the as-built note there). Translations for
+> `de`/`fr`/`es`/`pt`/`ja`/`ru` are a solid first pass, pending native review.
 
 ---
 
@@ -276,6 +278,21 @@ Plan:
   well-set cousin, not a twin. Accept this; don't try to force Bebas onto Japanese.
 - Consider trimming Noto Sans JP to the weights actually used (it's a large family).
 
+**As-built (shipped).** All four extra faces live in `app/[locale]/layout.tsx`, each
+`preload: false` and referenced only through `:root:lang(ru|ja)` in `globals.css`, so Latin
+pages never fetch them (verified: the `en` page emits no preload for Oswald/Noto):
+
+- `ru`: **Oswald** (Cyrillic display, `--font-oswald`) for headlines; Cyrillic **Rubik**
+  (`--font-rubik-cyr`) for body + comic; Cyrillic **JetBrains Mono** (`--font-mono-cyr`) for
+  the mono labels. Bebas/Bangers have no Cyrillic, hence the swaps.
+- `ja`: **Noto Sans JP** (`--font-noto-jp`, weights 400/700) for *everything* — display,
+  comic, sans and mono — since JetBrains Mono has no CJK either.
+- The Tailwind font `@theme` was switched from `inline` to referencing so the utilities
+  resolve `var(--font-display)` at runtime and the `:lang()` overrides actually take effect.
+- Noto's square glyphs run large at the display sizes tuned for condensed Bebas, so a small
+  `:lang(ja)` clamp steps the `h1`/`h2` headings down (in `globals.css`). `pt` is Latin and
+  needs none of this — it uses the base brand faces.
+
 ### 2.9 Metadata and SEO
 
 - `generateMetadata` per locale sets translated `<title>`/`description` and the alternates:
@@ -418,13 +435,14 @@ Phase 1 (done):
 - [x] Language switcher (`components/LangSwitcher.tsx`) in the nav.
 - [x] `app/sitemap.ts` — all locale URLs with hreflang alternates (force-static).
 - [x] `scripts/i18n-check.mjs` wired into the deploy workflow (blocking).
-- [x] Phase 1 translations: `de`, `fr`, `es` (+ `en`).
+- [x] Translations: `de`, `fr`, `es`, `pt`, `ja`, `ru` (+ `en`) — all seven live.
+- [x] Fonts: Oswald (Cyrillic) + Cyrillic Rubik/JetBrains for `ru`, Noto Sans JP for `ja`,
+      all `preload:false` with per-`lang` CSS overrides (§2.8).
 
-Phase 2 (not built):
+Remaining (Phase 2):
 
-- [ ] Native review of the marketing-critical `de`/`fr`/`es` lines (hero, CTAs, puns) — the
+- [ ] Native review of the marketing-critical non-English lines (hero, CTAs, puns) — the
       current translations are a solid first pass, not native-reviewed.
-- [ ] Add fonts (Oswald for Cyrillic, Noto Sans JP) + per-`lang` CSS variable overrides.
-- [ ] Add `pt`, then `ja` and `ru` to `i18n/config.ts` with their `messages/*.json`.
 - [ ] Per-locale OG images.
 - [ ] Optional: a footer language switcher (upward-opening variant).
+- [ ] Optional: subset Noto Sans JP weights further if the JP page's font payload matters.
