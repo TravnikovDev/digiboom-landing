@@ -1,7 +1,9 @@
+import type { Messages } from "@/i18n/dictionaries";
+import { rich } from "./rich";
 import Reveal from "./Reveal";
 
 /** Illustrative order pings — the "customers from every direction" idea made concrete,
- *  without claiming any specific volume or revenue. */
+ *  without claiming any specific volume or revenue. Product names are fixed sample data. */
 const ORDERS = [
   { platform: "Etsy", logo: "/logos/etsy.svg", product: "Procreate Brush Pack", price: "$18", rot: "-rotate-2" },
   { platform: "Gumroad", logo: "/logos/gumroad.svg", product: "SVG Mega Bundle", price: "$24", rot: "rotate-1" },
@@ -10,7 +12,7 @@ const ORDERS = [
   { platform: "Payhip", logo: "/logos/payhip.svg", product: "Display Font Family", price: "$29", rot: "-rotate-1" },
 ];
 
-function OrderChip({ order, i }: { order: (typeof ORDERS)[number]; i: number }) {
+function OrderChip({ order, i, newLabel }: { order: (typeof ORDERS)[number]; i: number; newLabel: string }) {
   return (
     <Reveal delay={i * 0.12} className={`bg-white rounded-2xl border-[3px] border-ink p-3.5 comic-shadow-sm ${order.rot}`}>
       <div className="flex items-center gap-3">
@@ -33,7 +35,7 @@ function OrderChip({ order, i }: { order: (typeof ORDERS)[number]; i: number }) 
         )}
         <div className="min-w-0">
           <p className="font-bold text-sm leading-tight">
-            New sale <span className="text-bomb-500 font-medium">· {order.platform}</span>
+            {newLabel} <span className="text-bomb-500 font-medium">· {order.platform}</span>
           </p>
           <p className="font-mono text-[11px] text-bomb-500 truncate">
             {order.product} · {order.price}
@@ -45,7 +47,7 @@ function OrderChip({ order, i }: { order: (typeof ORDERS)[number]; i: number }) 
   );
 }
 
-export default function Payoff() {
+export default function Payoff({ copy }: { copy: Messages["payoff"] }) {
   return (
     <section className="relative bg-ink py-24 overflow-hidden">
       {/* explosion glow */}
@@ -55,33 +57,26 @@ export default function Payoff() {
       />
       <div className="mx-auto max-w-6xl px-5 relative grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">The payoff</p>
-          <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.92]">
-            Then the orders come from everywhere
-          </h2>
+          <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">{copy.eyebrow}</p>
+          <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.92]">{copy.heading}</h2>
           <p className="mt-5 text-bomb-300 text-lg leading-relaxed max-w-md">
-            Your catalog goes live across every marketplace you sell on. Each one is another place a stranger trips over your
-            work. Each one keeps selling while you make the next thing. One upload, working in every direction at once.{" "}
-            <span className="text-white font-medium">That is the boom.</span>
+            {rich(copy.paragraph, { accent: (c, k) => <span key={k} className="text-white font-medium">{c}</span> })}
           </p>
-          <p className="mt-5 font-mono text-xs text-bomb-500 leading-relaxed max-w-md">
-            Reach is the lever we hand you. Three or four times the storefronts, none of the busywork. What you do with it is
-            your business.
-          </p>
+          <p className="mt-5 font-mono text-xs text-bomb-500 leading-relaxed max-w-md">{copy.note}</p>
         </div>
 
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-wider text-bomb-400 mb-4">Orders, from every channel</p>
+          <p className="font-mono text-[11px] uppercase tracking-wider text-bomb-400 mb-4">{copy.ordersLabel}</p>
           <div className="space-y-3">
             {ORDERS.map((order, i) => (
-              <OrderChip key={order.platform} order={order} i={i} />
+              <OrderChip key={order.platform} order={order} i={i} newLabel={copy.orderNew} />
             ))}
           </div>
         </div>
       </div>
 
       <span className="absolute bottom-8 right-6 sm:right-16 font-comic text-4xl text-white boom-text rotate-6 select-none pointer-events-none">
-        BOOM!
+        {copy.boom}
       </span>
     </section>
   );

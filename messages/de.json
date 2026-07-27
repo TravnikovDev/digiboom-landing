@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "DigiBoom. Wir jagen deinen Umsatz in die Luft. Im guten Sinne.",
+    "description": "Verkaufst du nur auf Etsy? DigiBoom eröffnet deine Shopify- und Gumroad-Shops für dich, überträgt deinen Katalog und hält alles synchron, damit deine Arbeit an mehr als einem Ort gefunden wird. Trag dich für den Early Access ein.",
+    "ogAlt": "DigiBoom. Wir jagen deinen Umsatz in die Luft. Im guten Sinne.",
+    "skip": "Zum Inhalt springen"
+  },
+  "nav": {
+    "badge": "in Entwicklung · Beta 2026",
+    "badgeShort": "Beta 2026",
+    "cta": "Early Access sichern",
+    "langLabel": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Tick... tick... tick...",
+    "headline": "Wir sprengen\ndeinen Umsatz.\n<accent>Im guten Sinne.</accent>",
+    "paragraph": "Du verkaufst deine Vorlagen, Presets, Brushes und Fonts auf <mark>Etsy</mark>. Nur auf Etsy. Ein Regal, ein Shop, und du weißt schon, wie diese Geschichte ausgeht. DigiBoom eröffnet deine weiteren Shops auf <mark>Shopify</mark>, <mark>Gumroad</mark> und dem Rest und hält danach jedes Angebot synchron. Mehr Orte, an denen man dich findet. Mehr Käufer. Keine zusätzlichen Stunden.",
+    "chipYours": "dein Shop",
+    "chipWeSetup": "richten wir ein",
+    "chipMore": "+20 weitere",
+    "signupButton": "Zündschnur anzünden",
+    "signupNote": "Kostenloser Early Access für die Warteliste. Nur Produkt-Updates, sonst nichts. Wir haben kein Interesse daran, dein Postfach vollzumüllen."
+  },
+  "signup": {
+    "emailLabel": "E-Mail",
+    "placeholder": "du@deinshop.com",
+    "successStrong": "Zündschnur brennt.",
+    "successRest": "Du hörst den Boom als Erster.",
+    "error": "Das hat nicht geklappt. Warte kurz und versuch es erneut."
+  },
+  "marquee": {
+    "items": [
+      "Etsy",
+      "Shopify",
+      "Gumroad",
+      "digitale Downloads",
+      "Druckdateien",
+      "Vorlagen",
+      "Presets",
+      "Fonts",
+      "3D-Assets",
+      "Kurse"
+    ]
+  },
+  "product": {
+    "eyebrow": "Was du bekommst",
+    "heading": "Du bringst einen Shop mit. Den Rest eröffnen wir.",
+    "intro": "Die meisten Verkäufer listen an einem Ort. Wer wächst, listet an drei oder vier. Das sind <strong>drei- bis viermal so viele Shops, über die ein Käufer zufällig auf dich stößt</strong>, für einen Bruchteil der Arbeit. DigiBoom übernimmt die Expansion. Du gibst jeden Schritt frei, wir erledigen den Rest.",
+    "features": [
+      {
+        "title": "Sei da, wo die Käufer schon sind",
+        "text": "Einen Shop zu eröffnen kostete dich früher eine Woche, die du nicht hattest, also hast du es gelassen. Wir kümmern uns um das Konto, das Branding, die Kategorien, das Kleingedruckte. Bis zum Abendessen bist du auf einem neuen Marktplatz live, vor Leuten, die noch nie von dir gehört haben."
+      },
+      {
+        "title": "Jedes Angebot ist sofort verkaufsbereit",
+        "text": "Dateien, Beschreibungen, Varianten, Tags, Lizenzen. Alles reist mit dem Produkt mit, passend für jede Plattform zugeschnitten, nicht nur Titel und Preis. Nichts erneut hochladen. Jeder neue Shop ist ab Tag eins geöffnet."
+      },
+      {
+        "title": "Mehr Shops, nicht mehr Stunden",
+        "text": "Preis einmal ändern. Neue Version einmal ausspielen. Jeder Shop zieht in Sekunden nach. Die Fleißarbeit, die früher deine Woche verschlang, ist einfach weg, also geh so breit, wie du willst, und behalt deine Abende."
+      }
+    ]
+  },
+  "syncPanel": {
+    "window": "digiboom / shop-expansion",
+    "catalogTitle": "Dein Etsy-Katalog, 48 Produkte",
+    "catalogMeta": "Dateien · Beschreibungen · Tags · Preise",
+    "stateYours": "dein Shop",
+    "stateLive": "Shop live",
+    "stateSetup": "wird eingerichtet",
+    "footLeft": "1 Shop",
+    "footLeftEnd": "3 Storefronts",
+    "footRight": "3× so viele Orte, an denen Käufer dich finden"
+  },
+  "problem": {
+    "eyebrow": "Das Problem",
+    "heading": "Ein Shop, ein Publikum, einen schlechten Tag von null entfernt",
+    "cards": [
+      {
+        "title": "Ein zweiter Shop kostet Wochen",
+        "text": "Neues Konto. Neues Branding. Neue Kategorien. Dann jede Datei und Beschreibung, von Hand neu hochgeladen. Die meisten fangen damit an und geben still und leise auf."
+      },
+      {
+        "title": "Ein Marktplatz, ein Publikum",
+        "text": "Deine Arbeit sehen nur Leute, die schon auf dieser einen Plattform sind. Alle, die woanders shoppen, ahnen nichts von deiner Existenz."
+      },
+      {
+        "title": "Jede Änderung, doppelt gemacht",
+        "text": "Neue Version, neuer Preis, neue Tags, mal jede Plattform, auf der du bist. Stunden pro Woche, in denen rein gar nichts entsteht."
+      }
+    ]
+  },
+  "how": {
+    "eyebrow": "So funktioniert's",
+    "heading": "Von einem Shop zu einem Shop-Netzwerk",
+    "steps": [
+      {
+        "title": "Shop verbinden",
+        "text": "Zeig uns den Shop, den du schon betreibst, Etsy, Shopify oder Gumroad, über die offizielle API. Zieh den Stecker, wann immer dir danach ist."
+      },
+      {
+        "title": "Katalog importieren",
+        "text": "Wir lesen deine Angebote, deine Dateien und all die fummeligen Metadaten und finden heraus, was wohin passt."
+      },
+      {
+        "title": "Neue Shops eröffnen",
+        "text": "Geführtes Setup auf den Plattformen, die dir fehlen. Konto, Branding, Kategorien, Richtlinien, größtenteils schon ausgefüllt, bevor du etwas anfasst."
+      },
+      {
+        "title": "Überall veröffentlichen",
+        "text": "Dein Katalog kommt in jedem neuen Shop unversehrt an. Dateien, Texte, Tags, Lizenzen. Du lädst nichts zweimal hoch."
+      }
+    ],
+    "payoffTitle": "Vervielfache deine Reichweite",
+    "payoffText": "Gleicher Katalog, ein Vielfaches an Regalfläche, vor jedem Marktplatz statt nur dem einen, mit dem du angefangen hast."
+  },
+  "payoff": {
+    "eyebrow": "Der Lohn",
+    "heading": "Dann kommen die Bestellungen von überall",
+    "paragraph": "Dein Katalog geht auf jedem Marktplatz live, auf dem du verkaufst. Jeder ist ein weiterer Ort, an dem ein Fremder über deine Arbeit stolpert. Jeder verkauft weiter, während du das Nächste machst. Ein Upload, der in alle Richtungen gleichzeitig arbeitet. <accent>Das ist der Boom.</accent>",
+    "note": "Reichweite ist der Hebel, den wir dir in die Hand geben. Drei- bis viermal so viele Shops, keine Fleißarbeit. Was du daraus machst, ist deine Sache.",
+    "ordersLabel": "Bestellungen, aus jedem Kanal",
+    "orderNew": "Neuer Verkauf",
+    "boom": "BOOM!"
+  },
+  "platforms": {
+    "eyebrow": "Wohin deine Produkte können",
+    "heading": "Jeder Ort, an dem digitale Waren verkauft werden",
+    "intro": "Marktplätze bringen dich vor neue Käufer. Deine eigenen Shops lassen dir die Marge. Mach beides. Etsy, Shopify und Gumroad kommen zuerst, dann bauen wir weiter aus, in der Reihenfolge, die frühe Mitglieder tatsächlich verlangen.",
+    "groups": [
+      {
+        "title": "Marktplätze",
+        "blurb": "Neue Zielgruppen, die schon da draußen suchen. Von hier kommt die Entdeckung wirklich."
+      },
+      {
+        "title": "Dein eigener Shop",
+        "blurb": "Ein Shop, der dir gehört. Behalt den Kunden, behalt die Marge, behalt das, was die Marktplätze abgeschöpft hätten."
+      },
+      {
+        "title": "Creator-Plattformen",
+        "blurb": "Wo ein Publikum direkt bei dir kauft."
+      },
+      {
+        "title": "Kurse & Medien",
+        "blurb": "Für Verkäufer, deren Produkte Lektionen, Audio oder Video sind."
+      }
+    ],
+    "stageLaunch": "zum Start",
+    "stagePlanned": "geplant",
+    "stageExploring": "in Prüfung",
+    "footnote": "Verkaufst du irgendwo, das wir nicht gelistet haben? Sag es uns bei der Anmeldung, dann kommt es auf den Stapel."
+  },
+  "countdown": {
+    "eyebrow": "Entwicklungsstand",
+    "heading": "Wird offen gebaut",
+    "intro": "DigiBoom steht am Anfang, und wir tun nicht so, als wäre es anders. Hier ist, was fertig ist, was läuft und was als Nächstes kommt. Diese Seite ändert sich mit der Arbeit.",
+    "shipped": "fertig",
+    "statusDone": "fertig",
+    "statusActive": "in Arbeit",
+    "statusPlanned": "geplant",
+    "milestones": [
+      {
+        "title": "Konzept und White Paper",
+        "text": "Das Problem hat sich bei echten Verkäufern bestätigt. Architektur und Geschäftsmodell, auf dem Papier.",
+        "when": "Q4 2025"
+      },
+      {
+        "title": "Landing und Warteliste",
+        "text": "Du schaust sie dir gerade an. Melde dich jetzt an und du bist fast vorn in der Schlange.",
+        "when": "Jetzt"
+      },
+      {
+        "title": "Verkäufer-Community",
+        "text": "Telegram und Discord, wo die Frühen darüber streiten, was zuerst gebaut wird.",
+        "when": "Als Nächstes"
+      },
+      {
+        "title": "MVP: Etsy und Shopify",
+        "text": "Shopify-Shop-Setup und Zwei-Wege-Sync deiner digitalen Produkte zwischen den ersten beiden Plattformen.",
+        "when": "Q1 bis Q2"
+      },
+      {
+        "title": "Geschlossene Beta",
+        "text": "Warteliste zuerst, in der Reihenfolge deiner Anmeldung. Kein Vordrängeln.",
+        "when": "Q3"
+      },
+      {
+        "title": "Öffentlicher Launch",
+        "text": "Abos für alle, dann Gumroad, dann die Analytics.",
+        "when": "Q4"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Geplante Preise",
+    "heading": "Feste Monatspläne, keine Credits",
+    "intro": "Bepreist danach, wie viel du verkaufst, nicht nach dem Sync. Ein zusätzlicher Verkauf im Monat deckt es, der Rest gehört dir. Warteliste-Mitglieder sichern sich den Launch-Preis, bevor wir zur Vernunft kommen.",
+    "mostPopular": "Am beliebtesten",
+    "perMonth": "/Mon.",
+    "plans": [
+      {
+        "name": "Starter",
+        "cap": "bis zu 50 Produkte",
+        "price": "$10",
+        "blurb": "Für den Ein-Personen-Shop, der endlich eine zweite Front eröffnet."
+      },
+      {
+        "name": "Pro",
+        "cap": "bis zu 200 Produkte",
+        "price": "$30",
+        "blurb": "Für Shops, die schon drei Plattformen oder mehr bespielen."
+      },
+      {
+        "name": "Business",
+        "cap": "bis zu 500 Produkte",
+        "price": "$50",
+        "blurb": "Für Studios, die einen Katalog bändigen, der außer Kontrolle geriet."
+      },
+      {
+        "name": "Enterprise",
+        "cap": "unbegrenzte Produkte",
+        "price": "Individuell",
+        "blurb": "Alles, plus API-Zugang und Integrationen, die wir passend bauen."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Bevor du fragst",
+    "heading": "Fragen, beantwortet",
+    "items": [
+      {
+        "q": "Brauche ich bereits Shops auf den anderen Plattformen?",
+        "a": "Nein. Genau das ist der Punkt. Wenn du nur Etsy hast, führen wir dich durch die Eröffnung der übrigen, füllen den Großteil des Setups für dich aus und bringen deinen Katalog mit."
+      },
+      {
+        "q": "Kann es die Konten komplett allein eröffnen?",
+        "a": "Nein, und das willst du auch nicht. Die Marktplätze verlangen, dass du die AGB selbst akzeptierst und dich selbst identifizierst. Wir bereiten alles rund um diese beiden Schritte vor. Branding, Kategorien, Richtlinien, Angebote, Dateien."
+      },
+      {
+        "q": "Verstößt das gegen die Regeln der Marktplätze?",
+        "a": "Nein. Wir nutzen die offiziellen öffentlichen APIs mit OAuth, dieselben Türen, die diese Plattformen jedem App-Entwickler öffnen. Kein Scraping. Kein Passwort in unsere Hände."
+      },
+      {
+        "q": "Behaltet ihr meine Dateien und Kundendaten?",
+        "a": "Deine Daten bleiben deine. Dateien liegen verschlüsselt, nur so lange ein Sync sie braucht, und du kannst alles jederzeit exportieren oder löschen."
+      },
+      {
+        "q": "Wann kann ich es wirklich ausprobieren?",
+        "a": "Der erste Build, Etsy und Shopify im Sync, geht in eine geschlossene Beta. Warteliste-Mitglieder kommen zuerst rein, in der Reihenfolge ihrer Anmeldung. Melde dich jetzt an, dank es dir später."
+      },
+      {
+        "q": "Wer baut das?",
+        "a": "Roman Travnikov. Gründer und Lead-Entwickler, zehn und mehr Jahre im Web, baut DigiBoom offen auf. Der ganze Plan steht im White Paper."
+      }
+    ]
+  },
+  "signupSection": {
+    "eyebrow": "Early Access",
+    "heading": "Sei dabei, bevor\nder erste Sync läuft",
+    "paragraph": "Updates, sobald sie erscheinen. Eine Beta-Einladung, bevor die Menge eine bekommt. Launch-Preis gesichert, solange es ihn gibt.",
+    "button": "Early Access sichern",
+    "note": "Eine E-Mail pro Meilenstein. Geh, wann immer du willst."
+  },
+  "footer": {
+    "platforms": "Plattformen",
+    "roadmap": "Roadmap",
+    "waitlist": "Warteliste",
+    "rights": "DigiBoom · Roman Travnikov"
+  },
+  "mascot": {
+    "static": "Das DigiBoom-Bomben-Maskottchen mit brennender Zündschnur",
+    "live": "Das DigiBoom-Bomben-Maskottchen, umkreist von digitalen Produktkarten"
+  }
+}

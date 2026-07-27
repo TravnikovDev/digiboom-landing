@@ -1,36 +1,38 @@
 import { ArrowRight, Check, Loader } from "lucide-react";
+import type { Messages } from "@/i18n/dictionaries";
 
 type State = "connected" | "created" | "creating";
 
+// Platform names and example handles are fixed sample data; only the state labels translate.
 const PLATFORMS: { name: string; handle: string; logo: string; state: State }[] = [
   { name: "Etsy", handle: "etsy.com/shop/yourstore", logo: "/logos/etsy.svg", state: "connected" },
   { name: "Shopify", handle: "yourstore.myshopify.com", logo: "/logos/shopify.svg", state: "created" },
   { name: "Gumroad", handle: "gumroad.com/yourstore", logo: "/logos/gumroad.svg", state: "creating" },
 ];
 
-function StateChip({ state }: { state: State }) {
+function StateChip({ state, copy }: { state: State; copy: Messages["syncPanel"] }) {
   if (state === "connected")
     return (
       <span className="font-mono text-[11px] uppercase tracking-wider text-bomb-500 border border-bomb-300 rounded px-2 py-0.5">
-        your shop
+        {copy.stateYours}
       </span>
     );
   if (state === "created")
     return (
       <span className="font-mono text-[11px] uppercase tracking-wider text-white bg-ink rounded px-2 py-0.5 inline-flex items-center gap-1.5">
         <Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" />
-        store live
+        {copy.stateLive}
       </span>
     );
   return (
     <span className="font-mono text-[11px] uppercase tracking-wider text-white bg-blast rounded px-2 py-0.5 inline-flex items-center gap-1.5">
       <Loader className="h-3 w-3 sync-dot" strokeWidth={3} aria-hidden="true" />
-      setting up
+      {copy.stateSetup}
     </span>
   );
 }
 
-export default function SyncPanel() {
+export default function SyncPanel({ copy }: { copy: Messages["syncPanel"] }) {
   return (
     <div className="rounded-2xl border-[3px] border-ink bg-white comic-shadow overflow-hidden text-left">
       {/* window chrome */}
@@ -38,7 +40,7 @@ export default function SyncPanel() {
         <span className="h-2.5 w-2.5 rounded-full bg-bomb-500" />
         <span className="h-2.5 w-2.5 rounded-full bg-bomb-600" />
         <span className="h-2.5 w-2.5 rounded-full bg-bomb-700" />
-        <span className="ml-2 font-mono text-[11px] text-bomb-400">digiboom / store expansion</span>
+        <span className="ml-2 font-mono text-[11px] text-bomb-400">{copy.window}</span>
       </div>
 
       {/* the catalog being expanded */}
@@ -48,8 +50,8 @@ export default function SyncPanel() {
           style={{ background: "radial-gradient(circle at 30% 26%, #FF9A5C 0%, #EE5C0B 60%, #C24204 100%)" }}
         />
         <div className="min-w-0">
-          <p className="font-semibold text-sm truncate">Your Etsy catalog, 48 products</p>
-          <p className="font-mono text-[11px] text-bomb-500 truncate">files · descriptions · tags · prices</p>
+          <p className="font-semibold text-sm truncate">{copy.catalogTitle}</p>
+          <p className="font-mono text-[11px] text-bomb-500 truncate">{copy.catalogMeta}</p>
         </div>
       </div>
 
@@ -70,7 +72,7 @@ export default function SyncPanel() {
                 <p className="font-mono text-[11px] text-bomb-500 truncate">{p.handle}</p>
               </div>
             </div>
-            <StateChip state={p.state} />
+            <StateChip state={p.state} copy={copy} />
           </div>
         ))}
       </div>
@@ -78,9 +80,9 @@ export default function SyncPanel() {
       {/* status bar */}
       <div className="flex items-center justify-between px-4 py-2.5 bg-bomb-100 border-t border-bomb-200">
         <span className="font-mono text-[11px] text-bomb-600 inline-flex items-center gap-1.5">
-          1 shop <ArrowRight className="h-3 w-3" strokeWidth={2.5} aria-hidden="true" /> 3 storefronts
+          {copy.footLeft} <ArrowRight className="h-3 w-3" strokeWidth={2.5} aria-hidden="true" /> {copy.footLeftEnd}
         </span>
-        <span className="font-mono text-[11px] text-ink font-semibold">3× the places buyers can find you</span>
+        <span className="font-mono text-[11px] text-ink font-semibold">{copy.footRight}</span>
       </div>
     </div>
   );

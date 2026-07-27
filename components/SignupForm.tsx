@@ -1,19 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import type { Messages } from "@/i18n/dictionaries";
 
 const FORMSPREE_ACTION = "https://formspree.io/f/mvzebyqy";
 
 export default function SignupForm({
   inputId,
+  signup,
   defaultNote,
-  buttonLabel = "Get early access",
+  buttonLabel,
   large = false,
   center = false,
 }: {
   inputId: string;
+  signup: Messages["signup"];
   defaultNote: string;
-  buttonLabel?: string;
+  buttonLabel: string;
   large?: boolean;
   center?: boolean;
 }) {
@@ -54,14 +57,14 @@ export default function SignupForm({
         {/* honeypot: bots fill it, humans never see it */}
         <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
         <label className="sr-only" htmlFor={inputId}>
-          Email
+          {signup.emailLabel}
         </label>
         <input
           id={inputId}
           required
           type="email"
           name="email"
-          placeholder="you@yourstore.com"
+          placeholder={signup.placeholder}
           className={`flex-1 rounded-full bg-white border-[3px] border-ink px-5 ${pad} text-ink placeholder-bomb-500 font-medium focus:outline-none focus:ring-4 focus:ring-ink/30`}
         />
         <button
@@ -74,11 +77,10 @@ export default function SignupForm({
       <p className="mt-3 text-ink text-sm font-medium" role="status">
         {state === "done" ? (
           <>
-            <strong>Fuse lit.</strong>{" "}
-            You&apos;ll hear the boom first.
+            <strong>{signup.successStrong}</strong> {signup.successRest}
           </>
         ) : state === "error" ? (
-          "That did not go through. Give it a minute and try again."
+          signup.error
         ) : (
           defaultNote
         )}

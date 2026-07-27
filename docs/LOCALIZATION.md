@@ -7,6 +7,19 @@ This doc has two halves: a **general plan** (the what and why, readable by anyon
 **technical plan** (the how, with implementation detail). Read the first half before the
 second.
 
+> **As-built note (Phase 1 shipped).** This plan proposed **next-intl**. When it came time
+> to build, reading the bundled Next 16 docs made the framework's own recommended pattern —
+> a plain `getDictionary(locale)` **dictionary loader** with `app/[locale]/` routes — the
+> lower-risk choice for a static export: zero dependencies, no library whose static-export
+> setup shifts between versions, and no locale middleware (which cannot run under
+> `output: export` anyway). So Phase 1 ships on the native dictionary pattern instead of
+> next-intl. The *architecture* the plan describes — per-locale static routes, English as
+> source of truth, deep-merge fallback, hreflang, a client root redirect, a CI key-diff — is
+> exactly what was built; only the message-plumbing tool changed. Sections **2.2, 2.4–2.7,
+> 2.11** and the **Part 7 checklist** below are updated to match the code; the rest of the
+> plan (general plan, fonts, SEO, switcher, workflow, risks) stands as written. **Live now:**
+> `en`, `de`, `fr`, `es`. **Phase 2 (not built):** `pt`, `ja`, `ru`.
+
 ---
 
 ## Part 1 — General plan
@@ -75,32 +88,39 @@ consequences:
   `app/[locale]/` segment with `generateStaticParams`, which writes `de/index.html`,
   `ja/index.html`, and so on.
 
-### 2.2 Library: `next-intl`
+### 2.2 Approach: native dictionaries (no i18n library)
 
-We use **next-intl**. Rationale:
+**As-built.** We use the pattern Next.js's own docs recommend for App-Router
+internationalization: a small `getDictionary(locale)` loader over per-locale JSON, wired
+through `app/[locale]/` static routes. No i18n dependency. Rationale:
 
-- Purpose-built for the App Router; first-class `generateStaticParams` + static rendering
-  via `setRequestLocale`.
-- ICU message format (plurals, numbers, dates) — useful for counts like "2 / 6 shipped".
-- Strong TypeScript story (typed message keys).
-- Clean upgrade path to a translation-management tool later.
+- **Static-export fit.** The dictionaries are consumed by server components and resolved at
+  build, so every string is inlined into the pre-rendered HTML. Nothing i18n-related ships
+  to the browser except the handful of strings a client component (the signup form) needs,
+  which flow in as ordinary props.
+- **Lower risk.** A library whose static-export story shifts between its own versions is one
+  more thing to keep working under `output: export`; the framework-native pattern has no
+  such moving parts.
+- **No dead weight.** next-intl's headline features are its locale **middleware** (can't run
+  in a static export) and ICU (plurals/dates) — which this copy doesn't use. What we needed
+  was string lookup with fallback and typed keys, and that's ~40 lines of our own code.
 
-**Static-export caveat:** next-intl's locale-detection middleware won't run under
-`output: export`. We therefore use next-intl *without* its middleware — only for the
-`[locale]` pages and message loading — and handle first-visit locale detection with a
-small client-side redirect at the root (see 2.5).
+What we gave up, and how it's covered:
 
-Alternatives considered and why not (now):
+- **ICU plurals/number-format.** Not used by the current copy. The one count ("2 / 6
+  shipped") is composed in JSX from plain numbers plus a translated word. If real
+  pluralization is needed later, add `Intl.PluralRules` at the call site or reconsider a
+  library then.
+- **Rich text** (a sentence with inline `<mark>`/`<strong>`, kept whole for translators) is
+  handled by a tiny renderer, `components/rich.tsx`, instead of next-intl's `t.rich`.
 
-- **Paraglide JS (inlang)** — compiler-based, smallest bundle, excellent static story.
-  A strong pick if bundle size becomes the priority; message format is simpler than ICU.
-- **i18next / react-i18next** — deepest ecosystem and TMS integrations; heavier and more
-  manual on the App Router. Revisit if the landing grows into a full app.
-- **next-i18next** — Pages-Router tool. Not applicable.
+Alternatives (still valid if constraints change): **next-intl** (adopt if we need ICU or a
+TMS integration and grow past a static landing), **Paraglide JS** (compiler-based, smallest
+bundle), **i18next** (deepest ecosystem). Revisit if the landing becomes a full app.
 
-> Verify the exact next-intl API against the version installed and the Next docs bundled
-> in `node_modules/next/dist/docs/` before writing code — this Next version has breaking
-> changes, and next-intl's static-export setup has shifted across its own versions.
+> Because there's no library, there's no version-specific API to track — but the Next
+> `app/[locale]` + `generateStaticParams` + `trailingSlash` behaviour was still verified
+> against the bundled docs in `node_modules/next/dist/docs/` before building.
 
 ### 2.3 URL structure and root redirect
 
@@ -111,64 +131,84 @@ Alternatives considered and why not (now):
 
 - Every locale is prefixed, including the default, so `hreflang` is uniform and there's no
   "which page is English" ambiguity.
-- The root `/` is a minimal client page: read `localStorage.locale`, else negotiate
-  `navigator.languages` against our list, else fall back to `en`, then
-  `location.replace('/<locale>/')`. It's one fast hop and the choice is remembered. This
+- The root `/` is a minimal client page (`public/index.html`): read the saved choice
+  (`localStorage['digiboom-locale']`), else negotiate `navigator.languages` against our list,
+  else fall back to `en`, then `location.replace('/<locale>/')`. It's one fast hop and the
+  choice is remembered. This
   replaces the middleware we can't run.
 
-### 2.4 Project structure
+### 2.4 Project structure (as-built)
 
 ```
 app/
-  layout.tsx                  # root: <html> shell, all @next/font declarations
-  page.tsx                    # root redirect (client component)
   [locale]/
-    layout.tsx                # setRequestLocale, <html lang>, per-locale <body> font class,
-                              # NextIntlClientProvider, generateMetadata (hreflang)
-    page.tsx                  # the landing; generateStaticParams() -> the 7 codes
+    layout.tsx                # ROOT layout: <html lang>, @next/font declarations, fonts on
+                              # <body>, generateStaticParams(), generateMetadata (hreflang)
+    page.tsx                  # the landing; loads the dictionary, passes slices to sections
+  globals.css                 # (unchanged) @theme tokens, keyframes
+  icon.svg                    # favicon (metadata file, app-root)
 i18n/
-  routing.ts                  # locales list + default; single source for the set
-  request.ts                  # getRequestConfig: load + deep-merge messages (fallback)
+  config.ts                   # locales list + default + isLocale + endonyms; the ONE source
+  dictionaries.ts             # getDictionary(locale): merge locale over en (fallback)
 messages/
-  en.json                     # SOURCE OF TRUTH (defines the key shape)
-  es.json  de.json  ja.json  fr.json  ru.json  pt.json
-lib/
-  fonts.ts                    # all @next/font faces incl. Oswald (Cyrillic) + Noto Sans JP
+  en.json                     # SOURCE OF TRUTH (defines the key shape / TS type)
+  de.json  fr.json  es.json   # Phase 1 translations (pt/ja/ru added in Phase 2)
+components/
+  rich.tsx                    # inline-tag renderer for <mark>/<strong>/<accent> + \n
+  LangSwitcher.tsx            # client dropdown of locales (links to /<locale>/)
+  ... (sections take a typed `copy` prop; see 2.11)
+public/
+  index.html                  # root "/" redirect (detect + forward); see 2.3
 scripts/
-  i18n-check.mjs              # CI: diff each locale's keys against en.json
-types/
-  messages.d.ts               # augment next-intl Messages type from en.json
+  i18n-check.mjs              # CI: diff each locale's keys against en.json (npm run i18n:check)
 ```
 
-Adding or removing a language = edit `i18n/routing.ts` and add/remove a `messages/*.json`.
-Nothing else hardcodes the list.
+Notes on what changed from the original sketch:
 
-### 2.5 Setup, step by step
+- **There is no top-level `app/layout.tsx`.** With a static export we want `<html lang>` set
+  per locale, so the root layout lives at `app/[locale]/layout.tsx` (a pattern the Next i18n
+  doc explicitly allows). Everything else lives under `[locale]`.
+- **The root `/` redirect is `public/index.html`, not `app/page.tsx`.** Since there's no
+  non-`[locale]` route, the export emits no `out/index.html`; a hand-written static redirect
+  file fills that slot (no framework layout needed, works with JS off via `<noscript>`).
+- **`trailingSlash: true`** in `next.config.ts` so the export emits `out/de/index.html` (not
+  `out/de.html`), which is what `/de/` resolves to on GitHub Pages.
+- No `i18n/routing.ts`/`request.ts`, no `types/messages.d.ts`, no `lib/fonts.ts` yet — those
+  were next-intl / Phase-2-font artifacts. The type lives in `dictionaries.ts` (2.6); fonts
+  stay inline in the layout until Phase 2 adds Cyrillic/CJK faces (2.8).
 
-1. **Install:** `npm i next-intl`.
-2. **`i18n/routing.ts`** — export `locales = ['en','es','de','ja','fr','ru','pt']` and
-   `defaultLocale = 'en'`.
-3. **`i18n/request.ts`** — `getRequestConfig(async ({requestLocale}) => {...})` that loads
-   `messages/{locale}.json`, **deep-merges it onto `en.json`** (English as the base layer),
-   and returns `{ locale, messages }`. The deep-merge is our fallback: any key absent in a
-   locale resolves to English. Also set `getMessageFallback` so a truly missing key returns
-   a readable string, not a thrown error, in production.
-4. **`next.config.ts`** — wrap the existing config with
-   `createNextIntlPlugin('./i18n/request.ts')`. Keep `output: 'export'`.
-5. **`app/[locale]/layout.tsx`:**
+Adding or removing a language = edit `i18n/config.ts`, add/remove a `messages/*.json`, and
+(new script only) add a font stack. Nothing else hardcodes the list.
+
+### 2.5 Setup, step by step (as-built)
+
+1. **No install.** Zero i18n dependencies.
+2. **`i18n/config.ts`** — export `locales = ['en','de','fr','es'] as const`,
+   `defaultLocale = 'en'`, an `isLocale()` guard, and `localeNames` (endonyms for the
+   switcher). This is the single source for the locale set.
+3. **`i18n/dictionaries.ts`** — statically import every `messages/*.json`, and export
+   `getDictionary(locale)` that returns English as-is or **merges the locale over `en`**
+   (`mergeInto`, arrays replaced whole). The merge is our fallback: any key absent in a
+   locale resolves to English. `Messages = typeof en` is exported here as the type (2.6).
+4. **`next.config.ts`** — keep `output: 'export'`; add `trailingSlash: true` so URLs emit as
+   `out/<locale>/index.html`.
+5. **`app/[locale]/layout.tsx`** (the root layout):
    - `export function generateStaticParams()` → `locales.map(locale => ({locale}))`.
-   - Call `setRequestLocale(locale)` first thing (opts the subtree into static rendering).
-   - `const messages = await getMessages()`.
-   - Render `<NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>`.
-   - Set `<html lang={locale}>` and the per-locale font body class (see 2.8).
-   - `export async function generateMetadata({params})` → localized title/description +
-     `alternates.languages` hreflang map (see 2.9).
-6. **`app/[locale]/page.tsx`** — the landing. Call `setRequestLocale(locale)`; render the
-   sections. Server components read strings via `getTranslations`; client components via
-   `useTranslations` (works because they're inside the provider).
-7. **`app/page.tsx`** — the root redirect described in 2.3 (a `'use client'` component with
-   a `useEffect`; also render a `<noscript>` link to `/en/` and a `<link rel="canonical">`).
-8. **Delete** the current root `app/page.tsx` landing (its content moves under `[locale]`).
+   - `const { locale } = await params` (params is a Promise in this Next version); guard with
+     `isLocale` and `notFound()` otherwise.
+   - Declare the `@next/font` faces and set `<html lang={locale}>` + the font variable class
+     on `<html>`, fonts on `<body>`.
+   - `export async function generateMetadata({params})` → `getDictionary(locale)` for
+     localized title/description + `alternates.languages` hreflang map + per-locale
+     `openGraph` (see 2.9).
+6. **`app/[locale]/page.tsx`** — the landing. `await params`, `getDictionary(locale)`, then
+   pass each section its **slice** of the dictionary as a typed `copy` prop
+   (`<Hero copy={t.hero} signup={t.signup} … />`). Sections stay server components; the one
+   client leaf (`SignupForm`) receives plain string props.
+7. **`public/index.html`** — the root `/` redirect described in 2.3 (inline script +
+   `<noscript>` meta-refresh to `/en/` + `<link rel="canonical">`). Static file, no layout.
+8. **Deleted** the old `app/layout.tsx` and `app/page.tsx` (their content moved under
+   `[locale]/`).
 
 ### 2.6 Messages and type safety
 
@@ -179,26 +219,32 @@ Nothing else hardcodes the list.
     "pricing": { "roi": "One extra sale a month covers it..." }
   }
   ```
-- `types/messages.d.ts` augments next-intl so `useTranslations('hero')` autocompletes keys
-  and flags typos at build:
+- The message type is derived from English in `dictionaries.ts`, so `en.json` is
+  authoritative for the *shape* as well as the content:
   ```ts
   import en from '../messages/en.json';
-  declare module 'next-intl' { interface AppConfig { Messages: typeof en } }
+  export type Messages = typeof en;   // getDictionary() returns Messages
   ```
-- Because the type is derived from `en.json`, English is authoritative for the *shape* as
-  well as the content.
+- Each section is typed against its slice, so a wrong key is a build error and the props
+  autocomplete: `function Hero({ copy }: { copy: Messages['hero'] })`. No `.d.ts` module
+  augmentation needed — it's a plain exported type.
 
 ### 2.7 Fallback strategy
 
-Cross-locale fallback (missing `de` key → English) is done by **deep-merging `en` as the
-base** in `i18n/request.ts`:
+Cross-locale fallback (missing `de` key → English) is done by **merging the locale over
+`en`** in `i18n/dictionaries.ts`:
 
 ```ts
-const messages = deepmerge(en, (await import(`../messages/${locale}.json`)).default);
+export function getDictionary(locale: Locale): Messages {
+  if (locale === 'en') return en;
+  return mergeInto(en, overrides[locale]) as Messages;  // recurses objects, replaces arrays
+}
 ```
 
-This is what lets Phase-1 languages ship partial and still render a complete page. The CI
-check (2.13) reports what's still on English so it doesn't hide forever.
+This is what lets a locale ship partial and still render a complete page. Arrays are
+replaced whole (not merged element-wise), so a translated array must keep English's length —
+`npm run i18n:check` enforces that, since the components map arrays by position (2.11). The
+CI check (2.13) also reports what's still on English so gaps don't hide forever.
 
 ### 2.8 Fonts per locale
 
@@ -240,32 +286,47 @@ Plan:
   }
   ```
 - `<html lang={locale}>` per page (also drives the font CSS in 2.8).
-- Add a **sitemap** listing all seven URLs (`app/sitemap.ts`, static-export friendly).
+- **Sitemap** (`app/sitemap.ts`, shipped) — one entry per locale URL, each with the full
+  `hreflang` alternates map + `x-default`. Needs `export const dynamic = "force-static"` to
+  emit `out/sitemap.xml` under `output: export`.
 - OG image: keep the single English card for launch. Per-locale OG cards are a Phase-2
   nice-to-have (regenerate the `next/og` route per locale, or one static PNG each).
 
-### 2.10 Language switcher
+### 2.10 Language switcher (as-built)
 
-- A dropdown in the nav (and footer) listing the seven languages by endonym (Deutsch,
-  Français, 日本語, Русский, …).
-- Each item links to the **same route in the target locale** and writes
-  `localStorage.locale` so the root redirect honours the choice next time.
-- Mark the current one; keyboard-accessible; `hreflang` on the links.
+- `components/LangSwitcher.tsx`: a dropdown **in the nav**, listing the active locales
+  (those in `i18n/config.ts`) by endonym (English, Deutsch, Français, Español; later 日本語,
+  Русский, …). A **footer** switcher is an easy optional addition — deferred because the nav
+  one already covers it and a footer dropdown would need to open upward.
+- Each item is a real `<a>` link to `/<locale>/` (works with JS off) and, on click, writes
+  `localStorage['digiboom-locale']` so the root redirect honours the choice next time.
+- The current locale is marked with a check; the trigger is a focusable `<button>` that
+  closes on Escape and outside-click; `hrefLang` is set on each link.
 
 ### 2.11 Component refactor
 
-Every component currently hardcodes English. The refactor:
+Every component used to hardcode English. As-built refactor:
 
-- Move all visible strings into `messages/en.json` under section namespaces
-  (`hero`, `problem`, `product`, `howItWorks`, `payoff`, `platforms`, `status`,
-  `pricing`, `faq`, `signup`, `nav`, `footer`, `syncPanel`).
-- Replace literals with `useTranslations('<namespace>')` (client) or `getTranslations`
-  (server). Arrays (feature lists, FAQ items, milestones) use indexed keys or `t.rich`
-  for the few strings with inline `<strong>`.
-- Keep non-text props (icons, colors, logos, `stage` flags) in the component; only *text*
-  moves to messages.
-- The mono `snake_case` labels (e.g. `guided_setup`) are decorative and can stay as-is or
-  move to messages if we want them localized (recommend: leave them, they read as code).
+- All visible strings moved into `messages/en.json` under section namespaces (`meta`, `nav`,
+  `hero`, `signup`, `marquee`, `product`, `syncPanel`, `problem`, `how`, `payoff`,
+  `platforms`, `countdown`, `pricing`, `faq`, `signupSection`, `footer`, `mascot`).
+- **`app/[locale]/page.tsx` loads the dictionary once and passes each section its slice as a
+  typed `copy` prop.** Sections stay **server components** (best for a static export: their
+  text is baked into HTML and no per-section JS ships). The only client leaf, `SignupForm`,
+  gets its strings as plain string props from its server parent — no context/provider needed.
+- **Arrays** (features, cards, steps, milestones, FAQ, platform groups, plans) live in
+  messages and are rendered by mapping over `copy.<array>`; the component keeps a parallel
+  **presentation array** (icons, colors, tilts, `stage` flags, plan styling) matched **by
+  position**. This is why array lengths must stay in lockstep with English (2.7).
+- **Inline emphasis** (a sentence with `<mark>`, `<strong>`, or a context-coloured
+  `<accent>`, plus `\n` line breaks in headlines) stays one translatable string and is
+  rendered with `rich(str, { accent: … })` from `components/rich.tsx` — so translators keep
+  full sentences and word order.
+- Non-text props (icons, colors, logos, brand names like Etsy/Shopify, example handles) stay
+  in the component; only *text* moved to messages. The mono `snake_case` labels (e.g.
+  `ready_to_sell`) are decorative and were **left in the component** — they read as code.
+- Accessibility text travels too: the mascot `aria-label`s are threaded from `mascot.*` in
+  the dictionary through `Hero → BombCanvas → BombStatic/Bomb3D` as props.
 
 ### 2.12 OG images (Phase 2)
 
@@ -275,12 +336,15 @@ PNG per language. Watch CJK/Cyrillic font embedding in the generator.
 
 ### 2.13 CI translation check
 
-`scripts/i18n-check.mjs`, run in the deploy workflow before build:
+`scripts/i18n-check.mjs` (`npm run i18n:check`), wired into the deploy workflow **before**
+build:
 
-- Load `en.json` and each locale; compute the flat key set of each.
-- Report per locale: keys missing (still English) and keys present that English lacks
-  (stale/renamed). Print a summary like `de: 3 missing, fr: complete`.
-- Non-blocking by default (fallback covers gaps); can be made blocking for `en` integrity.
+- Loads `en.json` and each locale; flattens each to a `dot.path → leaf | array:<len>` map.
+- Reports per locale: keys **missing** (still English), keys **extra** (present here, absent
+  in English — stale/renamed), and **array-length mismatches**.
+- **Blocking:** exits non-zero on any discrepancy, so the four shipped locales stay in
+  lockstep with English. (Only the locales in `i18n/config.ts` are checked, so Phase-2
+  files don't fail CI until they're added to the set.)
 - Optional later: hash each English string; when a hash changes, flag that key's
   translations as "needs review" so *changed* (not just missing) copy surfaces.
 
@@ -341,14 +405,26 @@ PNG per language. Watch CJK/Cyrillic font embedding in the generator.
 
 ## Part 7 — Rollout checklist
 
-- [ ] Install next-intl; add `i18n/routing.ts`, `i18n/request.ts`, wrap `next.config.ts`.
-- [ ] Move landing under `app/[locale]/`; add `generateStaticParams` + `setRequestLocale`.
-- [ ] Add root redirect at `app/page.tsx`.
-- [ ] Extract all strings to `messages/en.json`; add typed `Messages` augmentation.
-- [ ] Refactor components to `useTranslations` / `getTranslations`.
-- [ ] Add fonts (Oswald, Noto Sans JP) + per-`lang` CSS variable overrides.
-- [ ] `generateMetadata` per locale + `sitemap.ts` + hreflang.
-- [ ] Language switcher in nav/footer.
-- [ ] `scripts/i18n-check.mjs` wired into the deploy workflow.
-- [ ] Phase 1 translations: de, fr, es (+ en). Phase 2: pt, ja, ru with native review.
-- [ ] Per-locale OG images (Phase 2).
+Phase 1 (done):
+
+- [x] `i18n/config.ts` (locale set) + `i18n/dictionaries.ts` (`getDictionary` + fallback); no
+      library. `next.config.ts` gets `trailingSlash: true`, keeps `output: 'export'`.
+- [x] Move landing under `app/[locale]/`; `generateStaticParams`; delete old
+      `app/layout.tsx` + `app/page.tsx`.
+- [x] Root `/` redirect as `public/index.html` (detect + `<noscript>` fallback).
+- [x] Extract all strings to `messages/en.json`; `Messages = typeof en` type.
+- [x] Refactor components to take typed `copy` props; `components/rich.tsx` for inline tags.
+- [x] `generateMetadata` per locale + hreflang alternates + per-locale OpenGraph.
+- [x] Language switcher (`components/LangSwitcher.tsx`) in the nav.
+- [x] `app/sitemap.ts` — all locale URLs with hreflang alternates (force-static).
+- [x] `scripts/i18n-check.mjs` wired into the deploy workflow (blocking).
+- [x] Phase 1 translations: `de`, `fr`, `es` (+ `en`).
+
+Phase 2 (not built):
+
+- [ ] Native review of the marketing-critical `de`/`fr`/`es` lines (hero, CTAs, puns) — the
+      current translations are a solid first pass, not native-reviewed.
+- [ ] Add fonts (Oswald for Cyrillic, Noto Sans JP) + per-`lang` CSS variable overrides.
+- [ ] Add `pt`, then `ja` and `ru` to `i18n/config.ts` with their `messages/*.json`.
+- [ ] Per-locale OG images.
+- [ ] Optional: a footer language switcher (upward-opening variant).

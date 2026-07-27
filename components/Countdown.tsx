@@ -1,48 +1,12 @@
 import { Check, Loader } from "lucide-react";
+import type { Messages } from "@/i18n/dictionaries";
 import Reveal from "./Reveal";
 
 type Status = "done" | "active" | "planned";
 
-const MILESTONES: { title: string; text: string; status: Status; when: string }[] = [
-  {
-    title: "Concept and white paper",
-    text: "The problem held up with real sellers. Architecture and business model, on paper.",
-    status: "done",
-    when: "Q4 2025",
-  },
-  {
-    title: "Landing and waitlist",
-    text: "You are looking at it. Sign up now and you are near the front of the queue.",
-    status: "active",
-    when: "Now",
-  },
-  {
-    title: "Seller community",
-    text: "Telegram and Discord, where the early ones argue about what gets built first.",
-    status: "planned",
-    when: "Next",
-  },
-  {
-    title: "MVP: Etsy and Shopify",
-    text: "Shopify store setup, and two-way sync of your digital products between the first two platforms.",
-    status: "planned",
-    when: "Q1 to Q2",
-  },
-  {
-    title: "Closed beta",
-    text: "Waitlist first, in the order you signed up. No queue-jumping.",
-    status: "planned",
-    when: "Q3",
-  },
-  {
-    title: "Public launch",
-    text: "Subscriptions open to everyone, then Gumroad, then the analytics.",
-    status: "planned",
-    when: "Q4",
-  },
-];
-
-const DONE = MILESTONES.filter((m) => m.status !== "planned").length;
+// Milestone status is fixed program state; titles/text/when come from the dictionary, by position.
+const STATUSES: Status[] = ["done", "active", "planned", "planned", "planned", "planned"];
+const DONE = STATUSES.filter((s) => s !== "planned").length;
 
 function Node({ status }: { status: Status }) {
   if (status === "done")
@@ -60,40 +24,39 @@ function Node({ status }: { status: Status }) {
   return <span className="relative z-10 block h-11 w-11 rounded-xl border-[3px] border-dashed border-bomb-600 bg-ink" />;
 }
 
-export default function Countdown() {
+export default function Countdown({ copy }: { copy: Messages["countdown"] }) {
+  const total = copy.milestones.length;
+  const statusLabel = (s: Status) =>
+    s === "done" ? copy.statusDone : s === "active" ? copy.statusActive : copy.statusPlanned;
+
   return (
     <section id="status" className="bg-ink py-20">
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-16 lg:items-end">
           <div>
-            <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">Build status</p>
-            <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.92]">
-              Being built in the open
-            </h2>
+            <p className="font-comic text-2xl tracking-wide text-blast -rotate-1 inline-block">{copy.eyebrow}</p>
+            <h2 className="mt-2 font-display text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.92]">{copy.heading}</h2>
           </div>
           <div className="lg:pb-3">
-            <p className="text-bomb-300 leading-relaxed">
-              DigiBoom is early, and we are not going to pretend otherwise. Here is what is done, what is underway, and what
-              is next. This page changes as the work does.
-            </p>
+            <p className="text-bomb-300 leading-relaxed">{copy.intro}</p>
             {/* fuse-progress bar */}
             <div className="mt-5 flex items-center gap-3">
               <div className="h-2.5 flex-1 rounded-full bg-bomb-700 overflow-hidden">
-                <div className="h-full rounded-full bg-blast" style={{ width: `${(DONE / MILESTONES.length) * 100}%` }} />
+                <div className="h-full rounded-full bg-blast" style={{ width: `${(DONE / total) * 100}%` }} />
               </div>
               <span className="font-mono text-[11px] text-bomb-400 whitespace-nowrap">
-                {DONE} / {MILESTONES.length} shipped
+                {DONE} / {total} {copy.shipped}
               </span>
             </div>
           </div>
         </div>
 
         <ol className="mt-14">
-          {MILESTONES.map((m, i) => {
-            const planned = m.status === "planned";
-            const last = i === MILESTONES.length - 1;
-            const solid = m.status !== "planned";
-            const railStyle = solid
+          {copy.milestones.map((m, i) => {
+            const status = STATUSES[i];
+            const planned = status === "planned";
+            const last = i === total - 1;
+            const railStyle = !planned
               ? { background: "#EE5C0B" }
               : { backgroundImage: "repeating-linear-gradient(to bottom, #4E555F 0 6px, transparent 6px 12px)" };
             return (
@@ -112,11 +75,11 @@ export default function Countdown() {
                   className="absolute left-11 top-[22px] h-[3px] w-4 -translate-y-1/2"
                   style={railStyle}
                 />
-                <Node status={m.status} />
+                <Node status={status} />
                 <Reveal
                   delay={i * 0.05}
                   className={`flex-1 rounded-2xl p-5 ${
-                    m.status === "active"
+                    status === "active"
                       ? "border-2 border-blast bg-blast/10"
                       : planned
                         ? "border border-white/10 bg-white/[0.02]"
@@ -127,14 +90,14 @@ export default function Countdown() {
                     <h3 className={`font-bold text-lg ${planned ? "text-bomb-300" : "text-white"}`}>{m.title}</h3>
                     <span
                       className={`font-mono text-[11px] uppercase tracking-wider rounded px-2 py-0.5 ${
-                        m.status === "done"
+                        status === "done"
                           ? "bg-bomb-400 text-ink"
-                          : m.status === "active"
+                          : status === "active"
                             ? "bg-blast text-white"
                             : "bg-bomb-700 text-bomb-300"
                       }`}
                     >
-                      {m.status === "done" ? "shipped" : m.status === "active" ? "in progress" : "planned"}
+                      {statusLabel(status)}
                     </span>
                     <span className="font-mono text-[11px] text-bomb-500">{m.when}</span>
                   </div>

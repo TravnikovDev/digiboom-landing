@@ -1,6 +1,7 @@
+import type { Messages } from "@/i18n/dictionaries";
 import BombLogo from "./BombLogo";
 
-export default function Footer() {
+export default function Footer({ copy }: { copy: Messages["footer"] }) {
   return (
     <footer className="bg-ink py-10">
       <div className="mx-auto max-w-6xl px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-bomb-400">
@@ -10,16 +11,16 @@ export default function Footer() {
         </div>
         <nav className="flex gap-6">
           <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#platforms">
-            Platforms
+            {copy.platforms}
           </a>
           <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#status">
-            Roadmap
+            {copy.roadmap}
           </a>
           <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#signup">
-            Waitlist
+            {copy.waitlist}
           </a>
         </nav>
-        <p>© {new Date().getFullYear()} DigiBoom · Roman Travnikov</p>
+        <p>© {new Date().getFullYear()} {copy.rights}</p>
       </div>
     </footer>
   );

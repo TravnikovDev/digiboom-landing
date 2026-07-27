@@ -2,14 +2,15 @@
  * Shaded SVG bomb: renders instantly, works without WebGL or JS, and is what
  * stays on screen when the 3D scene is skipped (small screens, reduced motion).
  */
-export default function BombStatic({ className = "" }: { className?: string }) {
+export default function BombStatic({
+  className = "",
+  label = "The DigiBoom bomb mascot with a lit fuse",
+}: {
+  className?: string;
+  label?: string;
+}) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 340 420"
-      role="img"
-      aria-label="The DigiBoom bomb mascot with a lit fuse"
-    >
+    <svg className={className} viewBox="0 0 340 420" role="img" aria-label={label}>
       <defs>
         <radialGradient id="bs-sphere" cx="0.34" cy="0.28" r="0.9">
           <stop offset="0%" stopColor="#AEB5BF" />

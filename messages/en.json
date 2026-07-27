@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "DigiBoom. We'll explode your sales. In a good way.",
+    "description": "Selling on Etsy alone? DigiBoom opens your Shopify and Gumroad storefronts for you, moves your catalog across and keeps everything in sync, so your work gets found in more places than one. Join the early access list.",
+    "ogAlt": "DigiBoom. We'll explode your sales. In a good way.",
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "badge": "in development · beta 2026",
+    "badgeShort": "beta 2026",
+    "cta": "Get early access",
+    "langLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "Tick... tick... tick...",
+    "headline": "We'll explode\nyour sales.\n<accent>In a good way.</accent>",
+    "paragraph": "You sell your templates, presets, brushes and fonts on <mark>Etsy</mark>. Only Etsy. One shelf, one shop, and you already know how that story goes. DigiBoom opens your other storefronts on <mark>Shopify</mark>, <mark>Gumroad</mark> and the rest, then keeps every listing in sync. More places to be found. More buyers. None of the extra hours.",
+    "chipYours": "your shop",
+    "chipWeSetup": "we set it up",
+    "chipMore": "+20 more",
+    "signupButton": "Light the fuse",
+    "signupNote": "Free early access for the waitlist. Product updates, nothing else. We have no interest in cluttering your inbox."
+  },
+  "signup": {
+    "emailLabel": "Email",
+    "placeholder": "you@yourstore.com",
+    "successStrong": "Fuse lit.",
+    "successRest": "You'll hear the boom first.",
+    "error": "That did not go through. Give it a minute and try again."
+  },
+  "marquee": {
+    "items": [
+      "Etsy",
+      "Shopify",
+      "Gumroad",
+      "digital downloads",
+      "print files",
+      "templates",
+      "presets",
+      "fonts",
+      "3D assets",
+      "courses"
+    ]
+  },
+  "product": {
+    "eyebrow": "What you get",
+    "heading": "You bring one shop. We open the rest.",
+    "intro": "Most sellers list in one place. The ones who grow list in three or four. That is <strong>three or four times the storefronts a buyer can trip over you on</strong>, for a sliver of the work. DigiBoom does the expanding. You approve each step, we do the rest.",
+    "features": [
+      {
+        "title": "Be where the buyers already are",
+        "text": "Opening a store used to cost you a week you did not have, so you never bothered. We handle the account, the branding, the categories, the fine print. You are live on a new marketplace by dinner, in front of people who have never heard of you."
+      },
+      {
+        "title": "Every listing lands ready to sell",
+        "text": "Files, descriptions, variants, tags, licences. All of it travels with the product, shaped to fit each platform, not just the title and a price. Nothing to re-upload. Every new store is open for business on day one."
+      },
+      {
+        "title": "More stores, not more hours",
+        "text": "Change a price once. Ship a new version once. Every storefront catches up in seconds. The busywork that used to swallow your week is simply gone, so you can go as wide as you like and keep your evenings."
+      }
+    ]
+  },
+  "syncPanel": {
+    "window": "digiboom / store expansion",
+    "catalogTitle": "Your Etsy catalog, 48 products",
+    "catalogMeta": "files · descriptions · tags · prices",
+    "stateYours": "your shop",
+    "stateLive": "store live",
+    "stateSetup": "setting up",
+    "footLeft": "1 shop",
+    "footLeftEnd": "3 storefronts",
+    "footRight": "3× the places buyers can find you"
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "heading": "One shop, one audience, one bad day from zero",
+    "cards": [
+      {
+        "title": "A second store costs weeks",
+        "text": "New account. New branding. New categories. Then every file and description, re-uploaded by hand. Most people start this and quietly give up."
+      },
+      {
+        "title": "One marketplace, one audience",
+        "text": "Your work is only ever seen by people already on that one platform. Everyone shopping the others has no idea you exist."
+      },
+      {
+        "title": "Every change, done twice",
+        "text": "New version, new price, new tags, times every platform you are on. Hours a week spent producing nothing at all."
+      }
+    ]
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "heading": "From one shop to a storefront network",
+    "steps": [
+      {
+        "title": "Connect your shop",
+        "text": "Point us at the store you already run, Etsy or Shopify or Gumroad, through the official API. Pull the plug whenever you feel like it."
+      },
+      {
+        "title": "Import your catalog",
+        "text": "We read your listings, your files and all the fiddly metadata, then work out what fits where."
+      },
+      {
+        "title": "Open new storefronts",
+        "text": "Guided setup on the platforms you are missing. Account, branding, categories, policies, mostly filled in before you touch a thing."
+      },
+      {
+        "title": "Publish everywhere",
+        "text": "Your catalog arrives at every new store intact. Files, copy, tags, licences. You upload nothing twice."
+      }
+    ],
+    "payoffTitle": "Multiply your reach",
+    "payoffText": "Same catalog, several times the shelf space, in front of every marketplace instead of the one you started with."
+  },
+  "payoff": {
+    "eyebrow": "The payoff",
+    "heading": "Then the orders come from everywhere",
+    "paragraph": "Your catalog goes live across every marketplace you sell on. Each one is another place a stranger trips over your work. Each one keeps selling while you make the next thing. One upload, working in every direction at once. <accent>That is the boom.</accent>",
+    "note": "Reach is the lever we hand you. Three or four times the storefronts, none of the busywork. What you do with it is your business.",
+    "ordersLabel": "Orders, from every channel",
+    "orderNew": "New sale",
+    "boom": "BOOM!"
+  },
+  "platforms": {
+    "eyebrow": "Where your products can go",
+    "heading": "Every place digital goods sell",
+    "intro": "Marketplaces put you in front of new buyers. Your own stores let you keep the margin. Do both. Etsy, Shopify and Gumroad come first, then we keep adding, in the order early members actually ask for.",
+    "groups": [
+      {
+        "title": "Marketplaces",
+        "blurb": "New audiences already out there looking. This is where the discovery actually comes from."
+      },
+      {
+        "title": "Your own storefront",
+        "blurb": "A store you own. Keep the customer, keep the margin, keep what the marketplaces would have skimmed."
+      },
+      {
+        "title": "Creator platforms",
+        "blurb": "Where an audience buys directly from you."
+      },
+      {
+        "title": "Courses & media",
+        "blurb": "For sellers whose products are lessons, audio or video."
+      }
+    ],
+    "stageLaunch": "at launch",
+    "stagePlanned": "planned",
+    "stageExploring": "exploring",
+    "footnote": "Selling somewhere we have not listed? Tell us when you sign up and it goes on the pile."
+  },
+  "countdown": {
+    "eyebrow": "Build status",
+    "heading": "Being built in the open",
+    "intro": "DigiBoom is early, and we are not going to pretend otherwise. Here is what is done, what is underway, and what is next. This page changes as the work does.",
+    "shipped": "shipped",
+    "statusDone": "shipped",
+    "statusActive": "in progress",
+    "statusPlanned": "planned",
+    "milestones": [
+      {
+        "title": "Concept and white paper",
+        "text": "The problem held up with real sellers. Architecture and business model, on paper.",
+        "when": "Q4 2025"
+      },
+      {
+        "title": "Landing and waitlist",
+        "text": "You are looking at it. Sign up now and you are near the front of the queue.",
+        "when": "Now"
+      },
+      {
+        "title": "Seller community",
+        "text": "Telegram and Discord, where the early ones argue about what gets built first.",
+        "when": "Next"
+      },
+      {
+        "title": "MVP: Etsy and Shopify",
+        "text": "Shopify store setup, and two-way sync of your digital products between the first two platforms.",
+        "when": "Q1 to Q2"
+      },
+      {
+        "title": "Closed beta",
+        "text": "Waitlist first, in the order you signed up. No queue-jumping.",
+        "when": "Q3"
+      },
+      {
+        "title": "Public launch",
+        "text": "Subscriptions open to everyone, then Gumroad, then the analytics.",
+        "when": "Q4"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Planned pricing",
+    "heading": "Flat monthly plans, no credits",
+    "intro": "Priced by how much you sell, not by the sync. One extra sale a month covers it and the rest is yours. Waitlist members lock in launch pricing before we come to our senses.",
+    "mostPopular": "Most popular",
+    "perMonth": "/mo",
+    "plans": [
+      {
+        "name": "Starter",
+        "cap": "up to 50 products",
+        "price": "$10",
+        "blurb": "For the one-person shop finally opening a second front."
+      },
+      {
+        "name": "Pro",
+        "cap": "up to 200 products",
+        "price": "$30",
+        "blurb": "For stores already working three platforms or more."
+      },
+      {
+        "name": "Business",
+        "cap": "up to 500 products",
+        "price": "$50",
+        "blurb": "For studios wrangling a catalog that got out of hand."
+      },
+      {
+        "name": "Enterprise",
+        "cap": "unlimited products",
+        "price": "Custom",
+        "blurb": "Everything, plus API access and integrations we build to fit."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Before you ask",
+    "heading": "Questions, answered",
+    "items": [
+      {
+        "q": "Do I need stores on the other platforms already?",
+        "a": "No. That is the entire point. If Etsy is all you have, we walk you through opening the rest, fill in most of the setup for you, and carry your catalog over."
+      },
+      {
+        "q": "Can it open the accounts entirely on its own?",
+        "a": "No, and you would not want it to. The marketplaces make you accept the terms and prove who you are, yourself. We prepare everything around those two steps. Branding, categories, policies, listings, files."
+      },
+      {
+        "q": "Is this against the marketplace rules?",
+        "a": "No. We use the official public APIs with OAuth, the same doors these platforms open to any app developer. No scraping. No handing us your password."
+      },
+      {
+        "q": "Do you keep my files and customer data?",
+        "a": "Your data stays yours. Files sit encrypted, only for as long as a sync needs them, and you can export or wipe the lot whenever you want."
+      },
+      {
+        "q": "When can I actually try it?",
+        "a": "The first build, Etsy and Shopify in sync, goes to a closed beta. Waitlist members get in first, in the order they signed up. Join now, thank yourself later."
+      },
+      {
+        "q": "Who is building this?",
+        "a": "Roman Travnikov. Founder and lead developer, ten-plus years shipping on the web, building DigiBoom out in the open. The whole plan is in the white paper."
+      }
+    ]
+  },
+  "signupSection": {
+    "eyebrow": "Early access",
+    "heading": "Get in before\nthe first sync",
+    "paragraph": "Updates as they ship. A beta invite before the crowd gets one. Launch pricing locked in while it lasts.",
+    "button": "Get early access",
+    "note": "One email per milestone. Leave whenever you like."
+  },
+  "footer": {
+    "platforms": "Platforms",
+    "roadmap": "Roadmap",
+    "waitlist": "Waitlist",
+    "rights": "DigiBoom · Roman Travnikov"
+  },
+  "mascot": {
+    "static": "The DigiBoom bomb mascot with a lit fuse",
+    "live": "The DigiBoom bomb mascot, with digital product cards orbiting it"
+  }
+}

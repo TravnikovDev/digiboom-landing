@@ -59,33 +59,47 @@ If the domain ever moves to a sub-path (e.g. `user.github.io/repo/`), a `basePat
 
 ```
 app/
-  layout.tsx        # root: fonts, global metadata, <html>/<body> shell
-  page.tsx          # the landing: composes all sections in order
+  [locale]/
+    layout.tsx      # root layout: fonts, <html lang>, per-locale metadata + hreflang
+    page.tsx        # the landing: loads the dictionary, composes sections in order
   globals.css       # Tailwind import, @theme tokens, keyframes, utilities
   icon.svg          # favicon (Next file-convention -> /icon.svg)
 components/         # one file per section + shared pieces (see §5, §6)
+i18n/
+  config.ts         # locale set + default + endonyms (the one source for the list)
+  dictionaries.ts   # getDictionary(locale): merge locale over en (English fallback)
+messages/
+  en.json           # UI copy, source of truth + TS type; de/fr/es alongside
 lib/
   bomb-mark.ts      # bomb SVG as a string/data-URI (used to bake OG + apple icon)
 scripts/
   generate-logos.mjs# writes public/logos/*.svg from simple-icons (npm run logos)
+  i18n-check.mjs    # verifies locale files match en.json (npm run i18n:check)
 public/
+  index.html        # "/" redirect to the visitor's best-match locale
   CNAME             # custom domain for GitHub Pages (digiboom.biz)
   og.png            # 1200x630 social card (pre-generated, static)
   apple-icon.png    # 180x180 touch icon (pre-generated, static)
   logos/*.svg       # platform brand marks + README on sourcing/usage
 docs/
   ARCHITECTURE.md   # this file
-  LOCALIZATION.md   # i18n plan
+  LOCALIZATION.md   # i18n design + rollout (Phase 1 shipped)
 .github/workflows/
-  deploy.yml        # build + deploy to Pages
+  deploy.yml        # i18n:check + build + deploy to Pages
 ```
+
+> The landing lives under `app/[locale]/` (not a top-level `app/page.tsx`) so each language
+> is its own pre-rendered URL with the correct `<html lang>`. `next.config.ts` sets
+> `trailingSlash: true` so the export emits `out/<locale>/index.html`. See
+> [LOCALIZATION.md](LOCALIZATION.md) for the full i18n design.
 
 ---
 
 ## 5. Page structure and narrative
 
-`app/page.tsx` renders the sections in a deliberate arc (problem → mechanism → payoff →
-proof → price → ask):
+`app/[locale]/page.tsx` loads the locale's dictionary and renders the sections in a
+deliberate arc (problem → mechanism → payoff → proof → price → ask), passing each its slice
+of the copy as a typed prop:
 
 | Order | Component          | Role |
 |------:|--------------------|------|
@@ -191,15 +205,19 @@ Both forms (`SignupForm.tsx`, used in `Hero` and `SignupSection`) POST to **Form
 
 ## 9. SEO and assets
 
-- `app/layout.tsx` sets `metadataBase`, title, description, keywords, OpenGraph and Twitter
-  cards, `themeColor`, robots. `NEXT_PUBLIC_SITE_URL` (default `https://digiboom.biz`)
-  drives absolute URLs.
+- `app/[locale]/layout.tsx`'s `generateMetadata` sets per-locale title/description (from the
+  dictionary), keywords, OpenGraph (with `og:locale` + `/<locale>/` url) and Twitter cards,
+  and `alternates` — canonical `/<locale>/` plus a full `hreflang` map (`en`/`de`/`fr`/`es` +
+  `x-default`). `viewport` carries `themeColor`. `NEXT_PUBLIC_SITE_URL` (default
+  `https://digiboom.biz`) drives absolute URLs.
 - **OG/Twitter image:** `public/og.png` (1200×630), a **static** file. It was originally
   generated with `next/og` but baked to a PNG so the static host serves it with the right
   content-type. Regenerate by hand if the headline changes.
 - **Icons:** `app/icon.svg` (favicon, file-convention) + `public/apple-icon.png` (touch
   icon, declared in metadata).
-- **No sitemap or robots.txt yet** — see roadmap.
+- **Sitemap:** `app/sitemap.ts` emits a static `sitemap.xml` with every locale URL and its
+  `hreflang` alternates (`export const dynamic = "force-static"` for the static export). No
+  `robots.txt` yet — see roadmap.
 
 ---
 
@@ -290,8 +308,12 @@ Gotchas:
       stills, reserving realtime three.js for the hero.
 
 ### Internationalization
-- [ ] Full i18n for the seven web-content languages. Plan, phasing, fonts and maintenance
-      are documented in **[LOCALIZATION.md](./LOCALIZATION.md)**. Not started.
+- [x] **Phase 1 shipped** — en/de/fr/es on Next's native dictionary pattern: `app/[locale]/`
+      static routes, `getDictionary` with English fallback, hreflang + per-locale metadata, a
+      `/` redirect, a language switcher, and a blocking CI key-diff check.
+- [ ] **Phase 2** — native review of de/fr/es copy, then pt/ja/ru (needs Cyrillic + CJK
+      fonts), a sitemap, and per-locale OG images. Design and maintenance model are in
+      **[LOCALIZATION.md](./LOCALIZATION.md)**.
 
 ### Product roadmap
 The *product's* roadmap (community → MVP Etsy↔Shopify sync → closed beta → public launch)

@@ -13,7 +13,13 @@ const Bomb3D = dynamic(() => import("./Bomb3D"), { ssr: false });
  * fades in ON TOP once its first frame is painted — no empty gap, no pop.
  * The hero is above the fold, so no scroll/intersection gate is needed.
  */
-export default function BombCanvas() {
+export default function BombCanvas({
+  staticLabel,
+  liveLabel,
+}: {
+  staticLabel?: string;
+  liveLabel?: string;
+}) {
   const [mount3D, setMount3D] = useState(false);
   const [ready3D, setReady3D] = useState(false);
   const idle = useRef<number | undefined>(undefined);
@@ -49,7 +55,7 @@ export default function BombCanvas() {
         className="absolute inset-0 grid place-items-center transition-opacity duration-700 ease-out"
         style={{ opacity: ready3D ? 0 : 1 }}
       >
-        <BombStatic className="h-[86%] w-[86%]" />
+        <BombStatic className="h-[86%] w-[86%]" label={staticLabel} />
       </div>
 
       {/* live 3D scene fades IN once its first frame is painted */}
@@ -58,7 +64,7 @@ export default function BombCanvas() {
           className="absolute inset-0 transition-opacity duration-700 ease-out"
           style={{ opacity: ready3D ? 1 : 0 }}
         >
-          <Bomb3D onReady={() => setReady3D(true)} />
+          <Bomb3D onReady={() => setReady3D(true)} label={liveLabel} />
         </div>
       )}
     </div>
