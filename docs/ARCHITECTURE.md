@@ -47,8 +47,9 @@ optimization at runtime, `next/og` on-request, i18n middleware, and Accept-Langu
 redirects. We work around these:
 
 - OG image and icons are **pre-generated static files**, not live routes (see §8).
-- Localization will use `[locale]` static pages + a client redirect, not middleware (see
-  LOCALIZATION.md).
+- Localization uses the default locale at `/` + `[locale]` static pages for the rest, with
+  **no** auto-redirect (Accept-Language redirects can't run anyway, and are discouraged for
+  SEO). See LOCALIZATION.md.
 
 If the domain ever moves to a sub-path (e.g. `user.github.io/repo/`), a `basePath` +
 `assetPrefix` must be added; on the apex domain it's not needed.
@@ -59,24 +60,30 @@ If the domain ever moves to a sub-path (e.g. `user.github.io/repo/`), a `basePat
 
 ```
 app/
-  [locale]/
-    layout.tsx      # root layout: fonts, <html lang>, per-locale metadata + hreflang
-    page.tsx        # the landing: loads the dictionary, composes sections in order
-  globals.css       # Tailwind import, @theme tokens, keyframes, utilities
+  (home)/           # route group → the site root "/"
+    layout.tsx      # root layout A: <html lang="en">, fonts, static English metadata
+    page.tsx        # the English landing at "/"
+  [locale]/         # the six non-default locales → /de/, /fr/, ...
+    layout.tsx      # root layout B: <html lang={locale}>, fonts, per-locale metadata
+    page.tsx        # landing for a non-default locale (params exclude en)
+  fonts.ts          # @next/font faces + FONT_VARS, shared by both root layouts
+  sitemap.ts        # per-locale URLs + hreflang (force-static); en → /
+  globals.css       # Tailwind import, @theme tokens, per-lang font overrides, keyframes
   icon.svg          # favicon (Next file-convention -> /icon.svg)
-components/         # one file per section + shared pieces (see §5, §6)
+components/         # one file per section + Landing.tsx (shared composition), see §5, §6
 i18n/
-  config.ts         # locale set + default + endonyms (the one source for the list)
+  config.ts         # locale set + default + endonyms + localePath() (the one source)
   dictionaries.ts   # getDictionary(locale): merge locale over en (English fallback)
 messages/
-  en.json           # UI copy, source of truth + TS type; de/fr/es alongside
+  en.json           # UI copy, source of truth + TS type; de/fr/es/pt/ja/ru alongside
 lib/
+  site-metadata.ts  # buildMetadata(locale): title/desc/canonical/hreflang/OG (shared)
   bomb-mark.ts      # bomb SVG as a string/data-URI (used to bake OG + apple icon)
 scripts/
   generate-logos.mjs# writes public/logos/*.svg from simple-icons (npm run logos)
   i18n-check.mjs    # verifies locale files match en.json (npm run i18n:check)
 public/
-  index.html        # "/" redirect to the visitor's best-match locale
+  en/index.html     # legacy /en/ → / consolidation (English itself is served at /)
   CNAME             # custom domain for GitHub Pages (digiboom.biz)
   og.png            # 1200x630 social card (pre-generated, static)
   apple-icon.png    # 180x180 touch icon (pre-generated, static)
@@ -88,17 +95,19 @@ docs/
   deploy.yml        # i18n:check + build + deploy to Pages
 ```
 
-> The landing lives under `app/[locale]/` (not a top-level `app/page.tsx`) so each language
-> is its own pre-rendered URL with the correct `<html lang>`. `next.config.ts` sets
-> `trailingSlash: true` so the export emits `out/<locale>/index.html`. See
-> [LOCALIZATION.md](LOCALIZATION.md) for the full i18n design.
+> Two root layouts (no top-level `app/layout.tsx`) so each language gets the correct
+> `<html lang>`: `app/(home)/` serves **English at `/`** (the canonical apex — no redirect),
+> and `app/[locale]/` serves the other six at `/<locale>/`. `next.config.ts` sets
+> `trailingSlash: true` so the export emits `out/<locale>/index.html` (and `out/index.html`
+> for `/`). See [LOCALIZATION.md](LOCALIZATION.md) for the full i18n design.
 
 ---
 
 ## 5. Page structure and narrative
 
-`app/[locale]/page.tsx` loads the locale's dictionary and renders the sections in a
-deliberate arc (problem → mechanism → payoff → proof → price → ask), passing each its slice
+`components/Landing.tsx` (rendered by both the `/` English page and the `[locale]` pages)
+loads the locale's dictionary and renders the sections in a deliberate arc (problem →
+mechanism → payoff → proof → price → ask), passing each its slice
 of the copy as a typed prop:
 
 | Order | Component          | Role |
@@ -315,7 +324,7 @@ Gotchas:
 ### Internationalization
 - [x] **Shipped — all seven languages** (en/de/fr/es/pt/ja/ru) on Next's native dictionary
       pattern: `app/[locale]/` static routes, `getDictionary` with English fallback, hreflang
-      + per-locale metadata, a `/` redirect, a language switcher, a sitemap, and a blocking CI
+      + per-locale metadata, English at `/` (no redirect), a language switcher, a sitemap, and a blocking CI
       key-diff check. Cyrillic (Oswald) and CJK (Noto Sans JP) fonts load only on ru/ja pages.
 - [ ] **Remaining** — native review of the non-English copy, and per-locale OG images. Design
       and maintenance model are in **[LOCALIZATION.md](./LOCALIZATION.md)**.

@@ -14,7 +14,7 @@ second.
 > setup shifts between versions, and no locale middleware (which cannot run under
 > `output: export` anyway). So Phase 1 ships on the native dictionary pattern instead of
 > next-intl. The *architecture* the plan describes — per-locale static routes, English as
-> source of truth, deep-merge fallback, hreflang, a client root redirect, a CI key-diff — is
+> source of truth, deep-merge fallback, hreflang, the default locale served at `/`, a CI key-diff — is
 > exactly what was built; only the message-plumbing tool changed. Sections **2.2, 2.4–2.7,
 > 2.11** and the **Part 7 checklist** below are updated to match the code; the rest of the
 > plan (general plan, fonts, SEO, switcher, workflow, risks) stands as written. **Live now:
@@ -124,57 +124,78 @@ bundle), **i18next** (deepest ecosystem). Revisit if the landing becomes a full 
 > `app/[locale]` + `generateStaticParams` + `trailingSlash` behaviour was still verified
 > against the bundled docs in `node_modules/next/dist/docs/` before building.
 
-### 2.3 URL structure and root redirect
+### 2.3 URL structure — default locale at the root, no auto-redirect
 
 ```
-/            → tiny client redirect page (detect + forward)
-/en/  /es/  /de/  /ja/  /fr/  /ru/  /pt/   → pre-rendered landing per locale
+/                                  → the English landing (real content, canonical)
+/de/ /es/ /fr/ /pt/ /ja/ /ru/      → pre-rendered landing per non-default locale
+/en/                               → 301-style consolidation to /  (legacy path)
 ```
 
-- Every locale is prefixed, including the default, so `hreflang` is uniform and there's no
-  "which page is English" ambiguity.
-- The root `/` is a minimal client page (`public/index.html`): read the saved choice
-  (`localStorage['digiboom-locale']`), else negotiate `navigator.languages` against our list,
-  else fall back to `en`, then `location.replace('/<locale>/')`. It's one fast hop and the
-  choice is remembered. This
-  replaces the middleware we can't run.
+**Revised from the original plan.** The first cut prefixed *every* locale (`/en/` included)
+and made `/` a client redirect that detected the browser language and forwarded. That was
+wrong on two counts, both SEO:
+
+1. It wasted the apex — the single most important URL on the site — on a content-less
+   redirect shell, and bounced English visitors `/` → `/en/` for no reason.
+2. Google **advises against** auto-redirecting by language: Googlebot crawls as `en-US` from
+   the US, so a language redirect can trap it on one version and hide the rest.
+
+So the default locale (`en`) is now served **directly at `/`** with real content and
+`rel="canonical" → /`. The other six stay path-prefixed. **There is no automatic redirect
+anywhere** — visitors land on English and choose another language from the switcher (and
+`hreflang` tells search engines about every version). `/en/` existed in an earlier deploy, so
+`public/en/index.html` consolidates it to `/` (canonical + meta-refresh); this is a
+duplicate-URL cleanup, not a language redirect, and `/` itself never bounces.
+
+> If a soft "view in your language?" suggestion is ever wanted for non-English visitors, add
+> a dismissible banner — never an automatic redirect.
 
 ### 2.4 Project structure (as-built)
 
 ```
 app/
-  [locale]/
-    layout.tsx                # ROOT layout: <html lang>, @next/font declarations, fonts on
-                              # <body>, generateStaticParams(), generateMetadata (hreflang)
-    page.tsx                  # the landing; loads the dictionary, passes slices to sections
-  globals.css                 # (unchanged) @theme tokens, keyframes
+  (home)/                     # route group (no URL segment) → the site root "/"
+    layout.tsx                # root layout A: <html lang="en">, fonts, static en metadata
+    page.tsx                  # the English landing at "/"
+  [locale]/                   # the six non-default locales → /de/, /fr/, ...
+    layout.tsx                # root layout B: <html lang={locale}>, fonts, generateMetadata;
+                              # generateStaticParams() excludes the default (en)
+    page.tsx                  # the landing for a non-default locale
+  fonts.ts                    # all @next/font faces + FONT_VARS, shared by both layouts
+  sitemap.ts                  # per-locale URLs + hreflang (force-static); en → /
+  globals.css                 # @theme tokens, per-lang font overrides, keyframes
   icon.svg                    # favicon (metadata file, app-root)
 i18n/
-  config.ts                   # locales list + default + isLocale + endonyms; the ONE source
+  config.ts                   # locales + default + isLocale + endonyms + localePath(); ONE source
   dictionaries.ts             # getDictionary(locale): merge locale over en (fallback)
+lib/
+  site-metadata.ts            # buildMetadata(locale): title/desc/canonical/hreflang/OG, shared
 messages/
-  en.json                     # SOURCE OF TRUTH (defines the key shape / TS type)
-  de.json  fr.json  es.json   # Phase 1 translations (pt/ja/ru added in Phase 2)
+  en.json + de/fr/es/pt/ja/ru # en is SOURCE OF TRUTH (key shape / TS type); rest translated
 components/
+  Landing.tsx                 # the section composition, shared by both pages
   rich.tsx                    # inline-tag renderer for <mark>/<strong>/<accent> + \n
-  LangSwitcher.tsx            # client dropdown of locales (links to /<locale>/)
+  LangSwitcher.tsx            # client dropdown; links via localePath (en → /)
   ... (sections take a typed `copy` prop; see 2.11)
 public/
-  index.html                  # root "/" redirect (detect + forward); see 2.3
+  en/index.html               # legacy /en/ → / consolidation (canonical + meta-refresh)
 scripts/
   i18n-check.mjs              # CI: diff each locale's keys against en.json (npm run i18n:check)
 ```
 
-Notes on what changed from the original sketch:
+Notes on the structure:
 
-- **There is no top-level `app/layout.tsx`.** With a static export we want `<html lang>` set
-  per locale, so the root layout lives at `app/[locale]/layout.tsx` (a pattern the Next i18n
-  doc explicitly allows). Everything else lives under `[locale]`.
-- **The root `/` redirect is `public/index.html`, not `app/page.tsx`.** Since there's no
-  non-`[locale]` route, the export emits no `out/index.html`; a hand-written static redirect
-  file fills that slot (no framework layout needed, works with JS off via `<noscript>`).
+- **Two root layouts, no top-level `app/layout.tsx`.** Each needs its own `<html lang>`
+  (English can't be a nested child of a `<html lang="en">` root and still relabel per locale),
+  so `(home)/layout.tsx` owns `/` and `[locale]/layout.tsx` owns the prefixed locales — the
+  documented [multiple-root-layout](https://nextjs.org/docs/app/api-reference/file-conventions/layout#root-layout)
+  pattern. Fonts, metadata and the page body are factored into shared modules
+  (`app/fonts.ts`, `lib/site-metadata.ts`, `components/Landing.tsx`) so nothing is duplicated.
+- **`generateStaticParams` in `[locale]` excludes the default**, so Next never emits `/en/`;
+  the only `/en/` is the `public/en/` consolidation redirect (see 2.3).
 - **`trailingSlash: true`** in `next.config.ts` so the export emits `out/de/index.html` (not
-  `out/de.html`), which is what `/de/` resolves to on GitHub Pages.
+  `out/de.html`), which is what `/de/` resolves to on GitHub Pages. `/` → `out/index.html`.
 - No `i18n/routing.ts`/`request.ts`, no `types/messages.d.ts`, no `lib/fonts.ts` yet — those
   were next-intl / Phase-2-font artifacts. The type lives in `dictionaries.ts` (2.6); fonts
   stay inline in the layout until Phase 2 adds Cyrillic/CJK faces (2.8).
@@ -203,14 +224,15 @@ Adding or removing a language = edit `i18n/config.ts`, add/remove a `messages/*.
    - `export async function generateMetadata({params})` → `getDictionary(locale)` for
      localized title/description + `alternates.languages` hreflang map + per-locale
      `openGraph` (see 2.9).
-6. **`app/[locale]/page.tsx`** — the landing. `await params`, `getDictionary(locale)`, then
-   pass each section its **slice** of the dictionary as a typed `copy` prop
+6. **`app/(home)/` and `app/[locale]/`** — `(home)/page.tsx` renders English at `/`;
+   `[locale]/page.tsx` renders a non-default locale. Both delegate to `components/Landing.tsx`,
+   which passes each section its **slice** of the dictionary as a typed `copy` prop
    (`<Hero copy={t.hero} signup={t.signup} … />`). Sections stay server components; the one
    client leaf (`SignupForm`) receives plain string props.
-7. **`public/index.html`** — the root `/` redirect described in 2.3 (inline script +
-   `<noscript>` meta-refresh to `/en/` + `<link rel="canonical">`). Static file, no layout.
-8. **Deleted** the old `app/layout.tsx` and `app/page.tsx` (their content moved under
-   `[locale]/`).
+7. **`public/en/index.html`** — consolidates the legacy `/en/` path to `/` (canonical +
+   meta-refresh). No `/`-level redirect exists; `/` serves English content (see 2.3).
+8. There is no top-level `app/layout.tsx` or `app/page.tsx` — the two route branches each
+   carry their own root layout.
 
 ### 2.6 Messages and type safety
 
@@ -295,11 +317,12 @@ pages never fetch them (verified: the `en` page emits no preload for Oswald/Noto
 
 ### 2.9 Metadata and SEO
 
-- `generateMetadata` per locale sets translated `<title>`/`description` and the alternates:
+- `buildMetadata(locale)` (in `lib/site-metadata.ts`, shared by both root layouts) sets the
+  translated `<title>`/`description` and the alternates via `localePath()` (English → `/`):
   ```ts
   alternates: {
-    canonical: `${SITE}/${locale}/`,
-    languages: { en: `${SITE}/en/`, de: `${SITE}/de/`, /* ...all 7... */ 'x-default': `${SITE}/en/` }
+    canonical: localePath(locale),                 // en → "/", de → "/de/", ...
+    languages: { en: `${SITE}/`, de: `${SITE}/de/`, /* ...all 7... */ 'x-default': `${SITE}/` }
   }
   ```
 - `<html lang={locale}>` per page (also drives the font CSS in 2.8).
@@ -312,11 +335,12 @@ pages never fetch them (verified: the `en` page emits no preload for Oswald/Noto
 ### 2.10 Language switcher (as-built)
 
 - `components/LangSwitcher.tsx`: a dropdown **in the nav**, listing the active locales
-  (those in `i18n/config.ts`) by endonym (English, Deutsch, Français, Español; later 日本語,
-  Русский, …). A **footer** switcher is an easy optional addition — deferred because the nav
-  one already covers it and a footer dropdown would need to open upward.
-- Each item is a real `<a>` link to `/<locale>/` (works with JS off) and, on click, writes
-  `localStorage['digiboom-locale']` so the root redirect honours the choice next time.
+  (those in `i18n/config.ts`) by endonym (English, Deutsch, Français, Español, Português,
+  日本語, Русский). A **footer** switcher is an easy optional addition — deferred because the
+  nav one already covers it and a footer dropdown would need to open upward.
+- Each item is a real `<a>` link via `localePath(locale)` — English to `/`, others to
+  `/<locale>/` — so it works with JS off. There's no redirect to remember: `/` serves
+  English and visitors pick a language here.
 - The current locale is marked with a check; the trigger is a focusable `<button>` that
   closes on Escape and outside-click; `hrefLang` is set on each link.
 
@@ -393,7 +417,8 @@ build:
 
 ## Part 5 — QA checklist (per release)
 
-- [ ] Each locale renders at `/<locale>/` and the root redirect picks the right one.
+- [ ] `/` renders English (no redirect); each other locale renders at `/<locale>/`; `/en/`
+      consolidates to `/`.
 - [ ] `<html lang>` correct; `hreflang` alternates present and pointing at real URLs.
 - [ ] **Russian**: headlines/eyebrows render in Oswald/Rubik, not tofu.
 - [ ] **Japanese**: everything renders in Noto Sans JP; no missing glyphs.
@@ -412,8 +437,9 @@ build:
 - **Voice loss:** heavy machine translation reads flat. Budget the native-review pass or
   accept flatter non-English copy.
 - **Font weight (JP):** Noto Sans JP is large; keep it off Latin pages and subset weights.
-- **Static-export detection:** first-visit root redirect adds one hop and a brief flash;
-  acceptable, and the choice is remembered.
+- **No language auto-detection:** the default locale is served at `/` and there is no
+  automatic redirect (deliberately — see 2.3). A non-English visitor lands on English and
+  switches manually; per Google's guidance this is safer for crawling than auto-redirecting.
 - **ROI:** for a pre-launch page with an English-first audience, seven languages may be
   more than the moment needs. The architecture makes it cheap to *turn on* languages, so
   phasing lets us validate demand before completing `ja`/`ru`/`pt`.
@@ -428,7 +454,7 @@ Phase 1 (done):
       library. `next.config.ts` gets `trailingSlash: true`, keeps `output: 'export'`.
 - [x] Move landing under `app/[locale]/`; `generateStaticParams`; delete old
       `app/layout.tsx` + `app/page.tsx`.
-- [x] Root `/` redirect as `public/index.html` (detect + `<noscript>` fallback).
+- [x] Default locale served at `/` (no auto-redirect); `/en/` consolidates to `/`.
 - [x] Extract all strings to `messages/en.json`; `Messages = typeof en` type.
 - [x] Refactor components to take typed `copy` props; `components/rich.tsx` for inline tags.
 - [x] `generateMetadata` per locale + hreflang alternates + per-locale OpenGraph.

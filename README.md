@@ -6,9 +6,10 @@ expand from one marketplace to many. Live at **[digiboom.biz](https://digiboom.b
 Static Next.js site (App Router, TypeScript, Tailwind v4), deployed to GitHub Pages. The
 hero mascot is a three.js bomb; the rest is a single scrolling page with an email capture.
 The page ships in seven languages (English, German, French, Spanish, Portuguese, Japanese,
-Russian) at `/en/`, `/de/`, `/fr/`, `/es/`, `/pt/`, `/ja/`, `/ru/`; `/` redirects to the
-visitor's best match. Cyrillic (Oswald) and Japanese (Noto Sans JP) fonts load only on the
-`ru`/`ja` pages.
+Russian). English is served at the root `/` (real content, canonical — no redirect); the
+others are path-prefixed at `/de/`, `/fr/`, `/es/`, `/pt/`, `/ja/`, `/ru/`. There is no
+language auto-redirect; visitors pick a language from the switcher. Cyrillic (Oswald) and
+Japanese (Noto Sans JP) fonts load only on the `ru`/`ja` pages.
 
 ## Quick start
 

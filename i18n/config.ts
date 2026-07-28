@@ -15,6 +15,15 @@ export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
 
+/**
+ * The default locale is served at the site root (`/`) with real content — no redirect — so
+ * the canonical apex URL is the English page itself. Every other locale is path-prefixed.
+ * Use this for every locale-aware link, canonical, and hreflang entry.
+ */
+export function localePath(locale: Locale): string {
+  return locale === defaultLocale ? "/" : `/${locale}/`;
+}
+
 /** Endonyms for the language switcher. */
 export const localeNames: Record<Locale, string> = {
   en: "English",

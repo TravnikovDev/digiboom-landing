@@ -2,11 +2,12 @@
 
 import { Check, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { locales, localeNames, type Locale } from "@/i18n/config";
+import { localePath, locales, localeNames, type Locale } from "@/i18n/config";
 
 /**
- * Language menu. Each option is a real link to that locale's static page (/de/, /fr/, ...),
- * so it works without JS; the onClick just remembers the choice for the "/" redirect.
+ * Language menu. Each option is a real link to that locale's static page (English at `/`,
+ * others at /de/, /fr/, ...), so it works without JS. There is no automatic redirect: the
+ * root serves English directly and visitors choose their language here.
  */
 export default function LangSwitcher({ current, label }: { current: Locale; label: string }) {
   const [open, setOpen] = useState(false);
@@ -27,14 +28,6 @@ export default function LangSwitcher({ current, label }: { current: Locale; labe
       document.removeEventListener("keydown", onKey);
     };
   }, [open]);
-
-  function remember(locale: Locale) {
-    try {
-      localStorage.setItem("digiboom-locale", locale);
-    } catch {
-      /* private mode — the link still navigates */
-    }
-  }
 
   return (
     <div ref={ref} className="relative">
@@ -61,9 +54,8 @@ export default function LangSwitcher({ current, label }: { current: Locale; labe
               <li key={locale} role="none">
                 <a
                   role="menuitem"
-                  href={`/${locale}/`}
+                  href={localePath(locale)}
                   hrefLang={locale}
-                  onClick={() => remember(locale)}
                   aria-current={active ? "true" : undefined}
                   className={`flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium hover:bg-bomb-100 ${
                     active ? "text-ink" : "text-bomb-600"

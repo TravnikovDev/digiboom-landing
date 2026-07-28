@@ -1,12 +1,12 @@
 import type { Messages } from "@/i18n/dictionaries";
-import type { Locale } from "@/i18n/config";
+import { localePath, type Locale } from "@/i18n/config";
 import BombLogo from "./BombLogo";
 import LangSwitcher from "./LangSwitcher";
 
 export default function Nav({ copy, locale }: { copy: Messages["nav"]; locale: Locale }) {
   return (
     <header className="mx-auto max-w-6xl px-5 pt-6 flex items-center justify-between relative z-20">
-      <a href={`/${locale}/`} className="flex items-center gap-2.5">
+      <a href={localePath(locale)} className="flex items-center gap-2.5">
         <BombLogo />
         <span className="font-display text-2xl tracking-widest text-white">DIGIBOOM</span>
       </a>
