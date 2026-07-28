@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, ChevronDown, Globe } from "lucide-react";
+import { Check, ChevronDown, ChevronUp, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { localePath, locales, localeNames, type Locale } from "@/i18n/config";
 
@@ -8,10 +8,22 @@ import { localePath, locales, localeNames, type Locale } from "@/i18n/config";
  * Language menu. Each option is a real link to that locale's static page (English at `/`,
  * others at /de/, /fr/, ...), so it works without JS. There is no automatic redirect: the
  * root serves English directly and visitors choose their language here.
+ *
+ * `placement="up"` opens the menu above the button — used in the footer, where there's no
+ * room below.
  */
-export default function LangSwitcher({ current, label }: { current: Locale; label: string }) {
+export default function LangSwitcher({
+  current,
+  label,
+  placement = "down",
+}: {
+  current: Locale;
+  label: string;
+  placement?: "up" | "down";
+}) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const Chevron = placement === "up" ? ChevronUp : ChevronDown;
 
   useEffect(() => {
     if (!open) return;
@@ -43,7 +55,7 @@ export default function LangSwitcher({ current, label }: { current: Locale; labe
         <Globe className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
         <span className="hidden sm:inline">{localeNames[current]}</span>
         <span className="sm:hidden font-mono text-xs uppercase">{current}</span>
-        <ChevronDown
+        <Chevron
           className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
           strokeWidth={2.5}
           aria-hidden="true"
@@ -53,7 +65,9 @@ export default function LangSwitcher({ current, label }: { current: Locale; labe
       {open && (
         <ul
           role="menu"
-          className="absolute right-0 top-full mt-2 z-30 w-40 rounded-xl border-[3px] border-ink bg-white comic-shadow-sm overflow-hidden py-1"
+          className={`absolute right-0 z-30 w-40 rounded-xl border-[3px] border-ink bg-white comic-shadow-sm overflow-hidden py-1 ${
+            placement === "up" ? "bottom-full mb-2" : "top-full mt-2"
+          }`}
         >
           {locales.map((locale) => {
             const active = locale === current;

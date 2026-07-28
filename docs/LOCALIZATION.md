@@ -340,10 +340,12 @@ Oswald/Noto):
 
 ### 2.10 Language switcher (as-built)
 
-- `components/LangSwitcher.tsx`: a dropdown **in the nav**, listing the active locales
-  (those in `i18n/config.ts`) by endonym (English, Deutsch, Français, Español, Português,
-  日本語, Русский). A **footer** switcher is an easy optional addition — deferred because the
-  nav one already covers it and a footer dropdown would need to open upward.
+- `components/LangSwitcher.tsx`: a dropdown **in the footer** (not the top nav — the apex is
+  reserved for the product/CTA), listing the active locales (those in `i18n/config.ts`) by
+  endonym (English, Deutsch, Français, Español, Português, 日本語, Русский).
+- The trigger shows a globe + the **current language's name** (its short code on mobile) + a
+  chevron, so it reads unmistakably as a language control. `placement="up"` opens the menu
+  above the button (there's no room below it in the footer).
 - Each item is a real `<a>` link via `localePath(locale)` — English to `/`, others to
   `/<locale>/` — so it works with JS off. There's no redirect to remember: `/` serves
   English and visitors pick a language here.
@@ -468,7 +470,8 @@ Shipped:
 - [x] Extract all strings to `messages/en.json`; `Messages = typeof en` type.
 - [x] Refactor components to take typed `copy` props; `components/rich.tsx` for inline tags.
 - [x] `buildMetadata` per locale + hreflang alternates + per-locale OpenGraph.
-- [x] Language switcher (`components/LangSwitcher.tsx`) in the nav.
+- [x] Language switcher (`components/LangSwitcher.tsx`) in the footer, opens upward, shows the
+      current language by name.
 - [x] `app/sitemap.ts` — all locale URLs with hreflang alternates (force-static).
 - [x] `scripts/i18n-check.mjs` wired into the deploy workflow (blocking).
 - [x] Translations: `de`, `fr`, `es`, `pt`, `ja`, `ru` (+ `en`) — all seven live.
@@ -480,5 +483,4 @@ Remaining:
 - [ ] Native review of the marketing-critical non-English lines (hero, CTAs, puns) — the
       current translations are a solid first pass, not native-reviewed.
 - [ ] Per-locale OG images.
-- [ ] Optional: a footer language switcher (upward-opening variant).
 - [ ] Optional: subset Noto Sans JP weights further if the JP page's font payload matters.
