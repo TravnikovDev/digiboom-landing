@@ -38,7 +38,7 @@ export default function HowItWorks({ copy }: { copy: Messages["how"] }) {
           })}
 
           {/* the payoff — inverted so the destination reads differently from the steps */}
-          <Reveal delay={0.28} className="lg:col-span-3 h-full bg-ink border-[3px] border-ink rounded-2xl p-6 comic-shadow">
+          <Reveal delay={0.28} className="lg:col-span-3 h-full bg-ink border-[3px] border-ink rounded-2xl p-6 comic-shadow-invert">
             <div className="flex items-start justify-between gap-3">
               <span className="h-12 w-12 rounded-xl bg-blast grid place-items-center shrink-0">
                 <TrendingUp className="h-5 w-5 text-white" strokeWidth={2.5} aria-hidden="true" />

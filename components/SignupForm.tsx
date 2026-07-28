@@ -69,7 +69,7 @@ export default function SignupForm({
         />
         <button
           type="submit"
-          className={`rounded-full bg-ink text-white font-bold px-7 ${pad} border-[3px] border-ink comic-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all whitespace-nowrap`}
+          className={`rounded-full bg-ink text-white font-bold px-7 ${pad} border-[3px] border-ink comic-shadow-invert-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all whitespace-nowrap`}
         >
           {buttonLabel}
         </button>

@@ -28,8 +28,8 @@ export default function Pricing({ copy }: { copy: Messages["pricing"] }) {
               <Reveal
                 key={plan.name}
                 delay={i * 0.08}
-                className={`relative border-[3px] border-ink rounded-2xl p-6 comic-shadow ${
-                  meta.dark ? "bg-ink" : "bg-white"
+                className={`relative border-[3px] border-ink rounded-2xl p-6 ${
+                  meta.dark ? "bg-ink comic-shadow-invert" : "bg-white comic-shadow"
                 }`}
               >
                 {meta.popular && (
