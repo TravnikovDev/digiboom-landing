@@ -53,7 +53,7 @@
       },
       {
         "title": "Every listing lands ready to sell",
-        "text": "Files, descriptions, variants, tags, licences. All of it travels with the product, shaped to fit each platform, not just the title and a price. Nothing to re-upload. Every new store is open for business on day one."
+        "text": "Files, descriptions, variants, tags, licences. All of it travels with every digital download, shaped to fit each platform, not just the title and a price. Nothing to re-upload. Every new store is open for business on day one."
       },
       {
         "title": "More stores, not more hours",
@@ -78,7 +78,7 @@
     "cards": [
       {
         "title": "A second store costs weeks",
-        "text": "New account. New branding. New categories. Then every file and description, re-uploaded by hand. Most people start this and quietly give up."
+        "text": "New account. New branding. New categories. Then every digital file and description, re-uploaded by hand. Most people start this and quietly give up."
       },
       {
         "title": "One marketplace, one audience",
@@ -119,7 +119,7 @@
     "heading": "Then the orders come from everywhere",
     "paragraph": "Your digital products go live across every marketplace you sell on. Each one is another place a stranger trips over your work. Each one keeps selling while you make the next thing. One upload, working in every direction at once. <accent>That is the boom.</accent>",
     "note": "Reach is the lever we hand you. Three or four times the storefronts, none of the busywork. What you do with it is your business.",
-    "ordersLabel": "Orders, from every channel",
+    "ordersLabel": "Orders, from every sales channel",
     "orderNew": "New sale",
     "boom": "BOOM!"
   },
@@ -214,7 +214,7 @@
         "name": "Business",
         "cap": "up to 500 products",
         "price": "$50",
-        "blurb": "For studios wrangling a catalog that got out of hand."
+        "blurb": "For studios wrangling a digital product catalog that got out of hand."
       },
       {
         "name": "Enterprise",
@@ -229,8 +229,8 @@
     "heading": "Questions, answered",
     "items": [
       {
-        "q": "Do I need stores on the other platforms already?",
-        "a": "No. That is the entire point. If Etsy is all you have, we walk you through opening the rest, fill in most of the setup for you, and carry your catalog over."
+        "q": "Do I need stores on other platforms to sell my digital products?",
+        "a": "No. That is the entire point. If Etsy is all you have, we walk you through opening the rest, fill in most of the setup for you, and carry your digital products over."
       },
       {
         "q": "Can it open the accounts entirely on its own?",
@@ -242,7 +242,7 @@
       },
       {
         "q": "Do you keep my files and customer data?",
-        "a": "Your data stays yours. Files sit encrypted, only for as long as a sync needs them, and you can export or wipe the lot whenever you want."
+        "a": "Your data stays yours. Digital files sit encrypted, only for as long as a sync needs them, and you can export or wipe the lot whenever you want."
       },
       {
         "q": "When can I actually try it?",

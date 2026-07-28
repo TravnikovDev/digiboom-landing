@@ -53,7 +53,7 @@
       },
       {
         "title": "Cada anúncio chega pronto para vender",
-        "text": "Arquivos, descrições, variações, tags, licenças. Tudo viaja com o produto, ajustado para cada plataforma, não só o título e um preço. Nada para reenviar. Cada loja nova abre no primeiro dia."
+        "text": "Arquivos, descrições, variações, tags, licenças. Tudo viaja com cada download digital, ajustado para cada plataforma, não só o título e um preço. Nada para reenviar. Cada loja nova abre no primeiro dia."
       },
       {
         "title": "Mais lojas, não mais horas",
@@ -78,7 +78,7 @@
     "cards": [
       {
         "title": "Uma segunda loja custa semanas",
-        "text": "Conta nova. Marca nova. Categorias novas. Depois cada arquivo e descrição, reenviados na mão. A maioria começa e desiste caladinho."
+        "text": "Conta nova. Marca nova. Categorias novas. Depois cada arquivo digital e descrição, reenviados na mão. A maioria começa e desiste caladinho."
       },
       {
         "title": "Um mercado, um público",
@@ -119,7 +119,7 @@
     "heading": "E aí os pedidos chegam de todo lado",
     "paragraph": "Os seus produtos digitais entram no ar em cada mercado onde você vende. Cada um é mais um lugar onde um estranho esbarra no seu trabalho. Cada um continua vendendo enquanto você faz a próxima coisa. Um upload só, trabalhando em todas as direções ao mesmo tempo. <accent>Isso é o boom.</accent>",
     "note": "Alcance é a alavanca que a gente coloca na sua mão. Três ou quatro vezes mais lojas, zero trabalho repetitivo. O que você faz com isso é problema seu.",
-    "ordersLabel": "Pedidos, de cada canal",
+    "ordersLabel": "Pedidos, de cada canal de venda",
     "orderNew": "Nova venda",
     "boom": "BOOM!"
   },
@@ -214,7 +214,7 @@
         "name": "Business",
         "cap": "até 500 produtos",
         "price": "$50",
-        "blurb": "Para estúdios domando um catálogo que saiu do controle."
+        "blurb": "Para estúdios domando um catálogo de produtos digitais que saiu do controle."
       },
       {
         "name": "Enterprise",
@@ -229,8 +229,8 @@
     "heading": "Perguntas, respondidas",
     "items": [
       {
-        "q": "Preciso já ter lojas nas outras plataformas?",
-        "a": "Não. É justamente esse o ponto. Se você só tem a Etsy, a gente te guia para abrir as outras, preenche a maior parte da configuração por você e leva o seu catálogo junto."
+        "q": "Preciso já ter lojas em outras plataformas para vender meus produtos digitais?",
+        "a": "Não. É justamente esse o ponto. Se você só tem a Etsy, a gente te guia para abrir as outras, preenche a maior parte da configuração por você e leva os seus produtos digitais junto."
       },
       {
         "q": "Ele consegue abrir as contas totalmente sozinho?",
@@ -242,7 +242,7 @@
       },
       {
         "q": "Vocês ficam com os meus arquivos e dados de clientes?",
-        "a": "Os seus dados continuam seus. Os arquivos ficam criptografados, só pelo tempo que uma sincronização precisa, e você pode exportar ou apagar tudo quando quiser."
+        "a": "Os seus dados continuam seus. Os seus arquivos digitais ficam criptografados, só pelo tempo que uma sincronização precisa, e você pode exportar ou apagar tudo quando quiser."
       },
       {
         "q": "Quando eu vou poder testar de verdade?",

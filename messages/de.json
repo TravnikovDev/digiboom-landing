@@ -53,7 +53,7 @@
       },
       {
         "title": "Jedes Angebot ist sofort verkaufsbereit",
-        "text": "Dateien, Beschreibungen, Varianten, Tags, Lizenzen. Alles wandert mit dem Produkt mit, zugeschnitten auf jede Plattform, nicht nur Titel und Preis. Nichts erneut hochladen. Jeder neue Shop ist ab dem ersten Tag offen."
+        "text": "Dateien, Beschreibungen, Varianten, Tags, Lizenzen. Alles wandert mit jedem digitalen Download mit, zugeschnitten auf jede Plattform, nicht nur Titel und Preis. Nichts erneut hochladen. Jeder neue Shop ist ab dem ersten Tag offen."
       },
       {
         "title": "Mehr Shops, nicht mehr Stunden",
@@ -78,7 +78,7 @@
     "cards": [
       {
         "title": "Ein zweiter Shop kostet Wochen",
-        "text": "Neues Konto. Neues Branding. Neue Kategorien. Dann jede Datei und Beschreibung, von Hand neu hochgeladen. Die meisten fangen damit an und geben still und leise auf."
+        "text": "Neues Konto. Neues Branding. Neue Kategorien. Dann jede digitale Datei und Beschreibung, von Hand neu hochgeladen. Die meisten fangen damit an und geben still und leise auf."
       },
       {
         "title": "Ein Marktplatz, ein Publikum",
@@ -119,7 +119,7 @@
     "heading": "Dann kommen die Bestellungen von überall",
     "paragraph": "Deine digitalen Produkte gehen auf jedem Marktplatz live, auf dem du verkaufst. Jeder ist ein weiterer Ort, an dem ein Fremder über deine Arbeit stolpert. Jeder verkauft weiter, während du das Nächste machst. Ein Upload, der in alle Richtungen gleichzeitig arbeitet. <accent>Das ist der Boom.</accent>",
     "note": "Reichweite ist der Hebel, den wir dir in die Hand geben. Drei- bis viermal so viele Shops, keine Fleißarbeit. Was du daraus machst, ist deine Sache.",
-    "ordersLabel": "Bestellungen, aus jedem Kanal",
+    "ordersLabel": "Bestellungen, aus jedem Verkaufskanal",
     "orderNew": "Neuer Verkauf",
     "boom": "BOOM!"
   },
@@ -214,7 +214,7 @@
         "name": "Business",
         "cap": "bis zu 500 Produkte",
         "price": "$50",
-        "blurb": "Für Studios, die einen Katalog bändigen, der außer Kontrolle geriet."
+        "blurb": "Für Studios, die einen Katalog digitaler Produkte bändigen, der außer Kontrolle geriet."
       },
       {
         "name": "Enterprise",
@@ -229,8 +229,8 @@
     "heading": "Fragen, beantwortet",
     "items": [
       {
-        "q": "Brauche ich bereits Shops auf den anderen Plattformen?",
-        "a": "Nein. Genau das ist der Punkt. Wenn du nur Etsy hast, führen wir dich durch die Eröffnung der übrigen, füllen den Großteil des Setups für dich aus und bringen deinen Katalog mit."
+        "q": "Brauche ich schon Shops auf anderen Plattformen, um digitale Produkte zu verkaufen?",
+        "a": "Nein. Genau das ist der Punkt. Wenn du nur Etsy hast, führen wir dich durch die Eröffnung der übrigen, füllen den Großteil des Setups für dich aus und bringen deine digitalen Produkte mit."
       },
       {
         "q": "Kann es die Konten komplett allein eröffnen?",
@@ -242,7 +242,7 @@
       },
       {
         "q": "Behaltet ihr meine Dateien und Kundendaten?",
-        "a": "Deine Daten bleiben deine. Dateien liegen verschlüsselt, nur so lange ein Sync sie braucht, und du kannst alles jederzeit exportieren oder löschen."
+        "a": "Deine Daten bleiben deine. Digitale Dateien liegen verschlüsselt, nur so lange ein Sync sie braucht, und du kannst alles jederzeit exportieren oder löschen."
       },
       {
         "q": "Wann kann ich es wirklich ausprobieren?",

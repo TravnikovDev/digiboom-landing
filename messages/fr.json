@@ -53,7 +53,7 @@
       },
       {
         "title": "Chaque annonce arrive prête à vendre",
-        "text": "Fichiers, descriptions, variantes, tags, licences. Tout voyage avec le produit, taillé pour chaque plateforme, pas seulement le titre et un prix. Rien à remettre en ligne. Chaque nouvelle boutique est ouverte dès le premier jour."
+        "text": "Fichiers, descriptions, variantes, tags, licences. Tout voyage avec chaque téléchargement numérique, taillé pour chaque plateforme, pas seulement le titre et un prix. Rien à remettre en ligne. Chaque nouvelle boutique est ouverte dès le premier jour."
       },
       {
         "title": "Plus de boutiques, pas plus d'heures",
@@ -78,7 +78,7 @@
     "cards": [
       {
         "title": "Une deuxième boutique coûte des semaines",
-        "text": "Nouveau compte. Nouvelle identité. Nouvelles catégories. Puis chaque fichier et description, remis en ligne à la main. La plupart commencent, puis abandonnent en silence."
+        "text": "Nouveau compte. Nouvelle identité. Nouvelles catégories. Puis chaque fichier numérique et description, remis en ligne à la main. La plupart commencent, puis abandonnent en silence."
       },
       {
         "title": "Un marché, un public",
@@ -119,7 +119,7 @@
     "heading": "Puis les commandes arrivent de partout",
     "paragraph": "Tes produits numériques passent en ligne sur chaque marché où tu vends. Chacun est un endroit de plus où un inconnu tombe sur ton travail. Chacun continue de vendre pendant que tu crées la suite. Un seul envoi, qui travaille dans toutes les directions à la fois. <accent>C'est ça, le boom.</accent>",
     "note": "La portée, c'est le levier qu'on te met en main. Trois à quatre fois plus de boutiques, zéro corvée. Ce que tu en fais, c'est ton affaire.",
-    "ordersLabel": "Commandes, de chaque canal",
+    "ordersLabel": "Commandes, de chaque canal de vente",
     "orderNew": "Nouvelle vente",
     "boom": "BOOM!"
   },
@@ -214,7 +214,7 @@
         "name": "Business",
         "cap": "jusqu'à 500 produits",
         "price": "$50",
-        "blurb": "Pour les studios qui domptent un catalogue devenu ingérable."
+        "blurb": "Pour les studios qui domptent un catalogue de produits numériques devenu ingérable."
       },
       {
         "name": "Enterprise",
@@ -229,8 +229,8 @@
     "heading": "Questions, réponses",
     "items": [
       {
-        "q": "Dois-je déjà avoir des boutiques sur les autres plateformes ?",
-        "a": "Non. C'est tout l'intérêt. Si tu n'as qu'Etsy, on t'accompagne pour ouvrir les autres, on remplit l'essentiel de la configuration pour toi et on transfère ton catalogue."
+        "q": "Dois-je déjà avoir des boutiques ailleurs pour vendre mes produits numériques ?",
+        "a": "Non. C'est tout l'intérêt. Si tu n'as qu'Etsy, on t'accompagne pour ouvrir les autres, on remplit l'essentiel de la configuration pour toi et on transfère tes produits numériques."
       },
       {
         "q": "Peut-il ouvrir les comptes entièrement tout seul ?",
@@ -242,7 +242,7 @@
       },
       {
         "q": "Gardez-vous mes fichiers et mes données clients ?",
-        "a": "Tes données restent les tiennes. Les fichiers sont chiffrés, seulement le temps qu'un sync en a besoin, et tu peux tout exporter ou effacer quand tu veux."
+        "a": "Tes données restent les tiennes. Tes fichiers numériques sont chiffrés, seulement le temps qu'un sync en a besoin, et tu peux tout exporter ou effacer quand tu veux."
       },
       {
         "q": "Quand pourrai-je vraiment l'essayer ?",

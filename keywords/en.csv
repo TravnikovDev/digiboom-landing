@@ -1,6 +1,6 @@
 keyword,english_gloss,est_monthly_searches,popularity_0_100,relevance_0_10,intent,where_to_use,notes
 digital products,-,33100,100,9,category,"title, meta, platforms heading, product intro, payoff","Head term; anchors meta + platforms"
-digital downloads,-,27100,82,9,category,"meta, marquee","Core Etsy-culture term; used by buyers and sellers"
+digital downloads,-,27100,82,9,category,"meta, marquee, product features","Core Etsy-culture term; used by buyers and sellers"
 etsy digital downloads,-,14800,45,10,transactional,"meta, future blog","Exact audience: Etsy plus digital"
 digital content,-,12100,37,5,category,none,"Huge but low commercial fit (media/streaming skew)"
 digital products to sell,-,8100,24,8,informational,"future blog","Idea-hunting sellers; guide territory"
@@ -11,7 +11,7 @@ how to sell printables on etsy,-,4400,13,8,informational,"future blog","Printabl
 selling digital products on etsy,-,3600,11,10,informational,"future blog","Variant of the head how-to"
 sell digital products online,-,2900,9,9,transactional,"meta keywords",
 shopify digital products,-,2900,9,9,transactional,platforms,"Second platform in our MVP pair"
-digital files,-,2400,7,6,category,body,"How Etsy labels listings (digital file)"
+digital files,-,2400,7,6,category,"how step 4, problem, faq","How Etsy labels listings (digital file)"
 digital goods,-,2400,7,7,category,hero,"Founder's pick for the hero opener; covers the goods variant"
 sell digital downloads,-,1900,6,9,transactional,"meta keywords",
 digital items,-,1900,6,6,category,body,"Etsy UI wording (digital item)"
