@@ -1,5 +1,5 @@
 keyword,english_gloss,est_monthly_searches,popularity_0_100,relevance_0_10,intent,where_to_use,notes
-цифровые товары,digital goods,2900,100,9,category,"hero, meta, platforms heading","Head term in Russian"
+цифровые товары,digital goods,2900,100,9,category,"hero, title, meta, platforms heading, product intro, payoff","Head term in Russian"
 инфопродукты,info products,2400,83,6,category,none,"Big RU term but skews to courses; do not anchor"
 цифровые продукты,digital products,1900,66,9,category,"meta, body","Near-synonym of the head term"
 продавать на etsy,sell on etsy,1300,45,8,informational,"future blog","Audience is RU-speaking sellers abroad (see README)"

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "DigiBoom. A gente explode suas vendas. Para o bem.",
-    "description": "Vende produtos digitais só na Etsy? A DigiBoom abre as suas lojas na Shopify e na Gumroad por você, leva o seu catálogo junto e mantém tudo sincronizado, para te encontrarem em mais de um lugar. Entre na lista de acesso antecipado.",
-    "ogAlt": "DigiBoom. A gente explode suas vendas. Para o bem.",
+    "title": "DigiBoom. A gente explode suas vendas de produtos digitais. Para o bem.",
+    "description": "Vende produtos digitais só na Etsy? A DigiBoom abre Shopify, Gumroad e mais por você, leva seus downloads digitais junto e mantém tudo sincronizado. Entre no acesso antecipado.",
+    "ogAlt": "DigiBoom. A gente explode suas vendas de produtos digitais. Para o bem.",
     "skip": "Pular para o conteúdo"
   },
   "nav": {
@@ -45,7 +45,7 @@
   "product": {
     "eyebrow": "O que você leva",
     "heading": "Você traz uma loja. A gente abre o resto.",
-    "intro": "A maioria dos vendedores anuncia num lugar só. Quem cresce anuncia em três ou quatro. Isso é <strong>três ou quatro vezes mais lojas onde um comprador pode esbarrar em você</strong>, por uma fração do trabalho. A DigiBoom cuida da expansão. Você aprova cada passo, a gente faz o resto.",
+    "intro": "A maioria dos vendedores anuncia seus produtos digitais num lugar só. Quem cresce anuncia em três ou quatro. Isso é <strong>três ou quatro vezes mais lojas onde um comprador pode esbarrar em você</strong>, por uma fração do trabalho. A DigiBoom cuida da expansão. Você aprova cada passo, a gente faz o resto.",
     "features": [
       {
         "title": "Esteja onde os compradores já estão",
@@ -92,7 +92,7 @@
   },
   "how": {
     "eyebrow": "Como funciona",
-    "heading": "De uma loja a uma rede de lojas",
+    "heading": "De uma loja Etsy a uma rede de lojas",
     "steps": [
       {
         "title": "Conecte a sua loja",
@@ -108,7 +108,7 @@
       },
       {
         "title": "Publique em todo lugar",
-        "text": "O seu catálogo chega intacto a cada loja nova. Arquivos, textos, tags, licenças. Você não envia nada duas vezes."
+        "text": "O seu catálogo chega intacto a cada loja nova. Arquivos digitais, textos, tags, licenças. Você não envia nada duas vezes."
       }
     ],
     "payoffTitle": "Multiplique o seu alcance",
@@ -117,7 +117,7 @@
   "payoff": {
     "eyebrow": "A recompensa",
     "heading": "E aí os pedidos chegam de todo lado",
-    "paragraph": "O seu catálogo entra no ar em cada mercado onde você vende. Cada um é mais um lugar onde um estranho esbarra no seu trabalho. Cada um continua vendendo enquanto você faz a próxima coisa. Um upload só, trabalhando em todas as direções ao mesmo tempo. <accent>Isso é o boom.</accent>",
+    "paragraph": "Os seus produtos digitais entram no ar em cada mercado onde você vende. Cada um é mais um lugar onde um estranho esbarra no seu trabalho. Cada um continua vendendo enquanto você faz a próxima coisa. Um upload só, trabalhando em todas as direções ao mesmo tempo. <accent>Isso é o boom.</accent>",
     "note": "Alcance é a alavanca que a gente coloca na sua mão. Três ou quatro vezes mais lojas, zero trabalho repetitivo. O que você faz com isso é problema seu.",
     "ordersLabel": "Pedidos, de cada canal",
     "orderNew": "Nova venda",

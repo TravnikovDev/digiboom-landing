@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "DigiBoom. On explose tes ventes. En bien.",
-    "description": "Tu ne vends tes produits numériques que sur Etsy ? DigiBoom ouvre tes boutiques Shopify et Gumroad à ta place, y transfère ton catalogue et garde tout synchronisé, pour qu'on te trouve à plus d'un endroit. Rejoins la liste d'accès anticipé.",
-    "ogAlt": "DigiBoom. On explose tes ventes. En bien.",
+    "title": "DigiBoom. On explose tes ventes de produits numériques. En bien.",
+    "description": "Tu vends tes produits numériques uniquement sur Etsy ? DigiBoom ouvre Shopify, Gumroad et plus, transfère ton catalogue et garde chaque annonce synchronisée. Rejoins l'accès anticipé.",
+    "ogAlt": "DigiBoom. On explose tes ventes de produits numériques. En bien.",
     "skip": "Aller au contenu"
   },
   "nav": {
@@ -45,7 +45,7 @@
   "product": {
     "eyebrow": "Ce que tu obtiens",
     "heading": "Tu apportes une boutique. On ouvre les autres.",
-    "intro": "La plupart des vendeurs se contentent d'un seul endroit. Ceux qui grandissent en visent trois ou quatre. Soit <strong>trois à quatre fois plus de boutiques où un acheteur peut tomber sur toi</strong>, pour une fraction du travail. DigiBoom se charge de l'expansion. Tu valides chaque étape, on fait le reste.",
+    "intro": "La plupart vendent leurs produits numériques à un seul endroit. Ceux qui grandissent en visent trois ou quatre. Soit <strong>trois à quatre fois plus de boutiques où un acheteur peut tomber sur toi</strong>, pour une fraction du travail. DigiBoom se charge de l'expansion. Tu valides chaque étape, on fait le reste.",
     "features": [
       {
         "title": "Sois là où sont déjà les acheteurs",
@@ -92,7 +92,7 @@
   },
   "how": {
     "eyebrow": "Comment ça marche",
-    "heading": "D'une boutique à un réseau de boutiques",
+    "heading": "D'une boutique Etsy à un réseau de boutiques",
     "steps": [
       {
         "title": "Connecte ta boutique",
@@ -108,7 +108,7 @@
       },
       {
         "title": "Publie partout",
-        "text": "Ton catalogue arrive intact dans chaque nouvelle boutique. Fichiers, textes, tags, licences. Tu ne mets rien en ligne deux fois."
+        "text": "Ton catalogue arrive intact dans chaque nouvelle boutique. Fichiers numériques, textes, tags, licences. Tu ne mets rien en ligne deux fois."
       }
     ],
     "payoffTitle": "Multiplie ta portée",
@@ -117,7 +117,7 @@
   "payoff": {
     "eyebrow": "La récompense",
     "heading": "Puis les commandes arrivent de partout",
-    "paragraph": "Ton catalogue passe en ligne sur chaque marché où tu vends. Chacun est un endroit de plus où un inconnu tombe sur ton travail. Chacun continue de vendre pendant que tu crées la suite. Un seul envoi, qui travaille dans toutes les directions à la fois. <accent>C'est ça, le boom.</accent>",
+    "paragraph": "Tes produits numériques passent en ligne sur chaque marché où tu vends. Chacun est un endroit de plus où un inconnu tombe sur ton travail. Chacun continue de vendre pendant que tu crées la suite. Un seul envoi, qui travaille dans toutes les directions à la fois. <accent>C'est ça, le boom.</accent>",
     "note": "La portée, c'est le levier qu'on te met en main. Trois à quatre fois plus de boutiques, zéro corvée. Ce que tu en fais, c'est ton affaire.",
     "ordersLabel": "Commandes, de chaque canal",
     "orderNew": "Nouvelle vente",

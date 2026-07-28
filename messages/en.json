@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "DigiBoom. We'll explode your sales. In a good way.",
-    "description": "Selling digital products on Etsy alone? DigiBoom opens your Shopify and Gumroad storefronts for you, moves your digital downloads across and keeps every listing in sync, so your work gets found in more places than one. Join the early access list.",
-    "ogAlt": "DigiBoom. We'll explode your sales. In a good way.",
+    "title": "DigiBoom. We'll explode your digital product sales. In a good way.",
+    "description": "Selling digital products only on Etsy? DigiBoom opens your Shopify and Gumroad stores, moves your digital downloads over and keeps every listing in sync. Join early access.",
+    "ogAlt": "DigiBoom. We'll explode your digital product sales. In a good way.",
     "skip": "Skip to content"
   },
   "nav": {
@@ -45,7 +45,7 @@
   "product": {
     "eyebrow": "What you get",
     "heading": "You bring one shop. We open the rest.",
-    "intro": "Most sellers list in one place. The ones who grow list in three or four. That is <strong>three or four times the storefronts a buyer can trip over you on</strong>, for a sliver of the work. DigiBoom does the expanding. You approve each step, we do the rest.",
+    "intro": "Most sellers list their digital products in one place. The ones who grow list in three or four. That is <strong>three or four times the storefronts a buyer can trip over you on</strong>, for a sliver of the work. DigiBoom does the expanding. You approve each step, we do the rest.",
     "features": [
       {
         "title": "Be where the buyers already are",
@@ -92,7 +92,7 @@
   },
   "how": {
     "eyebrow": "How it works",
-    "heading": "From one shop to a storefront network",
+    "heading": "From one Etsy shop to a storefront network",
     "steps": [
       {
         "title": "Connect your shop",
@@ -108,7 +108,7 @@
       },
       {
         "title": "Publish everywhere",
-        "text": "Your catalog arrives at every new store intact. Files, copy, tags, licences. You upload nothing twice."
+        "text": "Your catalog arrives at every new store intact. Digital files, copy, tags, licences. You upload nothing twice."
       }
     ],
     "payoffTitle": "Multiply your reach",
@@ -117,7 +117,7 @@
   "payoff": {
     "eyebrow": "The payoff",
     "heading": "Then the orders come from everywhere",
-    "paragraph": "Your catalog goes live across every marketplace you sell on. Each one is another place a stranger trips over your work. Each one keeps selling while you make the next thing. One upload, working in every direction at once. <accent>That is the boom.</accent>",
+    "paragraph": "Your digital products go live across every marketplace you sell on. Each one is another place a stranger trips over your work. Each one keeps selling while you make the next thing. One upload, working in every direction at once. <accent>That is the boom.</accent>",
     "note": "Reach is the lever we hand you. Three or four times the storefronts, none of the busywork. What you do with it is your business.",
     "ordersLabel": "Orders, from every channel",
     "orderNew": "New sale",

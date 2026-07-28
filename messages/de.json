@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "DigiBoom. Wir sprengen deinen Umsatz. Im guten Sinne.",
-    "description": "Verkaufst du digitale Produkte nur auf Etsy? DigiBoom eröffnet deine Shopify- und Gumroad-Shops für dich, überträgt deine digitalen Downloads und hält alles synchron, damit deine Arbeit an mehr als einem Ort gefunden wird. Trag dich für den Early Access ein.",
-    "ogAlt": "DigiBoom. Wir sprengen deinen Umsatz. Im guten Sinne.",
+    "title": "DigiBoom. Wir sprengen deinen Umsatz mit digitalen Produkten. Im guten Sinne.",
+    "description": "Du verkaufst digitale Produkte nur auf Etsy? DigiBoom eröffnet Shopify, Gumroad und mehr für dich, überträgt deine digitalen Downloads und hält alles synchron. Sichere dir Early Access.",
+    "ogAlt": "DigiBoom. Wir sprengen deinen Umsatz mit digitalen Produkten. Im guten Sinne.",
     "skip": "Zum Inhalt springen"
   },
   "nav": {
@@ -45,7 +45,7 @@
   "product": {
     "eyebrow": "Was du bekommst",
     "heading": "Du bringst einen Shop mit. Den Rest eröffnen wir.",
-    "intro": "Die meisten sind nur an einem Ort vertreten. Wer wächst, an drei oder vier. Das sind <strong>drei- bis viermal so viele Shops, über die ein Käufer zufällig auf dich stößt</strong>, für einen Bruchteil der Arbeit. DigiBoom übernimmt die Expansion. Du gibst jeden Schritt frei, wir erledigen den Rest.",
+    "intro": "Die meisten verkaufen ihre digitalen Produkte nur an einem Ort. Wer wächst, an drei oder vier. Das sind <strong>drei- bis viermal so viele Shops, über die ein Käufer zufällig auf dich stößt</strong>, für einen Bruchteil der Arbeit. DigiBoom übernimmt die Expansion. Du gibst jeden Schritt frei, wir erledigen den Rest.",
     "features": [
       {
         "title": "Sei da, wo die Käufer schon sind",
@@ -92,7 +92,7 @@
   },
   "how": {
     "eyebrow": "So funktioniert's",
-    "heading": "Von einem Shop zu einem Shop-Netzwerk",
+    "heading": "Von einem Etsy-Shop zu einem Shop-Netzwerk",
     "steps": [
       {
         "title": "Shop verbinden",
@@ -108,7 +108,7 @@
       },
       {
         "title": "Überall veröffentlichen",
-        "text": "Dein Katalog kommt in jedem neuen Shop unversehrt an. Dateien, Texte, Tags, Lizenzen. Du lädst nichts zweimal hoch."
+        "text": "Dein Katalog kommt in jedem neuen Shop unversehrt an. Digitale Dateien, Texte, Tags, Lizenzen. Du lädst nichts zweimal hoch."
       }
     ],
     "payoffTitle": "Vervielfache deine Reichweite",
@@ -117,7 +117,7 @@
   "payoff": {
     "eyebrow": "Der Lohn",
     "heading": "Dann kommen die Bestellungen von überall",
-    "paragraph": "Dein Katalog geht auf jedem Marktplatz live, auf dem du verkaufst. Jeder ist ein weiterer Ort, an dem ein Fremder über deine Arbeit stolpert. Jeder verkauft weiter, während du das Nächste machst. Ein Upload, der in alle Richtungen gleichzeitig arbeitet. <accent>Das ist der Boom.</accent>",
+    "paragraph": "Deine digitalen Produkte gehen auf jedem Marktplatz live, auf dem du verkaufst. Jeder ist ein weiterer Ort, an dem ein Fremder über deine Arbeit stolpert. Jeder verkauft weiter, während du das Nächste machst. Ein Upload, der in alle Richtungen gleichzeitig arbeitet. <accent>Das ist der Boom.</accent>",
     "note": "Reichweite ist der Hebel, den wir dir in die Hand geben. Drei- bis viermal so viele Shops, keine Fleißarbeit. Was du daraus machst, ist deine Sache.",
     "ordersLabel": "Bestellungen, aus jedem Kanal",
     "orderNew": "Neuer Verkauf",
