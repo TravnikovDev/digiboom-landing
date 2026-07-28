@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Globe } from "lucide-react";
+import { Check, ChevronDown, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { localePath, locales, localeNames, type Locale } from "@/i18n/config";
 
@@ -37,10 +37,17 @@ export default function LangSwitcher({ current, label }: { current: Locale; labe
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={label}
-        className="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-[11px] font-semibold text-ink bg-white/90 border-2 border-ink rounded-md px-2 py-1.5 hover:-translate-y-0.5 transition-transform"
+        title={label}
+        className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-ink bg-white border-2 border-ink rounded-full pl-2.5 pr-2 py-1.5 hover:-translate-y-0.5 transition-transform"
       >
-        <Globe className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden="true" />
-        <span className="uppercase">{current}</span>
+        <Globe className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
+        <span className="hidden sm:inline">{localeNames[current]}</span>
+        <span className="sm:hidden font-mono text-xs uppercase">{current}</span>
+        <ChevronDown
+          className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+          strokeWidth={2.5}
+          aria-hidden="true"
+        />
       </button>
 
       {open && (
