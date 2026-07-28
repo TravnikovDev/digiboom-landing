@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "DigiBoom. On explose vos ventes. En bien.",
-    "description": "Vous ne vendez que sur Etsy ? DigiBoom ouvre vos boutiques Shopify et Gumroad à votre place, y transfère votre catalogue et garde tout synchronisé, pour qu'on vous trouve à plus d'un endroit. Rejoignez la liste d'accès anticipé.",
-    "ogAlt": "DigiBoom. On explose vos ventes. En bien.",
+    "title": "DigiBoom. On explose tes ventes. En bien.",
+    "description": "Tu ne vends que sur Etsy ? DigiBoom ouvre tes boutiques Shopify et Gumroad à ta place, y transfère ton catalogue et garde tout synchronisé, pour qu'on te trouve à plus d'un endroit. Rejoins la liste d'accès anticipé.",
+    "ogAlt": "DigiBoom. On explose tes ventes. En bien.",
     "skip": "Aller au contenu"
   },
   "nav": {
@@ -13,20 +13,20 @@
   },
   "hero": {
     "eyebrow": "Tic... tic... tic...",
-    "headline": "On explose\nvos ventes.\n<accent>En bien.</accent>",
-    "paragraph": "Vous vendez vos modèles, presets, brushes et polices sur <mark>Etsy</mark>. Rien qu'Etsy. Un rayon, une boutique, et vous savez déjà comment finit cette histoire. DigiBoom ouvre vos autres boutiques sur <mark>Shopify</mark>, <mark>Gumroad</mark> et le reste, puis garde chaque annonce synchronisée. Plus d'endroits où l'on vous trouve. Plus d'acheteurs. Aucune heure en plus.",
-    "chipYours": "votre boutique",
+    "headline": "On explose\ntes ventes.\n<accent>En bien.</accent>",
+    "paragraph": "Tu vends tes modèles, presets, brushes et polices sur <mark>Etsy</mark>. Rien qu'Etsy. Un rayon, une boutique, et tu sais déjà comment finit cette histoire. DigiBoom ouvre tes autres boutiques sur <mark>Shopify</mark>, <mark>Gumroad</mark> et le reste, puis garde chaque annonce synchronisée. Plus d'endroits où l'on te trouve. Plus d'acheteurs. Aucune heure en plus.",
+    "chipYours": "ta boutique",
     "chipWeSetup": "on s'en charge",
     "chipMore": "+20 autres",
     "signupButton": "Allumer la mèche",
-    "signupNote": "Accès anticipé gratuit pour la liste d'attente. Des nouvelles du produit, rien d'autre. On n'a aucune envie d'encombrer votre boîte mail."
+    "signupNote": "Accès anticipé gratuit pour la liste d'attente. Des nouvelles du produit, rien d'autre. On n'a aucune envie d'encombrer ta boîte mail."
   },
   "signup": {
     "emailLabel": "E-mail",
-    "placeholder": "vous@votreboutique.com",
+    "placeholder": "toi@taboutique.com",
     "successStrong": "Mèche allumée.",
-    "successRest": "Vous entendrez le boom en premier.",
-    "error": "Ça n'est pas passé. Attendez une minute et réessayez."
+    "successRest": "Tu entendras le boom en premier.",
+    "error": "Ça n'est pas passé. Attends une minute et réessaie."
   },
   "marquee": {
     "items": [
@@ -43,50 +43,50 @@
     ]
   },
   "product": {
-    "eyebrow": "Ce que vous obtenez",
-    "heading": "Vous apportez une boutique. On ouvre les autres.",
-    "intro": "La plupart des vendeurs se contentent d'un seul endroit. Ceux qui grandissent en visent trois ou quatre. Soit <strong>trois à quatre fois plus de boutiques où un acheteur peut tomber sur vous</strong>, pour une fraction du travail. DigiBoom se charge de l'expansion. Vous validez chaque étape, on fait le reste.",
+    "eyebrow": "Ce que tu obtiens",
+    "heading": "Tu apportes une boutique. On ouvre les autres.",
+    "intro": "La plupart des vendeurs se contentent d'un seul endroit. Ceux qui grandissent en visent trois ou quatre. Soit <strong>trois à quatre fois plus de boutiques où un acheteur peut tomber sur toi</strong>, pour une fraction du travail. DigiBoom se charge de l'expansion. Tu valides chaque étape, on fait le reste.",
     "features": [
       {
-        "title": "Soyez là où sont déjà les acheteurs",
-        "text": "Ouvrir une boutique vous coûtait une semaine que vous n'aviez pas, alors vous n'avez jamais tenté. On gère le compte, l'identité, les catégories, les petites lignes. Vous êtes en ligne sur un nouveau marché avant le dîner, devant des gens qui n'ont jamais entendu parler de vous."
+        "title": "Sois là où sont déjà les acheteurs",
+        "text": "Ouvrir une boutique te coûtait une semaine que tu n'avais pas, alors tu ne t'en es jamais donné la peine. On gère le compte, l'identité, les catégories, les petites lignes. Tu es en ligne sur un nouveau marché avant le dîner, devant des gens qui n'ont jamais entendu parler de toi."
       },
       {
         "title": "Chaque annonce arrive prête à vendre",
-        "text": "Fichiers, descriptions, variantes, tags, licences. Tout voyage avec le produit, taillé pour chaque plateforme, pas seulement le titre et un prix. Rien à re-téléverser. Chaque nouvelle boutique est ouverte dès le premier jour."
+        "text": "Fichiers, descriptions, variantes, tags, licences. Tout voyage avec le produit, taillé pour chaque plateforme, pas seulement le titre et un prix. Rien à remettre en ligne. Chaque nouvelle boutique est ouverte dès le premier jour."
       },
       {
         "title": "Plus de boutiques, pas plus d'heures",
-        "text": "Changez un prix une fois. Publiez une nouvelle version une fois. Chaque boutique se met à jour en quelques secondes. La corvée qui engloutissait votre semaine a tout simplement disparu, alors visez aussi large que vous voulez et gardez vos soirées."
+        "text": "Change un prix une fois. Publie une nouvelle version une fois. Chaque boutique se met à jour en quelques secondes. La corvée qui engloutissait ta semaine a tout simplement disparu, alors vise aussi large que tu veux et garde tes soirées."
       }
     ]
   },
   "syncPanel": {
     "window": "digiboom / expansion de boutique",
-    "catalogTitle": "Votre catalogue Etsy, 48 produits",
+    "catalogTitle": "Ton catalogue Etsy, 48 produits",
     "catalogMeta": "fichiers · descriptions · tags · prix",
-    "stateYours": "votre boutique",
+    "stateYours": "ta boutique",
     "stateLive": "boutique en ligne",
     "stateSetup": "en cours",
     "footLeft": "1 boutique",
     "footLeftEnd": "3 boutiques",
-    "footRight": "3× plus d'endroits où les acheteurs vous trouvent"
+    "footRight": "3× plus d'endroits où les acheteurs te trouvent"
   },
   "problem": {
     "eyebrow": "Le problème",
-    "heading": "Une boutique, un public, à un mauvais jour du néant",
+    "heading": "Une boutique, un public, à un mauvais jour de tout perdre",
     "cards": [
       {
         "title": "Une deuxième boutique coûte des semaines",
-        "text": "Nouveau compte. Nouvelle identité. Nouvelles catégories. Puis chaque fichier et description, re-téléversés à la main. La plupart commencent, puis abandonnent en silence."
+        "text": "Nouveau compte. Nouvelle identité. Nouvelles catégories. Puis chaque fichier et description, remis en ligne à la main. La plupart commencent, puis abandonnent en silence."
       },
       {
         "title": "Un marché, un public",
-        "text": "Votre travail n'est vu que par les gens déjà sur cette seule plateforme. Tous ceux qui achètent ailleurs ignorent votre existence."
+        "text": "Ton travail n'est vu que par les gens déjà sur cette seule plateforme. Tous ceux qui achètent ailleurs ignorent ton existence."
       },
       {
         "title": "Chaque changement, fait deux fois",
-        "text": "Nouvelle version, nouveau prix, nouveaux tags, fois chaque plateforme où vous êtes. Des heures par semaine à ne rien produire du tout."
+        "text": "Nouvelle version, nouveau prix, nouveaux tags, multipliés par chaque plateforme où tu es. Des heures par semaine à ne rien produire du tout."
       }
     ]
   },
@@ -95,50 +95,50 @@
     "heading": "D'une boutique à un réseau de boutiques",
     "steps": [
       {
-        "title": "Connectez votre boutique",
-        "text": "Indiquez-nous la boutique que vous tenez déjà, Etsy, Shopify ou Gumroad, via l'API officielle. Débranchez quand bon vous semble."
+        "title": "Connecte ta boutique",
+        "text": "Indique-nous la boutique que tu tiens déjà, Etsy, Shopify ou Gumroad, via l'API officielle. Débranche quand bon te semble."
       },
       {
-        "title": "Importez votre catalogue",
-        "text": "On lit vos annonces, vos fichiers et toutes les métadonnées pénibles, puis on détermine ce qui va où."
+        "title": "Importe ton catalogue",
+        "text": "On lit tes annonces, tes fichiers et toutes les métadonnées pénibles, puis on détermine ce qui va où."
       },
       {
-        "title": "Ouvrez de nouvelles boutiques",
-        "text": "Configuration guidée sur les plateformes qui vous manquent. Compte, identité, catégories, règles, en grande partie déjà remplis avant que vous ne touchiez à quoi que ce soit."
+        "title": "Ouvre de nouvelles boutiques",
+        "text": "Configuration guidée sur les plateformes qui te manquent. Compte, identité, catégories, règles, en grande partie déjà remplis avant que tu ne touches à quoi que ce soit."
       },
       {
-        "title": "Publiez partout",
-        "text": "Votre catalogue arrive intact dans chaque nouvelle boutique. Fichiers, textes, tags, licences. Vous ne téléversez rien deux fois."
+        "title": "Publie partout",
+        "text": "Ton catalogue arrive intact dans chaque nouvelle boutique. Fichiers, textes, tags, licences. Tu ne mets rien en ligne deux fois."
       }
     ],
-    "payoffTitle": "Multipliez votre portée",
-    "payoffText": "Même catalogue, plusieurs fois plus d'espace en rayon, devant chaque marché au lieu du seul par lequel vous avez commencé."
+    "payoffTitle": "Multiplie ta portée",
+    "payoffText": "Même catalogue, plusieurs fois plus d'espace en rayon, devant chaque marché au lieu du seul par lequel tu as commencé."
   },
   "payoff": {
     "eyebrow": "La récompense",
     "heading": "Puis les commandes arrivent de partout",
-    "paragraph": "Votre catalogue passe en ligne sur chaque marché où vous vendez. Chacun est un endroit de plus où un inconnu tombe sur votre travail. Chacun continue de vendre pendant que vous créez la suite. Un seul envoi, qui travaille dans toutes les directions à la fois. <accent>C'est ça, le boom.</accent>",
-    "note": "La portée, c'est le levier qu'on vous met en main. Trois à quatre fois plus de boutiques, zéro corvée. Ce que vous en faites, c'est votre affaire.",
+    "paragraph": "Ton catalogue passe en ligne sur chaque marché où tu vends. Chacun est un endroit de plus où un inconnu tombe sur ton travail. Chacun continue de vendre pendant que tu crées la suite. Un seul envoi, qui travaille dans toutes les directions à la fois. <accent>C'est ça, le boom.</accent>",
+    "note": "La portée, c'est le levier qu'on te met en main. Trois à quatre fois plus de boutiques, zéro corvée. Ce que tu en fais, c'est ton affaire.",
     "ordersLabel": "Commandes, de chaque canal",
     "orderNew": "Nouvelle vente",
     "boom": "BOOM!"
   },
   "platforms": {
-    "eyebrow": "Où vos produits peuvent aller",
+    "eyebrow": "Où tes produits peuvent aller",
     "heading": "Chaque endroit où se vend le numérique",
-    "intro": "Les marchés vous placent devant de nouveaux acheteurs. Vos propres boutiques vous laissent la marge. Faites les deux. Etsy, Shopify et Gumroad d'abord, puis on continue d'ajouter, dans l'ordre que les premiers membres réclament vraiment.",
+    "intro": "Les marchés te placent devant de nouveaux acheteurs. Tes propres boutiques te laissent la marge. Fais les deux. Etsy, Shopify et Gumroad d'abord, puis on continue d'ajouter, dans l'ordre que les premiers membres réclament vraiment.",
     "groups": [
       {
         "title": "Marchés",
-        "blurb": "De nouveaux publics déjà en train de chercher. C'est de là que vient réellement la découverte."
+        "blurb": "De nouveaux publics déjà en train de chercher. C'est là qu'on te découvre vraiment."
       },
       {
-        "title": "Votre propre boutique",
-        "blurb": "Une boutique qui est à vous. Gardez le client, gardez la marge, gardez ce que les marchés auraient prélevé."
+        "title": "Ta propre boutique",
+        "blurb": "Une boutique qui est à toi. Garde le client, garde la marge, garde ce que les marchés auraient prélevé."
       },
       {
         "title": "Plateformes créateurs",
-        "blurb": "Là où un public achète directement chez vous."
+        "blurb": "Là où un public achète directement chez toi."
       },
       {
         "title": "Cours & médias",
@@ -148,7 +148,7 @@
     "stageLaunch": "au lancement",
     "stagePlanned": "prévu",
     "stageExploring": "à l'étude",
-    "footnote": "Vous vendez quelque part qu'on n'a pas listé ? Dites-le-nous à l'inscription et ça rejoint la pile."
+    "footnote": "Tu vends quelque part qu'on n'a pas listé ? Dis-le-nous à l'inscription et ça rejoint la pile."
   },
   "countdown": {
     "eyebrow": "État d'avancement",
@@ -166,7 +166,7 @@
       },
       {
         "title": "Landing et liste d'attente",
-        "text": "Vous l'avez sous les yeux. Inscrivez-vous maintenant et vous êtes presque en tête de file.",
+        "text": "Tu l'as sous les yeux. Inscris-toi maintenant et tu es presque en tête de file.",
         "when": "Maintenant"
       },
       {
@@ -176,7 +176,7 @@
       },
       {
         "title": "MVP : Etsy et Shopify",
-        "text": "Configuration de la boutique Shopify, et sync bidirectionnelle de vos produits numériques entre les deux premières plateformes.",
+        "text": "Configuration de la boutique Shopify, et sync bidirectionnelle de tes produits numériques entre les deux premières plateformes.",
         "when": "T1 à T2"
       },
       {
@@ -194,7 +194,7 @@
   "pricing": {
     "eyebrow": "Tarifs prévus",
     "heading": "Forfaits mensuels fixes, sans crédits",
-    "intro": "Tarifé selon ce que vous vendez, pas selon le sync. Une vente de plus par mois le couvre, le reste est à vous. Les membres de la liste d'attente verrouillent le tarif de lancement avant qu'on ne revienne à la raison.",
+    "intro": "Le prix dépend de ce que tu vends, pas du sync. Une vente de plus par mois le couvre, le reste est à toi. Les membres de la liste d'attente verrouillent le tarif de lancement avant qu'on ne revienne à la raison.",
     "mostPopular": "Le plus choisi",
     "perMonth": "/mois",
     "plans": [
@@ -208,7 +208,7 @@
         "name": "Pro",
         "cap": "jusqu'à 200 produits",
         "price": "$30",
-        "blurb": "Pour les boutiques qui travaillent déjà trois plateformes ou plus."
+        "blurb": "Pour les boutiques qui gèrent déjà trois plateformes ou plus."
       },
       {
         "name": "Business",
@@ -230,11 +230,11 @@
     "items": [
       {
         "q": "Dois-je déjà avoir des boutiques sur les autres plateformes ?",
-        "a": "Non. C'est tout l'intérêt. Si vous n'avez qu'Etsy, on vous accompagne pour ouvrir les autres, on remplit l'essentiel de la configuration pour vous et on transfère votre catalogue."
+        "a": "Non. C'est tout l'intérêt. Si tu n'as qu'Etsy, on t'accompagne pour ouvrir les autres, on remplit l'essentiel de la configuration pour toi et on transfère ton catalogue."
       },
       {
         "q": "Peut-il ouvrir les comptes entièrement tout seul ?",
-        "a": "Non, et vous ne le voudriez pas. Les marchés vous obligent à accepter les conditions et à prouver votre identité vous-même. On prépare tout autour de ces deux étapes. Identité, catégories, règles, annonces, fichiers."
+        "a": "Non, et tu ne le voudrais pas. Les marchés t'obligent à accepter les conditions et à prouver ton identité toi-même. On prépare tout autour de ces deux étapes. Identité, catégories, règles, annonces, fichiers."
       },
       {
         "q": "Est-ce contraire aux règles des marchés ?",
@@ -242,11 +242,11 @@
       },
       {
         "q": "Gardez-vous mes fichiers et mes données clients ?",
-        "a": "Vos données restent les vôtres. Les fichiers sont chiffrés, seulement le temps qu'un sync en a besoin, et vous pouvez tout exporter ou effacer quand vous voulez."
+        "a": "Tes données restent les tiennes. Les fichiers sont chiffrés, seulement le temps qu'un sync en a besoin, et tu peux tout exporter ou effacer quand tu veux."
       },
       {
         "q": "Quand pourrai-je vraiment l'essayer ?",
-        "a": "La première version, Etsy et Shopify synchronisés, part en bêta fermée. Les membres de la liste d'attente entrent en premier, dans l'ordre d'inscription. Inscrivez-vous maintenant, vous vous remercierez plus tard."
+        "a": "La première version, Etsy et Shopify synchronisés, part en bêta fermée. Les membres de la liste d'attente entrent en premier, dans l'ordre d'inscription. Inscris-toi maintenant, tu te remercieras plus tard."
       },
       {
         "q": "Qui construit tout ça ?",
@@ -256,10 +256,10 @@
   },
   "signupSection": {
     "eyebrow": "Accès anticipé",
-    "heading": "Entrez avant\nle premier sync",
+    "heading": "Entre avant\nle premier sync",
     "paragraph": "Des nouvelles dès qu'elles sortent. Une invitation bêta avant la foule. Tarif de lancement verrouillé tant qu'il dure.",
     "button": "Obtenir l'accès anticipé",
-    "note": "Un e-mail par étape. Partez quand vous voulez."
+    "note": "Un e-mail par étape. Pars quand tu veux."
   },
   "footer": {
     "platforms": "Plateformes",

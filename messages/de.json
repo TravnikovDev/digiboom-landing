@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "DigiBoom. Wir jagen deinen Umsatz in die Luft. Im guten Sinne.",
+    "title": "DigiBoom. Wir sprengen deinen Umsatz. Im guten Sinne.",
     "description": "Verkaufst du nur auf Etsy? DigiBoom eröffnet deine Shopify- und Gumroad-Shops für dich, überträgt deinen Katalog und hält alles synchron, damit deine Arbeit an mehr als einem Ort gefunden wird. Trag dich für den Early Access ein.",
-    "ogAlt": "DigiBoom. Wir jagen deinen Umsatz in die Luft. Im guten Sinne.",
+    "ogAlt": "DigiBoom. Wir sprengen deinen Umsatz. Im guten Sinne.",
     "skip": "Zum Inhalt springen"
   },
   "nav": {
@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Tick... tick... tick...",
     "headline": "Wir sprengen\ndeinen Umsatz.\n<accent>Im guten Sinne.</accent>",
-    "paragraph": "Du verkaufst deine Vorlagen, Presets, Brushes und Fonts auf <mark>Etsy</mark>. Nur auf Etsy. Ein Regal, ein Shop, und du weißt schon, wie diese Geschichte ausgeht. DigiBoom eröffnet deine weiteren Shops auf <mark>Shopify</mark>, <mark>Gumroad</mark> und dem Rest und hält danach jedes Angebot synchron. Mehr Orte, an denen man dich findet. Mehr Käufer. Keine zusätzlichen Stunden.",
+    "paragraph": "Du verkaufst deine Vorlagen, Presets, Brushes und Fonts auf <mark>Etsy</mark>. Nur auf Etsy. Ein Regal, ein Shop, und du weißt schon, wie diese Geschichte ausgeht. DigiBoom eröffnet für dich weitere Shops auf <mark>Shopify</mark>, <mark>Gumroad</mark> und dem Rest und hält danach jedes Angebot synchron. Mehr Orte, an denen man dich findet. Mehr Käufer. Keine einzige Stunde extra.",
     "chipYours": "dein Shop",
     "chipWeSetup": "richten wir ein",
     "chipMore": "+20 weitere",
@@ -45,7 +45,7 @@
   "product": {
     "eyebrow": "Was du bekommst",
     "heading": "Du bringst einen Shop mit. Den Rest eröffnen wir.",
-    "intro": "Die meisten Verkäufer listen an einem Ort. Wer wächst, listet an drei oder vier. Das sind <strong>drei- bis viermal so viele Shops, über die ein Käufer zufällig auf dich stößt</strong>, für einen Bruchteil der Arbeit. DigiBoom übernimmt die Expansion. Du gibst jeden Schritt frei, wir erledigen den Rest.",
+    "intro": "Die meisten sind nur an einem Ort vertreten. Wer wächst, an drei oder vier. Das sind <strong>drei- bis viermal so viele Shops, über die ein Käufer zufällig auf dich stößt</strong>, für einen Bruchteil der Arbeit. DigiBoom übernimmt die Expansion. Du gibst jeden Schritt frei, wir erledigen den Rest.",
     "features": [
       {
         "title": "Sei da, wo die Käufer schon sind",
@@ -53,16 +53,16 @@
       },
       {
         "title": "Jedes Angebot ist sofort verkaufsbereit",
-        "text": "Dateien, Beschreibungen, Varianten, Tags, Lizenzen. Alles reist mit dem Produkt mit, passend für jede Plattform zugeschnitten, nicht nur Titel und Preis. Nichts erneut hochladen. Jeder neue Shop ist ab Tag eins geöffnet."
+        "text": "Dateien, Beschreibungen, Varianten, Tags, Lizenzen. Alles wandert mit dem Produkt mit, zugeschnitten auf jede Plattform, nicht nur Titel und Preis. Nichts erneut hochladen. Jeder neue Shop ist ab dem ersten Tag offen."
       },
       {
         "title": "Mehr Shops, nicht mehr Stunden",
-        "text": "Preis einmal ändern. Neue Version einmal ausspielen. Jeder Shop zieht in Sekunden nach. Die Fleißarbeit, die früher deine Woche verschlang, ist einfach weg, also geh so breit, wie du willst, und behalt deine Abende."
+        "text": "Preis einmal ändern. Neue Version einmal ausspielen. Jeder Shop zieht in Sekunden nach. Die Fleißarbeit, die früher deine Woche verschlang, ist einfach weg, also breite dich so weit aus, wie du willst, und behalt deine Abende für dich."
       }
     ]
   },
   "syncPanel": {
-    "window": "digiboom / shop-expansion",
+    "window": "digiboom / shop-erweiterung",
     "catalogTitle": "Dein Etsy-Katalog, 48 Produkte",
     "catalogMeta": "Dateien · Beschreibungen · Tags · Preise",
     "stateYours": "dein Shop",
@@ -74,7 +74,7 @@
   },
   "problem": {
     "eyebrow": "Das Problem",
-    "heading": "Ein Shop, ein Publikum, einen schlechten Tag von null entfernt",
+    "heading": "Ein Shop, ein Publikum, einen schlechten Tag vom Aus entfernt",
     "cards": [
       {
         "title": "Ein zweiter Shop kostet Wochen",
@@ -86,7 +86,7 @@
       },
       {
         "title": "Jede Änderung, doppelt gemacht",
-        "text": "Neue Version, neuer Preis, neue Tags, mal jede Plattform, auf der du bist. Stunden pro Woche, in denen rein gar nichts entsteht."
+        "text": "Neue Version, neuer Preis, neue Tags, und das für jede Plattform, auf der du bist. Stunden pro Woche, in denen rein gar nichts entsteht."
       }
     ]
   },
@@ -126,11 +126,11 @@
   "platforms": {
     "eyebrow": "Wohin deine Produkte können",
     "heading": "Jeder Ort, an dem digitale Waren verkauft werden",
-    "intro": "Marktplätze bringen dich vor neue Käufer. Deine eigenen Shops lassen dir die Marge. Mach beides. Etsy, Shopify und Gumroad kommen zuerst, dann bauen wir weiter aus, in der Reihenfolge, die frühe Mitglieder tatsächlich verlangen.",
+    "intro": "Marktplätze bringen dich vor neue Käufer. Deine eigenen Shops lassen dir die Marge. Mach beides. Etsy, Shopify und Gumroad kommen zuerst, dann bauen wir weiter aus, in der Reihenfolge, die die ersten Mitglieder tatsächlich verlangen.",
     "groups": [
       {
         "title": "Marktplätze",
-        "blurb": "Neue Zielgruppen, die schon da draußen suchen. Von hier kommt die Entdeckung wirklich."
+        "blurb": "Neue Zielgruppen, die schon da draußen suchen. Hier wirst du tatsächlich entdeckt."
       },
       {
         "title": "Dein eigener Shop",
@@ -152,7 +152,7 @@
   },
   "countdown": {
     "eyebrow": "Entwicklungsstand",
-    "heading": "Wird offen gebaut",
+    "heading": "Wird offen entwickelt",
     "intro": "DigiBoom steht am Anfang, und wir tun nicht so, als wäre es anders. Hier ist, was fertig ist, was läuft und was als Nächstes kommt. Diese Seite ändert sich mit der Arbeit.",
     "shipped": "fertig",
     "statusDone": "fertig",
@@ -171,7 +171,7 @@
       },
       {
         "title": "Verkäufer-Community",
-        "text": "Telegram und Discord, wo die Frühen darüber streiten, was zuerst gebaut wird.",
+        "text": "Telegram und Discord, wo die Ersten darüber streiten, was zuerst gebaut wird.",
         "when": "Als Nächstes"
       },
       {
@@ -194,7 +194,7 @@
   "pricing": {
     "eyebrow": "Geplante Preise",
     "heading": "Feste Monatspläne, keine Credits",
-    "intro": "Bepreist danach, wie viel du verkaufst, nicht nach dem Sync. Ein zusätzlicher Verkauf im Monat deckt es, der Rest gehört dir. Warteliste-Mitglieder sichern sich den Launch-Preis, bevor wir zur Vernunft kommen.",
+    "intro": "Der Preis richtet sich danach, wie viel du verkaufst, nicht nach dem Sync. Ein zusätzlicher Verkauf im Monat deckt ihn, der Rest gehört dir. Wer auf der Warteliste steht, sichert sich den Launch-Preis, bevor wir zur Vernunft kommen.",
     "mostPopular": "Am beliebtesten",
     "perMonth": "/Mon.",
     "plans": [
@@ -238,7 +238,7 @@
       },
       {
         "q": "Verstößt das gegen die Regeln der Marktplätze?",
-        "a": "Nein. Wir nutzen die offiziellen öffentlichen APIs mit OAuth, dieselben Türen, die diese Plattformen jedem App-Entwickler öffnen. Kein Scraping. Kein Passwort in unsere Hände."
+        "a": "Nein. Wir nutzen die offiziellen öffentlichen APIs mit OAuth, dieselben Türen, die diese Plattformen jedem App-Entwickler öffnen. Kein Scraping. Und du gibst uns kein Passwort."
       },
       {
         "q": "Behaltet ihr meine Dateien und Kundendaten?",
@@ -246,11 +246,11 @@
       },
       {
         "q": "Wann kann ich es wirklich ausprobieren?",
-        "a": "Der erste Build, Etsy und Shopify im Sync, geht in eine geschlossene Beta. Warteliste-Mitglieder kommen zuerst rein, in der Reihenfolge ihrer Anmeldung. Melde dich jetzt an, dank es dir später."
+        "a": "Der erste Build, Etsy und Shopify im Sync, geht in eine geschlossene Beta. Warteliste-Mitglieder kommen zuerst rein, in der Reihenfolge ihrer Anmeldung. Melde dich jetzt an, du wirst es dir später danken."
       },
       {
         "q": "Wer baut das?",
-        "a": "Roman Travnikov. Gründer und Lead-Entwickler, zehn und mehr Jahre im Web, baut DigiBoom offen auf. Der ganze Plan steht im White Paper."
+        "a": "Roman Travnikov. Gründer und Lead-Entwickler, seit über zehn Jahren im Web, baut DigiBoom offen auf. Der ganze Plan steht im White Paper."
       }
     ]
   },
@@ -259,7 +259,7 @@
     "heading": "Sei dabei, bevor\nder erste Sync läuft",
     "paragraph": "Updates, sobald sie erscheinen. Eine Beta-Einladung, bevor die Menge eine bekommt. Launch-Preis gesichert, solange es ihn gibt.",
     "button": "Early Access sichern",
-    "note": "Eine E-Mail pro Meilenstein. Geh, wann immer du willst."
+    "note": "Eine E-Mail pro Meilenstein. Abmelden, wann immer du willst."
   },
   "footer": {
     "platforms": "Plattformen",

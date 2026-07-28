@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DigiBoom. A gente explode suas vendas. Para o bem.",
-    "description": "Vende só na Etsy? A DigiBoom abre as suas lojas na Shopify e na Gumroad por você, leva o seu catálogo junto e mantém tudo sincronizado, para o seu trabalho ser encontrado em mais de um lugar. Entre na lista de acesso antecipado.",
+    "description": "Vende só na Etsy? A DigiBoom abre as suas lojas na Shopify e na Gumroad por você, leva o seu catálogo junto e mantém tudo sincronizado, para te encontrarem em mais de um lugar. Entre na lista de acesso antecipado.",
     "ogAlt": "DigiBoom. A gente explode suas vendas. Para o bem.",
     "skip": "Pular para o conteúdo"
   },
@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Tique... tique... tique...",
     "headline": "A gente explode\nsuas vendas.\n<accent>Para o bem.</accent>",
-    "paragraph": "Você vende seus modelos, presets, pincéis e fontes na <mark>Etsy</mark>. Só na Etsy. Uma prateleira, uma loja, e você já sabe como essa história termina. A DigiBoom abre as suas outras lojas na <mark>Shopify</mark>, na <mark>Gumroad</mark> e no resto, e depois mantém cada anúncio sincronizado. Mais lugares onde te encontram. Mais compradores. Nenhuma hora a mais.",
+    "paragraph": "Você vende seus modelos, presets, pincéis e fontes na <mark>Etsy</mark>. Só na Etsy. Uma prateleira, uma loja, e você já sabe como essa história termina. A DigiBoom abre as suas lojas na <mark>Shopify</mark>, na <mark>Gumroad</mark> e nas demais, e depois mantém cada anúncio sincronizado. Mais lugares onde te encontram. Mais compradores. Nenhuma hora a mais.",
     "chipYours": "sua loja",
     "chipWeSetup": "a gente monta",
     "chipMore": "+20 outras",
@@ -25,7 +25,7 @@
     "emailLabel": "E-mail",
     "placeholder": "voce@sualoja.com",
     "successStrong": "Pavio aceso.",
-    "successRest": "Você vai ouvir o boom primeiro.",
+    "successRest": "Você vai ouvir o boom antes de todo mundo.",
     "error": "Não deu certo. Espere um instante e tente de novo."
   },
   "marquee": {
@@ -74,7 +74,7 @@
   },
   "problem": {
     "eyebrow": "O problema",
-    "heading": "Uma loja, um público, a um dia ruim do zero",
+    "heading": "Uma loja, um público, a um dia ruim de perder tudo",
     "cards": [
       {
         "title": "Uma segunda loja custa semanas",
@@ -82,11 +82,11 @@
       },
       {
         "title": "Um mercado, um público",
-        "text": "O seu trabalho só é visto por quem já está naquela única plataforma. Todo mundo que compra nas outras não sabe que você existe."
+        "text": "O seu trabalho só é visto por quem já está naquela única plataforma. Quem compra nas outras nem sabe que você existe."
       },
       {
         "title": "Cada mudança, feita duas vezes",
-        "text": "Versão nova, preço novo, tags novas, vezes cada plataforma em que você está. Horas por semana sem produzir nada."
+        "text": "Versão nova, preço novo, tags novas, e isso pra cada plataforma em que você está. Horas por semana sem produzir nada."
       }
     ]
   },
@@ -130,7 +130,7 @@
     "groups": [
       {
         "title": "Mercados",
-        "blurb": "Novos públicos que já estão lá fora procurando. É daqui que a descoberta realmente vem."
+        "blurb": "Novos públicos que já estão lá fora procurando. É aqui que você é descoberto de verdade."
       },
       {
         "title": "A sua própria loja",
@@ -176,7 +176,7 @@
       },
       {
         "title": "MVP: Etsy e Shopify",
-        "text": "Configuração da loja Shopify e sincronização de duas vias dos seus produtos digitais entre as duas primeiras plataformas.",
+        "text": "Configuração da loja Shopify e sincronização bidirecional dos seus produtos digitais entre as duas primeiras plataformas.",
         "when": "T1 a T2"
       },
       {
@@ -194,7 +194,7 @@
   "pricing": {
     "eyebrow": "Preços planejados",
     "heading": "Planos mensais fixos, sem créditos",
-    "intro": "Cobrado por quanto você vende, não pela sincronização. Uma venda a mais por mês já paga, e o resto é seu. Quem está na lista de espera trava o preço de lançamento antes de a gente cair em si.",
+    "intro": "A gente cobra por quanto você vende, não pela sincronização. Uma venda a mais por mês já paga, e o resto é seu. Quem está na lista de espera trava o preço de lançamento antes de a gente cair em si.",
     "mostPopular": "Mais escolhido",
     "perMonth": "/mês",
     "plans": [
@@ -259,7 +259,7 @@
     "heading": "Entre antes\nda primeira sincronização",
     "paragraph": "Novidades assim que saem. Um convite para o beta antes da multidão. Preço de lançamento travado enquanto durar.",
     "button": "Garantir acesso antecipado",
-    "note": "Um e-mail por marco. Saia quando quiser."
+    "note": "Um e-mail por marco. Cancele quando quiser."
   },
   "footer": {
     "platforms": "Plataformas",

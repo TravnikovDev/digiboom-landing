@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Tic... tic... tic...",
     "headline": "Explotamos\ntus ventas.\n<accent>Para bien.</accent>",
-    "paragraph": "Vendes tus plantillas, presets, pinceles y fuentes en <mark>Etsy</mark>. Solo en Etsy. Un estante, una tienda, y ya sabes cómo acaba esa historia. DigiBoom abre tus otras tiendas en <mark>Shopify</mark>, <mark>Gumroad</mark> y las demás, y luego mantiene cada anuncio sincronizado. Más sitios donde te encuentran. Más compradores. Ni una hora extra.",
+    "paragraph": "Vendes tus plantillas, presets, pinceles y fuentes en <mark>Etsy</mark>. Solo en Etsy. Un estante, una tienda, y ya sabes cómo acaba esa historia. DigiBoom te abre tiendas en <mark>Shopify</mark>, <mark>Gumroad</mark> y las demás, y luego mantiene cada anuncio sincronizado. Más sitios donde te encuentran. Más compradores. Ni una hora extra.",
     "chipYours": "tu tienda",
     "chipWeSetup": "la montamos",
     "chipMore": "+20 más",
@@ -25,7 +25,7 @@
     "emailLabel": "Correo",
     "placeholder": "tu@tutienda.com",
     "successStrong": "Mecha encendida.",
-    "successRest": "Oirás el boom el primero.",
+    "successRest": "Oirás el boom antes que nadie.",
     "error": "No se ha enviado. Espera un momento e inténtalo de nuevo."
   },
   "marquee": {
@@ -45,7 +45,7 @@
   "product": {
     "eyebrow": "Lo que obtienes",
     "heading": "Tú traes una tienda. Nosotros abrimos el resto.",
-    "intro": "La mayoría de vendedores publica en un solo sitio. Los que crecen publican en tres o cuatro. Eso es <strong>tres o cuatro veces más tiendas donde un comprador puede toparse contigo</strong>, por una fracción del trabajo. DigiBoom se encarga de la expansión. Tú apruebas cada paso, nosotros hacemos el resto.",
+    "intro": "La mayoría de los vendedores publica en un solo sitio. Los que crecen publican en tres o cuatro. Eso es <strong>tres o cuatro veces más tiendas donde un comprador puede toparse contigo</strong>, por una fracción del trabajo. DigiBoom se encarga de la expansión. Tú apruebas cada paso, nosotros hacemos el resto.",
     "features": [
       {
         "title": "Está donde ya están los compradores",
@@ -82,7 +82,7 @@
       },
       {
         "title": "Un mercado, un público",
-        "text": "Tu trabajo solo lo ve quien ya está en esa única plataforma. Todos los que compran en las demás no saben que existes."
+        "text": "Tu trabajo solo lo ve quien ya está en esa única plataforma. Los que compran en las demás ni saben que existes."
       },
       {
         "title": "Cada cambio, hecho dos veces",
@@ -130,7 +130,7 @@
     "groups": [
       {
         "title": "Mercados",
-        "blurb": "Nuevos públicos que ya están ahí fuera buscando. De aquí viene de verdad el descubrimiento."
+        "blurb": "Nuevos públicos que ya están ahí fuera buscando. Aquí es donde de verdad te descubren."
       },
       {
         "title": "Tu propia tienda",
@@ -194,7 +194,7 @@
   "pricing": {
     "eyebrow": "Precios previstos",
     "heading": "Planes mensuales fijos, sin créditos",
-    "intro": "El precio va por cuánto vendes, no por la sincronización. Una venta más al mes lo cubre y el resto es tuyo. Los miembros de la lista de espera fijan el precio de lanzamiento antes de que entremos en razón.",
+    "intro": "El precio depende de cuánto vendes, no de la sincronización. Una venta más al mes lo cubre y el resto es tuyo. Los miembros de la lista de espera fijan el precio de lanzamiento antes de que entremos en razón.",
     "mostPopular": "El más elegido",
     "perMonth": "/mes",
     "plans": [
@@ -230,7 +230,7 @@
     "items": [
       {
         "q": "¿Necesito ya tiendas en las otras plataformas?",
-        "a": "No. Ese es justo el sentido. Si solo tienes Etsy, te guiamos para abrir las demás, rellenamos la mayor parte de la configuración por ti y trasladamos tu catálogo."
+        "a": "No. De eso se trata precisamente. Si solo tienes Etsy, te guiamos para abrir las demás, rellenamos la mayor parte de la configuración por ti y trasladamos tu catálogo."
       },
       {
         "q": "¿Puede abrir las cuentas completamente solo?",
@@ -259,7 +259,7 @@
     "heading": "Entra antes\nde la primera sincronización",
     "paragraph": "Novedades según salen. Una invitación a la beta antes que la multitud. Precio de lanzamiento fijado mientras dure.",
     "button": "Conseguir acceso anticipado",
-    "note": "Un correo por hito. Vete cuando quieras."
+    "note": "Un correo por hito. Cancela cuando quieras."
   },
   "footer": {
     "platforms": "Plataformas",
