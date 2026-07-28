@@ -36,12 +36,16 @@ Sources consulted for the landscape (no public per-keyword volumes exist):
 
 ## How the core maps into the page (as of this commit)
 
-- **`digital products`** (and its translations) is the anchor category term: hero
-  paragraph first sentence, meta description, and the Platforms heading.
+- The **hero opener** names the category plainly: `digital goods` in English (founder's
+  wording), each language's natural head term elsewhere (`digitale Produkte`,
+  `produits numériques`, `productos digitales`, `produtos digitais`, `デジタル商品`,
+  `цифровые товары` — the last two literally mean "digital goods").
+- **`digital products`** anchors the meta description and the Platforms heading, so both
+  head variants are on the page.
 - **`digital downloads`** appears in the meta description and the marquee.
-- The vivid product list (templates, presets, brushes, fonts) **stays** — those are
-  real long-tail seller niches (`sell canva templates`, `sell lightroom presets`,
-  `sell procreate brushes`, `sell fonts online`) and better copy than category soup.
+- The long-tail product words (templates, presets, fonts, 3D assets, courses) live in the
+  **marquee**, keeping `sell canva templates` / `sell lightroom presets`-style niches
+  represented without cluttering the hero.
 - High-relevance informational queries (`how to sell digital products on etsy`,
   `etsy alternatives for digital downloads`, `crosslisting app`) have **no page** yet —
   they're marked `future blog` and are the argument for a content section later.

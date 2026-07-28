@@ -1,5 +1,5 @@
 keyword,english_gloss,est_monthly_searches,popularity_0_100,relevance_0_10,intent,where_to_use,notes
-digital products,-,33100,100,9,category,"hero, meta, platforms heading","Head term; anchor the page on it"
+digital products,-,33100,100,9,category,"meta, platforms heading","Head term; anchors meta + platforms"
 digital downloads,-,27100,82,9,category,"meta, marquee","Core Etsy-culture term; used by buyers and sellers"
 etsy digital downloads,-,14800,45,10,transactional,"meta, future blog","Exact audience: Etsy plus digital"
 digital content,-,12100,37,5,category,none,"Huge but low commercial fit (media/streaming skew)"
@@ -12,7 +12,7 @@ selling digital products on etsy,-,3600,11,10,informational,"future blog","Varia
 sell digital products online,-,2900,9,9,transactional,"meta keywords",
 shopify digital products,-,2900,9,9,transactional,platforms,"Second platform in our MVP pair"
 digital files,-,2400,7,6,category,body,"How Etsy labels listings (digital file)"
-digital goods,-,2400,7,7,category,body,"Synonym; keep as variation, not anchor"
+digital goods,-,2400,7,7,category,hero,"Founder's pick for the hero opener; covers the goods variant"
 sell digital downloads,-,1900,6,9,transactional,"meta keywords",
 digital items,-,1900,6,6,category,body,"Etsy UI wording (digital item)"
 passive income digital products,-,1900,6,7,informational,"future blog","Motivation angle; payoff section echoes it"
