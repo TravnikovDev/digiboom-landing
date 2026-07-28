@@ -53,6 +53,15 @@
   line-height: 1.25;
 }
 
+/* Russian words are long and Oswald (Cyrillic display) is wider than Bebas, so the headings
+   tuned for short English still overflow. Ease them down a notch (same idea as :lang(ja)). */
+:lang(ru) h1.font-display {
+  font-size: clamp(2.75rem, 7vw, 5rem);
+}
+:lang(ru) h2.font-display {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
 html {
   scroll-behavior: smooth;
 }

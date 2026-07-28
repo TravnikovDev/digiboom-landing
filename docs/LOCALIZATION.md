@@ -317,9 +317,14 @@ Oswald/Noto):
   comic, sans and mono — since JetBrains Mono has no CJK either.
 - The Tailwind font `@theme` was switched from `inline` to referencing so the utilities
   resolve `var(--font-display)` at runtime and the `:lang()` overrides actually take effect.
-- Noto's square glyphs run large at the display sizes tuned for condensed Bebas, so a small
-  `:lang(ja)` clamp steps the `h1`/`h2` headings down (in `globals.css`). `pt` is Latin and
-  needs none of this — it uses the base brand faces.
+- The big display headline is sized for English's short tagline, so longer languages need
+  help on two fronts: (1) **concise copy** — each locale's `hero.headline` is rewritten to
+  stay punchy and fit ~3 lines (e.g. es "Explotamos tus ventas. Para bien.", ru "Взорвём ваши
+  продажи. По-хорошему.") rather than translated literally; and (2) a per-`lang` **font
+  clamp** in `globals.css` for the scripts whose glyphs are wide even after tightening —
+  `:lang(ja)` (Noto's square CJK) and `:lang(ru)` (Oswald Cyrillic) step the `h1`/`h2` down.
+  `es`/`fr`/`pt` (condensed Bebas) are handled by the copy alone. Keep new headline
+  translations short — that's the first line of defense against a broken hero.
 
 ### 2.9 Metadata and SEO
 
