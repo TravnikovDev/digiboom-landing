@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DigiBoom. We'll explode your sales. In a good way.",
-    "description": "Selling on Etsy alone? DigiBoom opens your Shopify and Gumroad storefronts for you, moves your catalog across and keeps everything in sync, so your work gets found in more places than one. Join the early access list.",
+    "description": "Selling digital products on Etsy alone? DigiBoom opens your Shopify and Gumroad storefronts for you, moves your digital downloads across and keeps every listing in sync, so your work gets found in more places than one. Join the early access list.",
     "ogAlt": "DigiBoom. We'll explode your sales. In a good way.",
     "skip": "Skip to content"
   },
@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Tick... tick... tick...",
     "headline": "We'll explode\nyour sales.\n<accent>In a good way.</accent>",
-    "paragraph": "You sell your templates, presets, brushes and fonts on <mark>Etsy</mark>. Only Etsy. One shelf, one shop, and you already know how that story goes. DigiBoom opens your other storefronts on <mark>Shopify</mark>, <mark>Gumroad</mark> and the rest, then keeps every listing in sync. More places to be found. More buyers. None of the extra hours.",
+    "paragraph": "You sell digital products on <mark>Etsy</mark>. Templates, presets, brushes, fonts. Only Etsy. One shelf, one shop, and you already know how that story goes. DigiBoom opens your other storefronts on <mark>Shopify</mark>, <mark>Gumroad</mark> and the rest, then keeps every listing in sync. More places to be found. More buyers. None of the extra hours.",
     "chipYours": "your shop",
     "chipWeSetup": "we set it up",
     "chipMore": "+20 more",
@@ -125,7 +125,7 @@
   },
   "platforms": {
     "eyebrow": "Where your products can go",
-    "heading": "Every place digital goods sell",
+    "heading": "Every place digital products sell",
     "intro": "Marketplaces put you in front of new buyers. Your own stores let you keep the margin. Do both. Etsy, Shopify and Gumroad come first, then we keep adding, in the order early members actually ask for.",
     "groups": [
       {

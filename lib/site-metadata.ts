@@ -29,12 +29,16 @@ export function buildMetadata(locale: Locale): Metadata {
     title: t.meta.title,
     description: t.meta.description,
     applicationName: "DigiBoom",
+    // Top terms from keywords/<locale>.csv (the keywords core); keep in sync with it.
     keywords: [
       "digital products",
+      "sell digital products",
+      "digital downloads",
+      "Etsy digital downloads",
+      "sell digital products online",
       "Etsy to Shopify",
+      "multichannel selling",
       "marketplace sync",
-      "sell digital downloads",
-      "multi-channel selling",
       "Gumroad",
     ],
     authors: [{ name: "Roman Travnikov" }],

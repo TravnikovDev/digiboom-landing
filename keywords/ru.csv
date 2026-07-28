@@ -1,0 +1,19 @@
+keyword,english_gloss,est_monthly_searches,popularity_0_100,relevance_0_10,intent,where_to_use,notes
+цифровые товары,digital goods,2900,100,9,category,"hero, meta, platforms heading","Head term in Russian"
+инфопродукты,info products,2400,83,6,category,none,"Big RU term but skews to courses; do not anchor"
+цифровые продукты,digital products,1900,66,9,category,"meta, body","Near-synonym of the head term"
+продавать на etsy,sell on etsy,1300,45,8,informational,"future blog","Audience is RU-speaking sellers abroad (see README)"
+продажа цифровых товаров,selling digital goods,1000,34,10,transactional,"meta keywords","Primary action term"
+как продавать цифровые товары,how to sell digital goods,880,30,9,informational,"future blog","Strong blog candidate"
+магазин цифровых товаров,digital goods store,590,20,9,transactional,"future blog",
+цифровые товары для продажи,digital goods to sell,480,17,8,informational,"future blog",
+как продавать на etsy из россии,how to sell on etsy from russia,390,13,5,informational,none,"Geo-restricted since 2022; low actionable fit"
+пассивный доход цифровые товары,passive income digital goods,320,11,7,informational,"future blog",
+продажа шаблонов,selling templates,210,7,8,transactional,"future blog",
+маркетплейсы цифровых товаров,digital goods marketplaces,170,6,9,comparison,platforms,"The Platforms section answers this"
+etsy для цифровых товаров,etsy for digital goods,170,6,10,transactional,"future blog","Exact audience"
+продажа пресетов,selling presets,170,6,8,transactional,"future blog",
+продажа цифровых товаров на etsy,selling digital goods on etsy,140,5,10,transactional,"future blog",
+цифровые загрузки,digital downloads,140,5,8,category,marquee,"Calque; less natural than цифровые товары"
+продавать шаблоны canva,sell canva templates,110,4,8,transactional,"future blog",
+синхронизация товаров между площадками,sync products across platforms,50,2,10,tool,product,"Tiny volume, exact product fit"

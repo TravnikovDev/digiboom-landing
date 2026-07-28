@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DigiBoom. A gente explode suas vendas. Para o bem.",
-    "description": "Vende só na Etsy? A DigiBoom abre as suas lojas na Shopify e na Gumroad por você, leva o seu catálogo junto e mantém tudo sincronizado, para te encontrarem em mais de um lugar. Entre na lista de acesso antecipado.",
+    "description": "Vende produtos digitais só na Etsy? A DigiBoom abre as suas lojas na Shopify e na Gumroad por você, leva o seu catálogo junto e mantém tudo sincronizado, para te encontrarem em mais de um lugar. Entre na lista de acesso antecipado.",
     "ogAlt": "DigiBoom. A gente explode suas vendas. Para o bem.",
     "skip": "Pular para o conteúdo"
   },
@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Tique... tique... tique...",
     "headline": "A gente explode\nsuas vendas.\n<accent>Para o bem.</accent>",
-    "paragraph": "Você vende seus modelos, presets, pincéis e fontes na <mark>Etsy</mark>. Só na Etsy. Uma prateleira, uma loja, e você já sabe como essa história termina. A DigiBoom abre as suas lojas na <mark>Shopify</mark>, na <mark>Gumroad</mark> e nas demais, e depois mantém cada anúncio sincronizado. Mais lugares onde te encontram. Mais compradores. Nenhuma hora a mais.",
+    "paragraph": "Você vende produtos digitais na <mark>Etsy</mark>. Modelos, presets, pincéis, fontes. Só na Etsy. Uma prateleira, uma loja, e você já sabe como essa história termina. A DigiBoom abre as suas lojas na <mark>Shopify</mark>, na <mark>Gumroad</mark> e nas demais, e depois mantém cada anúncio sincronizado. Mais lugares onde te encontram. Mais compradores. Nenhuma hora a mais.",
     "chipYours": "sua loja",
     "chipWeSetup": "a gente monta",
     "chipMore": "+20 outras",
@@ -125,7 +125,7 @@
   },
   "platforms": {
     "eyebrow": "Para onde os seus produtos podem ir",
-    "heading": "Todo lugar onde o digital vende",
+    "heading": "Todo lugar onde se vendem produtos digitais",
     "intro": "Os mercados te colocam na frente de novos compradores. As suas próprias lojas deixam a margem com você. Faça as duas coisas. Etsy, Shopify e Gumroad primeiro, depois a gente continua somando, na ordem que os primeiros membros realmente pedem.",
     "groups": [
       {

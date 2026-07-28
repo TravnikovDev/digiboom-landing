@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DigiBoom. Wir sprengen deinen Umsatz. Im guten Sinne.",
-    "description": "Verkaufst du nur auf Etsy? DigiBoom eröffnet deine Shopify- und Gumroad-Shops für dich, überträgt deinen Katalog und hält alles synchron, damit deine Arbeit an mehr als einem Ort gefunden wird. Trag dich für den Early Access ein.",
+    "description": "Verkaufst du digitale Produkte nur auf Etsy? DigiBoom eröffnet deine Shopify- und Gumroad-Shops für dich, überträgt deine digitalen Downloads und hält alles synchron, damit deine Arbeit an mehr als einem Ort gefunden wird. Trag dich für den Early Access ein.",
     "ogAlt": "DigiBoom. Wir sprengen deinen Umsatz. Im guten Sinne.",
     "skip": "Zum Inhalt springen"
   },
@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Tick... tick... tick...",
     "headline": "Wir sprengen\ndeinen Umsatz.\n<accent>Im guten Sinne.</accent>",
-    "paragraph": "Du verkaufst deine Vorlagen, Presets, Brushes und Fonts auf <mark>Etsy</mark>. Nur auf Etsy. Ein Regal, ein Shop, und du weißt schon, wie diese Geschichte ausgeht. DigiBoom eröffnet für dich weitere Shops auf <mark>Shopify</mark>, <mark>Gumroad</mark> und dem Rest und hält danach jedes Angebot synchron. Mehr Orte, an denen man dich findet. Mehr Käufer. Keine einzige Stunde extra.",
+    "paragraph": "Du verkaufst digitale Produkte auf <mark>Etsy</mark>. Vorlagen, Presets, Brushes, Fonts. Nur auf Etsy. Ein Regal, ein Shop, und du weißt schon, wie diese Geschichte ausgeht. DigiBoom eröffnet für dich weitere Shops auf <mark>Shopify</mark>, <mark>Gumroad</mark> und dem Rest und hält danach jedes Angebot synchron. Mehr Orte, an denen man dich findet. Mehr Käufer. Keine einzige Stunde extra.",
     "chipYours": "dein Shop",
     "chipWeSetup": "richten wir ein",
     "chipMore": "+20 weitere",
@@ -125,7 +125,7 @@
   },
   "platforms": {
     "eyebrow": "Wohin deine Produkte können",
-    "heading": "Jeder Ort, an dem digitale Waren verkauft werden",
+    "heading": "Jeder Ort, an dem digitale Produkte verkauft werden",
     "intro": "Marktplätze bringen dich vor neue Käufer. Deine eigenen Shops lassen dir die Marge. Mach beides. Etsy, Shopify und Gumroad kommen zuerst, dann bauen wir weiter aus, in der Reihenfolge, die die ersten Mitglieder tatsächlich verlangen.",
     "groups": [
       {

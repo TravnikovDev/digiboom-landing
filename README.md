@@ -47,6 +47,9 @@ export and publishes it to GitHub Pages behind `digiboom.biz`. Keep the Pages so
 - **[docs/LOCALIZATION.md](docs/LOCALIZATION.md)** — how the multilingual setup works
   (all seven languages live on a native dictionary pattern, with Cyrillic/CJK fonts) and the
   remaining polish (native copy review, per-locale OG images).
+- **[keywords/README.md](keywords/README.md)** — the SEO keywords core: one CSV per
+  language with volumes, relevance, and where each term is used on the page. Check copy
+  changes against it.
 - **[public/logos/README.md](public/logos/README.md)** — sourcing and usage rules for
   platform brand marks.
 

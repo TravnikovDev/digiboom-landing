@@ -232,6 +232,11 @@ Both forms (`SignupForm.tsx`, used in `Hero` and `SignupSection`) POST to **Form
 - **Sitemap:** `app/sitemap.ts` emits a static `sitemap.xml` with every locale URL and its
   `hreflang` alternates (`export const dynamic = "force-static"` for the static export). No
   `robots.txt` yet — see roadmap.
+- **Keywords core:** `keywords/` holds one CSV per locale (volume, relevance, intent, where
+  each term is used on the page) plus a README with methodology. The head category term of
+  each language ("digital products" / "digitale Produkte" / "produits numériques" / …) is
+  deliberately worked into the hero paragraph, meta description, and Platforms heading —
+  keyword changes go through those files first, copy second.
 
 ---
 
