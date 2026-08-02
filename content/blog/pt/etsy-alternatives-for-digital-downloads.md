@@ -18,41 +18,41 @@ bom.
 
 ## Marketplaces (eles trazem o tráfego)
 
-**Creative Market** — recursos de design: fontes, templates, gráficos, mockups. Os
+**Creative Market.** Recursos de design: fontes, templates, gráficos, mockups. Os
 compradores são designers com orçamento comercial, então os preços ficam acima da Etsy. É
 curado, a aprovação não é instantânea.
 
-**Creative Fabrica** — arquivos de artesanato e corte, fontes, bordado. Público enorme
+**Creative Fabrica.** Arquivos de artesanato e corte, fontes, bordado. Público enorme
 movido por assinatura no nicho de artesanato. Se você vende SVG, o pessoal do SVG está aqui.
 
-**Design Bundles** — pacotes e arquivos de artesanato, público parecido com o da Creative
+**Design Bundles.** Pacotes e arquivos de artesanato, público parecido com o da Creative
 Fabrica; vale estar nos dois.
 
-**Envato Elements / Market** — templates, vídeo, áudio, temas web. O modelo de assinatura
+**Envato Elements / Market.** Templates, vídeo, áudio, temas web. O modelo de assinatura
 significa pagamentos menores por download, mas volume bem constante.
 
-**itch.io** — assets de jogos, ferramentas e jogos indie. Generoso com criadores,
+**itch.io.** Assets de jogos, ferramentas e jogos indie. Generoso com criadores,
 maravilhosamente descomplicado, e a comunidade realmente gosta de te ver ali.
 
-**ArtStation / CGTrader** — modelos 3D, materiais, pincéis. O público profissional de 3D.
+**ArtStation / CGTrader.** Modelos 3D, materiais, pincéis. O público profissional de 3D.
 
 ## Plataformas de criadores (seu público compra direto)
 
-**Gumroad** — o clássico. Simples ao extremo, funciona com qualquer tipo de arquivo, e você
+**Gumroad.** O clássico. Simples ao extremo, funciona com qualquer tipo de arquivo, e você
 fica com mais de cada venda. Mas não traz tráfego próprio: o motor de descoberta é você.
 
-**Lemon Squeezy** — parecido com a Gumroad, com um tratamento bem melhor de impostos e IVA
+**Lemon Squeezy.** Parecido com a Gumroad, com um tratamento bem melhor de impostos e IVA
 como merchant of record. Bom se a papelada fiscal internacional te assusta, e deveria.
 
-**Payhip / Ko-fi** — lojas leves que encaixam direitinho com um público de redes sociais.
+**Payhip / Ko-fi.** Lojas leves que encaixam direitinho com um público de redes sociais.
 
 ## Sua própria loja (você fica com tudo)
 
-**Shopify** — uma loja de verdade que é sua, com entrega de produtos digitais via app. Você
+**Shopify.** Uma loja de verdade que é sua, com entrega de produtos digitais via app. Você
 paga uma mensalidade e fica com a margem que os marketplaces teriam abocanhado. Sem tráfego
 embutido, mas também sem dono da praça.
 
-**WooCommerce / Squarespace / Big Cartel** — a mesma ideia em preços e níveis de trabalheira
+**WooCommerce / Squarespace / Big Cartel.** A mesma ideia em preços e níveis de trabalheira
 diferentes.
 
 ## Como escolher de verdade

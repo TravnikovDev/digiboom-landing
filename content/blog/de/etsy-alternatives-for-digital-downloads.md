@@ -20,44 +20,44 @@ gut ist.
 
 ## Marktplätze (sie bringen dir den Traffic)
 
-**Creative Market** — Design-Assets: Fonts, Vorlagen, Grafiken, Mockups. Die Käufer sind
+**Creative Market.** Design-Assets: Fonts, Vorlagen, Grafiken, Mockups. Die Käufer sind
 Designer mit kommerziellem Budget, entsprechend liegen die Preise höher als auf Etsy.
 Kuratiert, die Aufnahme ist also nicht sofort.
 
-**Creative Fabrica** — Bastel- und Schneidedateien, Fonts, Stickmuster. Riesiges
+**Creative Fabrica.** Bastel- und Schneidedateien, Fonts, Stickmuster. Riesiges
 abo-getriebenes Publikum in der Bastelnische. Wenn du SVGs verkaufst, sind hier die
 SVG-Leute.
 
-**Design Bundles** — Bundles und Craft-Dateien, ähnliches Publikum wie Creative Fabrica,
+**Design Bundles.** Bundles und Craft-Dateien, ähnliches Publikum wie Creative Fabrica,
 beides lohnt sich.
 
-**Envato Elements / Market** — Vorlagen, Video, Audio, Web-Themes. Das Abo-Modell bedeutet
+**Envato Elements / Market.** Vorlagen, Video, Audio, Web-Themes. Das Abo-Modell bedeutet
 kleinere Auszahlungen pro Download, aber sehr stetiges Volumen.
 
-**itch.io** — Game-Assets, Tools und Indie-Games. Großzügig zu Kreativen, herrlich
+**itch.io.** Game-Assets, Tools und Indie-Games. Großzügig zu Kreativen, herrlich
 unkompliziert, und die Community freut sich tatsächlich, dass du da bist.
 
-**ArtStation / CGTrader** — 3D-Modelle, Materialien, Brushes. Das professionelle 3D-Publikum.
+**ArtStation / CGTrader.** 3D-Modelle, Materialien, Brushes. Das professionelle 3D-Publikum.
 
 ## Creator-Plattformen (dein Publikum kauft direkt)
 
-**Gumroad** — der Klassiker. Denkbar einfach, funktioniert mit wirklich jedem Dateityp, und
+**Gumroad.** Der Klassiker. Denkbar einfach, funktioniert mit wirklich jedem Dateityp, und
 dir bleibt mehr vom Verkauf. Aber er bringt keinen eigenen Traffic: du bist die
 Entdeckungsmaschine.
 
-**Lemon Squeezy** — wie Gumroad, mit besserer Behandlung von Steuern und Umsatzsteuer als
+**Lemon Squeezy.** Wie Gumroad, mit besserer Behandlung von Steuern und Umsatzsteuer als
 Merchant of Record. Angenehm, wenn dir internationale Steuerpapiere Angst machen, was sie
 sollten.
 
-**Payhip / Ko-fi** — leichte Storefronts, die sich sauber an eine Social-Following anhängen.
+**Payhip / Ko-fi.** Leichte Storefronts, die sich sauber an eine Social-Following anhängen.
 
 ## Dein eigener Shop (dir bleibt alles)
 
-**Shopify** — ein echter Shop, der dir gehört, mit digitaler Auslieferung über eine App. Du
+**Shopify.** Ein echter Shop, der dir gehört, mit digitaler Auslieferung über eine App. Du
 zahlst eine Monatsgebühr und behältst die Marge, die die Marktplätze abgeschöpft hätten.
 Kein eingebauter Traffic, aber auch kein Vermieter.
 
-**WooCommerce / Squarespace / Big Cartel** — dieselbe Idee zu anderen Preisen und mit
+**WooCommerce / Squarespace / Big Cartel.** Dieselbe Idee zu anderen Preisen und mit
 anderem Fummelfaktor.
 
 ## Wie du tatsächlich wählst

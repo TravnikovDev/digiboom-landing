@@ -7,6 +7,7 @@
     "build": "next build",
     "logos": "node scripts/generate-logos.mjs",
     "i18n:check": "node scripts/i18n-check.mjs",
+    "writing:check": "node scripts/writing-check.mjs",
     "start": "next start"
   },
   "dependencies": {

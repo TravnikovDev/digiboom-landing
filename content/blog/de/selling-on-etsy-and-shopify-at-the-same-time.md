@@ -22,7 +22,7 @@ Transaktionsgebühren.
 
 **Shopify ist dein eigener Shop.** Niemand kommt zufällig an. Aber es wird kein Anteil für
 Entdeckung genommen, es gibt keinen Algorithmus zu besänftigen, kein Risiko, dass eine
-Sperr-Mail deinen Monat beendet, und der Kunde gehört *dir* — seine E-Mail, seine
+Sperr-Mail deinen Monat beendet, und der Kunde gehört *dir*: seine E-Mail, seine
 Folgekäufe, die Beziehung.
 
 Entdeckung und Eigentum. Du willst beides, und keine der beiden Plattformen gibt dir das
@@ -34,7 +34,7 @@ Die gesunde Variante:
 
 1. **Etsy bleibt die Eingangstür.** Halte es optimiert. Dort finden dich Fremde.
 2. **Shopify wird das Zuhause.** Gleicher Katalog, dein Branding, deine Regeln, volle Marge.
-3. **Alles, was du verkaufst, existiert an beiden Orten** — der Kunde wählt, wo er kauft.
+3. **Alles, was du verkaufst, existiert an beiden Orten**: der Kunde wählt, wo er kauft.
 4. **Weise die Leute nach Hause, wo du kannst.** Die Karte im Download, die E-Mail-Signatur,
    deine Social-Bio: alle zeigen auf den Shop, der dir gehört.
 

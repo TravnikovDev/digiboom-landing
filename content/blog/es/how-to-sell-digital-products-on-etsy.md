@@ -17,13 +17,13 @@ nadie pone en las guías para principiantes.
 
 Las categorías que se mueven, más o menos en orden de saturación:
 
-- **Imprimibles** — planificadores, láminas, fichas, invitaciones. La categoría digital más
+- Imprimibles: planificadores, láminas, fichas, invitaciones. La categoría digital más
   grande de Etsy y la más saturada.
-- **Plantillas** — plantillas de Canva, sistemas de Notion, hojas de cálculo, kits de CV.
-- **Recursos de diseño** — fuentes, pinceles de Procreate, presets de Lightroom, packs de
+- Plantillas: plantillas de Canva, sistemas de Notion, hojas de cálculo, kits de CV.
+- Recursos de diseño: fuentes, pinceles de Procreate, presets de Lightroom, packs de
   SVG, texturas.
-- **Recursos 3D y de videojuegos** — modelos, materiales, kits de Blender.
-- **Cursos y guías** — PDF y packs de lecciones, aunque funcionan mejor en plataformas para
+- Recursos 3D y de videojuegos: modelos, materiales, kits de Blender.
+- Cursos y guías: PDF y packs de lecciones, aunque funcionan mejor en plataformas para
   creadores que en Etsy.
 
 Si haces cualquiera de estas cosas, ya tienes algo que vender. La mayoría de quienes leen
@@ -61,7 +61,7 @@ Una vez que tus anuncios están publicados y optimizados, tu techo no es la cali
 producto. Es **cuánta gente pasa por delante de tu estante.** Y en Etsy ese número lo fija
 Etsy: su tráfico, su algoritmo, su categoría, su competencia.
 
-Puedes mejorar tu posición dentro de ese techo — mejores fotos, mejores etiquetas, más
+Puedes mejorar tu posición dentro de ese techo: mejores fotos, mejores etiquetas, más
 anuncios. Pero no puedes levantar el techo, porque solo ocupas un estante en una tienda.
 
 Mientras tanto:

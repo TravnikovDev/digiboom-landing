@@ -17,13 +17,13 @@ ninguém coloca nos guias para iniciantes.
 
 As categorias que se movem, mais ou menos em ordem de saturação:
 
-- **Imprimíveis** — planners, quadros, fichas, convites. A maior categoria digital da Etsy e
+- Imprimíveis: planners, quadros, fichas, convites. A maior categoria digital da Etsy e
   a mais saturada.
-- **Modelos** — templates de Canva, sistemas de Notion, planilhas, kits de currículo.
-- **Recursos de design** — fontes, pincéis de Procreate, presets de Lightroom, pacotes de
+- Modelos: templates de Canva, sistemas de Notion, planilhas, kits de currículo.
+- Recursos de design: fontes, pincéis de Procreate, presets de Lightroom, pacotes de
   SVG, texturas.
-- **Recursos 3D e de jogos** — modelos, materiais, kits de Blender.
-- **Cursos e guias** — PDFs e pacotes de aulas, embora funcionem melhor em plataformas de
+- Recursos 3D e de jogos: modelos, materiais, kits de Blender.
+- Cursos e guias: PDFs e pacotes de aulas, embora funcionem melhor em plataformas de
   criadores do que na Etsy.
 
 Se você faz qualquer uma dessas coisas, já tem algo para vender. A maioria de quem lê isto
@@ -61,7 +61,7 @@ Depois que seus anúncios estão no ar e otimizados, o seu teto não é a qualid
 É **quantas pessoas passam pela sua prateleira.** E na Etsy esse número é definido pela
 Etsy: o tráfego deles, o algoritmo deles, a categoria deles, a concorrência deles.
 
-Você pode melhorar sua posição dentro desse teto — fotos melhores, tags melhores, mais
+Você pode melhorar sua posição dentro desse teto: fotos melhores, tags melhores, mais
 anúncios. Mas não dá para levantar o teto, porque você ocupa uma prateleira em uma loja só.
 
 Enquanto isso:

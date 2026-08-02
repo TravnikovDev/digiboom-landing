@@ -20,44 +20,44 @@ est vraiment bon.
 
 ## Marketplaces (elles t'apportent le trafic)
 
-**Creative Market** — ressources de design : polices, templates, graphismes, mockups. Les
+**Creative Market.** Ressources de design : polices, templates, graphismes, mockups. Les
 acheteurs sont des designers avec un budget pro, donc les prix sont plus élevés que sur
 Etsy. C'est curaté, l'approbation n'est pas instantanée.
 
-**Creative Fabrica** — fichiers de loisirs créatifs et de découpe, polices, broderie.
+**Creative Fabrica.** Fichiers de loisirs créatifs et de découpe, polices, broderie.
 Audience énorme portée par l'abonnement dans la niche créative. Si tu vends des SVG, les
 gens du SVG sont là.
 
-**Design Bundles** — packs et fichiers créatifs, public proche de Creative Fabrica ; ça vaut
+**Design Bundles.** Packs et fichiers créatifs, public proche de Creative Fabrica ; ça vaut
 le coup d'être sur les deux.
 
-**Envato Elements / Market** — templates, vidéo, audio, thèmes web. Le modèle par abonnement
+**Envato Elements / Market.** Templates, vidéo, audio, thèmes web. Le modèle par abonnement
 donne de plus petits revenus par téléchargement mais un volume très régulier.
 
-**itch.io** — assets de jeu, outils et jeux indés. Généreux avec les créateurs, délicieusement
+**itch.io.** Assets de jeu, outils et jeux indés. Généreux avec les créateurs, délicieusement
 simple, et la communauté apprécie vraiment ta présence.
 
-**ArtStation / CGTrader** — modèles 3D, matériaux, brushes. Le public 3D professionnel.
+**ArtStation / CGTrader.** Modèles 3D, matériaux, brushes. Le public 3D professionnel.
 
 ## Plateformes créateurs (ton audience achète directement)
 
-**Gumroad** — le classique. D'une simplicité totale, marche avec n'importe quel type de
+**Gumroad.** Le classique. D'une simplicité totale, marche avec n'importe quel type de
 fichier, et tu gardes plus sur chaque vente. Mais il n'apporte aucun trafic : le moteur de
 découverte, c'est toi.
 
-**Lemon Squeezy** — proche de Gumroad, avec une bien meilleure gestion des taxes et de la
+**Lemon Squeezy.** Proche de Gumroad, avec une bien meilleure gestion des taxes et de la
 TVA en tant que merchant of record. Pratique si la paperasse fiscale internationale te fait
 peur, ce qui devrait être le cas.
 
-**Payhip / Ko-fi** — boutiques légères qui se branchent proprement sur une audience sociale.
+**Payhip / Ko-fi.** Boutiques légères qui se branchent proprement sur une audience sociale.
 
 ## Ta propre boutique (tu gardes tout)
 
-**Shopify** — une vraie boutique qui t'appartient, avec livraison de produits numériques via
+**Shopify.** Une vraie boutique qui t'appartient, avec livraison de produits numériques via
 une app. Tu paies un abonnement mensuel et tu gardes la marge que les marketplaces auraient
 prélevée. Pas de trafic intégré, mais pas de propriétaire non plus.
 
-**WooCommerce / Squarespace / Big Cartel** — la même idée à d'autres prix et d'autres
+**WooCommerce / Squarespace / Big Cartel.** La même idée à d'autres prix et d'autres
 niveaux de bricolage.
 
 ## Comment choisir concrètement

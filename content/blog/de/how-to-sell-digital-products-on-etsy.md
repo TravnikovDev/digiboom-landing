@@ -17,12 +17,12 @@ der Teil, den die Einsteiger-Guides weglassen.
 
 Die Kategorien, die laufen, grob nach Überfüllung sortiert:
 
-- **Printables** — Planer, Wandbilder, Arbeitsblätter, Einladungen. Die größte digitale
+- Printables: Planer, Wandbilder, Arbeitsblätter, Einladungen. Die größte digitale
   Kategorie auf Etsy und die gesättigtste.
-- **Vorlagen** — Canva-Vorlagen, Notion-Setups, Tabellen, Bewerbungskits.
-- **Design-Assets** — Fonts, Procreate-Brushes, Lightroom-Presets, SVG-Bundles, Texturen.
-- **3D- und Game-Assets** — Modelle, Materialien, Blender-Kits.
-- **Kurse und Guides** — PDFs und Lektionspakete, die allerdings auf Creator-Plattformen
+- Vorlagen: Canva-Vorlagen, Notion-Setups, Tabellen, Bewerbungskits.
+- Design-Assets: Fonts, Procreate-Brushes, Lightroom-Presets, SVG-Bundles, Texturen.
+- 3D- und Game-Assets: Modelle, Materialien, Blender-Kits.
+- Kurse und Guides: PDFs und Lektionspakete, die allerdings auf Creator-Plattformen
   besser laufen als auf Etsy.
 
 Wenn du irgendetwas davon machst, hast du bereits etwas zu verkaufen. Die meisten, die das
@@ -61,7 +61,7 @@ Sobald deine Angebote stehen und optimiert sind, ist deine Decke nicht die Quali
 Produkte. Sie ist **die Zahl der Menschen, die an deinem Regal vorbeigehen.** Und auf Etsy
 legt Etsy diese Zahl fest: ihr Traffic, ihre Suche, ihre Kategorie, ihre Konkurrenz.
 
-Du kannst deine Position innerhalb dieser Decke verbessern — bessere Fotos, bessere Tags,
+Du kannst deine Position innerhalb dieser Decke verbessern: bessere Fotos, bessere Tags,
 mehr Angebote. Aber die Decke selbst kannst du nicht anheben, weil du nur ein Regal in
 einem einzigen Laden belegst.
 

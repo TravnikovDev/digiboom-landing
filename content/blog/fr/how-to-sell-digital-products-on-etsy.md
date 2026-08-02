@@ -17,13 +17,13 @@ partie que personne ne met dans les guides pour débutants.
 
 Les catégories qui bougent, à peu près par ordre de saturation :
 
-- **Imprimables** — agendas, affiches, fiches, invitations. La plus grosse catégorie
+- Imprimables: agendas, affiches, fiches, invitations. La plus grosse catégorie
   numérique d'Etsy et la plus saturée.
-- **Modèles** — templates Canva, systèmes Notion, tableurs, kits de CV.
-- **Ressources de design** — polices, brushes Procreate, presets Lightroom, packs SVG,
+- Modèles: templates Canva, systèmes Notion, tableurs, kits de CV.
+- Ressources de design: polices, brushes Procreate, presets Lightroom, packs SVG,
   textures.
-- **Ressources 3D et jeu vidéo** — modèles, matériaux, kits Blender.
-- **Cours et guides** — PDF et packs de leçons, même s'ils marchent mieux sur les
+- Ressources 3D et jeu vidéo: modèles, matériaux, kits Blender.
+- Cours et guides: PDF et packs de leçons, même s'ils marchent mieux sur les
   plateformes créateurs que sur Etsy.
 
 Si tu fais l'une de ces choses, tu as déjà quelque chose à vendre. La plupart des gens qui
@@ -63,7 +63,7 @@ Une fois tes annonces en ligne et optimisées, ton plafond n'est pas la qualité
 produit. C'est **le nombre de gens qui passent devant ton rayon.** Et sur Etsy, ce nombre
 est fixé par Etsy : leur trafic, leur algorithme, leur catégorie, leur concurrence.
 
-Tu peux améliorer ta position sous ce plafond — meilleures photos, meilleurs tags, plus
+Tu peux améliorer ta position sous ce plafond: meilleures photos, meilleurs tags, plus
 d'annonces. Mais tu ne peux pas relever le plafond, parce que tu n'occupes qu'un rayon dans
 une seule boutique.
 

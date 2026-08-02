@@ -6,7 +6,7 @@ keyword: "sell digital products on shopify"
 ---
 
 Etsy and Shopify are not competitors for your business. They are two halves of one
-strategy, and running both is the single highest-leverage move available to a digital
+strategy, and running both is the one move that pays back most for a digital
 seller who has outgrown one shop.
 
 Here is why the pairing works, and the exact thing that makes people abandon it.
@@ -19,7 +19,7 @@ who they see. You pay listing and transaction fees for that introduction.
 
 **Shopify is your own store.** Nobody arrives by accident. But there is no cut taken on
 discovery, no algorithm to please, no risk of a suspension email ending your month, and
-the customer is *yours* — their email, their repeat purchases, the relationship.
+the customer is *yours*: their email, their repeat purchases, the relationship.
 
 Discovery and ownership. You want both, and neither platform gives you the other.
 
@@ -29,7 +29,7 @@ The healthy version:
 
 1. **Etsy stays the front door.** Keep it optimised. It is where strangers find you.
 2. **Shopify becomes the home.** Same catalog, your branding, your rules, full margin.
-3. **Everything you sell exists in both places** — the customer chooses where to buy.
+3. **Everything you sell exists in both places**: the customer chooses where to buy.
 4. **You point people home when you can.** The card in the download, the email footer,
    your social bio: all pointing at the store you own.
 

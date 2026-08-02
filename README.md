@@ -25,6 +25,7 @@ npm run dev        # http://localhost:3000
 | `npm run dev`       | Dev server. |
 | `npm run build`     | Static export to `./out`. |
 | `npm run i18n:check`| Verify every `messages/*.json` is in sync with `en.json` (keys + array lengths). |
+| `npm run writing:check`| Scan copy for AI-writing tells (see docs/WRITING.md). |
 | `npm run logos`     | Regenerate `public/logos/*.svg` from `simple-icons`. |
 
 Preview the production build:
@@ -47,6 +48,9 @@ export and publishes it to GitHub Pages behind `digiboom.biz`. Keep the Pages so
 - **[docs/LOCALIZATION.md](docs/LOCALIZATION.md)** — how the multilingual setup works
   (all seven languages live on a native dictionary pattern, with Cyrillic/CJK fonts) and the
   remaining polish (native copy review, per-locale OG images).
+- **[docs/WRITING.md](docs/WRITING.md)** — voice + the AI-writing patterns to avoid.
+  **Read before touching any user-facing text**; `npm run writing:check` enforces the
+  mechanical parts.
 - **[docs/TODO.md](docs/TODO.md)** — the road to the first 100 signups, split into work
   Claude can do alone and work only the founder can do (accounts, codes, posting).
 - **[docs/launch-copy.md](docs/launch-copy.md)** — ready-to-post community launch copy.

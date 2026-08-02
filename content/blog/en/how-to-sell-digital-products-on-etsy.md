@@ -16,12 +16,12 @@ that nobody puts in the getting-started guides.
 
 The categories that move, roughly in order of how crowded they are:
 
-- **Printables** — planners, wall art, worksheets, invitations. The biggest digital
+- Printables: planners, wall art, worksheets, invitations. The biggest digital
   category on Etsy and the most saturated.
-- **Templates** — Canva templates, Notion setups, spreadsheets, resume kits.
-- **Design assets** — fonts, Procreate brushes, Lightroom presets, SVG bundles, textures.
-- **3D and game assets** — models, materials, Blender kits.
-- **Courses and guides** — PDFs and lesson packs, though these do better on creator
+- Templates: Canva templates, Notion setups, spreadsheets, resume kits.
+- Design assets: fonts, Procreate brushes, Lightroom presets, SVG bundles, textures.
+- 3D and game assets: models, materials, Blender kits.
+- Courses and guides: PDFs and lesson packs, though these do better on creator
   platforms than on Etsy.
 
 If you make any of these, you already have something to sell. Most people reading this
@@ -59,7 +59,7 @@ Once your listings are up and optimised, your ceiling is not your product qualit
 **the number of people who walk past your shelf.** And on Etsy, that number is fixed by
 Etsy: their traffic, their search algorithm, their category, their competition.
 
-You can improve your position inside that ceiling — better photos, better tags, more
+You can improve your position inside that ceiling: better photos, better tags, more
 listings. But you cannot raise the ceiling itself, because you only occupy one shelf in
 one shop.
 

@@ -7,7 +7,7 @@ keyword: "shopify produits numériques"
 ---
 
 Etsy et Shopify ne se disputent pas ton activité. Ce sont deux moitiés d'une même stratégie,
-et tenir les deux est le mouvement à plus fort levier pour un vendeur numérique qui a dépassé
+et tenir les deux est le mouvement qui rapporte le plus à un vendeur numérique qui a dépassé
 une seule boutique.
 
 Voici pourquoi le duo fonctionne, et la chose précise qui pousse les gens à l'abandonner.
@@ -21,7 +21,7 @@ transaction pour cette présentation.
 
 **Shopify est ta propre boutique.** Personne n'arrive par hasard. Mais aucune part n'est
 prélevée sur la découverte, aucun algorithme à satisfaire, aucun risque qu'un e-mail de
-suspension termine ton mois, et le client est *à toi* — son e-mail, ses achats répétés, la
+suspension termine ton mois, et le client est *à toi*: son e-mail, ses achats répétés, la
 relation.
 
 Découverte et propriété. Tu veux les deux, et aucune des plateformes ne te donne l'autre.
@@ -33,7 +33,7 @@ La version saine :
 1. **Etsy reste la porte d'entrée.** Garde-la optimisée. C'est là que les inconnus te
    trouvent.
 2. **Shopify devient la maison.** Même catalogue, ton identité, tes règles, toute la marge.
-3. **Tout ce que tu vends existe aux deux endroits** — le client choisit où acheter.
+3. **Tout ce que tu vends existe aux deux endroits**: le client choisit où acheter.
 4. **Ramène les gens à la maison quand tu peux.** La carte dans le téléchargement, la
    signature de tes e-mails, ta bio sociale : tout pointe vers la boutique qui t'appartient.
 

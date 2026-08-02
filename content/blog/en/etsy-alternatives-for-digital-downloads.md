@@ -17,42 +17,42 @@ genuinely good at.
 
 ## Marketplaces (they bring you the traffic)
 
-**Creative Market** — design assets: fonts, templates, graphics, mockups. Buyers are
+**Creative Market.** Design assets: fonts, templates, graphics, mockups. Buyers are
 designers with commercial budgets, so prices run higher than Etsy. Curated, so approval
 is not instant.
 
-**Creative Fabrica** — crafting and cutting files, fonts, embroidery. Enormous
+**Creative Fabrica.** Crafting and cutting files, fonts, embroidery. Enormous
 subscription-driven audience in the crafting niche. If you sell SVGs, this is where the
 SVG people are.
 
-**Design Bundles** — bundles and craft files, similar crowd to Creative Fabrica, worth
+**Design Bundles.** Bundles and craft files, similar crowd to Creative Fabrica, worth
 listing on both.
 
-**Envato Elements / Market** — templates, video, audio, web themes. Subscription model
+**Envato Elements / Market.** Templates, video, audio, web themes. Subscription model
 means smaller per-download payouts but very steady volume.
 
-**itch.io** — game assets, tools, and indie games. Generous to creators, wonderfully
+**itch.io.** Game assets, tools, and indie games. Generous to creators, wonderfully
 unfussy, and the community actually likes you being there.
 
-**ArtStation / CGTrader** — 3D models, materials, brushes. The professional 3D crowd.
+**ArtStation / CGTrader.** 3D models, materials, brushes. The professional 3D crowd.
 
 ## Creator platforms (your audience buys directly)
 
-**Gumroad** — the classic. Dead simple, works for literally any file type, and you keep
+**Gumroad.** The classic. Dead simple, works for literally any file type, and you keep
 more of the sale. But it brings no traffic of its own: you are the discovery engine.
 
-**Lemon Squeezy** — Gumroad-like, with better handling of taxes and VAT as a merchant of
+**Lemon Squeezy.** Gumroad-like, with better handling of taxes and VAT as a merchant of
 record. Nice if international tax paperwork scares you, which it should.
 
-**Payhip / Ko-fi** — lightweight storefronts that plug neatly into a social following.
+**Payhip / Ko-fi.** Lightweight storefronts that plug neatly into a social following.
 
 ## Your own store (you keep everything)
 
-**Shopify** — a real store you own, with digital-product delivery through an app. You pay
+**Shopify.** A real store you own, with digital-product delivery through an app. You pay
 a monthly fee and you keep the margin the marketplaces would have skimmed. No built-in
 traffic, but no landlord either.
 
-**WooCommerce / Squarespace / Big Cartel** — same idea at different prices and levels of
+**WooCommerce / Squarespace / Big Cartel.** Same idea at different prices and levels of
 fiddliness.
 
 ## How to actually choose

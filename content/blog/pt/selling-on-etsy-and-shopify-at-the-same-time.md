@@ -7,7 +7,7 @@ keyword: "shopify produtos digitais"
 ---
 
 Etsy e Shopify não são concorrentes pelo seu negócio. São duas metades de uma estratégia, e
-tocar as duas é a jogada de maior alavancagem disponível para um vendedor digital que já
+tocar as duas é a jogada que mais rende para um vendedor digital que já
 passou do tamanho de uma loja só.
 
 Aqui está por que a dupla funciona, e a coisa exata que faz as pessoas abandonarem.
@@ -20,7 +20,7 @@ decide quem eles veem. Você paga taxas de anúncio e comissão por essa apresen
 
 **A Shopify é a sua própria loja.** Ninguém chega por acaso. Mas não tem parte tirada pela
 descoberta, não tem algoritmo para agradar, não tem risco de um e-mail de suspensão acabar
-com o seu mês, e o cliente é *seu* — o e-mail dele, as recompras, a relação.
+com o seu mês, e o cliente é *seu*: o e-mail dele, as recompras, a relação.
 
 Descoberta e propriedade. Você quer as duas, e nenhuma plataforma te dá a outra.
 
@@ -31,7 +31,7 @@ A versão saudável:
 1. **A Etsy continua sendo a porta de entrada.** Mantenha otimizada. É lá que estranhos te
    encontram.
 2. **A Shopify vira a casa.** Mesmo catálogo, sua marca, suas regras, margem inteira.
-3. **Tudo o que você vende existe nos dois lugares** — o cliente escolhe onde comprar.
+3. **Tudo o que você vende existe nos dois lugares**: o cliente escolhe onde comprar.
 4. **Aponte as pessoas para casa quando der.** O cartão dentro do download, a assinatura do
    e-mail, a bio nas redes: tudo apontando para a loja que é sua.
 
