@@ -12,6 +12,7 @@ export default function SignupForm({
   buttonLabel,
   large = false,
   center = false,
+  onDark = false,
 }: {
   inputId: string;
   signup: Messages["signup"];
@@ -19,6 +20,9 @@ export default function SignupForm({
   buttonLabel: string;
   large?: boolean;
   center?: boolean;
+  /** On an ink background the default ink note text would be invisible, and the ink
+   *  button would vanish into the card. Switches both to light-on-dark. */
+  onDark?: boolean;
 }) {
   const [state, setState] = useState<"idle" | "done" | "error">("idle");
 
@@ -69,12 +73,14 @@ export default function SignupForm({
         />
         <button
           type="submit"
-          className={`rounded-full bg-ink text-white font-bold px-7 ${pad} border-[3px] border-ink comic-shadow-invert-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all whitespace-nowrap`}
+          className={`rounded-full font-bold px-7 ${pad} border-[3px] border-ink whitespace-nowrap hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all ${
+            onDark ? "bg-blast text-white comic-shadow-invert-sm" : "bg-ink text-white comic-shadow-invert-sm"
+          }`}
         >
           {buttonLabel}
         </button>
       </form>
-      <p className="mt-3 text-ink text-sm font-medium" role="status">
+      <p className={`mt-3 text-sm font-medium ${onDark ? "text-bomb-300" : "text-ink"}`} role="status">
         {state === "done" ? (
           <>
             <strong>{signup.successStrong}</strong> {signup.successRest}
