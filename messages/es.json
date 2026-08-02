@@ -270,5 +270,24 @@
   "mascot": {
     "static": "La mascota bomba de DigiBoom con la mecha encendida",
     "live": "La mascota bomba de DigiBoom, con tarjetas de productos digitales orbitando a su alrededor"
+  },
+  "blog": {
+    "navLabel": "blog",
+    "eyebrow": "El blog",
+    "heading": "Vender productos digitales\n<accent>en más de un sitio</accent>",
+    "intro": "Notas de la construcción de DigiBoom y guías para aquello que estamos construyendo: sacar tus productos digitales de un solo mercado y ponerlos en varios, sin duplicar tu trabajo.",
+    "metaTitle": "Blog. Vender productos digitales en más de un sitio.",
+    "metaDescription": "Guías para quien vende productos digitales: abrir una segunda tienda, alternativas a Etsy para descargas digitales y mantener los anuncios sincronizados sin trabajo pesado.",
+    "latest": "Nuevo",
+    "read": "Leer",
+    "readIt": "Leer el artículo",
+    "readingTime": "min de lectura",
+    "allPosts": "todos los artículos",
+    "keepReading": "Sigue leyendo",
+    "empty": "Nada publicado todavía. Pronto.",
+    "ctaHeadingIndex": "Estamos construyendo la herramienta que describen estos artículos",
+    "ctaHeadingPost": "Estamos construyendo la herramienta que describe este artículo",
+    "ctaText": "DigiBoom abre tus otras tiendas y mantiene cada anuncio sincronizado. Está en desarrollo, a la vista de todos. Únete a la lista de espera y te enterarás cuando abra.",
+    "alsoIn": "También en"
   }
 }

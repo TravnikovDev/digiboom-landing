@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { localePath, locales } from "@/i18n/config";
-import { getPosts } from "@/lib/blog";
+import { blogIndexPath, blogPath, localePath, locales } from "@/i18n/config";
+import { getPosts, localesWithPosts, translationsOf } from "@/lib/blog";
 
 // Required for metadata routes under `output: export` (otherwise the build errors).
 export const dynamic = "force-static";
@@ -25,20 +25,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages },
   }));
 
-  // Blog is English-only, so no hreflang alternates on these.
+  // Blog: one index per locale that has posts, and one entry per (locale, post).
+  // hreflang lists only the languages an article was actually translated into.
+  const blogLocales = localesWithPosts();
+  const indexLanguages = Object.fromEntries(
+    blogLocales.map((l) => [l, `${SITE_URL}${blogIndexPath(l)}`]),
+  );
+
   const blogEntries: MetadataRoute.Sitemap = [
-    {
-      url: `${SITE_URL}/blog/`,
+    ...blogLocales.map((l) => ({
+      url: `${SITE_URL}${blogIndexPath(l)}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: 0.7,
-    },
-    ...getPosts().map((post) => ({
-      url: `${SITE_URL}/blog/${post.slug}/`,
-      lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
+      alternates: { languages: indexLanguages },
     })),
+    ...blogLocales.flatMap((l) =>
+      getPosts(l).map((post) => ({
+        url: `${SITE_URL}${blogPath(l, post.slug)}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+        alternates: {
+          languages: Object.fromEntries(
+            (Object.entries(translationsOf(post.key)) as [typeof l, string][]).map(([loc, slug]) => [
+              loc,
+              `${SITE_URL}${blogPath(loc, slug)}`,
+            ]),
+          ),
+        },
+      })),
+    ),
   ];
 
   return [...localeEntries, ...blogEntries];

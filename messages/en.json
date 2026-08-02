@@ -270,5 +270,24 @@
   "mascot": {
     "static": "The DigiBoom bomb mascot with a lit fuse",
     "live": "The DigiBoom bomb mascot, with digital product cards orbiting it"
+  },
+  "blog": {
+    "navLabel": "blog",
+    "eyebrow": "The blog",
+    "heading": "Selling digital products\n<accent>in more than one place</accent>",
+    "intro": "Notes from building DigiBoom, and guides for the thing we are building it for: getting your digital products off one marketplace and onto several, without doubling your workload.",
+    "metaTitle": "Blog. Selling digital products in more than one place.",
+    "metaDescription": "Guides for people who sell digital products: opening a second storefront, Etsy alternatives for digital downloads, and keeping listings in sync without the busywork.",
+    "latest": "Latest",
+    "read": "Read",
+    "readIt": "Read it",
+    "readingTime": "min read",
+    "allPosts": "all posts",
+    "keepReading": "Keep reading",
+    "empty": "Nothing published yet. Soon.",
+    "ctaHeadingIndex": "We are building the tool these posts describe",
+    "ctaHeadingPost": "We are building the tool this post describes",
+    "ctaText": "DigiBoom opens your other storefronts and keeps every listing in sync. It is in development, in the open. Join the waitlist and you will hear when it opens.",
+    "alsoIn": "Also in"
   }
 }

@@ -1,5 +1,5 @@
 import type { Messages } from "@/i18n/dictionaries";
-import type { Locale } from "@/i18n/config";
+import { blogIndexPath, localePath, type Locale } from "@/i18n/config";
 import BombLogo from "./BombLogo";
 import LangSwitcher from "./LangSwitcher";
 
@@ -7,10 +7,12 @@ export default function Footer({
   copy,
   locale,
   langLabel,
+  blogLabel = "Blog",
 }: {
   copy: Messages["footer"];
   locale: Locale;
   langLabel: string;
+  blogLabel?: string;
 }) {
   return (
     <footer className="bg-ink py-10">
@@ -21,18 +23,17 @@ export default function Footer({
             <span className="font-display text-lg tracking-widest text-white">DIGIBOOM</span>
           </div>
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-1">
-            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#platforms">
+            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href={`${localePath(locale)}#platforms`}>
               {copy.platforms}
             </a>
-            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#status">
+            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href={`${localePath(locale)}#status`}>
               {copy.roadmap}
             </a>
-            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#signup">
+            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href={`${localePath(locale)}#signup`}>
               {copy.waitlist}
             </a>
-            {/* Blog is English-only for now; the link is in English on every locale. */}
-            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="/blog/">
-              Blog
+            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href={blogIndexPath(locale)}>
+              {blogLabel}
             </a>
           </nav>
           {/* Language selector lives here, not in the top nav. Opens upward (footer). */}

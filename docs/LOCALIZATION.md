@@ -405,6 +405,30 @@ build:
 
 ---
 
+### 2.14 Blog (multilingual, opt-in per post)
+
+Articles live in `content/blog/<locale>/<key>.md`.
+
+- The **file basename is the key** and is stable across languages: it is what ties
+  translations of the same article together for hreflang and the "also in" links.
+- The **URL slug is localized** via a `slug:` frontmatter field, so readers get
+  `/de/blog/digitale-produkte-auf-etsy-verkaufen/`, not an English URL in a German page.
+- Routes mirror the landing: English at `/blog/...` (the `(home)` group), everything else
+  at `/<locale>/blog/...` (the `[locale]` group). Both render the same
+  `BlogIndexView`/`BlogPostView`, so there is one design to maintain.
+- Chrome strings (eyebrow, "min read", "Keep reading", CTA…) live under `blog.*` in
+  `messages/*.json` like every other string.
+- **Translation is opt-in per post.** An article exists in exactly the languages that have
+  a file; there is no fallback to English, because silently serving the wrong language is
+  worse than not having the page. A post with only an English file simply does not appear
+  on `/de/blog/`, and its hreflang set lists only the languages that really exist. That
+  keeps translating a *winning* post cheap and optional instead of mandatory for all seven.
+- `readingMinutes` counts characters/500 for `ja` (no spaces to count words by) and
+  words/200 elsewhere.
+
+> Gotcha: `app/[locale]/blog/[slug]` needs at least one non-English post to exist, or
+> `generateStaticParams` returns an empty array and the static export errors.
+
 ## Part 3 — Translation workflow
 
 1. Copy change lands in `messages/en.json` (source of truth) with the English shipped.

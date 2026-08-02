@@ -36,7 +36,7 @@ export default function Landing({ t, locale }: { t: Messages; locale: Locale }) 
         <Faq copy={t.faq} />
         <SignupSection copy={t.signupSection} signup={t.signup} />
       </main>
-      <Footer copy={t.footer} locale={locale} langLabel={t.nav.langLabel} />
+      <Footer copy={t.footer} locale={locale} langLabel={t.nav.langLabel} blogLabel={t.blog.navLabel} />
     </>
   );
 }

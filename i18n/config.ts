@@ -24,6 +24,16 @@ export function localePath(locale: Locale): string {
   return locale === defaultLocale ? "/" : `/${locale}/`;
 }
 
+/** Blog index for a locale: `/blog/` for the default, `/<locale>/blog/` otherwise. */
+export function blogIndexPath(locale: Locale): string {
+  return locale === defaultLocale ? "/blog/" : `/${locale}/blog/`;
+}
+
+/** A blog post URL. Slugs are localized, so pass the slug for *that* locale. */
+export function blogPath(locale: Locale, slug: string): string {
+  return `${blogIndexPath(locale)}${slug}/`;
+}
+
 /** Endonyms for the language switcher. */
 export const localeNames: Record<Locale, string> = {
   en: "English",

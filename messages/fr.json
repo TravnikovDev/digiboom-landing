@@ -270,5 +270,24 @@
   "mascot": {
     "static": "La mascotte bombe de DigiBoom avec une mèche allumée",
     "live": "La mascotte bombe de DigiBoom, entourée de cartes de produits numériques en orbite"
+  },
+  "blog": {
+    "navLabel": "blog",
+    "eyebrow": "Le blog",
+    "heading": "Vendre des produits numériques\n<accent>à plus d'un endroit</accent>",
+    "intro": "Des notes sur la construction de DigiBoom, et des guides pour ce qu'on construit : sortir tes produits numériques d'une seule marketplace pour les mettre sur plusieurs, sans doubler ton travail.",
+    "metaTitle": "Blog. Vendre des produits numériques à plus d'un endroit.",
+    "metaDescription": "Des guides pour ceux qui vendent des produits numériques : ouvrir une deuxième boutique, les alternatives à Etsy pour les téléchargements, et garder ses annonces synchronisées.",
+    "latest": "Nouveau",
+    "read": "Lire",
+    "readIt": "Lire l'article",
+    "readingTime": "min de lecture",
+    "allPosts": "tous les articles",
+    "keepReading": "À lire aussi",
+    "empty": "Rien de publié pour l'instant. Bientôt.",
+    "ctaHeadingIndex": "On construit l'outil que ces articles décrivent",
+    "ctaHeadingPost": "On construit l'outil que cet article décrit",
+    "ctaText": "DigiBoom ouvre tes autres boutiques et garde chaque annonce synchronisée. C'est en développement, au grand jour. Rejoins la liste d'attente et tu sauras quand ça ouvre.",
+    "alsoIn": "Aussi en"
   }
 }

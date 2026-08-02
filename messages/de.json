@@ -270,5 +270,24 @@
   "mascot": {
     "static": "Das DigiBoom-Bomben-Maskottchen mit brennender Zündschnur",
     "live": "Das DigiBoom-Bomben-Maskottchen, umkreist von digitalen Produktkarten"
+  },
+  "blog": {
+    "navLabel": "Blog",
+    "eyebrow": "Der Blog",
+    "heading": "Digitale Produkte verkaufen,\n<accent>an mehr als einem Ort</accent>",
+    "intro": "Notizen aus dem Bau von DigiBoom und Leitfäden für genau das, wofür wir es bauen: deine digitalen Produkte von einem Marktplatz auf mehrere bringen, ohne deine Arbeit zu verdoppeln.",
+    "metaTitle": "Blog. Digitale Produkte an mehr als einem Ort verkaufen.",
+    "metaDescription": "Leitfäden für alle, die digitale Produkte verkaufen: einen zweiten Shop eröffnen, Etsy-Alternativen für digitale Downloads und Angebote synchron halten, ohne Fleißarbeit.",
+    "latest": "Neu",
+    "read": "Lesen",
+    "readIt": "Jetzt lesen",
+    "readingTime": "Min. Lesezeit",
+    "allPosts": "alle Beiträge",
+    "keepReading": "Weiterlesen",
+    "empty": "Noch nichts veröffentlicht. Bald.",
+    "ctaHeadingIndex": "Wir bauen das Tool, das diese Beiträge beschreiben",
+    "ctaHeadingPost": "Wir bauen das Tool, das dieser Beitrag beschreibt",
+    "ctaText": "DigiBoom eröffnet deine weiteren Shops und hält jedes Angebot synchron. Es ist in Entwicklung, ganz offen. Trag dich in die Warteliste ein und du erfährst es als Erster.",
+    "alsoIn": "Auch auf"
   }
 }

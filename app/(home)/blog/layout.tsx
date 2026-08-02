@@ -16,7 +16,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
       <main id="main" className="flex-1">
         {children}
       </main>
-      <Footer copy={t.footer} locale={defaultLocale} langLabel={t.nav.langLabel} />
+      <Footer copy={t.footer} locale={defaultLocale} langLabel={t.nav.langLabel} blogLabel={t.blog.navLabel} />
     </div>
   );
 }
