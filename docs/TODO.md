@@ -10,22 +10,22 @@ Claude-tasks blocked until you finish the matching item in Part 2.
 
 ## Part 1 — Claude's list (no human needed)
 
-### Ready to start now
+### Done (this batch)
 
-- [ ] **C1. `robots.txt`** — allow all, point at the sitemap. 5 minutes.
-- [ ] **C2. Fix the community milestone copy** — the roadmap section promises
+- [x] **C1. `robots.txt`** ✅ shipped — allow all, point at the sitemap. 5 minutes.
+- [x] **C2. Fix the community milestone copy** ✅ shipped — the roadmap section promises
   "Telegram and Discord"; Discord is banned in Turkey, so it becomes Telegram-only.
   All 7 locales.
-- [ ] **C3. Blog machinery** — `/blog` in the same repo and design system: markdown
+- [x] **C3. Blog machinery** ✅ shipped — `/blog` in the same repo and design system: markdown
   posts, listing page, post template, sitemap entries, nav/footer links. English-only
   at first (translating every post into 7 languages is unsustainable solo; winners get
   translated later).
-- [ ] **C4. Draft the first 3 blog posts** from the keywords core, in the site voice:
+- [x] **C4. Draft the first 3 blog posts** ✅ drafted (review the voice before publishing) — from the keywords core, in the site voice:
   1. *How to sell digital products on Etsy* (4.4K/mo, relevance 10)
   2. *Etsy alternatives for digital downloads* (720/mo, relevance 9)
   3. *Selling on Etsy and Shopify at once, without the busywork* (crosslisting angle)
   Each ends in the waitlist CTA. **You review the voice before they publish.**
-- [ ] **C5. Draft the launch/community copy pack** (`docs/launch-copy.md`): two Reddit
+- [x] **C5. Launch copy pack** ✅ drafted in `docs/launch-copy.md` — two Reddit
   posts (r/EtsySellers, r/SideProject flavours), an Indie Hackers post, a Product Hunt
   "Coming soon" tagline + description, a BetaList blurb. Written in your
   founder-building-in-the-open voice; you post them from your accounts (B7).

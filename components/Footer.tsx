@@ -20,7 +20,7 @@ export default function Footer({
             <BombLogo size={22} muted />
             <span className="font-display text-lg tracking-widest text-white">DIGIBOOM</span>
           </div>
-          <nav className="flex gap-6">
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-1">
             <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#platforms">
               {copy.platforms}
             </a>
@@ -29,6 +29,10 @@ export default function Footer({
             </a>
             <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="#signup">
               {copy.waitlist}
+            </a>
+            {/* Blog is English-only for now; the link is in English on every locale. */}
+            <a className="hover:text-white inline-flex items-center min-h-11 px-1" href="/blog/">
+              Blog
             </a>
           </nav>
           {/* Language selector lives here, not in the top nav. Opens upward (footer). */}

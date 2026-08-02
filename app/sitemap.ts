@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { localePath, locales } from "@/i18n/config";
+import { getPosts } from "@/lib/blog";
 
 // Required for metadata routes under `output: export` (otherwise the build errors).
 export const dynamic = "force-static";
@@ -16,11 +17,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const languages: Record<string, string> = Object.fromEntries(locales.map((locale) => [locale, abs(locale)]));
   languages["x-default"] = abs("en");
 
-  return locales.map((locale) => ({
+  const localeEntries: MetadataRoute.Sitemap = locales.map((locale) => ({
     url: abs(locale),
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: locale === "en" ? 1 : 0.8,
     alternates: { languages },
   }));
+
+  // Blog is English-only, so no hreflang alternates on these.
+  const blogEntries: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/blog/`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    ...getPosts().map((post) => ({
+      url: `${SITE_URL}/blog/${post.slug}/`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
+
+  return [...localeEntries, ...blogEntries];
 }
