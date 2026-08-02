@@ -163,8 +163,24 @@ These come from the assistant side of a chat and must never appear in a file:
   (`tu`, `du`); Russian keeps `вы`, because Russian past tense is gendered and `ты` would
   force a masculine default onto every reader.
 - Do not carry English punctuation habits across. Spanish opens questions with `¿`;
-  French puts a space before `?` and `!`; Russian uses em dashes and « » quotes; Japanese
-  uses `、` `。` and no spaces.
+  Russian uses em dashes and « » quotes; Japanese uses `、` and `。`.
+- **French takes a non-breaking space (U+00A0) before `:` `;` `?` `!` `»`, and after `«`.**
+  A plain space is wrong: it lets the punctuation wrap alone onto the next line. `BOOM!` is
+  a brand term and keeps no space. `writing:check` enforces this.
+- **Japanese paragraphs go on one line. Never hard-wrap them.** A line break inside a
+  markdown paragraph renders as a visible space, and Japanese has no inter-word spaces, so
+  the break shows up as a gap in the middle of a sentence. Measured in the browser:
+  `品切れなし` is 80.00px, `品切れ\nなし` is 83.58px, exactly the same as `品切れ なし`.
+  Latin and Cyrillic are unaffected, where a newline should become a space.
+  `writing:check` enforces this.
+- Keep each language region-neutral where it costs nothing. Spanish uses `tú` and avoids
+  Spain-only `vosotros` forms, since most Spanish readers are not in Spain.
+- The FAQ questions are the reader speaking to us, so they address the team as an informal
+  plural: `ihr` (de), `vous` (fr), `vocês` (pt), `вы` (ru). That `vous` is the plural of
+  `tu`, not a formality slip.
+- A loanword that the language has genuinely absorbed is fine (German "White Paper").
+  An English phrase sitting untranslated in a different script is not: Russian and Japanese
+  must never carry raw Latin-script English where a native term exists.
 - Watch for words from the wrong language surviving a translation pass. This has happened
   (an English "half" and a Russian "двух" both ended up inside a Japanese post).
 - Keep array lengths identical to English or `npm run i18n:check` fails.

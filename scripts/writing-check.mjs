@@ -121,9 +121,52 @@ const rules = [
     },
   },
   {
+    id: "fr-punctuation-space",
+    label: "French needs a non-breaking space before : ; ? ! » (§7)",
+    locales: (locale) => locale === "fr",
+    test: (line) => {
+      if (/^\s*(title|description|date|slug|keyword):/.test(line) || line.includes("http")) return [];
+      // JSON structure colons sit right after a closing quote; prose colons do not.
+      const prose = line.replace(/"\s*:/g, '":');
+      return [...prose.matchAll(/(?<![ :/\d"])[ ]?([;?!»])|(?<![ :/\d"])[ ]?:(?=\s|$)/g)]
+        .map((m) => m[0])
+        .filter((s) => !line.includes(`BOOM${s.trim()}`));
+    },
+  },
+  {
     id: "assistant-leak",
     label: "assistant/chat text or placeholder leaked into copy (§5)",
     test: (line) => LEAKS.filter((p) => line.toLowerCase().includes(p)),
+  },
+];
+
+/**
+ * Rules that need the whole file, not one line.
+ * Japanese has no inter-word spaces, but browsers render a hard line break inside a
+ * markdown paragraph as a visible space (measured: "品切れ\nなし" == "品切れ なし" ==
+ * 83.58px, vs 80.00px unwrapped). So Japanese paragraphs must sit on one line.
+ */
+const fileRules = [
+  {
+    id: "ja-hard-wrap",
+    label: "line break inside a Japanese paragraph renders as a visible space (§7)",
+    locales: (locale) => locale === "ja",
+    markdownOnly: true,
+    test: (lines) => {
+      const structural = (l) => !l.trim() || /^(\s*(#{1,6}\s|[-*+]\s|\d+\.\s|>|---|```|\|))/.test(l);
+      const hits = [];
+      let inFrontmatter = false;
+      lines.forEach((line, i) => {
+        if (line.trim() === "---" && (i === 0 || inFrontmatter)) {
+          inFrontmatter = i === 0 ? true : !inFrontmatter;
+          return;
+        }
+        const next = lines[i + 1];
+        if (inFrontmatter || structural(line) || next === undefined || structural(next)) return;
+        hits.push(`${i + 1}: …${line.slice(-12)} ⏎ ${next.slice(0, 12)}…`);
+      });
+      return hits;
+    },
   },
 ];
 
@@ -165,6 +208,16 @@ for (const { path, locale } of targets()) {
       );
     }
   });
+
+  for (const rule of fileRules) {
+    if (rule.locales && !rule.locales(locale)) continue;
+    if (rule.markdownOnly && !path.endsWith(".md")) continue;
+    const hits = rule.test(lines);
+    if (!hits.length) continue;
+    findings += hits.length;
+    if (!byRule.has(rule.id)) byRule.set(rule.id, { label: rule.label, items: [] });
+    for (const h of hits) byRule.get(rule.id).items.push(`  ${relative(ROOT, path)}:${h}`);
+  }
 }
 
 if (findings === 0) {

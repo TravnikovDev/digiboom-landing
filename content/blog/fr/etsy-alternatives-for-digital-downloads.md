@@ -7,12 +7,12 @@ keyword: "alternative etsy"
 ---
 
 La plupart des gens qui cherchent des alternatives à Etsy vivent l'une de deux mauvaises
-journées : les frais ont encore augmenté, ou l'algorithme a discrètement arrêté de montrer
+journées : les frais ont encore augmenté, ou l'algorithme a discrètement arrêté de montrer
 leurs annonces.
 
-Avant la liste, le recadrage utile : **tu ne veux probablement pas une alternative. Tu veux
+Avant la liste, le recadrage utile : **tu ne veux probablement pas une alternative. Tu veux
 un ajout.** Etsy t'amène des inconnus qui faisaient déjà leurs achats. Ça vaut la peine de
-le garder. Le problème n'est pas que tu vends sur Etsy ; c'est que tu vends *seulement* sur
+le garder. Le problème n'est pas que tu vends sur Etsy ; c'est que tu vends *seulement* sur
 Etsy.
 
 Cela dit, voici où les téléchargements numériques se vendent aussi, et à quoi chaque endroit
@@ -20,7 +20,7 @@ est vraiment bon.
 
 ## Marketplaces (elles t'apportent le trafic)
 
-**Creative Market.** Ressources de design : polices, templates, graphismes, mockups. Les
+**Creative Market.** Ressources de design : polices, templates, graphismes, mockups. Les
 acheteurs sont des designers avec un budget pro, donc les prix sont plus élevés que sur
 Etsy. C'est curaté, l'approbation n'est pas instantanée.
 
@@ -28,7 +28,7 @@ Etsy. C'est curaté, l'approbation n'est pas instantanée.
 Audience énorme portée par l'abonnement dans la niche créative. Si tu vends des SVG, les
 gens du SVG sont là.
 
-**Design Bundles.** Packs et fichiers créatifs, public proche de Creative Fabrica ; ça vaut
+**Design Bundles.** Packs et fichiers créatifs, public proche de Creative Fabrica ; ça vaut
 le coup d'être sur les deux.
 
 **Envato Elements / Market.** Templates, vidéo, audio, thèmes web. Le modèle par abonnement
@@ -42,7 +42,7 @@ simple, et la communauté apprécie vraiment ta présence.
 ## Plateformes créateurs (ton audience achète directement)
 
 **Gumroad.** Le classique. D'une simplicité totale, marche avec n'importe quel type de
-fichier, et tu gardes plus sur chaque vente. Mais il n'apporte aucun trafic : le moteur de
+fichier, et tu gardes plus sur chaque vente. Mais il n'apporte aucun trafic : le moteur de
 découverte, c'est toi.
 
 **Lemon Squeezy.** Proche de Gumroad, avec une bien meilleure gestion des taxes et de la
@@ -62,7 +62,7 @@ niveaux de bricolage.
 
 ## Comment choisir concrètement
 
-Range la liste en deux paniers et prends-en un dans chacun :
+Range la liste en deux paniers et prends-en un dans chacun :
 
 - **Les plateformes de découverte** (Etsy, Creative Market, Creative Fabrica, Envato) te
   donnent des inconnus. Tu paies ça en frais.
@@ -75,7 +75,7 @@ boutique crie dans une pièce vide. **Ceux qui grandissent sont sur les deux, en
 ## Le hic, qui est toute la raison pour laquelle c'est difficile
 
 Tout ce qui précède est un conseil évident. Personne ne l'applique, parce que le travail est
-réel : chaque plateforme veut dire encore un compte, encore un jeu de règles, encore un
+réel : chaque plateforme veut dire encore un compte, encore un jeu de règles, encore un
 téléversement complet de ton catalogue, puis chaque changement de prix répété partout
 jusqu'à ce que tu arrêtes de t'embêter.
 
@@ -84,7 +84,7 @@ une plateforme. Pas la stratégie. La saisie de données.
 
 ## Là où DigiBoom entre en jeu
 
-[DigiBoom](/fr/) est un outil exactement pour ça : connecte la boutique que tu tiens déjà, on
+[DigiBoom](/fr/) est un outil exactement pour ça : connecte la boutique que tu tiens déjà, on
 ouvre les autres, on déplace ton catalogue avec les fichiers, descriptions, tags et licences
 intacts, et on garde tout synchronisé ensuite. Ajouter une plateforme cesse d'être une
 semaine de travail et devient une décision.

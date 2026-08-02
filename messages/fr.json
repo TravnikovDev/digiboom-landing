@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DigiBoom. On explose tes ventes de produits numériques. En bien.",
-    "description": "Tu vends tes produits numériques uniquement sur Etsy ? DigiBoom ouvre Shopify, Gumroad et plus, transfère ton catalogue et garde chaque annonce synchronisée. Rejoins l'accès anticipé.",
+    "description": "Tu vends tes produits numériques uniquement sur Etsy ? DigiBoom ouvre Shopify, Gumroad et plus, transfère ton catalogue et garde chaque annonce synchronisée. Rejoins l'accès anticipé.",
     "ogAlt": "DigiBoom. On explose tes ventes de produits numériques. En bien.",
     "skip": "Aller au contenu"
   },
@@ -148,7 +148,7 @@
     "stageLaunch": "au lancement",
     "stagePlanned": "prévu",
     "stageExploring": "à l'étude",
-    "footnote": "Tu vends quelque part qu'on n'a pas listé ? Dis-le-nous à l'inscription et ça rejoint la pile."
+    "footnote": "Tu vends quelque part qu'on n'a pas listé ? Dis-le-nous à l'inscription et ça rejoint la pile."
   },
   "countdown": {
     "eyebrow": "État d'avancement",
@@ -175,7 +175,7 @@
         "when": "Ensuite"
       },
       {
-        "title": "MVP : Etsy et Shopify",
+        "title": "MVP : Etsy et Shopify",
         "text": "Configuration de la boutique Shopify, et sync bidirectionnelle de tes produits numériques entre les deux premières plateformes.",
         "when": "T1 à T2"
       },
@@ -229,27 +229,27 @@
     "heading": "Questions, réponses",
     "items": [
       {
-        "q": "Dois-je déjà avoir des boutiques ailleurs pour vendre mes produits numériques ?",
+        "q": "Dois-je déjà avoir des boutiques ailleurs pour vendre mes produits numériques ?",
         "a": "Non. C'est tout l'intérêt. Si tu n'as qu'Etsy, on t'accompagne pour ouvrir les autres, on remplit l'essentiel de la configuration pour toi et on transfère tes produits numériques."
       },
       {
-        "q": "Peut-il ouvrir les comptes entièrement tout seul ?",
+        "q": "Peut-il ouvrir les comptes entièrement tout seul ?",
         "a": "Non, et tu ne le voudrais pas. Les marchés t'obligent à accepter les conditions et à prouver ton identité toi-même. On prépare tout autour de ces deux étapes. Identité, catégories, règles, annonces, fichiers."
       },
       {
-        "q": "Est-ce contraire aux règles des marchés ?",
+        "q": "Est-ce contraire aux règles des marchés ?",
         "a": "Non. On utilise les API publiques officielles avec OAuth, les mêmes portes que ces plateformes ouvrent à tout développeur d'app. Pas de scraping. Pas de mot de passe entre nos mains."
       },
       {
-        "q": "Gardez-vous mes fichiers et mes données clients ?",
+        "q": "Gardez-vous mes fichiers et mes données clients ?",
         "a": "Tes données restent les tiennes. Tes fichiers numériques sont chiffrés, seulement le temps qu'un sync en a besoin, et tu peux tout exporter ou effacer quand tu veux."
       },
       {
-        "q": "Quand pourrai-je vraiment l'essayer ?",
+        "q": "Quand pourrai-je vraiment l'essayer ?",
         "a": "La première version, Etsy et Shopify synchronisés, part en bêta fermée. Les membres de la liste d'attente entrent en premier, dans l'ordre d'inscription. Inscris-toi maintenant, tu te remercieras plus tard."
       },
       {
-        "q": "Qui construit tout ça ?",
+        "q": "Qui construit tout ça ?",
         "a": "Roman Travnikov. Fondateur et développeur principal, dix ans et plus à livrer sur le web, il construit DigiBoom au grand jour. Ce qui est fait et ce qui suit est sur cette page."
       }
     ]
@@ -275,9 +275,9 @@
     "navLabel": "blog",
     "eyebrow": "Le blog",
     "heading": "Vendre des produits numériques\n<accent>à plus d'un endroit</accent>",
-    "intro": "Des notes sur la construction de DigiBoom, et des guides pour ce qu'on construit : sortir tes produits numériques d'une seule marketplace pour les mettre sur plusieurs, sans doubler ton travail.",
+    "intro": "Des notes sur la construction de DigiBoom, et des guides pour ce qu'on construit : sortir tes produits numériques d'une seule marketplace pour les mettre sur plusieurs, sans doubler ton travail.",
     "metaTitle": "Blog. Vendre des produits numériques à plus d'un endroit.",
-    "metaDescription": "Des guides pour ceux qui vendent des produits numériques : ouvrir une deuxième boutique, les alternatives à Etsy pour les téléchargements, et garder ses annonces synchronisées.",
+    "metaDescription": "Des guides pour ceux qui vendent des produits numériques : ouvrir une deuxième boutique, les alternatives à Etsy pour les téléchargements, et garder ses annonces synchronisées.",
     "latest": "Nouveau",
     "read": "Lire",
     "readIt": "Lire l'article",
