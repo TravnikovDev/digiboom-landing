@@ -66,7 +66,7 @@ Real sync means: **you change something once, and everywhere catches up.**
 That is the difference between "I sell on two platforms" being a strategy and being a
 chore you resent.
 
-## What we are building about it
+## What we are building for this pair
 
 [DigiBoom](/) is being built for exactly this pairing first: connect the Etsy shop you
 already run, we set up the Shopify side, carry your digital products across intact, and

@@ -72,7 +72,7 @@ La vraie synchro, c'est : **tu changes une chose une fois, et tout le reste se m
 C'est la différence entre « je vends sur deux plateformes » comme stratégie et comme corvée
 que tu subis.
 
-## Ce qu'on construit à ce sujet
+## Ce qu'on construit pour ce duo
 
 [DigiBoom](/fr/) est construit pour ce duo en premier : connecte la boutique Etsy que tu
 tiens déjà, on met en place le côté Shopify, on transfère tes produits numériques intacts, et

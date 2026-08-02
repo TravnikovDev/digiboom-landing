@@ -74,8 +74,8 @@ an "-ing" clause explains its significance.
 it does.
 
 **Negative parallelism.** "Not just X, but Y." "It's not X, it's Y." "No X, no Y, just Z."
-One of these in a piece is a stylistic choice; two is a signature. Currently we use exactly
-one, deliberately, in the hero.
+One in a piece is a stylistic choice; two is a signature. The site currently uses none,
+which is the right number.
 
 **Rule of three.** Three adjectives, or three parallel clauses, over and over. Vary the
 count: two, then four, then one.
@@ -107,8 +107,9 @@ stop. This has been an explicit project rule since the first copy pass.
 *Exception:* in Russian the em dash is correct native punctuation (`Одна загрузка — вот
 это и есть BOOM`) and stays. Japanese uses `、` and `。` normally.
 
-**Bold-header bullet lists.** The `- **Name** — description` / `- **Name:** description`
-shape is a strong tell. Write the name into a normal sentence instead:
+**Bold-header bullet lists.** The tell is the **bolded label plus separator** shape:
+`- **Name** — description` or `- **Name:** description`. A plain `- Name: description`
+list is ordinary writing and is fine. Write the name into a normal sentence instead:
 
 > ✗ - **Gumroad** — the classic, works with any file type.
 > ✓ - Gumroad is the classic. Any file type, and you keep more of the sale.

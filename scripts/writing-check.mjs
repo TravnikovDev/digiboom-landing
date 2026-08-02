@@ -112,7 +112,9 @@ const rules = [
     test: (line) => {
       const m = line.match(/^#{2,6}\s+(.*)$/);
       if (!m) return [];
-      const words = m[1].split(/\s+/).filter((w) => /^[A-Za-z]/.test(w));
+      // Proper nouns are capitalised in sentence case too, so they cannot count as evidence.
+      const PROPER = /^(DigiBoom|Etsy|Shopify|Gumroad|Creative|Market|Fabrica|Design|Bundles|Envato|Elements|ArtStation|CGTrader|Payhip|Ko-fi|Lemon|Squeezy|WooCommerce|Squarespace|Big|Cartel|Canva|Notion|Procreate|Lightroom|BOOM|SVG|PDF|API|VAT|OAuth)$/;
+      const words = m[1].split(/\s+/).filter((w) => /^[A-Za-z]/.test(w) && !PROPER.test(w.replace(/[.,:;!?]$/, "")));
       if (words.length < 3) return [];
       const capped = words.filter((w) => /^[A-Z]/.test(w)).length;
       return capped >= words.length - 1 ? [m[1]] : [];

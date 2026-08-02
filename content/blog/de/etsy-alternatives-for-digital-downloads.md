@@ -82,7 +82,7 @@ aufhörst, dir die Mühe zu machen.
 Das ist der eigentliche Grund, warum die meisten digitalen Verkäufer auf einer Plattform
 festhängen. Nicht Strategie. Dateneingabe.
 
-## Was wir dagegen bauen
+## Wo DigiBoom ins Spiel kommt
 
 [DigiBoom](/de/) ist ein Werkzeug für genau das: Verbinde den Shop, den du schon betreibst,
 wir eröffnen die anderen Storefronts, bringen deinen Katalog mit Dateien, Beschreibungen,

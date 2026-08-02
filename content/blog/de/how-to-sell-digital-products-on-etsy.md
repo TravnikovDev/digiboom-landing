@@ -91,7 +91,7 @@ danach muss jede Preisänderung und jede neue Version überall wiederholt werden
 Die meisten fangen einen zweiten Shop an, spüren das Gewicht und geben still auf. Das ist
 kein Disziplinproblem. Das ist ein Prozess, der wirklich schrecklich ist.
 
-## Was wir dagegen bauen
+## Was wir dagegen tun
 
 Genau diesen Prozess soll [DigiBoom](/de/) löschen. Du verbindest den Shop, den du schon
 betreibst, wir eröffnen die fehlenden Storefronts, bringen deinen Katalog unversehrt hinüber

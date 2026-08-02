@@ -89,7 +89,7 @@ change and new version has to be repeated everywhere, forever.
 Most sellers start a second store, feel the weight of it, and quietly give up. That is
 not a discipline problem. That is the process being genuinely terrible.
 
-## What we are building about it
+## What we are doing about it
 
 That process is what [DigiBoom](/) exists to delete. You connect the shop you already
 run, we open the storefronts you are missing, carry your catalog across intact, and keep

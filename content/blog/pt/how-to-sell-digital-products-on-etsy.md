@@ -89,7 +89,7 @@ versão nova repetidas em todo lugar, para sempre.
 A maioria começa uma segunda loja, sente o peso e desiste caladinho. Isso não é problema de
 disciplina. É um processo genuinamente terrível.
 
-## O que a gente está construindo sobre isso
+## O que a gente está fazendo sobre isso
 
 Esse processo é exatamente o que a [DigiBoom](/pt/) existe para apagar. Você conecta a loja
 que já toca, a gente abre as lojas que faltam, leva o seu catálogo intacto e mantém cada

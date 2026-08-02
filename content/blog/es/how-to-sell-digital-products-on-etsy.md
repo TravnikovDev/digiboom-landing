@@ -89,7 +89,7 @@ de precio y cada versión nueva repetidos en todas partes, para siempre.
 La mayoría empieza una segunda tienda, siente el peso y abandona en silencio. Eso no es un
 problema de disciplina. Es un proceso genuinamente horrible.
 
-## Qué estamos construyendo al respecto
+## Qué estamos haciendo al respecto
 
 Ese proceso es justo lo que [DigiBoom](/es/) existe para borrar. Conectas la tienda que ya
 llevas, nosotros abrimos las tiendas que te faltan, trasladamos tu catálogo intacto y

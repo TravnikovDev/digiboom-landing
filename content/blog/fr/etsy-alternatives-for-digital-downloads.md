@@ -82,7 +82,7 @@ jusqu'à ce que tu arrêtes de t'embêter.
 C'est la vraie raison pour laquelle la plupart des vendeurs numériques restent coincés sur
 une plateforme. Pas la stratégie. La saisie de données.
 
-## Ce qu'on construit à ce sujet
+## Là où DigiBoom entre en jeu
 
 [DigiBoom](/fr/) est un outil exactement pour ça : connecte la boutique que tu tiens déjà, on
 ouvre les autres, on déplace ton catalogue avec les fichiers, descriptions, tags et licences

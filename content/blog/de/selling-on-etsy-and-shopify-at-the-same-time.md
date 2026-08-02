@@ -73,7 +73,7 @@ Echte Synchronisation heißt: **du änderst etwas einmal, und überall wird nach
 Das ist der Unterschied zwischen "ich verkaufe auf zwei Plattformen" als Strategie und als
 lästiger Pflicht.
 
-## Was wir dagegen bauen
+## Was wir für dieses Paar bauen
 
 [DigiBoom](/de/) wird genau für dieses Paar zuerst gebaut: Verbinde den Etsy-Shop, den du
 schon betreibst, wir richten die Shopify-Seite ein, bringen deine digitalen Produkte

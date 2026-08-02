@@ -77,7 +77,7 @@ importar.
 Essa é a razão real de a maioria dos vendedores digitais ficar presa em uma plataforma. Não
 é estratégia. É digitação.
 
-## O que a gente está construindo sobre isso
+## Onde a DigiBoom entra
 
 A [DigiBoom](/pt/) é uma ferramenta exatamente para isso: conecte a loja que você já toca, a
 gente abre as outras, move o seu catálogo com os arquivos, descrições, tags e licenças

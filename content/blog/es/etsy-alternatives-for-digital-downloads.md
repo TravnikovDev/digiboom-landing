@@ -78,7 +78,7 @@ molestarte.
 Esa es la razón real de que la mayoría de vendedores digitales estén atascados en una
 plataforma. No es estrategia. Es introducir datos.
 
-## Qué estamos construyendo al respecto
+## Dónde entra DigiBoom
 
 [DigiBoom](/es/) es una herramienta exactamente para esto: conectas la tienda que ya llevas,
 nosotros abrimos las demás, trasladamos tu catálogo con los archivos, descripciones,

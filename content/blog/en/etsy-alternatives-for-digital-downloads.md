@@ -77,7 +77,7 @@ catalog, and then every price change repeated everywhere until you stop botherin
 That is the actual reason most digital sellers are stuck on one platform. Not strategy.
 Data entry.
 
-## What we are building about it
+## Where DigiBoom comes in
 
 [DigiBoom](/) is a tool for exactly this: connect the shop you already run, we open the
 other storefronts, move your catalog across with the files, descriptions, tags and

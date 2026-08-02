@@ -70,7 +70,7 @@ atualiza.**
 Essa é a diferença entre "eu vendo em duas plataformas" ser uma estratégia e ser uma tarefa
 que você odeia.
 
-## O que a gente está construindo sobre isso
+## O que a gente está construindo para essa dupla
 
 A [DigiBoom](/pt/) está sendo construída para exatamente essa dupla primeiro: conecte a loja
 da Etsy que você já toca, a gente monta o lado da Shopify, leva os seus produtos digitais

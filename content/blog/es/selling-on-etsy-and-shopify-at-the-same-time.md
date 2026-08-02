@@ -70,7 +70,7 @@ Sincronizar de verdad significa: **cambias algo una vez y todo lo demás se pone
 Esa es la diferencia entre que "vendo en dos plataformas" sea una estrategia o sea una tarea
 que odias.
 
-## Qué estamos construyendo al respecto
+## Qué estamos construyendo para esta pareja
 
 [DigiBoom](/es/) se está construyendo para esta pareja primero: conectas la tienda de Etsy
 que ya llevas, nosotros montamos el lado de Shopify, trasladamos tus productos digitales

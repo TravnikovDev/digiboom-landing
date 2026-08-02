@@ -93,7 +93,7 @@ pour toujours.
 La plupart démarrent une deuxième boutique, sentent le poids, et abandonnent en silence. Ce
 n'est pas un problème de discipline. C'est un processus vraiment atroce.
 
-## Ce qu'on construit à ce sujet
+## Ce qu'on fait pour ça
 
 Ce processus, c'est exactement ce que [DigiBoom](/fr/) existe pour supprimer. Tu connectes la
 boutique que tu tiens déjà, on ouvre celles qui te manquent, on transfère ton catalogue
