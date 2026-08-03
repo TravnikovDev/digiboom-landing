@@ -64,8 +64,8 @@ Claude-tasks blocked until you finish the matching item in Part 2.
 - [ ] **B2. Google Search Console** — ~10 min, the step that makes 7-language
   indexing real. Domain property + DNS TXT at Namecheap, then submit
   `https://digiboom.biz/sitemap.xml` (35 URLs). Needs no code from Claude, so C7 only
-  applies if you fall back to the HTML-tag method. Guide also covers Yandex Webmaster,
-  which is the only way the Russian version pays off outside Google.
+  applies if you fall back to the HTML-tag method. Guide also covers the
+  2-click Bing import.
 - [ ] **B3. Decide on the white paper** — publish it (send the file / say yes) or
   keep it private (Claude softens the FAQ line).
 - [ ] **B4. Send the Neurofashion links** — which platforms the shop is live on

@@ -187,19 +187,14 @@ problem on our side, not something you can fix at Namecheap.
 Do not click "Request indexing" on all 35 URLs. The sitemap already told Google about them,
 and hammering the button does not speed anything up.
 
-### 1.8 Optional, ten minutes, genuinely worth it
-
-**Yandex Webmaster.** You shipped a full Russian version. Yandex, not Google, is the
-dominant search engine in Russia, and it will not index you well without being told you
-exist. [webmaster.yandex.com](https://webmaster.yandex.com) → add site `digiboom.biz` →
-verify (it accepts a DNS TXT record, same procedure as above) → submit the same
-`https://digiboom.biz/sitemap.xml`. Of all the optional items on either list, this one has
-the best ratio of effort to reach, because it is the only way the `ru` work pays off outside
-Google.
+### 1.8 Optional, two minutes
 
 **Bing Webmaster Tools.** [bing.com/webmasters](https://www.bing.com/webmasters) → Import
 from Google Search Console → authorize → done in about two clicks. Bing traffic is small
 but the import costs nothing, and it also feeds DuckDuckGo.
+
+Deliberately not here: Russian search services. Out of scope for this project by decision,
+not oversight. The Russian pages are indexed by Google like every other locale.
 
 ---
 
