@@ -49,7 +49,7 @@
     "features": [
       {
         "title": "Esteja onde os compradores já estão",
-        "text": "Abrir uma loja custava uma semana que você não tinha, então você nunca se deu ao trabalho. A gente cuida da conta, da marca, das categorias, das letras miúdas. Você está no ar num novo mercado antes do jantar, na frente de gente que nunca ouviu falar de você."
+        "text": "Abrir uma loja custava uma semana que você não tinha, então você nunca foi em frente. Aceitar os termos e provar quem você é fica com você, ninguém faz isso no seu lugar. Todo o resto é com a gente: marca, categorias, políticas, anúncios, arquivos."
       },
       {
         "title": "Cada anúncio chega pronto para vender",
@@ -118,7 +118,7 @@
     "eyebrow": "A recompensa",
     "heading": "E aí os pedidos chegam de todo lado",
     "paragraph": "Os seus produtos digitais entram no ar em cada mercado onde você vende. Cada um é mais um lugar onde um estranho esbarra no seu trabalho. Cada um continua vendendo enquanto você faz a próxima coisa. Um upload só, trabalhando em todas as direções ao mesmo tempo. <accent>Isso é o boom.</accent>",
-    "note": "Alcance é a alavanca que a gente coloca na sua mão. Três ou quatro vezes mais lojas, zero trabalho repetitivo. O que você faz com isso é problema seu.",
+    "note": "Alcance é a alavanca que a gente coloca na sua mão. Três ou quatro vezes mais lojas, zero trabalho repetitivo. O que você faz com isso é decisão sua.",
     "ordersLabel": "Pedidos, de cada canal de venda",
     "orderNew": "Nova venda",
     "boom": "BOOM!"
@@ -167,7 +167,7 @@
       {
         "title": "Landing e lista de espera",
         "text": "Você está olhando para ela. Cadastre-se agora e você fica quase no começo da fila.",
-        "when": "Agora"
+        "when": "T3 2026"
       },
       {
         "title": "Comunidade de vendedores",
@@ -177,17 +177,17 @@
       {
         "title": "MVP: Etsy e Shopify",
         "text": "Configuração da loja Shopify e sincronização bidirecional dos seus produtos digitais entre as duas primeiras plataformas.",
-        "when": "T1 a T2"
+        "when": "Depois"
       },
       {
         "title": "Beta fechado",
         "text": "Lista de espera primeiro, na ordem em que você se cadastrou. Sem furar a fila.",
-        "when": "T3"
+        "when": "Mais adiante"
       },
       {
         "title": "Lançamento público",
         "text": "Assinaturas abertas para todos, depois Gumroad, depois as análises.",
-        "when": "T4"
+        "when": "Quando estiver pronto"
       }
     ]
   },

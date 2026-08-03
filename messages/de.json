@@ -49,7 +49,7 @@
     "features": [
       {
         "title": "Sei da, wo die Käufer schon sind",
-        "text": "Einen Shop zu eröffnen kostete dich früher eine Woche, die du nicht hattest, also hast du es gelassen. Wir kümmern uns um das Konto, das Branding, die Kategorien, das Kleingedruckte. Bis zum Abendessen bist du auf einem neuen Marktplatz live, vor Leuten, die noch nie von dir gehört haben."
+        "text": "Einen Shop zu eröffnen kostete dich früher eine Woche, die du nicht hattest, also hast du es gelassen. Die Bedingungen annehmen und dich ausweisen musst du selbst, das kann dir niemand abnehmen. Alles drumherum übernehmen wir: Branding, Kategorien, Richtlinien, Angebote, Dateien."
       },
       {
         "title": "Jedes Angebot ist sofort verkaufsbereit",
@@ -167,7 +167,7 @@
       {
         "title": "Landing und Warteliste",
         "text": "Du schaust sie dir gerade an. Melde dich jetzt an und du bist fast vorn in der Schlange.",
-        "when": "Jetzt"
+        "when": "Q3 2026"
       },
       {
         "title": "Verkäufer-Community",
@@ -177,17 +177,17 @@
       {
         "title": "MVP: Etsy und Shopify",
         "text": "Shopify-Shop-Setup und Zwei-Wege-Sync deiner digitalen Produkte zwischen den ersten beiden Plattformen.",
-        "when": "Q1 bis Q2"
+        "when": "Danach"
       },
       {
         "title": "Geschlossene Beta",
         "text": "Warteliste zuerst, in der Reihenfolge deiner Anmeldung. Kein Vordrängeln.",
-        "when": "Q3"
+        "when": "Im Anschluss"
       },
       {
         "title": "Öffentlicher Launch",
         "text": "Abos für alle, dann Gumroad, dann die Analytics.",
-        "when": "Q4"
+        "when": "Wenn es fertig ist"
       }
     ]
   },

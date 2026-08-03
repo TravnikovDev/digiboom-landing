@@ -4,8 +4,17 @@ import Reveal from "./Reveal";
 
 type Status = "done" | "active" | "planned";
 
-// Milestone status is fixed program state; titles/text/when come from the dictionary, by position.
-const STATUSES: Status[] = ["done", "active", "planned", "planned", "planned", "planned"];
+/**
+ * Milestone status is program state, not copy, so it lives here rather than in seven
+ * dictionaries. Titles, text and `when` come from the dictionary, matched by position.
+ *
+ * THIS LINE IS A CLAIM ABOUT REALITY. Keep it true.
+ * The landing shipped, so it is `done`. Move `active` to whichever milestone is genuinely
+ * being worked on right now. A roadmap that says "this page changes as the work does" and
+ * then does not is worse than having no roadmap: `npm run roadmap:check` guards the dates,
+ * but only a human can say what is actually in progress.
+ */
+const STATUSES: Status[] = ["done", "done", "active", "planned", "planned", "planned"];
 const DONE = STATUSES.filter((s) => s !== "planned").length;
 
 function Node({ status }: { status: Status }) {

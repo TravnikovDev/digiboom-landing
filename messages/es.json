@@ -49,7 +49,7 @@
     "features": [
       {
         "title": "Está donde ya están los compradores",
-        "text": "Abrir una tienda te costaba una semana que no tenías, así que nunca te molestaste. Nosotros nos ocupamos de la cuenta, la marca, las categorías, la letra pequeña. Estás en un mercado nuevo antes de la cena, ante gente que nunca ha oído hablar de ti."
+        "text": "Abrir una tienda te costaba una semana que no tenías, así que nunca lo hiciste. Aceptar las condiciones y demostrar quién eres te toca a ti, nadie puede hacerlo por ti. Todo lo que rodea esos dos pasos es cosa nuestra: marca, categorías, políticas, fichas de producto, archivos."
       },
       {
         "title": "Cada anuncio llega listo para vender",
@@ -167,7 +167,7 @@
       {
         "title": "Landing y lista de espera",
         "text": "La estás mirando. Regístrate ahora y estarás casi al principio de la cola.",
-        "when": "Ahora"
+        "when": "T3 2026"
       },
       {
         "title": "Comunidad de vendedores",
@@ -177,17 +177,17 @@
       {
         "title": "MVP: Etsy y Shopify",
         "text": "Configuración de la tienda Shopify y sincronización bidireccional de tus productos digitales entre las dos primeras plataformas.",
-        "when": "T1 a T2"
+        "when": "Luego"
       },
       {
         "title": "Beta cerrada",
         "text": "Lista de espera primero, en el orden en que te registraste. Sin colarse.",
-        "when": "T3"
+        "when": "Más adelante"
       },
       {
         "title": "Lanzamiento público",
         "text": "Suscripciones abiertas a todos, luego Gumroad, luego las analíticas.",
-        "when": "T4"
+        "when": "Cuando esté listo"
       }
     ]
   },

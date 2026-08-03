@@ -10,6 +10,7 @@
     "writing:check": "node scripts/writing-check.mjs",
     "fonts:build": "node scripts/build-ja-font.mjs",
     "fonts:check": "node scripts/font-check.mjs",
+    "roadmap:check": "node scripts/roadmap-check.mjs",
     "start": "next start"
   },
   "dependencies": {

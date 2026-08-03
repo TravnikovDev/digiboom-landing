@@ -55,6 +55,14 @@ arriving, which is **B7**. Everything below B7 is polish.
 
 These came out of an architecture review and need nothing from you.
 
+- [x] **C18. Fixes from the external LLM copy review** ✅ shipped — four confirmed bugs, all
+  7 locales. Portuguese `é problema seu` (read as "that's your problem"); a stale roadmap
+  whose MVP quarter had passed while still marked planned; the page contradicting itself by
+  claiming "we handle the account" against an FAQ that says the opposite; and the
+  "live by dinner" timing promise from a product with no MVP. `roadmap:check` now guards
+  the dates in CI. **Most of that review was wrong** and was discarded after checking each
+  claim against the actual strings; see the commit for what was debunked.
+
 - [x] **C16. `/llms.txt`** ✅ shipped — `app/llms.txt/route.ts`, generated at build so the
   blog and locale lists cannot drift. The valuable part is the status paragraph: it states
   outright that DigiBoom is unreleased with no users, so a model summarising the marketing

@@ -49,7 +49,7 @@
     "features": [
       {
         "title": "Be where the buyers already are",
-        "text": "Opening a store used to cost you a week you did not have, so you never bothered. We handle the account, the branding, the categories, the fine print. You are live on a new marketplace by dinner, in front of people who have never heard of you."
+        "text": "Opening a store used to cost you a week you did not have, so you never bothered. You accept the terms and prove who you are, because only you can. Everything around those two steps is ours: branding, categories, policies, listings, files."
       },
       {
         "title": "Every listing lands ready to sell",
@@ -167,7 +167,7 @@
       {
         "title": "Landing and waitlist",
         "text": "You are looking at it. Sign up now and you are near the front of the queue.",
-        "when": "Now"
+        "when": "Q3 2026"
       },
       {
         "title": "Seller community",
@@ -177,17 +177,17 @@
       {
         "title": "MVP: Etsy and Shopify",
         "text": "Shopify store setup, and two-way sync of your digital products between the first two platforms.",
-        "when": "Q1 to Q2"
+        "when": "Then"
       },
       {
         "title": "Closed beta",
         "text": "Waitlist first, in the order you signed up. No queue-jumping.",
-        "when": "Q3"
+        "when": "After that"
       },
       {
         "title": "Public launch",
         "text": "Subscriptions open to everyone, then Gumroad, then the analytics.",
-        "when": "Q4"
+        "when": "When it is ready"
       }
     ]
   },

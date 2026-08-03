@@ -32,6 +32,8 @@ jobs:
         run: npm run writing:check
       - name: Check the Japanese font subset covers the Japanese copy
         run: npm run fonts:check
+      - name: Check the roadmap has not sailed past its own dates
+        run: npm run roadmap:check
       - name: Build static export
         run: npm run build
         env:
