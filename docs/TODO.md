@@ -17,9 +17,9 @@ Claude-tasks blocked until you finish the matching item in Part 2.
   "Telegram and Discord"; Discord is banned in Turkey, so it becomes Telegram-only.
   All 7 locales.
 - [x] **C3. Blog machinery** ✅ shipped — `/blog` in the same repo and design system: markdown
-  posts, listing page, post template, sitemap entries, nav/footer links. English-only
-  at first (translating every post into 7 languages is unsustainable solo; winners get
-  translated later).
+  posts, listing page, post template, sitemap entries, nav/footer links. ~~English-only at
+  first~~ superseded: the blog was made multilingual afterwards, so all 3 posts exist in all
+  7 languages (21 posts) with localized slugs and per-post hreflang.
 - [x] **C4. Draft the first 3 blog posts** ✅ drafted (review the voice before publishing) — from the keywords core, in the site voice:
   1. *How to sell digital products on Etsy* (4.4K/mo, relevance 10)
   2. *Etsy alternatives for digital downloads* (720/mo, relevance 9)
@@ -51,14 +51,21 @@ Claude-tasks blocked until you finish the matching item in Part 2.
 
 ## Part 2 — Your list (accounts, codes, decisions)
 
-- [ ] **B1. GoatCounter account** — free, ~5 min. goatcounter.com → sign up → pick a
-  code (e.g. `digiboom`) → tell Claude the resulting `*.goatcounter.com` code.
-  (Prefer Cloudflare Web Analytics or Plausible instead? Also fine — say which.)
+> **B1 and B2 have a full step-by-step guide:
+> [setup-search-console-and-analytics.md](setup-search-console-and-analytics.md).**
+> It covers the exact Namecheap record (including the SPF record already on your root that
+> must not be overwritten), how to confirm propagation, sitemap submission, and how to check
+> Google can actually reach the non-English pages. Do B2 before B1: indexing is slow, so
+> start that clock first.
+
+- [ ] **B1. Analytics account** — ~5 min. Guide recommends Cloudflare Web Analytics over
+  GoatCounter: free with no commercial-use restriction, cookieless (so no consent banner
+  for the four EU locales), and no DNS change. Send Claude the snippet → unblocks C6.
 - [ ] **B2. Google Search Console** — ~10 min, the step that makes 7-language
-  indexing real. search.google.com/search-console → Add property → type **Domain** →
-  `digiboom.biz` → verify with the DNS TXT record it shows you (added in Namecheap →
-  Advanced DNS) → once verified, Sitemaps → submit `https://digiboom.biz/sitemap.xml`.
-  Optional bonus: Bing Webmaster Tools can import the GSC property in 2 clicks.
+  indexing real. Domain property + DNS TXT at Namecheap, then submit
+  `https://digiboom.biz/sitemap.xml` (35 URLs). Needs no code from Claude, so C7 only
+  applies if you fall back to the HTML-tag method. Guide also covers Yandex Webmaster,
+  which is the only way the Russian version pays off outside Google.
 - [ ] **B3. Decide on the white paper** — publish it (send the file / say yes) or
   keep it private (Claude softens the FAQ line).
 - [ ] **B4. Send the Neurofashion links** — which platforms the shop is live on
