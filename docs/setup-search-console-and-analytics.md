@@ -149,13 +149,20 @@ later un-verifies the property and you lose access to the data.
 Verification alone does not tell Google about your pages. This step does.
 
 1. In the left sidebar, click **Sitemaps** (under Indexing).
-2. Under "Add a new sitemap" the domain is already filled in. Type only:
+2. Under "Add a new sitemap", enter the **full URL**:
 
    ```
-   sitemap.xml
+   https://digiboom.biz/sitemap.xml
    ```
 
 3. Click **Submit**.
+
+**Enter the whole URL, not just `sitemap.xml`.** This is the one place a Domain property
+behaves differently from the URL-prefix kind, and it is easy to get wrong. A URL-prefix
+property shows the domain greyed out to the left of the box, so you type only the path.
+A Domain property has no prefix to prepend and shows an empty box, so a bare `sitemap.xml`
+is rejected with "Invalid sitemap address". That error means the path was wrong, not that
+anything is wrong with the file.
 
 Status goes to "Success" within minutes to a day, and the discovered-URL count should read
 **35**. If it reads 0 or errors, tell me and I will look at the file. If it reads a number
