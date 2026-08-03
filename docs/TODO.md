@@ -55,6 +55,15 @@ arriving, which is **B7**. Everything below B7 is polish.
 
 These came out of an architecture review and need nothing from you.
 
+- [x] **C16. `/llms.txt`** ✅ shipped — `app/llms.txt/route.ts`, generated at build so the
+  blog and locale lists cannot drift. The valuable part is the status paragraph: it states
+  outright that DigiBoom is unreleased with no users, so a model summarising the marketing
+  copy does not present it as a shipping product or invent a customer count.
+- [ ] **C17. Structured data on the landing page** — it currently has none at all, while
+  blog posts carry BlogPosting/Organization/Person. FAQPage schema would make the 6 FAQ
+  answers extractable by Google and by AI crawlers, plus Organization and
+  SoftwareApplication for what DigiBoom is.
+
 - [ ] **C13. `meta keywords` is English on all 7 locales** while `keywords/*.csv` holds
   per-language research and the code comment claims they are in sync. Google has ignored
   this tag since 2009, so the honest fix is probably to delete the field.
