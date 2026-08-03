@@ -3,6 +3,7 @@ import type { Locale } from "@/i18n/config";
 import Countdown from "@/components/Countdown";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
+import Founder from "@/components/Founder";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Marquee from "@/components/Marquee";
@@ -34,6 +35,7 @@ export default function Landing({ t, locale }: { t: Messages; locale: Locale }) 
         <Countdown copy={t.countdown} />
         <Pricing copy={t.pricing} />
         <Faq copy={t.faq} />
+        <Founder copy={t.founder} />
         <SignupSection copy={t.signupSection} signup={t.signup} />
       </main>
       <Footer copy={t.footer} locale={locale} langLabel={t.nav.langLabel} blogLabel={t.blog.navLabel} />

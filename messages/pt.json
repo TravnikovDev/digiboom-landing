@@ -254,6 +254,31 @@
       }
     ]
   },
+  "founder": {
+    "eyebrow": "Quem está construindo isto",
+    "heading": "Eu também vendo produtos digitais",
+    "paragraph": "A NeuroFashion tem mais de 500 produtos digitais e mais de 10.000 vendas na Etsy. Três anos, uma prateleira só. Toda vez que pensei em abrir uma segunda loja, fiz as contas de subir o catálogo inteiro de novo na mão, e fechei a aba. <accent>DigiBoom é o que eu construí no lugar disso.</accent>",
+    "stats": [
+      {
+        "value": "500+",
+        "label": "produtos digitais"
+      },
+      {
+        "value": "10.000+",
+        "label": "vendas"
+      },
+      {
+        "value": "3",
+        "label": "anos vendendo"
+      },
+      {
+        "value": "1",
+        "label": "loja"
+      }
+    ],
+    "shopLabel": "Ver a loja na Etsy",
+    "signature": "Roman Travnikov, construindo o DigiBoom às claras"
+  },
   "signupSection": {
     "eyebrow": "Acesso antecipado",
     "heading": "Entre antes\nda primeira sincronização",

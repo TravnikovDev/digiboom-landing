@@ -254,6 +254,31 @@
       }
     ]
   },
+  "founder": {
+    "eyebrow": "Who is building this",
+    "heading": "I sell digital products too",
+    "paragraph": "NeuroFashion has more than 500 digital products and more than 10,000 sales on Etsy. Three years, one shelf. Every time I thought about opening a second storefront, I did the arithmetic on re-uploading the whole catalog by hand, and closed the tab. <accent>DigiBoom is what I built instead.</accent>",
+    "stats": [
+      {
+        "value": "500+",
+        "label": "digital products"
+      },
+      {
+        "value": "10,000+",
+        "label": "sales"
+      },
+      {
+        "value": "3",
+        "label": "years selling"
+      },
+      {
+        "value": "1",
+        "label": "storefront"
+      }
+    ],
+    "shopLabel": "See the shop on Etsy",
+    "signature": "Roman Travnikov, building DigiBoom in the open"
+  },
   "signupSection": {
     "eyebrow": "Early access",
     "heading": "Get in before\nthe first sync",

@@ -63,8 +63,11 @@ These came out of an architecture review and need nothing from you.
 
 ### Blocked until Part 2 hands something over
 
-- [ ] **C8. "Built by a seller" proof section** — a founder note: Neurofashion runs on N
-  platforms, synced by hand, which is why DigiBoom exists. With real links — **⛔ B4**.
+- [x] **C8. "Built by a seller" proof section** ✅ shipped — `components/Founder.tsx`,
+  between the FAQ and the final signup, in all 7 languages. Numbers are rounded ("more than
+  500", "more than 10,000") so they age upward instead of going stale, and each locale uses
+  its own thousands separator. The last stat is the argument: three numbers that sound like
+  success, then 1 storefront.
 - [ ] **C9. Telegram link** in the footer + community milestone — **⛔ B5**.
 - [ ] **C10. Move the signup form from Formspree to Buttondown** — **⛔ B6**.
 - [ ] **C11. White paper**: link the real document from the FAQ, or soften the line —
@@ -86,9 +89,7 @@ These came out of an architecture review and need nothing from you.
   sits at the halfway point of the target and would bite hardest right when a launch post
   works. buttondown.com → create newsletter → send Claude the API/embed details. Later:
   export the Formspree CSV and import it so nobody is lost.
-- [ ] **B4. Send the Neurofashion links** — which platforms the shop is live on today, plus
-  URLs. Optional: 1-2 sentences in your words for the founder note. Unblocks C8, which is
-  the most convincing thing missing from the page.
+- [x] **B4. Neurofashion links** ✅ done — shop analysed, C8 built from it.
 - [ ] **B7. Post the launch pack** (written for you in C5) — r/EtsySellers, r/Etsy, Indie
   Hackers, Product Hunt "Coming soon", BetaList. **This is the only item on either list
   that brings anyone to the site.** Everything else measures traffic or improves what
@@ -108,9 +109,14 @@ These came out of an architecture review and need nothing from you.
 1. **Push the analytics** so it starts counting. Nothing is measured until then.
 2. **B6 (Buttondown)** before any traffic arrives, so the Formspree cap cannot cost you
    signups during a launch spike.
-3. **B4** → Claude builds C8, the founder proof section.
-4. **B7, post the launch pack.** After 1 to 3, so the page is at its most convincing and
-   every visitor is counted when the spike lands.
+3. ~~B4 → C8~~ done. The founder section is live.
+4. **B7, post the launch pack.** The page is now at its most convincing and every visitor
+   is counted, so this is the next real move.
+
+   Before posting to r/EtsySellers or r/Etsy, decide how to handle the shop being
+   AI-generated work. Those communities are frequently hostile to it, and the founder
+   section links the shop. Leading with the problem rather than the shop is the safer
+   framing there. The section itself does not mention AI.
 5. **B5, B3** whenever. They unblock nice-to-haves, not structural work.
 
 On timing: indexing is not instant. Landing pages usually appear within days, blog posts
