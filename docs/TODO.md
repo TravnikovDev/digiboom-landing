@@ -50,38 +50,23 @@ arriving, which is **B7**. Everything below B7 is polish.
   across all 7 locales. `fonts:check` guards it in CI.
 - [x] Setup guide for Search Console and analytics
   ([setup-search-console-and-analytics.md](setup-search-console-and-analytics.md)).
+- [x] **`/llms.txt`** — generated at build so the article and locale lists cannot drift. The
+  valuable part is the status paragraph: it says outright that DigiBoom is unreleased with
+  no users, so a model summarising the marketing copy cannot present it as shipping.
+- [x] **Structured data on the landing page** — `lib/landing-jsonld.ts`, one linked @graph of
+  Organization, WebSite, SoftwareApplication and FAQPage per locale. Carries no `offers`
+  (pricing is "planned") and no `aggregateRating` (no users), which is WRITING.md §6 applied
+  to machine-readable data.
+- [x] **Nine fixes from an external LLM copy review** — four structural (Portuguese
+  `problema seu`, the stale roadmap, the account contradiction, "live by dinner") and five
+  linguistic (the "second front" military metaphor, local clock onomatopoeia, Japanese
+  あなた 32 → 14, Portuguese declaring pt-BR, Spanish Peninsular markers). `roadmap:check`
+  added to CI. Roughly half the review's claims were wrong and were discarded after checking
+  each one against the actual strings.
 
 ### Unblocked, small, not yet done
 
 These came out of an architecture review and need nothing from you.
-
-- [x] **C18. Fixes from the external LLM copy review** ✅ shipped — four confirmed bugs, all
-  7 locales. Portuguese `é problema seu` (read as "that's your problem"); a stale roadmap
-  whose MVP quarter had passed while still marked planned; the page contradicting itself by
-  claiming "we handle the account" against an FAQ that says the opposite; and the
-  "live by dinner" timing promise from a product with no MVP. `roadmap:check` now guards
-  the dates in CI. **Most of that review was wrong** and was discarded after checking each
-  claim against the actual strings; see the commit for what was debunked.
-- [x] **C19. The remaining five confirmed review findings** ✅ shipped — the "second front"
-  military metaphor removed in all 7 (Russian «второй фронт» and Japanese 戦線 were the
-  worst); the clock now ticks in each language's own onomatopoeia instead of German
-  repeating the English string verbatim; Japanese あなた cut from 32 to 14, keeping only
-  contrastive and emphatic uses; hreflang and `<html lang>` for Portuguese now declare
-  pt-BR, matching the Brazilian copy and the OG locale that already said pt_BR; two
-  Peninsular markers removed from otherwise region-neutral Spanish.
-
-- [x] **C16. `/llms.txt`** ✅ shipped — `app/llms.txt/route.ts`, generated at build so the
-  blog and locale lists cannot drift. The valuable part is the status paragraph: it states
-  outright that DigiBoom is unreleased with no users, so a model summarising the marketing
-  copy does not present it as a shipping product or invent a customer count.
-- [x] **C17. Structured data on the landing page** ✅ shipped — `lib/landing-jsonld.ts`,
-  one linked @graph of Organization, WebSite, SoftwareApplication and FAQPage, per locale,
-  with the 6 FAQ answers in that locale's language. Deliberately carries no `offers` (the
-  pricing section says "Planned pricing", so those products are not purchasable) and no
-  `aggregateRating` (no users, so any rating would be invented). Note that Google
-  restricted FAQ rich results to government and health sites in 2023, so this will not
-  produce rich results for us; it earns its place with AI crawlers and other structured
-  data consumers.
 
 - [ ] **C13. `meta keywords` is English on all 7 locales** while `keywords/*.csv` holds
   per-language research and the code comment claims they are in sync. Google has ignored
@@ -125,6 +110,10 @@ These came out of an architecture review and need nothing from you.
   that brings anyone to the site.** Everything else measures traffic or improves what
   visitors find once they arrive.
 - [ ] **B5. Create the Telegram channel** — ~5 min → send the t.me link. Unblocks C9.
+  **This got more urgent.** The roadmap now shows "Seller community" as *in progress*, which
+  was the least-wrong default available when the stale dates were fixed. If the channel does
+  not exist, that claim is a stretch. Either create it, or tell Claude to move `active` in
+  `components/Countdown.tsx` to whatever you are really working on.
 - [ ] **B3. Decide on the white paper** — publish it or keep it private (Claude softens the
   FAQ line). Unblocks C11.
 - [ ] **B8. Monthly rhythm** — review and send the email Claude drafts (C12), roughly
@@ -138,17 +127,19 @@ These came out of an architecture review and need nothing from you.
 
 1. ~~Push the analytics~~ done, live and counting.
 2. ~~B4 → C8~~ done. The founder section is live.
-3. **B6 (Buttondown)**, or consciously decide to skip it. Deferred once already. The only
+3. **B5 (Telegram, 5 min)** so the roadmap's "seller community in progress" is true, and
+   Claude can put the link in the footer.
+4. **B6 (Buttondown)**, or consciously decide to skip it. Deferred once already. The only
    thing that matters is that Formspree's cap is silent when it hits, so if a launch post
    works, check Formspree that same day.
-4. **B7, post the launch pack. This is the next real move.** The page is at its most
+5. **B7, post the launch pack. This is the next real move.** The page is at its most
    convincing and every visitor is counted, so there is nothing left to wait for.
 
    Before posting to r/EtsySellers or r/Etsy, decide how to handle the shop being
    AI-generated work. Those communities are frequently hostile to it, and the founder
    section links the shop. Leading with the problem rather than the shop is the safer
    framing there. The section itself does not mention AI.
-5. **B5, B3** whenever. They unblock nice-to-haves, not structural work.
+6. **B3** whenever. It unblocks a nice-to-have, not structural work.
 
 On timing: indexing is not instant. Landing pages usually appear within days, blog posts
 one to three weeks, and non-English trails English. Check the **Pages** report in Search
