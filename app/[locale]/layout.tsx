@@ -4,7 +4,7 @@ import "../globals.css";
 import { FONT_VARS } from "../fonts";
 import Analytics from "@/components/Analytics";
 import { buildMetadata } from "@/lib/site-metadata";
-import { defaultLocale, isLocale, locales } from "@/i18n/config";
+import { defaultLocale, hreflangOf, isLocale, locales } from "@/i18n/config";
 
 // Root layout for the prefixed, non-default locales (/de/, /fr/, ...). English is served at
 // `/` by app/(home) instead, so it is excluded here — there is no /en/ page.
@@ -38,7 +38,8 @@ export default async function LocaleLayout({
   if (!isLocale(locale) || locale === defaultLocale) notFound();
 
   return (
-    <html lang={locale} className={FONT_VARS}>
+    // lang declares the variant, not the URL segment: /pt/ is Brazilian, so pt-BR.
+    <html lang={hreflangOf[locale]} className={FONT_VARS}>
       <body className="bg-blast text-ink antialiased font-sans overflow-x-hidden">
         {children}
         <Analytics />

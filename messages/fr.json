@@ -12,7 +12,7 @@
     "langLabel": "Langue"
   },
   "hero": {
-    "eyebrow": "Tic... tic... tic...",
+    "eyebrow": "Tic... tac... tic...",
     "headline": "On explose\ntes ventes.\n<accent>En bien.</accent>",
     "paragraph": "Tu vends des produits numériques sur <mark>Etsy</mark>. Rien qu'Etsy. Un rayon, une boutique, et tu sais déjà comment finit cette histoire. DigiBoom ouvre tes autres boutiques sur <mark>Shopify</mark>, <mark>Gumroad</mark> et le reste, puis garde chaque annonce synchronisée. Plus d'endroits où l'on te trouve. Plus d'acheteurs. Aucune heure en plus.",
     "chipYours": "ta boutique",
@@ -202,7 +202,7 @@
         "name": "Starter",
         "cap": "jusqu'à 50 produits",
         "price": "$10",
-        "blurb": "Pour la boutique d'une personne qui ouvre enfin un deuxième front."
+        "blurb": "Pour la boutique d'une personne qui ouvre enfin une deuxième boutique."
       },
       {
         "name": "Pro",

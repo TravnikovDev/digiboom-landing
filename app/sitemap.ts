@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogIndexPath, blogPath, localePath, locales } from "@/i18n/config";
+import { blogIndexPath, blogPath, hreflangOf, localePath, locales } from "@/i18n/config";
 import { getPosts, localesWithPosts, translationsOf } from "@/lib/blog";
 
 // Required for metadata routes under `output: export` (otherwise the build errors).
@@ -14,7 +14,7 @@ const abs = (locale: (typeof locales)[number]) => `${SITE_URL}${localePath(local
  * generateSitemaps this emits a single static out/sitemap.xml at build.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const languages: Record<string, string> = Object.fromEntries(locales.map((locale) => [locale, abs(locale)]));
+  const languages: Record<string, string> = Object.fromEntries(locales.map((locale) => [hreflangOf[locale], abs(locale)]));
   languages["x-default"] = abs("en");
 
   const localeEntries: MetadataRoute.Sitemap = locales.map((locale) => ({
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // hreflang lists only the languages an article was actually translated into.
   const blogLocales = localesWithPosts();
   const indexLanguages = Object.fromEntries(
-    blogLocales.map((l) => [l, `${SITE_URL}${blogIndexPath(l)}`]),
+    blogLocales.map((l) => [hreflangOf[l], `${SITE_URL}${blogIndexPath(l)}`]),
   );
 
   const blogEntries: MetadataRoute.Sitemap = [
@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             (Object.entries(translationsOf(post.key)) as [typeof l, string][]).map(([loc, slug]) => [
-              loc,
+              hreflangOf[loc],
               `${SITE_URL}${blogPath(loc, slug)}`,
             ]),
           ),

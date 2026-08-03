@@ -34,6 +34,25 @@ export function blogPath(locale: Locale, slug: string): string {
   return `${blogIndexPath(locale)}${slug}/`;
 }
 
+/**
+ * BCP-47 tags for hreflang and any other place that declares the language to a machine.
+ * Mostly identical to the locale code; Portuguese is the exception, because the copy is
+ * Brazilian (você, a gente, arquivos rather than ficheiros) and `pt` alone would offer it
+ * to readers in Portugal as if it were written for them. OG_LOCALE already said pt_BR, so
+ * this also stops the page contradicting its own metadata.
+ *
+ * The URL path stays `/pt/`. Only the declared language changes.
+ */
+export const hreflangOf: Record<Locale, string> = {
+  en: "en",
+  de: "de",
+  fr: "fr",
+  es: "es",
+  pt: "pt-BR",
+  ja: "ja",
+  ru: "ru",
+};
+
 /** Endonyms for the language switcher. */
 export const localeNames: Record<Locale, string> = {
   en: "English",

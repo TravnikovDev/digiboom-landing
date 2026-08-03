@@ -62,6 +62,13 @@ These came out of an architecture review and need nothing from you.
   "live by dinner" timing promise from a product with no MVP. `roadmap:check` now guards
   the dates in CI. **Most of that review was wrong** and was discarded after checking each
   claim against the actual strings; see the commit for what was debunked.
+- [x] **C19. The remaining five confirmed review findings** ✅ shipped — the "second front"
+  military metaphor removed in all 7 (Russian «второй фронт» and Japanese 戦線 were the
+  worst); the clock now ticks in each language's own onomatopoeia instead of German
+  repeating the English string verbatim; Japanese あなた cut from 32 to 14, keeping only
+  contrastive and emphatic uses; hreflang and `<html lang>` for Portuguese now declare
+  pt-BR, matching the Brazilian copy and the OG locale that already said pt_BR; two
+  Peninsular markers removed from otherwise region-neutral Spanish.
 
 - [x] **C16. `/llms.txt`** ✅ shipped — `app/llms.txt/route.ts`, generated at build so the
   blog and locale lists cannot drift. The valuable part is the status paragraph: it states

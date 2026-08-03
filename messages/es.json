@@ -12,7 +12,7 @@
     "langLabel": "Idioma"
   },
   "hero": {
-    "eyebrow": "Tic... tic... tic...",
+    "eyebrow": "Tic... tac... tic...",
     "headline": "Explotamos\ntus ventas.\n<accent>Para bien.</accent>",
     "paragraph": "Vendes productos digitales en <mark>Etsy</mark>. Solo en Etsy. Un estante, una tienda, y ya sabes cómo acaba esa historia. DigiBoom te abre tiendas en <mark>Shopify</mark>, <mark>Gumroad</mark> y las demás, y luego mantiene cada anuncio sincronizado. Más sitios donde te encuentran. Más compradores. Ni una hora extra.",
     "chipYours": "tu tienda",
@@ -96,7 +96,7 @@
     "steps": [
       {
         "title": "Conecta tu tienda",
-        "text": "Señálanos la tienda que ya llevas, Etsy, Shopify o Gumroad, a través de la API oficial. Desconéctala cuando te apetezca."
+        "text": "Señálanos la tienda que ya llevas, Etsy, Shopify o Gumroad, a través de la API oficial. Desconéctala cuando quieras."
       },
       {
         "title": "Importa tu catálogo",
@@ -142,7 +142,7 @@
       },
       {
         "title": "Cursos y medios",
-        "blurb": "Para vendedores cuyos productos son lecciones, audio o vídeo."
+        "blurb": "Para vendedores cuyos productos son lecciones, audio o video."
       }
     ],
     "stageLaunch": "en el lanzamiento",
@@ -202,7 +202,7 @@
         "name": "Starter",
         "cap": "hasta 50 productos",
         "price": "$10",
-        "blurb": "Para la tienda de una persona que por fin abre un segundo frente."
+        "blurb": "Para la tienda de una persona que por fin abre una segunda tienda."
       },
       {
         "name": "Pro",

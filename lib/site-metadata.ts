@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
-import { localePath, locales, type Locale } from "@/i18n/config";
+import { hreflangOf, localePath, locales, type Locale } from "@/i18n/config";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://digiboom.biz";
 
@@ -22,7 +22,7 @@ const OG_LOCALE: Record<Locale, string> = {
  */
 export function buildMetadata(locale: Locale): Metadata {
   const t = getDictionary(locale);
-  const languages = Object.fromEntries(locales.map((l) => [l, localePath(l)]));
+  const languages = Object.fromEntries(locales.map((l) => [hreflangOf[l], localePath(l)]));
 
   return {
     metadataBase: new URL(SITE_URL),

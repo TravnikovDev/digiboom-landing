@@ -12,7 +12,7 @@
     "langLabel": "Sprache"
   },
   "hero": {
-    "eyebrow": "Tick... tick... tick...",
+    "eyebrow": "Tick... tack... tick...",
     "headline": "Wir sprengen\ndeinen Umsatz.\n<accent>Im guten Sinne.</accent>",
     "paragraph": "Du verkaufst digitale Produkte auf <mark>Etsy</mark>. Nur auf Etsy. Ein Regal, ein Shop, und du weißt schon, wie diese Geschichte ausgeht. DigiBoom eröffnet für dich weitere Shops auf <mark>Shopify</mark>, <mark>Gumroad</mark> und dem Rest und hält danach jedes Angebot synchron. Mehr Orte, an denen man dich findet. Mehr Käufer. Keine einzige Stunde extra.",
     "chipYours": "dein Shop",
@@ -202,7 +202,7 @@
         "name": "Starter",
         "cap": "bis zu 50 Produkte",
         "price": "$10",
-        "blurb": "Für den Ein-Personen-Shop, der endlich eine zweite Front eröffnet."
+        "blurb": "Für den Ein-Personen-Shop, der endlich einen zweiten Shop eröffnet."
       },
       {
         "name": "Pro",
