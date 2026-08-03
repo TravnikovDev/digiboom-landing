@@ -42,7 +42,18 @@ export function buildMetadata(locale: Locale): Metadata {
       "Gumroad",
     ],
     authors: [{ name: "Roman Travnikov" }],
-    icons: { apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }] },
+    /**
+     * `icon` has to be listed explicitly. Declaring an `icons` object at all switches off
+     * Next's automatic detection of app/icon.svg, and because this metadata merges down
+     * from the root layout, naming only `apple` here silently stripped the favicon link
+     * from every page on the site. The 404 page kept one purely because it sits outside
+     * this tree, which is what made the omission easy to miss. There is no favicon.ico to
+     * fall back on, so without this line browsers showed a blank tab icon.
+     */
+    icons: {
+      icon: [{ url: "/icon.svg", type: "image/svg+xml", sizes: "any" }],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     alternates: {
       canonical: localePath(locale),
       languages: { ...languages, "x-default": localePath("en") },

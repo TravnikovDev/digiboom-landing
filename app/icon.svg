@@ -1,14 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    Favicon, drawn for 16px, because that is the size it is actually seen at.
+
+    Two things it deliberately does not do. It has no face: two eyes and a mouth are mud
+    below about 48px and spend contrast the silhouette needs. And it leaves little padding:
+    the previous version filled roughly 60% of the tile, so at 16px the bomb was about 10px
+    and read as a dark dot on orange.
+
+    The star is the one feature that survives tab size, so it is oversized relative to the
+    nav mark and pushed into the corner where nothing crowds it.
+  -->
+  <defs>
+    <radialGradient id="fav-body" cx="0.34" cy="0.28" r="0.88">
+      <stop offset="0%" stop-color="#9AA1AB"/>
+      <stop offset="42%" stop-color="#697079"/>
+      <stop offset="100%" stop-color="#2B3037"/>
+    </radialGradient>
+  </defs>
+
   <rect width="64" height="64" rx="14" fill="#EE5C0B"/>
-  <path d="M44 12 L46.5 18 L52 15.5 L49 21 L55 23 L48.5 25 L51 31 L45 27.5 L43 33.5 L42 27 L36 28 L40 23 L34 20 L41 19 Z" fill="#FFFFFF"/>
-  <path d="M33 22 Q37 15 44 13" fill="none" stroke="#1B1712" stroke-width="4.5" stroke-linecap="round"/>
-  <g transform="rotate(22 33 24)">
-    <rect x="26" y="19" width="15" height="9" rx="2.5" fill="#3B414A" stroke="#1B1712" stroke-width="2.5"/>
+
+  <path d="M35 16 Q43 9 49 14" fill="none" stroke="#1B1712" stroke-width="4.2" stroke-linecap="round"/>
+
+  <g transform="rotate(16 28 16)">
+    <rect x="21.5" y="9.5" width="13" height="10" rx="3" fill="#4E555F" stroke="#1B1712" stroke-width="3"/>
+    <rect x="23.5" y="12.2" width="9" height="2.1" rx="1" fill="#8A929C" opacity="0.7"/>
   </g>
-  <circle cx="29" cy="40" r="19" fill="#697079" stroke="#1B1712" stroke-width="4"/>
-  <circle cx="36" cy="47" r="13" fill="#3B414A" opacity="0.5"/>
-  <ellipse cx="22" cy="33" rx="6" ry="4.5" fill="#FFFFFF" opacity="0.9" transform="rotate(-28 22 33)"/>
-  <ellipse cx="24" cy="41" rx="2.6" ry="3.4" fill="#1B1712"/>
-  <ellipse cx="35" cy="41" rx="2.6" ry="3.4" fill="#1B1712"/>
-  <path d="M25 48 Q29 51.5 34 48" stroke="#1B1712" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+
+  <circle cx="28" cy="39" r="20" fill="url(#fav-body)" stroke="#1B1712" stroke-width="4"/>
+  <ellipse cx="20" cy="30" rx="7.4" ry="5.2" fill="#FFFFFF" opacity="0.9" transform="rotate(-28 20 30)"/>
+
+  <path d="M49.5 4 L52.2 9.6 L58.4 10.4 L53.9 14.8 L55 21 L49.5 18 L44 21 L45.1 14.8 L40.6 10.4 L46.8 9.6 Z"
+        fill="#FFD9C2" stroke="#1B1712" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="49.5" cy="13" r="3" fill="#FFFFFF"/>
 </svg>
