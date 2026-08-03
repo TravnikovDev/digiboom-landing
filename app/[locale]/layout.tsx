@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { FONT_VARS } from "../fonts";
+import Analytics from "@/components/Analytics";
 import { buildMetadata } from "@/lib/site-metadata";
 import { defaultLocale, isLocale, locales } from "@/i18n/config";
 
@@ -38,7 +39,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={FONT_VARS}>
-      <body className="bg-blast text-ink antialiased font-sans overflow-x-hidden">{children}</body>
+      <body className="bg-blast text-ink antialiased font-sans overflow-x-hidden">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

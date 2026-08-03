@@ -32,9 +32,12 @@ Claude-tasks blocked until you finish the matching item in Part 2.
 
 ### Blocked until Part 2 hands something over
 
-- [ ] **C6. Wire the analytics snippet** into the layouts — **⛔ B1** (site code).
-- [ ] **C7. Add the Search Console verification tag** (only if you choose the
-  HTML-tag method; DNS method needs nothing from me) — **⛔ B2**.
+- [x] **C6. Wire the analytics snippet** ✅ shipped — Cloudflare Web Analytics in
+  `components/Analytics.tsx`, rendered by both root layouts so all 7 locales and the blog
+  are counted. Cookieless, so no consent banner. Verified: the beacon loads and fires its
+  `rum` request.
+- [x] **C7. Search Console verification tag** ✅ not needed — the Domain-property + DNS TXT
+  method was used, which requires no code.
 - [ ] **C8. "Built by a seller" proof section** — a small founder note: Neurofashion
   runs on N platforms, synced the hard way, which is why DigiBoom exists. With real
   links — **⛔ B4**.
@@ -58,9 +61,8 @@ Claude-tasks blocked until you finish the matching item in Part 2.
 > Google can actually reach the non-English pages. Do B2 before B1: indexing is slow, so
 > start that clock first.
 
-- [ ] **B1. Analytics account** — ~5 min. Guide recommends Cloudflare Web Analytics over
-  GoatCounter: free with no commercial-use restriction, cookieless (so no consent banner
-  for the four EU locales), and no DNS change. Send Claude the snippet → unblocks C6.
+- [x] **B1. Analytics account** ✅ done — Cloudflare Web Analytics, token handed over and
+  wired up in C6.
 - [ ] **B2. Google Search Console** — ~10 min, the step that makes 7-language
   indexing real. Domain property + DNS TXT at Namecheap, then submit
   `https://digiboom.biz/sitemap.xml` (35 URLs). Needs no code from Claude, so C7 only
@@ -86,9 +88,9 @@ Claude-tasks blocked until you finish the matching item in Part 2.
 
 ## Sensible order
 
-1. **B1 + B2 first** (~15 min total) → unblocks C6/C7 the same day → from then on
-   every visitor is counted and Google starts indexing all 7 locales properly.
-2. **C1–C5 run in parallel** — no waiting on anyone.
+1. ~~B1 + B2 first~~ → B1 done (analytics live). **B2 is the one still open**: the TXT
+   record is not yet visible in DNS. Finish verification, then submit the sitemap.
+2. ~~C1–C5 run in parallel~~ done.
 3. **B4 / B5 / B6 whenever you get to them** → unblock C8–C10, C12.
 4. **B7 last** — post to communities only after the blog + proof section are live,
    so the page is at its most convincing when the traffic spike hits.

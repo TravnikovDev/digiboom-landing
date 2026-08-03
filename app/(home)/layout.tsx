@@ -1,6 +1,7 @@
 import type { Viewport } from "next";
 import "../globals.css";
 import { FONT_VARS } from "../fonts";
+import Analytics from "@/components/Analytics";
 import { buildMetadata } from "@/lib/site-metadata";
 
 // One of two root layouts (see app/[locale]/layout.tsx for the others). This one owns the
@@ -16,7 +17,10 @@ export const viewport: Viewport = {
 export default function HomeLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={FONT_VARS}>
-      <body className="bg-blast text-ink antialiased font-sans overflow-x-hidden">{children}</body>
+      <body className="bg-blast text-ink antialiased font-sans overflow-x-hidden">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
