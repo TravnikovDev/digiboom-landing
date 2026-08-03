@@ -167,7 +167,7 @@ app/
     layout.tsx                # root layout B: <html lang={locale}>, fonts, generateMetadata;
                               # generateStaticParams() excludes the default (en)
     page.tsx                  # the landing for a non-default locale
-  fonts.ts                    # all @next/font faces + FONT_VARS, shared by both layouts
+  fonts.ts                    # Latin + Cyrillic @next/font faces + FONT_VARS (NOT Japanese)
   sitemap.ts                  # per-locale URLs + hreflang (force-static); en → /
   globals.css                 # @theme tokens, per-lang font overrides, keyframes
   icon.svg                    # favicon (metadata file, app-root)
@@ -185,8 +185,11 @@ components/
   ... (sections take a typed `copy` prop; see 2.11)
 public/
   en/index.html               # legacy /en/ → / consolidation (canonical + meta-refresh)
+  fonts/                      # self-hosted Japanese subset + the manifest it was built from
 scripts/
   i18n-check.mjs              # CI: diff each locale's keys against en.json (npm run i18n:check)
+  build-ja-font.mjs           # regenerate the Japanese subset (npm run fonts:build)
+  font-check.mjs              # CI: subset still covers the ja copy (npm run fonts:check)
 ```
 
 Notes on the structure:
@@ -202,11 +205,21 @@ Notes on the structure:
 - **`trailingSlash: true`** in `next.config.ts` so the export emits `out/de/index.html` (not
   `out/de.html`), which is what `/de/` resolves to on GitHub Pages. `/` → `out/index.html`.
 - No `i18n/routing.ts`/`request.ts` and no `types/messages.d.ts` — those were next-intl
-  artifacts. The message type lives in `dictionaries.ts` (2.6); the fonts (including the
-  Cyrillic/CJK faces) live in `app/fonts.ts`, shared by both root layouts (2.8).
+  artifacts. The message type lives in `dictionaries.ts` (2.6); the Latin and Cyrillic fonts
+  live in `app/fonts.ts`, shared by both root layouts (2.8).
+- **Japanese is self-hosted, not loaded through `next/font`.** Google splits Noto Sans JP into
+  ~250 unicode-range `@font-face` rules, and `next/font` inlines the CSS of every font it
+  imports into every page, so all seven locales were downloading 66 KB (gzipped) of CJK
+  `@font-face` declarations for a face only Japanese renders. `public/fonts/` holds a subset
+  built from the characters the Japanese copy actually uses, declared in two rules in
+  `globals.css`. That took the stylesheet from 75.5 KB to 9.2 KB gzipped on every page.
+  `npm run fonts:build` regenerates it; `npm run fonts:check` fails CI if the copy gains a
+  character the subset lacks. Cyrillic stays in `next/font` because it is one unicode-range
+  per face, a few rules rather than 250.
 
 Adding or removing a language = edit `i18n/config.ts`, add/remove a `messages/*.json`, and
-(new script only) add a font stack. Nothing else hardcodes the list.
+(new script only) add a font stack. Nothing else hardcodes the list, except the curly-quote
+rule in `scripts/writing-check.mjs`, which lists the Latin-script locales explicitly.
 
 ### 2.5 Setup, step by step (as-built)
 

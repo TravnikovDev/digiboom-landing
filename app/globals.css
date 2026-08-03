@@ -23,9 +23,31 @@
   --font-mono: var(--font-mono-code), ui-monospace, SFMono-Regular, monospace;
 }
 
+/* Japanese is self-hosted rather than loaded through next/font. Google splits Noto Sans JP
+   into ~250 unicode-range @font-face rules, and next/font bundles the CSS for every font it
+   imports into every page, so all seven locales were downloading 66 KB (gzipped) of CJK
+   @font-face declarations for a face only Japanese renders. These two rules replace all of
+   them. The .woff2 files are subset to the characters the Japanese copy actually uses, so
+   the browser still fetches nothing here unless :root:lang(ja) below matches.
+   Regenerate with `npm run fonts:build`; `npm run fonts:check` fails CI if the copy drifts. */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/noto-sans-jp-regular.subset.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/noto-sans-jp-bold.subset.woff2") format("woff2");
+}
+
 /* Bebas/Bangers are Latin-only. Russian (Cyrillic) and Japanese (CJK) swap in faces that
    cover their script; `<html lang>` is set per page, so the right stack applies with zero JS.
-   These fonts are preload:false (see app/[locale]/layout.tsx), so only ru/ja pages fetch them. */
+   The Cyrillic faces are preload:false (see app/fonts.ts), so only ru pages fetch them. */
 :root:lang(ru) {
   --font-display: var(--font-oswald), Impact, sans-serif;
   --font-comic: var(--font-rubik-cyr), ui-sans-serif, sans-serif;
@@ -33,10 +55,10 @@
   --font-mono: var(--font-mono-cyr), ui-monospace, monospace;
 }
 :root:lang(ja) {
-  --font-display: var(--font-noto-jp), sans-serif;
-  --font-comic: var(--font-noto-jp), sans-serif;
-  --font-sans: var(--font-noto-jp), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-noto-jp), ui-monospace, monospace;
+  --font-display: "Noto Sans JP", sans-serif;
+  --font-comic: "Noto Sans JP", sans-serif;
+  --font-sans: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Noto Sans JP", ui-monospace, monospace;
 }
 
 /* Noto's square CJK glyphs run large and tall at the display sizes tuned for the condensed
