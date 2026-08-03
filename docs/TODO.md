@@ -59,10 +59,14 @@ These came out of an architecture review and need nothing from you.
   blog and locale lists cannot drift. The valuable part is the status paragraph: it states
   outright that DigiBoom is unreleased with no users, so a model summarising the marketing
   copy does not present it as a shipping product or invent a customer count.
-- [ ] **C17. Structured data on the landing page** — it currently has none at all, while
-  blog posts carry BlogPosting/Organization/Person. FAQPage schema would make the 6 FAQ
-  answers extractable by Google and by AI crawlers, plus Organization and
-  SoftwareApplication for what DigiBoom is.
+- [x] **C17. Structured data on the landing page** ✅ shipped — `lib/landing-jsonld.ts`,
+  one linked @graph of Organization, WebSite, SoftwareApplication and FAQPage, per locale,
+  with the 6 FAQ answers in that locale's language. Deliberately carries no `offers` (the
+  pricing section says "Planned pricing", so those products are not purchasable) and no
+  `aggregateRating` (no users, so any rating would be invented). Note that Google
+  restricted FAQ rich results to government and health sites in 2023, so this will not
+  produce rich results for us; it earns its place with AI crawlers and other structured
+  data consumers.
 
 - [ ] **C13. `meta keywords` is English on all 7 locales** while `keywords/*.csv` holds
   per-language research and the code comment claims they are in sync. Google has ignored
