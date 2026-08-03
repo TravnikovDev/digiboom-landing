@@ -1,15 +1,17 @@
 # TODO — the road to the first 100 signups
 
-Goal: **100 waitlist emails.** Current: 0 measured. Analytics is wired but not yet
-deployed, so nothing has been counted so far.
+Goal: **100 waitlist emails.** Current: 0. Analytics went live on 3 Aug 2026, so from now
+on every visit is counted. Check the Cloudflare Web Analytics dashboard for the real number.
 
 Two lists. Part 1 is work Claude does alone. Part 2 is work only you can do (accounts,
 codes, decisions, posting under your name). Items marked **⛔ Bx** are Claude-tasks blocked
 until you finish the matching item in Part 2.
 
-**Where things stand:** analytics and Search Console are both set up. The site is live in 7
-languages with 21 blog posts, verified in Search Console, and the sitemap is submitted.
-What is missing now is not infrastructure. It is people arriving, which is B7.
+**Where things stand:** the build is done. Live in 7 languages, 21 blog posts, founder
+proof section, verified in Search Console with the sitemap submitted, analytics counting.
+
+Nothing else on Claude's list changes the outcome. The only thing that does now is people
+arriving, which is **B7**. Everything below B7 is polish.
 
 ---
 
@@ -106,12 +108,13 @@ These came out of an architecture review and need nothing from you.
 
 ## Sensible order from here
 
-1. **Push the analytics** so it starts counting. Nothing is measured until then.
-2. **B6 (Buttondown)** before any traffic arrives, so the Formspree cap cannot cost you
-   signups during a launch spike.
-3. ~~B4 → C8~~ done. The founder section is live.
-4. **B7, post the launch pack.** The page is now at its most convincing and every visitor
-   is counted, so this is the next real move.
+1. ~~Push the analytics~~ done, live and counting.
+2. ~~B4 → C8~~ done. The founder section is live.
+3. **B6 (Buttondown)**, or consciously decide to skip it. Deferred once already. The only
+   thing that matters is that Formspree's cap is silent when it hits, so if a launch post
+   works, check Formspree that same day.
+4. **B7, post the launch pack. This is the next real move.** The page is at its most
+   convincing and every visitor is counted, so there is nothing left to wait for.
 
    Before posting to r/EtsySellers or r/Etsy, decide how to handle the shop being
    AI-generated work. Those communities are frequently hostile to it, and the founder
